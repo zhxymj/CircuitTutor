@@ -1,0 +1,117 @@
+{
+  "source": "manual",
+  "name": "candidate",
+  "assurance": "official",
+  "verdict": "pass",
+  "accepted": true,
+  "gate_order": [
+    "structure",
+    "erc",
+    "ratings",
+    "spice_deck",
+    "spice_runtime",
+    "kicad_export",
+    "official_erc",
+    "official_netlist"
+  ],
+  "gates": {
+    "structure": {
+      "status": "pass",
+      "required": true,
+      "issues": [],
+      "evidence": {
+        "version": 2
+      },
+      "reason": ""
+    },
+    "erc": {
+      "status": "pass",
+      "required": true,
+      "issues": [
+        {
+          "rule": "并联供电输出",
+          "message": "网络 N4 中多个供电输出脚 ['J1:VCC', 'J2:VCC'] 接到同一网络（两路稳压输出并联，输出电压难以一致，建议只用一路供电）",
+          "severity": "warning",
+          "pins": [
+            "J1:VCC",
+            "J2:VCC"
+          ]
+        }
+      ],
+      "evidence": {
+        "counts": {
+          "fatal": 0,
+          "major": 0,
+          "minor": 0,
+          "warning": 1
+        }
+      },
+      "reason": ""
+    },
+    "ratings": {
+      "status": "pass",
+      "required": true,
+      "issues": [],
+      "evidence": {
+        "danger_count": 0
+      },
+      "reason": ""
+    },
+    "spice_deck": {
+      "status": "not_applicable",
+      "required": false,
+      "issues": [],
+      "evidence": {
+        "unmodeled_types": [
+          "i2c_header"
+        ]
+      },
+      "reason": "元件缺少可执行 SPICE 模型：i2c_header"
+    },
+    "spice_runtime": {
+      "status": "not_applicable",
+      "required": false,
+      "issues": [],
+      "evidence": {},
+      "reason": "元件缺少可执行 SPICE 模型：i2c_header"
+    },
+    "kicad_export": {
+      "status": "pass",
+      "required": true,
+      "issues": [],
+      "evidence": {
+        "sha256": "4069988fe776fdebd3a0ef7617817470996cc09244ea79b6d51077c64aa5603e",
+        "bytes": 11420
+      },
+      "reason": ""
+    },
+    "official_erc": {
+      "status": "pass",
+      "required": true,
+      "issues": [],
+      "evidence": {
+        "total": 0,
+        "by_type": {},
+        "violations": [],
+        "report": "data\\pcb_examples\\internal_05\\source_gates\\run_1410ec361b1c4c23bb7acdf7142f67ea\\candidate.erc.json"
+      },
+      "reason": ""
+    },
+    "official_netlist": {
+      "status": "pass",
+      "required": true,
+      "issues": [],
+      "evidence": {
+        "differences": [],
+        "net_count": 4
+      },
+      "reason": ""
+    }
+  },
+  "blocking_gates": [],
+  "artifacts": {
+    "schematic": "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_05\\source_gates\\run_1410ec361b1c4c23bb7acdf7142f67ea\\candidate.kicad_sch",
+    "project": "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_05\\source_gates\\run_1410ec361b1c4c23bb7acdf7142f67ea\\candidate.kicad_pro",
+    "netlist": "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_05\\source_gates\\run_1410ec361b1c4c23bb7acdf7142f67ea\\candidate.net"
+  }
+}

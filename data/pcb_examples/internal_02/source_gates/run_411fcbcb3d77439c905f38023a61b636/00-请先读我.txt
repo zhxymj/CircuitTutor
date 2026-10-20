@@ -1,0 +1,21 @@
+【请先读我】智绘电路 KiCad 导出包
+================================
+电路：candidate
+工程主名：candidate
+
+解压后请这样做（不要用「文件→导入」）
+--------------------------------------
+1. 解压 zip，进入文件夹 candidate/
+2. 双击 OPEN_IN_KICAD.bat（推荐），或
+   打开 KiCad → 打开工程 → 选 candidate.kicad_pro
+3. 在项目管理器双击 candidate.kicad_sch
+4. 若图纸空白：按 Home / 适合页面；也可先看 PREVIEW.svg
+
+为什么「导入」会啥都没有？
+--------------------------
+KiCad 的「导入」用于外部格式转换，不是打开本工程。
+本包已是标准 KiCad 工程（.kicad_pro + .kicad_sch + 符号库），
+GitHub 同类项目（dshills/KiCadAI、mikelenko/SolverSCH 等）同样
+交付完整工程目录，要求用户 Open Project，而不是 Import。
+
+详见同目录 HOW_TO_OPEN.txt

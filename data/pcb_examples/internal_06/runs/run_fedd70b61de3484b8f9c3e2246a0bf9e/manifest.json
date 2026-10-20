@@ -1,0 +1,116 @@
+{
+  "status": "unavailable",
+  "manufacturing_release": false,
+  "review_required": [
+    "electronic_engineer",
+    "fabricator"
+  ],
+  "run_dir": "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_06\\runs\\run_fedd70b61de3484b8f9c3e2246a0bf9e",
+  "board_sha256": "173f8d98cde7a65a8377ed7c30b926b7a74b68522634c03fc415e08258e01caa",
+  "pad_net_audit": {
+    "status": "pass",
+    "pads_audited": 12,
+    "nets_audited": 4,
+    "footprint_sha256": {
+      "J1": "8952158347d7b7cc13924c62dccb0c48911af892bb009a0de27cb4d3c25cc1bb",
+      "J2": "8952158347d7b7cc13924c62dccb0c48911af892bb009a0de27cb4d3c25cc1bb",
+      "R1": "949bbbe025b509557866ddd9fcb0403244571f3ceb4f954c9766ee622d18421c",
+      "R2": "949bbbe025b509557866ddd9fcb0403244571f3ceb4f954c9766ee622d18421c"
+    }
+  },
+  "drc": {
+    "status": "pass",
+    "counts": {
+      "violations": 0,
+      "unconnected_items": 0,
+      "schematic_parity": 0
+    },
+    "kicad_version": "10.0.6",
+    "source": "candidate.kicad_pcb",
+    "report_sha256": "20e9a63c4bfff0fa24bdaba6ef319933b9059b56724843f19d6d86094c17ee98"
+  },
+  "commands": [
+    {
+      "argv": [
+        "F:\\智绘电路工具链\\kicad\\bin\\kicad-cli.exe",
+        "pcb",
+        "drc",
+        "--format",
+        "json",
+        "--severity-all",
+        "--exit-code-violations",
+        "-o",
+        "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_06\\runs\\run_fedd70b61de3484b8f9c3e2246a0bf9e\\drc.json",
+        "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_06\\runs\\run_fedd70b61de3484b8f9c3e2246a0bf9e\\candidate.kicad_pcb"
+      ],
+      "exit_code": 0,
+      "stdout": "发现 0 条违规项\n发现 0 个未连接的项目\n保存 DRC 报告到 C:/Users/姚/Desktop/智绘电路-企业命题演示包/智绘电路/data/pcb_examples/internal_06/runs/run_fedd70b61de3484b8f9c3e2246a0bf9e/drc.json\n",
+      "stderr": "",
+      "elapsed_s": 1.011
+    },
+    {
+      "argv": [
+        "F:\\智绘电路工具链\\kicad\\bin\\kicad-cli.exe",
+        "pcb",
+        "export",
+        "gerbers",
+        "--layers",
+        "F.Cu,B.Cu,F.Mask,B.Mask,F.SilkS,Edge.Cuts",
+        "--output",
+        "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_06\\runs\\run_fedd70b61de3484b8f9c3e2246a0bf9e\\cam\\",
+        "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_06\\runs\\run_fedd70b61de3484b8f9c3e2246a0bf9e\\candidate.kicad_pcb"
+      ],
+      "exit_code": 0,
+      "stdout": "绘制到 'C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_06\\runs\\run_fedd70b61de3484b8f9c3e2246a0bf9e\\cam\\candidate-F_Cu.gtl'。\n绘制到 'C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_06\\runs\\run_fedd70b61de3484b8f9c3e2246a0bf9e\\cam\\candidate-B_Cu.gbl'。\n绘制到 'C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_06\\runs\\run_fedd70b61de3484b8f9c3e2246a0bf9e\\cam\\candidate-F_Silkscreen.gto'。\n绘制到 'C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_06\\runs\\run_fedd70b61de3484b8f9c3e2246a0bf9e\\cam\\candidate-F_Mask.gts'。\n绘制到 'C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_06\\runs\\run_fedd70b61de3484b8f9c3e2246a0bf9e\\cam\\candidate-B_Mask.gbs'。\n绘制到 'C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_06\\runs\\run_fedd70b61de3484b8f9c3e2246a0bf9e\\cam\\candidate-Edge_Cuts.gm1'。\n",
+      "stderr": "",
+      "elapsed_s": 0.598
+    },
+    {
+      "argv": [
+        "F:\\智绘电路工具链\\kicad\\bin\\kicad-cli.exe",
+        "pcb",
+        "export",
+        "drill",
+        "--format",
+        "excellon",
+        "--excellon-units",
+        "mm",
+        "--excellon-separate-th",
+        "--output",
+        "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_06\\runs\\run_fedd70b61de3484b8f9c3e2246a0bf9e\\cam\\",
+        "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_06\\runs\\run_fedd70b61de3484b8f9c3e2246a0bf9e\\candidate.kicad_pcb"
+      ],
+      "exit_code": 0,
+      "stdout": "已创建文件 'C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_06\\runs\\run_fedd70b61de3484b8f9c3e2246a0bf9e\\cam\\candidate-PTH.drl'\n已创建文件 'C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_06\\runs\\run_fedd70b61de3484b8f9c3e2246a0bf9e\\cam\\candidate-NPTH.drl'\n完成。\n",
+      "stderr": "",
+      "elapsed_s": 0.438
+    },
+    {
+      "argv": [
+        "F:\\智绘电路工具链\\kicad\\bin\\kicad-cli.exe",
+        "pcb",
+        "export",
+        "pos",
+        "--format",
+        "csv",
+        "--units",
+        "mm",
+        "--side",
+        "both",
+        "--output",
+        "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_06\\runs\\run_fedd70b61de3484b8f9c3e2246a0bf9e\\cam\\positions.csv",
+        "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_06\\runs\\run_fedd70b61de3484b8f9c3e2246a0bf9e\\candidate.kicad_pcb"
+      ],
+      "exit_code": 0,
+      "stdout": "Wrote position data to 'C:\\Users\\",
+      "stderr": "",
+      "elapsed_s": 0.433
+    }
+  ],
+  "artifacts": [],
+  "failure": {
+    "code": "export_incomplete",
+    "message": "未生成非空 Gerber 层 F_Cu.gbr"
+  },
+  "manifest_path": "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_06\\runs\\run_fedd70b61de3484b8f9c3e2246a0bf9e\\manifest.json"
+}

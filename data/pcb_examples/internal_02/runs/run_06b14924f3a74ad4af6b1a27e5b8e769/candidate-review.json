@@ -1,0 +1,61 @@
+{
+  "manufacturing_release": false,
+  "review_required": [
+    "electronic_engineer",
+    "fabricator"
+  ],
+  "board_sha256": "1f3255869d5a6dab2512d5dbf9eeb63e1ca95eced82dfdb2efabb5e0d2a97327",
+  "drc": {
+    "status": "pass",
+    "counts": {
+      "violations": 0,
+      "unconnected_items": 0,
+      "schematic_parity": 0
+    },
+    "kicad_version": "10.0.6",
+    "source": "candidate.kicad_pcb",
+    "official_schematic_parity_checked": true,
+    "report_sha256": "e020e6384b1993226cd8a272621036dd63676c184afb70a32574b73dce336487"
+  },
+  "pad_net_audit": {
+    "status": "pass",
+    "pads_audited": 8,
+    "nets_audited": 4,
+    "footprint_sha256": {
+      "J1": "8952158347d7b7cc13924c62dccb0c48911af892bb009a0de27cb4d3c25cc1bb",
+      "R1": "949bbbe025b509557866ddd9fcb0403244571f3ceb4f954c9766ee622d18421c",
+      "R2": "949bbbe025b509557866ddd9fcb0403244571f3ceb4f954c9766ee622d18421c"
+    }
+  },
+  "source_erc": {
+    "status": "pass",
+    "count": 0,
+    "kicad_version": "10.0.6",
+    "report_sha256": "f2ba6448623eafd78bcf64740d1cdf8aaabbfcbf45ac7c5e4c46feb17f7ce358"
+  },
+  "source_netlist": {
+    "status": "pass",
+    "differences": [],
+    "net_count": 4,
+    "report_sha256": "bd31f68ca4306d1f574e0d1f8b247077871fdb49aa94708074aa3bef0d0e87b6"
+  },
+  "source_sha256": "0ec0688c475370eb20eeab0b7c24131c65948e91919fc5cf5254aac128484e60",
+  "provenance": {
+    "origin": "manual",
+    "source_id": "internal-pcb-02"
+  },
+  "engineering_example": {
+    "classification": "internal_engineering_example",
+    "topology": "i2c_1_port_pullup_adapter",
+    "ports": 1,
+    "independent_external_sample": false,
+    "review_required": true,
+    "sources": [
+      "https://www.samtec.com/products/tsw-104-07-g-s",
+      "https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-074K7L",
+      "https://gitlab.com/kicad/libraries/kicad-footprints"
+    ],
+    "pin_assignment": "Design choice: pad1=GND,pad2=VCC,pad3=SDA,pad4=SCL; not a universal cable standard",
+    "assumptions": "External MCU/sensor use the same voltage; bus capacitance/speed and existing pullups must be reviewed"
+  }
+}

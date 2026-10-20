@@ -1,0 +1,5 @@
+Ref,Val,Package,PosX,PosY,Rot,Side
+"J1","I2C GND VCC SDA SCL","PinHeader_1x04_P2.54mm_Vertical",8.000000,-8.000000,0.000000,top
+"J2","I2C GND VCC SDA SCL","PinHeader_1x04_P2.54mm_Vertical",28.000000,-8.000000,0.000000,top
+"R1","4.7k","R_0805_2012Metric",16.000000,-13.080000,0.000000,top
+"R2","4.7k","R_0805_2012Metric",21.000000,-15.620000,0.000000,top

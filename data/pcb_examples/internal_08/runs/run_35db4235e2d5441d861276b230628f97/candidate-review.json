@@ -1,0 +1,63 @@
+{
+  "manufacturing_release": false,
+  "review_required": [
+    "electronic_engineer",
+    "fabricator"
+  ],
+  "board_sha256": "11e3dcd2409bac1a8f85dccb5217e664214a9cebfe47fe6d8a86a16e2699838f",
+  "drc": {
+    "status": "pass",
+    "counts": {
+      "violations": 0,
+      "unconnected_items": 0,
+      "schematic_parity": 0
+    },
+    "kicad_version": "10.0.6",
+    "source": "candidate.kicad_pcb",
+    "official_schematic_parity_checked": true,
+    "report_sha256": "e02b790f69a59c0a87d32794d9dfd8cf1ca8bb39a148140fd661cef5569bd60d"
+  },
+  "pad_net_audit": {
+    "status": "pass",
+    "pads_audited": 16,
+    "nets_audited": 4,
+    "footprint_sha256": {
+      "J1": "8952158347d7b7cc13924c62dccb0c48911af892bb009a0de27cb4d3c25cc1bb",
+      "J2": "8952158347d7b7cc13924c62dccb0c48911af892bb009a0de27cb4d3c25cc1bb",
+      "J3": "8952158347d7b7cc13924c62dccb0c48911af892bb009a0de27cb4d3c25cc1bb",
+      "R1": "949bbbe025b509557866ddd9fcb0403244571f3ceb4f954c9766ee622d18421c",
+      "R2": "949bbbe025b509557866ddd9fcb0403244571f3ceb4f954c9766ee622d18421c"
+    }
+  },
+  "source_erc": {
+    "status": "pass",
+    "count": 0,
+    "kicad_version": "10.0.6",
+    "report_sha256": "672f9edff8eabd07d00d669e6fcd179e146208885eea3cb73e11c79f8f37e17e"
+  },
+  "source_netlist": {
+    "status": "pass",
+    "differences": [],
+    "net_count": 4,
+    "report_sha256": "c388bcc756e45276339938ac457992ed0ed77e6b5a72384e85550e806e724d7b"
+  },
+  "source_sha256": "fdb23abb3dfc5bee49ffcdd19921706161c8c4deff6b7366f5fb924ccdac30f5",
+  "provenance": {
+    "origin": "manual",
+    "source_id": "internal-pcb-08"
+  },
+  "engineering_example": {
+    "classification": "internal_engineering_example",
+    "topology": "i2c_3_port_pullup_adapter",
+    "ports": 3,
+    "independent_external_sample": false,
+    "review_required": true,
+    "sources": [
+      "https://www.samtec.com/products/tsw-104-07-g-s",
+      "https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-074K7L",
+      "https://gitlab.com/kicad/libraries/kicad-footprints"
+    ],
+    "pin_assignment": "Design choice: pad1=GND,pad2=VCC,pad3=SDA,pad4=SCL; not a universal cable standard",
+    "assumptions": "External MCU/sensor use the same voltage; bus capacitance/speed and existing pullups must be reviewed"
+  }
+}

@@ -1,0 +1,239 @@
+{
+  "date": "2026-09-26T10:16:24.349Z",
+  "runtime": "tesseract.js@7.0.0",
+  "language": "eng/4.0.0_best_int",
+  "input": "MIT upstream printed iec-structured.png, manual oracle text crops",
+  "scope": "Oracle text-region OCR smoke test on one upstream printed schematic; not end-to-end text detection accuracy or handwriting accuracy.",
+  "elapsed_ms": 428,
+  "matched": 3,
+  "total": 15,
+  "results": [
+    {
+      "expected": "8V",
+      "prediction": "[X",
+      "exact_match": false,
+      "confidence": 23,
+      "normalized_prediction": "ii",
+      "normalized_exact_match": false,
+      "normalized_confidence": 35,
+      "rectangle": {
+        "left": 15,
+        "top": 33,
+        "width": 25,
+        "height": 30
+      }
+    },
+    {
+      "expected": "F1",
+      "prediction": "3]",
+      "exact_match": false,
+      "confidence": 50,
+      "normalized_prediction": "Fi",
+      "normalized_exact_match": false,
+      "normalized_confidence": 39,
+      "rectangle": {
+        "left": 90,
+        "top": 64,
+        "width": 23,
+        "height": 27
+      }
+    },
+    {
+      "expected": "0.25A",
+      "prediction": "0.254",
+      "exact_match": false,
+      "confidence": 68,
+      "normalized_prediction": "0.284",
+      "normalized_exact_match": false,
+      "normalized_confidence": 55,
+      "rectangle": {
+        "left": 78,
+        "top": 89,
+        "width": 39,
+        "height": 29
+      }
+    },
+    {
+      "expected": "9.1V",
+      "prediction": "(AV)",
+      "exact_match": false,
+      "confidence": 39,
+      "normalized_prediction": "Iv",
+      "normalized_exact_match": false,
+      "normalized_confidence": 0,
+      "rectangle": {
+        "left": 204,
+        "top": 131,
+        "width": 35,
+        "height": 29
+      }
+    },
+    {
+      "expected": "ZD1",
+      "prediction": "m",
+      "exact_match": false,
+      "confidence": 76,
+      "normalized_prediction": "0",
+      "normalized_exact_match": false,
+      "normalized_confidence": 77,
+      "rectangle": {
+        "left": 204,
+        "top": 159,
+        "width": 34,
+        "height": 31
+      }
+    },
+    {
+      "expected": "C1",
+      "prediction": "[4]",
+      "exact_match": false,
+      "confidence": 69,
+      "normalized_prediction": "(1",
+      "normalized_exact_match": false,
+      "normalized_confidence": 73,
+      "rectangle": {
+        "left": 104,
+        "top": 246,
+        "width": 22,
+        "height": 28
+      }
+    },
+    {
+      "expected": "100nF",
+      "prediction": "100nF",
+      "exact_match": true,
+      "confidence": 38,
+      "normalized_prediction": "100nF",
+      "normalized_exact_match": true,
+      "normalized_confidence": 39,
+      "rectangle": {
+        "left": 86,
+        "top": 276,
+        "width": 40,
+        "height": 31
+      }
+    },
+    {
+      "expected": "R1",
+      "prediction": "R1",
+      "exact_match": true,
+      "confidence": 3,
+      "normalized_prediction": "Rl",
+      "normalized_exact_match": false,
+      "normalized_confidence": 50,
+      "rectangle": {
+        "left": 205,
+        "top": 352,
+        "width": 24,
+        "height": 30
+      }
+    },
+    {
+      "expected": "1K",
+      "prediction": "1K",
+      "exact_match": true,
+      "confidence": 83,
+      "normalized_prediction": "K",
+      "normalized_exact_match": false,
+      "normalized_confidence": 0,
+      "rectangle": {
+        "left": 204,
+        "top": 378,
+        "width": 24,
+        "height": 31
+      }
+    },
+    {
+      "expected": "C2",
+      "prediction": "02",
+      "exact_match": false,
+      "confidence": 80,
+      "normalized_prediction": "(2",
+      "normalized_exact_match": false,
+      "normalized_confidence": 85,
+      "rectangle": {
+        "left": 274,
+        "top": 352,
+        "width": 26,
+        "height": 30
+      }
+    },
+    {
+      "expected": "47nF",
+      "prediction": "inf",
+      "exact_match": false,
+      "confidence": 17,
+      "normalized_prediction": "iF",
+      "normalized_exact_match": false,
+      "normalized_confidence": 43,
+      "rectangle": {
+        "left": 268,
+        "top": 380,
+        "width": 35,
+        "height": 31
+      }
+    },
+    {
+      "expected": "SD1",
+      "prediction": "S01",
+      "exact_match": false,
+      "confidence": 50,
+      "normalized_prediction": "S01",
+      "normalized_exact_match": false,
+      "normalized_confidence": 51,
+      "rectangle": {
+        "left": 354,
+        "top": 95,
+        "width": 32,
+        "height": 31
+      }
+    },
+    {
+      "expected": "Q1",
+      "prediction": "[I",
+      "exact_match": false,
+      "confidence": 52,
+      "normalized_prediction": "I]",
+      "normalized_exact_match": false,
+      "normalized_confidence": 66,
+      "rectangle": {
+        "left": 341,
+        "top": 270,
+        "width": 27,
+        "height": 31
+      }
+    },
+    {
+      "expected": "Load",
+      "prediction": "0",
+      "exact_match": false,
+      "confidence": 96,
+      "normalized_prediction": "0",
+      "normalized_exact_match": false,
+      "normalized_confidence": 93,
+      "rectangle": {
+        "left": 408,
+        "top": 297,
+        "width": 34,
+        "height": 29
+      }
+    },
+    {
+      "expected": "0V",
+      "prediction": "ov",
+      "exact_match": false,
+      "confidence": 72,
+      "normalized_prediction": "0",
+      "normalized_exact_match": false,
+      "normalized_confidence": 42,
+      "rectangle": {
+        "left": 15,
+        "top": 487,
+        "width": 24,
+        "height": 31
+      }
+    }
+  ],
+  "normalized_matched": 1,
+  "normalization": "Fixed threshold 190, nearest-neighbor 3x and white margin 8px, applied identically to every oracle text crop; same development image, no holdout claim."
+}

@@ -1,0 +1,14 @@
+{
+  "feature": "Offline TSX/JSX circuit generation",
+  "upstream_entry": "third_party/upstream/tscircuit/index.ts",
+  "repository": "https://github.com/tscircuit/tscircuit",
+  "license_file": "third_party/upstream/tscircuit/LICENSE",
+  "reuse": [
+    {"package": "@tscircuit/eval", "version": "0.0.1619", "repository": "https://github.com/tscircuit/eval", "license": "MIT", "functions": ["CircuitRunner.setDisableCdnLoading", "CircuitRunner.executeWithFsMap", "CircuitRunner.renderUntilSettled", "CircuitRunner.getCircuitJson"]},
+    {"package": "@tscircuit/core", "version": "0.0.2156", "repository": "https://github.com/tscircuit/core", "license": "MIT", "functions": ["RootCircuit (used by CircuitRunner)"]},
+    {"package": "circuit-to-svg", "version": "0.0.450", "repository": "https://github.com/tscircuit/circuit-to-svg", "license": "ISC", "functions": ["convertCircuitJsonToSchematicSvg"]}
+  ],
+  "runtime": "Existing local npm installation at TSCIRCUIT_PREFIX or runtime/tscircuit; existing sibling toolchain is also discovered. No downloads or dependency installation occur.",
+  "project_code": "core/tscircuit_engine.py and tools/tscircuit_worker.mjs are integration code. npm dependency trees and upstream libraries are reused third-party code, not project inventions.",
+  "conversion": "Reuses core.external_import._tscircuit, including all-or-nothing component conversion and existing CircuitJSON validation. Generated candidates require the existing electrical validation and human review."
+}

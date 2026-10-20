@@ -1,0 +1,6891 @@
+{
+  "schema_version": "2.0",
+  "dataset_sha256": "6d0bd70a6081a64f5f02b0e7aea155919b046c36937ef48bdbdb9c25dc2cef9c",
+  "run_metadata": {
+    "mode": "deterministic_offline_preflight",
+    "model_calls": 0,
+    "created_at": "2026-09-26T10:10:30.073636+00:00",
+    "core_sha256": {
+      "catalog.py": "38d992a0dffaf7da32944fab94e7a91e66c72aaeb76cc0bee8b075d4b3a45614",
+      "clarify.py": "07ecfbd092c9b7fd1a35ba6883662580227cb89ba1cf470f99bbcba2a8424813",
+      "llm.py": "810927255cc8ae708cbbd72c12a3ce2cbaffc9401124f8c4a0ce763aff12cd71",
+      "intent_constraints.py": "e3b108959c9a99121b59e74aecc7b33644c9db432a688c4b2f7c878955181661"
+    }
+  },
+  "dataset_metadata": {
+    "schema_version": "2.0",
+    "dataset_kind": "internal_original_requirements",
+    "created_on": "2026-09-26",
+    "scenario": "5V/3.3V MCU 与 I2C 传感接口子板",
+    "source_license": "project_original",
+    "external_examples_imported": 0,
+    "reference_circuit_count": 0,
+    "case_group_count": 30,
+    "task_count": 80,
+    "holdout_task_count": 20,
+    "split_policy": "同一案例的任务只在一个划分中；相关族可能跨划分",
+    "training_use": "未用于训练",
+    "holdout_status": "内部预留分区，非独立盲测",
+    "T03_external_circuit_goal_met": false,
+    "limitations": [
+      "内部原创需求合同，未附30个独立外部电路或已验证网表",
+      "任务变体属于同一案例；30个场景不能当成30个真实独立泛化样本",
+      "元件参数与最终电路仍需电子工程师和具体器件数据手册复核",
+      "留出分区按案例组隔离，但同族场景可能重叠且开发者已查看标注"
+    ]
+  },
+  "acceptance": {
+    "case_groups": 30,
+    "tasks": 80,
+    "split_tasks": {
+      "dev": 60,
+      "holdout": 20
+    },
+    "categories": {
+      "explicit": 30,
+      "ambiguous": 20,
+      "unsupported_model": 15,
+      "negative": 15
+    },
+    "split_categories": {
+      "dev": {
+        "explicit": 20,
+        "ambiguous": 17,
+        "unsupported_model": 11,
+        "negative": 12
+      },
+      "holdout": {
+        "explicit": 10,
+        "negative": 3,
+        "unsupported_model": 4,
+        "ambiguous": 3
+      }
+    },
+    "related_families_in_both_splits": [
+      "external_header",
+      "regulated_board",
+      "sensor_display",
+      "single_sensor"
+    ],
+    "external_reference_circuits": 0,
+    "T03_complete": false,
+    "internal_count_target_met": true
+  },
+  "summary": {
+    "tasks": 80,
+    "preflight_disposition_matches": 80,
+    "catalog_selection_correct": 80,
+    "unsupported_detection_correct": 80,
+    "negative_tasks": 15,
+    "negative_text_rule_matches": 15,
+    "unexpected_blockers_on_nonnegative_tasks": 0,
+    "required_type_total": 213,
+    "required_type_found": 213,
+    "total_elapsed_ms": 349.524
+  },
+  "by_split": {
+    "dev": {
+      "tasks": 60,
+      "preflight_disposition_matches": 60,
+      "catalog_selection_correct": 60,
+      "unsupported_detection_correct": 60,
+      "negative_tasks": 12,
+      "negative_text_rule_matches": 12,
+      "unexpected_blockers_on_nonnegative_tasks": 0,
+      "required_type_total": 153,
+      "required_type_found": 153,
+      "total_elapsed_ms": 264.104
+    },
+    "holdout": {
+      "tasks": 20,
+      "preflight_disposition_matches": 20,
+      "catalog_selection_correct": 20,
+      "unsupported_detection_correct": 20,
+      "negative_tasks": 3,
+      "negative_text_rule_matches": 3,
+      "unexpected_blockers_on_nonnegative_tasks": 0,
+      "required_type_total": 60,
+      "required_type_found": 60,
+      "total_elapsed_ms": 85.42
+    }
+  },
+  "by_category": {
+    "explicit": {
+      "tasks": 30,
+      "preflight_disposition_matches": 30,
+      "catalog_selection_correct": 30,
+      "unsupported_detection_correct": 30,
+      "negative_tasks": 0,
+      "negative_text_rule_matches": 0,
+      "unexpected_blockers_on_nonnegative_tasks": 0,
+      "required_type_total": 92,
+      "required_type_found": 92,
+      "total_elapsed_ms": 151.47
+    },
+    "ambiguous": {
+      "tasks": 20,
+      "preflight_disposition_matches": 20,
+      "catalog_selection_correct": 20,
+      "unsupported_detection_correct": 20,
+      "negative_tasks": 0,
+      "negative_text_rule_matches": 0,
+      "unexpected_blockers_on_nonnegative_tasks": 0,
+      "required_type_total": 45,
+      "required_type_found": 45,
+      "total_elapsed_ms": 78.787
+    },
+    "unsupported_model": {
+      "tasks": 15,
+      "preflight_disposition_matches": 15,
+      "catalog_selection_correct": 15,
+      "unsupported_detection_correct": 15,
+      "negative_tasks": 0,
+      "negative_text_rule_matches": 0,
+      "unexpected_blockers_on_nonnegative_tasks": 0,
+      "required_type_total": 29,
+      "required_type_found": 29,
+      "total_elapsed_ms": 54.734
+    },
+    "negative": {
+      "tasks": 15,
+      "preflight_disposition_matches": 15,
+      "catalog_selection_correct": 15,
+      "unsupported_detection_correct": 15,
+      "negative_tasks": 15,
+      "negative_text_rule_matches": 15,
+      "unexpected_blockers_on_nonnegative_tasks": 0,
+      "required_type_total": 47,
+      "required_type_found": 47,
+      "total_elapsed_ms": 64.533
+    }
+  },
+  "records": [
+    {
+      "task_id": "C01_T1",
+      "case_id": "C01",
+      "split": "dev",
+      "category": "explicit",
+      "expected_disposition": "plan",
+      "observed_preflight_disposition": "plan",
+      "disposition_match": true,
+      "required_types": [
+        "atmega328",
+        "bmp280"
+      ],
+      "selected_types": [
+        "atmega328",
+        "bmp280",
+        "capacitor",
+        "gnd",
+        "resistor"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "atmega328",
+          "name": "ATmega328",
+          "alias": "atmega328p",
+          "position": 5,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 30,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "resistor",
+          "name": "电阻",
+          "alias": "上拉电阻",
+          "position": 57,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "capacitor",
+          "name": "电容",
+          "alias": "去耦电容",
+          "position": 69,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "gnd",
+          "name": "接地",
+          "alias": "地",
+          "position": 76,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 23.246,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C01_T2",
+      "case_id": "C01",
+      "split": "dev",
+      "category": "ambiguous",
+      "expected_disposition": "clarify",
+      "observed_preflight_disposition": "clarify",
+      "disposition_match": true,
+      "required_types": [
+        "bmp280"
+      ],
+      "selected_types": [
+        "bmp280"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [
+        "controller_model"
+      ],
+      "clarify_questions": [
+        {
+          "question": "I2C 主控具体使用哪一型号？",
+          "options": [
+            "ATmega328P",
+            "ESP32-WROOM",
+            "其他型号（请写明）"
+          ],
+          "reason": "主控型号决定 SDA/SCL 的真实引脚与供电范围"
+        }
+      ],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 17,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 4.329,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C01_T3",
+      "case_id": "C01",
+      "split": "dev",
+      "category": "unsupported_model",
+      "expected_disposition": "reject",
+      "observed_preflight_disposition": "reject",
+      "disposition_match": true,
+      "required_types": [
+        "bmp280"
+      ],
+      "selected_types": [
+        "bmp280"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [
+        "STM32F103"
+      ],
+      "observed_unsupported_models": [
+        "STM32F103"
+      ],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 14,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 3.366,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C02_T1",
+      "case_id": "C02",
+      "split": "dev",
+      "category": "explicit",
+      "expected_disposition": "plan",
+      "observed_preflight_disposition": "plan",
+      "disposition_match": true,
+      "required_types": [
+        "esp32",
+        "mpu6050"
+      ],
+      "selected_types": [
+        "capacitor",
+        "esp32",
+        "gnd",
+        "mpu6050",
+        "resistor"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "esp32",
+          "name": "ESP32模块",
+          "alias": "esp32",
+          "position": 0,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "mpu6050",
+          "name": "陀螺仪加速度计",
+          "alias": "mpu6050",
+          "position": 14,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "gnd",
+          "name": "接地",
+          "alias": "接地",
+          "position": 61,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "resistor",
+          "name": "电阻",
+          "alias": "上拉电阻",
+          "position": 68,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "capacitor",
+          "name": "电容",
+          "alias": "去耦电容",
+          "position": 76,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 4.424,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C02_T2",
+      "case_id": "C02",
+      "split": "dev",
+      "category": "negative",
+      "expected_disposition": "reject",
+      "observed_preflight_disposition": "reject",
+      "disposition_match": true,
+      "required_types": [
+        "esp32",
+        "mpu6050"
+      ],
+      "selected_types": [
+        "esp32",
+        "mpu6050"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [
+        "SDA_SCL_SHORT"
+      ],
+      "requirement_blockers": [
+        {
+          "rule_id": "SDA_SCL_SHORT",
+          "severity": "error",
+          "message": "SDA 和 SCL 必须保留为不同信号网络，不能按要求短接。",
+          "evidence": "把 SDA 和 SCL 短接成一条导线以节约空间",
+          "span": [
+            27,
+            51
+          ],
+          "source": "explicit_requirement_rule"
+        }
+      ],
+      "observed_negative_rule_ids": [
+        "SDA_SCL_SHORT"
+      ],
+      "negative_rule_detection": true,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "esp32",
+          "name": "ESP32模块",
+          "alias": "esp32",
+          "position": 5,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "mpu6050",
+          "name": "陀螺仪加速度计",
+          "alias": "mpu6050",
+          "position": 13,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 4.018,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C02_T3",
+      "case_id": "C02",
+      "split": "dev",
+      "category": "ambiguous",
+      "expected_disposition": "clarify",
+      "observed_preflight_disposition": "clarify",
+      "disposition_match": true,
+      "required_types": [
+        "esp32",
+        "mpu6050"
+      ],
+      "selected_types": [
+        "battery",
+        "esp32",
+        "mpu6050"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [
+        "bus_voltage"
+      ],
+      "clarify_questions": [
+        {
+          "question": "I2C 总线和器件使用什么电压？",
+          "options": [
+            "全部 3.3V",
+            "全部 5V（器件均须支持）",
+            "5V 主控与 3.3V 从设备（需电平转换）"
+          ],
+          "reason": "总线电压决定上拉电源及器件输入是否兼容"
+        }
+      ],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "esp32",
+          "name": "ESP32模块",
+          "alias": "esp32",
+          "position": 0,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "mpu6050",
+          "name": "陀螺仪加速度计",
+          "alias": "mpu6050",
+          "position": 9,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "battery",
+          "name": "电池/直流源",
+          "alias": "供电",
+          "position": 27,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 4.171,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C03_T1",
+      "case_id": "C03",
+      "split": "dev",
+      "category": "explicit",
+      "expected_disposition": "plan",
+      "observed_preflight_disposition": "plan",
+      "disposition_match": true,
+      "required_types": [
+        "atmega328",
+        "oled_ssd1306"
+      ],
+      "selected_types": [
+        "atmega328",
+        "capacitor",
+        "oled_ssd1306",
+        "resistor"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "atmega328",
+          "name": "ATmega328",
+          "alias": "atmega328p",
+          "position": 0,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "oled_ssd1306",
+          "name": "OLED屏",
+          "alias": "ssd1306",
+          "position": 25,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "resistor",
+          "name": "电阻",
+          "alias": "上拉电阻",
+          "position": 60,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "capacitor",
+          "name": "电容",
+          "alias": "去耦电容",
+          "position": 71,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 4.465,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C03_T2",
+      "case_id": "C03",
+      "split": "dev",
+      "category": "ambiguous",
+      "expected_disposition": "clarify",
+      "observed_preflight_disposition": "clarify",
+      "disposition_match": true,
+      "required_types": [
+        "atmega328"
+      ],
+      "selected_types": [
+        "atmega328"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [
+        "device_model"
+      ],
+      "clarify_questions": [
+        {
+          "question": "I2C 从设备具体使用哪一型号？",
+          "options": [
+            "BMP280",
+            "MPU6050",
+            "SSD1306 OLED",
+            "其他型号（请写明）"
+          ],
+          "reason": "不同从设备的引脚、供电和地址配置不同"
+        }
+      ],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "atmega328",
+          "name": "ATmega328",
+          "alias": "atmega328p",
+          "position": 5,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 3.309,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C03_T3",
+      "case_id": "C03",
+      "split": "dev",
+      "category": "unsupported_model",
+      "expected_disposition": "reject",
+      "observed_preflight_disposition": "reject",
+      "disposition_match": true,
+      "required_types": [
+        "atmega328"
+      ],
+      "selected_types": [
+        "atmega328",
+        "oled_ssd1306"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [
+        "SH1106"
+      ],
+      "observed_unsupported_models": [
+        "SH1106"
+      ],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "atmega328",
+          "name": "ATmega328",
+          "alias": "atmega328p",
+          "position": 5,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "oled_ssd1306",
+          "name": "OLED屏",
+          "alias": "ssd1306",
+          "position": 43,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 3.638,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C04_T1",
+      "case_id": "C04",
+      "split": "dev",
+      "category": "explicit",
+      "expected_disposition": "plan",
+      "observed_preflight_disposition": "plan",
+      "disposition_match": true,
+      "required_types": [
+        "esp32",
+        "bmp280",
+        "mpu6050"
+      ],
+      "selected_types": [
+        "bmp280",
+        "capacitor",
+        "esp32",
+        "gnd",
+        "mpu6050",
+        "resistor"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "esp32",
+          "name": "ESP32模块",
+          "alias": "esp32",
+          "position": 5,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 14,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "mpu6050",
+          "name": "陀螺仪加速度计",
+          "alias": "mpu6050",
+          "position": 23,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "resistor",
+          "name": "电阻",
+          "alias": "上拉电阻",
+          "position": 67,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "capacitor",
+          "name": "电容",
+          "alias": "去耦电容",
+          "position": 74,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "gnd",
+          "name": "接地",
+          "alias": "地",
+          "position": 80,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 4.621,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C04_T2",
+      "case_id": "C04",
+      "split": "dev",
+      "category": "negative",
+      "expected_disposition": "reject",
+      "observed_preflight_disposition": "reject",
+      "disposition_match": true,
+      "required_types": [
+        "esp32",
+        "bmp280",
+        "mpu6050"
+      ],
+      "selected_types": [
+        "bmp280",
+        "esp32",
+        "gnd",
+        "mpu6050"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [
+        "NO_COMMON_GROUND"
+      ],
+      "requirement_blockers": [
+        {
+          "rule_id": "NO_COMMON_GROUND",
+          "severity": "error",
+          "message": "I2C 两侧被要求不共地且未声明有效隔离器，需明确公共参考地或隔离方案。",
+          "evidence": "禁止接任何公共地",
+          "span": [
+            33,
+            41
+          ],
+          "source": "explicit_requirement_rule"
+        }
+      ],
+      "observed_negative_rule_ids": [
+        "NO_COMMON_GROUND"
+      ],
+      "negative_rule_detection": true,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "esp32",
+          "name": "ESP32模块",
+          "alias": "esp32",
+          "position": 5,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 11,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "mpu6050",
+          "name": "陀螺仪加速度计",
+          "alias": "mpu6050",
+          "position": 18,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "gnd",
+          "name": "接地",
+          "alias": "公共地",
+          "position": 38,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 3.951,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C04_T3",
+      "case_id": "C04",
+      "split": "dev",
+      "category": "ambiguous",
+      "expected_disposition": "clarify",
+      "observed_preflight_disposition": "clarify",
+      "disposition_match": true,
+      "required_types": [
+        "esp32",
+        "bmp280",
+        "mpu6050"
+      ],
+      "selected_types": [
+        "battery",
+        "bmp280",
+        "esp32",
+        "mpu6050"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [
+        "bus_voltage"
+      ],
+      "clarify_questions": [
+        {
+          "question": "I2C 总线和器件使用什么电压？",
+          "options": [
+            "全部 3.3V",
+            "全部 5V（器件均须支持）",
+            "5V 主控与 3.3V 从设备（需电平转换）"
+          ],
+          "reason": "总线电压决定上拉电源及器件输入是否兼容"
+        }
+      ],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "esp32",
+          "name": "ESP32模块",
+          "alias": "esp32",
+          "position": 0,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 8,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "mpu6050",
+          "name": "陀螺仪加速度计",
+          "alias": "mpu6050",
+          "position": 15,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "battery",
+          "name": "电池/直流源",
+          "alias": "供电",
+          "position": 32,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 3.482,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C05_T1",
+      "case_id": "C05",
+      "split": "dev",
+      "category": "explicit",
+      "expected_disposition": "plan",
+      "observed_preflight_disposition": "plan",
+      "disposition_match": true,
+      "required_types": [
+        "atmega328",
+        "bmp280",
+        "oled_ssd1306"
+      ],
+      "selected_types": [
+        "atmega328",
+        "bmp280",
+        "gnd",
+        "oled_ssd1306",
+        "resistor"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "atmega328",
+          "name": "ATmega328",
+          "alias": "atmega328p",
+          "position": 5,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 27,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "oled_ssd1306",
+          "name": "OLED屏",
+          "alias": "ssd1306",
+          "position": 36,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "gnd",
+          "name": "接地",
+          "alias": "地",
+          "position": 53,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "resistor",
+          "name": "电阻",
+          "alias": "上拉电阻",
+          "position": 64,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 4.42,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C05_T2",
+      "case_id": "C05",
+      "split": "dev",
+      "category": "ambiguous",
+      "expected_disposition": "clarify",
+      "observed_preflight_disposition": "clarify",
+      "disposition_match": true,
+      "required_types": [
+        "atmega328"
+      ],
+      "selected_types": [
+        "atmega328",
+        "bmp280"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [
+        "device_models"
+      ],
+      "clarify_questions": [
+        {
+          "question": "I2C 从设备具体使用哪一型号？",
+          "options": [
+            "BMP280",
+            "MPU6050",
+            "SSD1306 OLED",
+            "其他型号（请写明）"
+          ],
+          "reason": "不同从设备的引脚、供电和地址配置不同"
+        }
+      ],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "atmega328",
+          "name": "ATmega328",
+          "alias": "atmega328p",
+          "position": 5,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "气压传感器",
+          "position": 18,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 3.956,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C05_T3",
+      "case_id": "C05",
+      "split": "dev",
+      "category": "unsupported_model",
+      "expected_disposition": "reject",
+      "observed_preflight_disposition": "reject",
+      "disposition_match": true,
+      "required_types": [
+        "atmega328",
+        "oled_ssd1306"
+      ],
+      "selected_types": [
+        "atmega328",
+        "oled_ssd1306"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [
+        "BME680"
+      ],
+      "observed_unsupported_models": [
+        "BME680"
+      ],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "atmega328",
+          "name": "ATmega328",
+          "alias": "atmega328p",
+          "position": 5,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "oled_ssd1306",
+          "name": "OLED屏",
+          "alias": "ssd1306",
+          "position": 27,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 3.776,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C06_T1",
+      "case_id": "C06",
+      "split": "dev",
+      "category": "explicit",
+      "expected_disposition": "plan",
+      "observed_preflight_disposition": "plan",
+      "disposition_match": true,
+      "required_types": [
+        "esp32",
+        "mpu6050",
+        "oled_ssd1306"
+      ],
+      "selected_types": [
+        "capacitor",
+        "esp32",
+        "mpu6050",
+        "oled_ssd1306",
+        "resistor"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "esp32",
+          "name": "ESP32模块",
+          "alias": "esp32",
+          "position": 5,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "mpu6050",
+          "name": "陀螺仪加速度计",
+          "alias": "mpu6050",
+          "position": 26,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "oled_ssd1306",
+          "name": "OLED屏",
+          "alias": "ssd1306",
+          "position": 36,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "resistor",
+          "name": "电阻",
+          "alias": "上拉电阻",
+          "position": 55,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "capacitor",
+          "name": "电容",
+          "alias": "去耦电容",
+          "position": 65,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 4.499,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C06_T2",
+      "case_id": "C06",
+      "split": "dev",
+      "category": "negative",
+      "expected_disposition": "reject",
+      "observed_preflight_disposition": "reject",
+      "disposition_match": true,
+      "required_types": [
+        "esp32",
+        "mpu6050",
+        "oled_ssd1306"
+      ],
+      "selected_types": [
+        "battery",
+        "esp32",
+        "mpu6050",
+        "oled_ssd1306"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [
+        "SIGNAL_TIED_TO_SUPPLY"
+      ],
+      "requirement_blockers": [
+        {
+          "rule_id": "SIGNAL_TIED_TO_SUPPLY",
+          "severity": "error",
+          "message": "信号脚被要求固定到电源，无法保持正常信号切换；请明确驱动或上拉路径。",
+          "evidence": "将 ESP32 的 GPIO21/SDA 直接焊到 3.3V 电源",
+          "span": [
+            39,
+            72
+          ],
+          "source": "explicit_requirement_rule"
+        }
+      ],
+      "observed_negative_rule_ids": [
+        "SIGNAL_TIED_TO_SUPPLY"
+      ],
+      "negative_rule_detection": true,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "esp32",
+          "name": "ESP32模块",
+          "alias": "esp32",
+          "position": 0,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "mpu6050",
+          "name": "陀螺仪加速度计",
+          "alias": "mpu6050",
+          "position": 6,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "oled_ssd1306",
+          "name": "OLED屏",
+          "alias": "ssd1306",
+          "position": 14,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "battery",
+          "name": "电池/直流源",
+          "alias": "电源",
+          "position": 70,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 4.429,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C06_T3",
+      "case_id": "C06",
+      "split": "dev",
+      "category": "ambiguous",
+      "expected_disposition": "clarify",
+      "observed_preflight_disposition": "clarify",
+      "disposition_match": true,
+      "required_types": [
+        "esp32",
+        "mpu6050",
+        "oled_ssd1306"
+      ],
+      "selected_types": [
+        "esp32",
+        "mpu6050",
+        "oled_ssd1306"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [
+        "bus_voltage"
+      ],
+      "clarify_questions": [
+        {
+          "question": "I2C 从设备具体使用哪一型号？",
+          "options": [
+            "BMP280",
+            "MPU6050",
+            "SSD1306 OLED",
+            "其他型号（请写明）"
+          ],
+          "reason": "不同从设备的引脚、供电和地址配置不同"
+        },
+        {
+          "question": "I2C 总线和器件使用什么电压？",
+          "options": [
+            "全部 3.3V",
+            "全部 5V（器件均须支持）",
+            "5V 主控与 3.3V 从设备（需电平转换）"
+          ],
+          "reason": "总线电压决定上拉电源及器件输入是否兼容"
+        }
+      ],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "esp32",
+          "name": "ESP32模块",
+          "alias": "esp32",
+          "position": 0,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "mpu6050",
+          "name": "陀螺仪加速度计",
+          "alias": "mpu6050",
+          "position": 14,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "oled_ssd1306",
+          "name": "OLED屏",
+          "alias": "oled",
+          "position": 24,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 4.148,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C07_T1",
+      "case_id": "C07",
+      "split": "dev",
+      "category": "explicit",
+      "expected_disposition": "plan",
+      "observed_preflight_disposition": "plan",
+      "disposition_match": true,
+      "required_types": [
+        "atmega328",
+        "bmp280",
+        "mpu6050",
+        "oled_ssd1306"
+      ],
+      "selected_types": [
+        "atmega328",
+        "battery",
+        "bmp280",
+        "mpu6050",
+        "oled_ssd1306",
+        "resistor"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "atmega328",
+          "name": "ATmega328",
+          "alias": "atmega328p",
+          "position": 0,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 11,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "mpu6050",
+          "name": "陀螺仪加速度计",
+          "alias": "mpu6050",
+          "position": 18,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "oled_ssd1306",
+          "name": "OLED屏",
+          "alias": "ssd1306",
+          "position": 28,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "battery",
+          "name": "电池/直流源",
+          "alias": "供电",
+          "position": 42,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "resistor",
+          "name": "电阻",
+          "alias": "上拉电阻",
+          "position": 75,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 4.28,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C07_T2",
+      "case_id": "C07",
+      "split": "dev",
+      "category": "ambiguous",
+      "expected_disposition": "clarify",
+      "observed_preflight_disposition": "clarify",
+      "disposition_match": true,
+      "required_types": [
+        "bmp280",
+        "mpu6050",
+        "oled_ssd1306"
+      ],
+      "selected_types": [
+        "bmp280",
+        "mpu6050",
+        "oled_ssd1306"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [
+        "controller_model"
+      ],
+      "clarify_questions": [
+        {
+          "question": "I2C 主控具体使用哪一型号？",
+          "options": [
+            "ATmega328P",
+            "ESP32-WROOM",
+            "其他型号（请写明）"
+          ],
+          "reason": "主控型号决定 SDA/SCL 的真实引脚与供电范围"
+        }
+      ],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 9,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "mpu6050",
+          "name": "陀螺仪加速度计",
+          "alias": "mpu6050",
+          "position": 16,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "oled_ssd1306",
+          "name": "OLED屏",
+          "alias": "ssd1306",
+          "position": 24,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 3.532,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C07_T3",
+      "case_id": "C07",
+      "split": "dev",
+      "category": "unsupported_model",
+      "expected_disposition": "reject",
+      "observed_preflight_disposition": "reject",
+      "disposition_match": true,
+      "required_types": [
+        "bmp280",
+        "mpu6050",
+        "oled_ssd1306"
+      ],
+      "selected_types": [
+        "bmp280",
+        "mpu6050",
+        "oled_ssd1306"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [
+        "RP2040"
+      ],
+      "observed_unsupported_models": [
+        "RP2040"
+      ],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 14,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "mpu6050",
+          "name": "陀螺仪加速度计",
+          "alias": "mpu6050",
+          "position": 21,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "oled_ssd1306",
+          "name": "OLED屏",
+          "alias": "ssd1306",
+          "position": 29,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 3.576,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C08_T1",
+      "case_id": "C08",
+      "split": "dev",
+      "category": "explicit",
+      "expected_disposition": "plan",
+      "observed_preflight_disposition": "plan",
+      "disposition_match": true,
+      "required_types": [
+        "atmega328",
+        "bmp280"
+      ],
+      "selected_types": [
+        "atmega328",
+        "bmp280",
+        "gnd",
+        "resistor"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "atmega328",
+          "name": "ATmega328",
+          "alias": "atmega328p",
+          "position": 5,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 23,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "gnd",
+          "name": "接地",
+          "alias": "接地",
+          "position": 44,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "resistor",
+          "name": "电阻",
+          "alias": "上拉电阻",
+          "position": 74,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 4.867,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C08_T2",
+      "case_id": "C08",
+      "split": "dev",
+      "category": "negative",
+      "expected_disposition": "reject",
+      "observed_preflight_disposition": "reject",
+      "disposition_match": true,
+      "required_types": [
+        "atmega328",
+        "bmp280"
+      ],
+      "selected_types": [
+        "atmega328",
+        "bmp280",
+        "gnd"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [
+        "I2C_ADDRESS_COLLISION"
+      ],
+      "requirement_blockers": [
+        {
+          "rule_id": "I2C_ADDRESS_COLLISION",
+          "severity": "error",
+          "message": "同一总线的相同地址目标不能按要求独立访问；需不同地址或选通方案。",
+          "evidence": "二者地址都设成 0x76",
+          "span": [
+            36,
+            48
+          ],
+          "source": "explicit_requirement_rule"
+        }
+      ],
+      "observed_negative_rule_ids": [
+        "I2C_ADDRESS_COLLISION"
+      ],
+      "negative_rule_detection": true,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "atmega328",
+          "name": "ATmega328",
+          "alias": "atmega328p",
+          "position": 5,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 29,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "gnd",
+          "name": "接地",
+          "alias": "地",
+          "position": 38,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 4.289,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C08_T3",
+      "case_id": "C08",
+      "split": "dev",
+      "category": "ambiguous",
+      "expected_disposition": "clarify",
+      "observed_preflight_disposition": "clarify",
+      "disposition_match": true,
+      "required_types": [
+        "atmega328",
+        "bmp280"
+      ],
+      "selected_types": [
+        "atmega328",
+        "bmp280",
+        "gnd"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [
+        "slave_addresses"
+      ],
+      "clarify_questions": [
+        {
+          "question": "同一 I2C 总线各从设备的地址与地址选择引脚如何配置？",
+          "options": [
+            "分别配置不同地址（请写明）",
+            "分开总线或使用多路复用器",
+            "待核对具体模块"
+          ],
+          "reason": "重复地址的同型号从设备无法在同一总线上分别寻址"
+        }
+      ],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "atmega328",
+          "name": "ATmega328",
+          "alias": "atmega328p",
+          "position": 5,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 20,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "gnd",
+          "name": "接地",
+          "alias": "地",
+          "position": 37,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 3.627,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C09_T1",
+      "case_id": "C09",
+      "split": "dev",
+      "category": "explicit",
+      "expected_disposition": "plan",
+      "observed_preflight_disposition": "plan",
+      "disposition_match": true,
+      "required_types": [
+        "esp32",
+        "mpu6050"
+      ],
+      "selected_types": [
+        "battery",
+        "esp32",
+        "gnd",
+        "mpu6050",
+        "resistor"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "esp32",
+          "name": "ESP32模块",
+          "alias": "esp32",
+          "position": 0,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "mpu6050",
+          "name": "陀螺仪加速度计",
+          "alias": "mpu6050",
+          "position": 10,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "battery",
+          "name": "电池/直流源",
+          "alias": "供电",
+          "position": 18,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "gnd",
+          "name": "接地",
+          "alias": "接地",
+          "position": 40,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "resistor",
+          "name": "电阻",
+          "alias": "上拉电阻",
+          "position": 65,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 4.387,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C09_T2",
+      "case_id": "C09",
+      "split": "dev",
+      "category": "ambiguous",
+      "expected_disposition": "clarify",
+      "observed_preflight_disposition": "clarify",
+      "disposition_match": true,
+      "required_types": [
+        "mpu6050"
+      ],
+      "selected_types": [
+        "mpu6050"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [
+        "controller_model"
+      ],
+      "clarify_questions": [
+        {
+          "question": "I2C 主控具体使用哪一型号？",
+          "options": [
+            "ATmega328P",
+            "ESP32-WROOM",
+            "其他型号（请写明）"
+          ],
+          "reason": "主控型号决定 SDA/SCL 的真实引脚与供电范围"
+        }
+      ],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "mpu6050",
+          "name": "陀螺仪加速度计",
+          "alias": "mpu6050",
+          "position": 11,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 3.817,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C09_T3",
+      "case_id": "C09",
+      "split": "dev",
+      "category": "unsupported_model",
+      "expected_disposition": "reject",
+      "observed_preflight_disposition": "reject",
+      "disposition_match": true,
+      "required_types": [
+        "esp32"
+      ],
+      "selected_types": [
+        "esp32",
+        "mpu6050"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [
+        "ICM20948"
+      ],
+      "observed_unsupported_models": [
+        "ICM20948"
+      ],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "esp32",
+          "name": "ESP32模块",
+          "alias": "esp32",
+          "position": 5,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "mpu6050",
+          "name": "陀螺仪加速度计",
+          "alias": "mpu6050",
+          "position": 36,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 3.549,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C10_T1",
+      "case_id": "C10",
+      "split": "dev",
+      "category": "explicit",
+      "expected_disposition": "plan",
+      "observed_preflight_disposition": "plan",
+      "disposition_match": true,
+      "required_types": [
+        "ldo_3v3",
+        "atmega328",
+        "bmp280"
+      ],
+      "selected_types": [
+        "atmega328",
+        "bmp280",
+        "capacitor",
+        "gnd",
+        "ldo_3v3"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "ldo_3v3",
+          "name": "LDO3.3V稳压",
+          "alias": "ams1117",
+          "position": 7,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "atmega328",
+          "name": "ATmega328",
+          "alias": "atmega328p",
+          "position": 22,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 35,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "capacitor",
+          "name": "电容",
+          "alias": "电容",
+          "position": 53,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "gnd",
+          "name": "接地",
+          "alias": "地",
+          "position": 70,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 4.446,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C10_T2",
+      "case_id": "C10",
+      "split": "dev",
+      "category": "negative",
+      "expected_disposition": "reject",
+      "observed_preflight_disposition": "reject",
+      "disposition_match": true,
+      "required_types": [
+        "ldo_3v3",
+        "atmega328",
+        "bmp280"
+      ],
+      "selected_types": [
+        "atmega328",
+        "battery",
+        "bmp280",
+        "ldo_3v3"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [
+        "I2C_PULLUP_WRONG_DOMAIN"
+      ],
+      "requirement_blockers": [
+        {
+          "rule_id": "I2C_PULLUP_WRONG_DOMAIN",
+          "severity": "error",
+          "message": "3.3V 总线被要求上拉到 5V 且无电平转换说明，需先核对输入容限并修正供电域。",
+          "evidence": "但 I2C 的 SDA/SCL 上拉必须直接接 5V",
+          "span": [
+            42,
+            68
+          ],
+          "source": "explicit_requirement_rule"
+        }
+      ],
+      "observed_negative_rule_ids": [
+        "I2C_PULLUP_WRONG_DOMAIN"
+      ],
+      "negative_rule_detection": true,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "ldo_3v3",
+          "name": "LDO3.3V稳压",
+          "alias": "ams1117",
+          "position": 7,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "atmega328",
+          "name": "ATmega328",
+          "alias": "atmega328p",
+          "position": 21,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 32,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "battery",
+          "name": "电池/直流源",
+          "alias": "供电",
+          "position": 39,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 4.591,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C10_T3",
+      "case_id": "C10",
+      "split": "dev",
+      "category": "ambiguous",
+      "expected_disposition": "clarify",
+      "observed_preflight_disposition": "clarify",
+      "disposition_match": true,
+      "required_types": [
+        "atmega328",
+        "bmp280"
+      ],
+      "selected_types": [
+        "atmega328",
+        "battery",
+        "bmp280"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [
+        "supply_domains"
+      ],
+      "clarify_questions": [
+        {
+          "question": "I2C 总线和器件使用什么电压？",
+          "options": [
+            "全部 3.3V",
+            "全部 5V（器件均须支持）",
+            "5V 主控与 3.3V 从设备（需电平转换）"
+          ],
+          "reason": "总线电压决定上拉电源及器件输入是否兼容"
+        }
+      ],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "atmega328",
+          "name": "ATmega328",
+          "alias": "atmega328p",
+          "position": 0,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 13,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "battery",
+          "name": "电池/直流源",
+          "alias": "电源",
+          "position": 30,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 5.066,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C11_T1",
+      "case_id": "C11",
+      "split": "dev",
+      "category": "explicit",
+      "expected_disposition": "plan",
+      "observed_preflight_disposition": "plan",
+      "disposition_match": true,
+      "required_types": [
+        "ldo_3v3",
+        "esp32",
+        "mpu6050"
+      ],
+      "selected_types": [
+        "capacitor",
+        "esp32",
+        "ldo_3v3",
+        "mpu6050"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "ldo_3v3",
+          "name": "LDO3.3V稳压",
+          "alias": "ams1117",
+          "position": 5,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "esp32",
+          "name": "ESP32模块",
+          "alias": "esp32",
+          "position": 20,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "mpu6050",
+          "name": "陀螺仪加速度计",
+          "alias": "mpu6050",
+          "position": 34,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "capacitor",
+          "name": "电容",
+          "alias": "电容",
+          "position": 78,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 4.257,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C11_T2",
+      "case_id": "C11",
+      "split": "dev",
+      "category": "unsupported_model",
+      "expected_disposition": "reject",
+      "observed_preflight_disposition": "reject",
+      "disposition_match": true,
+      "required_types": [
+        "esp32",
+        "mpu6050"
+      ],
+      "selected_types": [
+        "battery",
+        "esp32",
+        "ldo_3v3",
+        "mpu6050"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [
+        "MCP1700-3302"
+      ],
+      "observed_unsupported_models": [
+        "MCP1700-3302"
+      ],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "esp32",
+          "name": "ESP32模块",
+          "alias": "esp32",
+          "position": 24,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "mpu6050",
+          "name": "陀螺仪加速度计",
+          "alias": "mpu6050",
+          "position": 32,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "battery",
+          "name": "电池/直流源",
+          "alias": "供电",
+          "position": 51,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "ldo_3v3",
+          "name": "LDO3.3V稳压",
+          "alias": "ldo",
+          "position": 58,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 3.802,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C11_T3",
+      "case_id": "C11",
+      "split": "dev",
+      "category": "unsupported_model",
+      "expected_disposition": "reject",
+      "observed_preflight_disposition": "reject",
+      "disposition_match": true,
+      "required_types": [
+        "esp32",
+        "mpu6050"
+      ],
+      "selected_types": [
+        "battery",
+        "esp32",
+        "ldo_3v3",
+        "mpu6050"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [
+        "TLV75533"
+      ],
+      "observed_unsupported_models": [
+        "TLV75533"
+      ],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "esp32",
+          "name": "ESP32模块",
+          "alias": "esp32",
+          "position": 21,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "mpu6050",
+          "name": "陀螺仪加速度计",
+          "alias": "mpu6050",
+          "position": 29,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "battery",
+          "name": "电池/直流源",
+          "alias": "供电",
+          "position": 37,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "ldo_3v3",
+          "name": "LDO3.3V稳压",
+          "alias": "ldo",
+          "position": 47,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 3.484,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C12_T1",
+      "case_id": "C12",
+      "split": "dev",
+      "category": "explicit",
+      "expected_disposition": "plan",
+      "observed_preflight_disposition": "plan",
+      "disposition_match": true,
+      "required_types": [
+        "ldo_3v3",
+        "atmega328",
+        "bmp280",
+        "oled_ssd1306"
+      ],
+      "selected_types": [
+        "atmega328",
+        "bmp280",
+        "capacitor",
+        "gnd",
+        "ldo_3v3",
+        "oled_ssd1306",
+        "resistor"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "ldo_3v3",
+          "name": "LDO3.3V稳压",
+          "alias": "ams1117",
+          "position": 7,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "atmega328",
+          "name": "ATmega328",
+          "alias": "atmega328p",
+          "position": 21,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 32,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "oled_ssd1306",
+          "name": "OLED屏",
+          "alias": "ssd1306",
+          "position": 41,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "gnd",
+          "name": "接地",
+          "alias": "地",
+          "position": 65,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "resistor",
+          "name": "电阻",
+          "alias": "上拉电阻",
+          "position": 70,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "capacitor",
+          "name": "电容",
+          "alias": "电容",
+          "position": 84,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 4.952,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C12_T2",
+      "case_id": "C12",
+      "split": "dev",
+      "category": "negative",
+      "expected_disposition": "reject",
+      "observed_preflight_disposition": "reject",
+      "disposition_match": true,
+      "required_types": [
+        "ldo_3v3",
+        "atmega328",
+        "bmp280",
+        "oled_ssd1306"
+      ],
+      "selected_types": [
+        "atmega328",
+        "battery",
+        "bmp280",
+        "capacitor",
+        "ldo_3v3",
+        "oled_ssd1306"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [
+        "LDO_OUTPUT_CAP_OMITTED"
+      ],
+      "requirement_blockers": [
+        {
+          "rule_id": "LDO_OUTPUT_CAP_OMITTED",
+          "severity": "error",
+          "message": "当前稳压方案要求输出电容，不能同时要求删除并禁止补回。",
+          "evidence": "删除 LDO 输出电容且禁止补回",
+          "span": [
+            53,
+            69
+          ],
+          "source": "explicit_requirement_rule"
+        }
+      ],
+      "observed_negative_rule_ids": [
+        "LDO_OUTPUT_CAP_OMITTED"
+      ],
+      "negative_rule_detection": true,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "ldo_3v3",
+          "name": "LDO3.3V稳压",
+          "alias": "ams1117",
+          "position": 5,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "atmega328",
+          "name": "ATmega328",
+          "alias": "atmega328p",
+          "position": 19,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 30,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "oled_ssd1306",
+          "name": "OLED屏",
+          "alias": "ssd1306",
+          "position": 37,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "battery",
+          "name": "电池/直流源",
+          "alias": "供电",
+          "position": 50,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "capacitor",
+          "name": "电容",
+          "alias": "电容",
+          "position": 62,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 4.242,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C12_T3",
+      "case_id": "C12",
+      "split": "dev",
+      "category": "negative",
+      "expected_disposition": "reject",
+      "observed_preflight_disposition": "reject",
+      "disposition_match": true,
+      "required_types": [
+        "ldo_3v3",
+        "atmega328",
+        "bmp280",
+        "oled_ssd1306"
+      ],
+      "selected_types": [
+        "atmega328",
+        "bmp280",
+        "gnd",
+        "ldo_3v3",
+        "oled_ssd1306"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [
+        "NO_COMMON_GROUND"
+      ],
+      "requirement_blockers": [
+        {
+          "rule_id": "NO_COMMON_GROUND",
+          "severity": "error",
+          "message": "I2C 两侧被要求不共地且未声明有效隔离器，需明确公共参考地或隔离方案。",
+          "evidence": "但主控与两个从设备必须各自隔离地且不加隔离器",
+          "span": [
+            58,
+            80
+          ],
+          "source": "explicit_requirement_rule"
+        }
+      ],
+      "observed_negative_rule_ids": [
+        "NO_COMMON_GROUND"
+      ],
+      "negative_rule_detection": true,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "ldo_3v3",
+          "name": "LDO3.3V稳压",
+          "alias": "ams1117",
+          "position": 0,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "atmega328",
+          "name": "ATmega328",
+          "alias": "atmega328p",
+          "position": 14,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 25,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "oled_ssd1306",
+          "name": "OLED屏",
+          "alias": "ssd1306",
+          "position": 34,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "gnd",
+          "name": "接地",
+          "alias": "地",
+          "position": 73,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 4.275,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C13_T1",
+      "case_id": "C13",
+      "split": "dev",
+      "category": "explicit",
+      "expected_disposition": "plan",
+      "observed_preflight_disposition": "plan",
+      "disposition_match": true,
+      "required_types": [
+        "atmega328",
+        "bmp280",
+        "i2c_header"
+      ],
+      "selected_types": [
+        "atmega328",
+        "bmp280",
+        "gnd",
+        "i2c_header",
+        "resistor"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "atmega328",
+          "name": "ATmega328",
+          "alias": "atmega328p",
+          "position": 5,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 18,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "gnd",
+          "name": "接地",
+          "alias": "gnd",
+          "position": 43,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "i2c_header",
+          "name": "I2C排针",
+          "alias": "I2C排针",
+          "position": 45,
+          "position_basis": "normalized",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "resistor",
+          "name": "电阻",
+          "alias": "上拉电阻",
+          "position": 67,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 4.357,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C13_T2",
+      "case_id": "C13",
+      "split": "dev",
+      "category": "ambiguous",
+      "expected_disposition": "clarify",
+      "observed_preflight_disposition": "clarify",
+      "disposition_match": true,
+      "required_types": [
+        "bmp280",
+        "i2c_header"
+      ],
+      "selected_types": [
+        "bmp280",
+        "i2c_header"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [
+        "controller_model"
+      ],
+      "clarify_questions": [
+        {
+          "question": "I2C 主控具体使用哪一型号？",
+          "options": [
+            "ATmega328P",
+            "ESP32-WROOM",
+            "其他型号（请写明）"
+          ],
+          "reason": "主控型号决定 SDA/SCL 的真实引脚与供电范围"
+        }
+      ],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 10,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "i2c_header",
+          "name": "I2C排针",
+          "alias": "I2C排针",
+          "position": 20,
+          "position_basis": "normalized",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 3.705,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C13_T3",
+      "case_id": "C13",
+      "split": "dev",
+      "category": "unsupported_model",
+      "expected_disposition": "reject",
+      "observed_preflight_disposition": "reject",
+      "disposition_match": true,
+      "required_types": [
+        "atmega328",
+        "i2c_header"
+      ],
+      "selected_types": [
+        "atmega328",
+        "i2c_header"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [
+        "DPS310"
+      ],
+      "observed_unsupported_models": [
+        "DPS310"
+      ],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "atmega328",
+          "name": "ATmega328",
+          "alias": "atmega328p",
+          "position": 5,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "i2c_header",
+          "name": "I2C排针",
+          "alias": "I2C排针",
+          "position": 27,
+          "position_basis": "normalized",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 3.429,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C14_T1",
+      "case_id": "C14",
+      "split": "dev",
+      "category": "explicit",
+      "expected_disposition": "plan",
+      "observed_preflight_disposition": "plan",
+      "disposition_match": true,
+      "required_types": [
+        "esp32",
+        "mpu6050",
+        "i2c_header"
+      ],
+      "selected_types": [
+        "esp32",
+        "gnd",
+        "i2c_header",
+        "mpu6050",
+        "resistor"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "esp32",
+          "name": "ESP32模块",
+          "alias": "esp32",
+          "position": 5,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "mpu6050",
+          "name": "陀螺仪加速度计",
+          "alias": "mpu6050",
+          "position": 13,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "i2c_header",
+          "name": "I2C排针",
+          "alias": "I2C排针",
+          "position": 30,
+          "position_basis": "normalized",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "gnd",
+          "name": "接地",
+          "alias": "gnd",
+          "position": 54,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "resistor",
+          "name": "电阻",
+          "alias": "上拉电阻",
+          "position": 65,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 4.23,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C14_T2",
+      "case_id": "C14",
+      "split": "dev",
+      "category": "negative",
+      "expected_disposition": "reject",
+      "observed_preflight_disposition": "reject",
+      "disposition_match": true,
+      "required_types": [
+        "esp32",
+        "mpu6050",
+        "i2c_header"
+      ],
+      "selected_types": [
+        "esp32",
+        "gnd",
+        "i2c_header",
+        "mpu6050"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [
+        "EXTERNAL_GROUND_OMITTED"
+      ],
+      "requirement_blockers": [
+        {
+          "rule_id": "EXTERNAL_GROUND_OMITTED",
+          "severity": "error",
+          "message": "外部 I2C 接口的参考地被要求悬空，需接公共地或提供明确隔离方案。",
+          "evidence": "却把它的 GND 悬空",
+          "span": [
+            46,
+            57
+          ],
+          "source": "explicit_requirement_rule"
+        }
+      ],
+      "observed_negative_rule_ids": [
+        "EXTERNAL_GROUND_OMITTED"
+      ],
+      "negative_rule_detection": true,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "esp32",
+          "name": "ESP32模块",
+          "alias": "esp32",
+          "position": 0,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "mpu6050",
+          "name": "陀螺仪加速度计",
+          "alias": "mpu6050",
+          "position": 8,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "i2c_header",
+          "name": "I2C排针",
+          "alias": "I2C排针",
+          "position": 26,
+          "position_basis": "normalized",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "gnd",
+          "name": "接地",
+          "alias": "gnd",
+          "position": 51,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 4.936,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C14_T3",
+      "case_id": "C14",
+      "split": "dev",
+      "category": "ambiguous",
+      "expected_disposition": "clarify",
+      "observed_preflight_disposition": "clarify",
+      "disposition_match": true,
+      "required_types": [
+        "esp32",
+        "mpu6050",
+        "i2c_header"
+      ],
+      "selected_types": [
+        "esp32",
+        "i2c_header",
+        "mpu6050"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [
+        "external_supply_voltage"
+      ],
+      "clarify_questions": [
+        {
+          "question": "I2C 总线和器件使用什么电压？",
+          "options": [
+            "全部 3.3V",
+            "全部 5V（器件均须支持）",
+            "5V 主控与 3.3V 从设备（需电平转换）"
+          ],
+          "reason": "总线电压决定上拉电源及器件输入是否兼容"
+        }
+      ],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "esp32",
+          "name": "ESP32模块",
+          "alias": "esp32",
+          "position": 0,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "mpu6050",
+          "name": "陀螺仪加速度计",
+          "alias": "mpu6050",
+          "position": 8,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "i2c_header",
+          "name": "I2C排针",
+          "alias": "I2C排针",
+          "position": 16,
+          "position_basis": "normalized",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 3.925,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C15_T1",
+      "case_id": "C15",
+      "split": "dev",
+      "category": "explicit",
+      "expected_disposition": "plan",
+      "observed_preflight_disposition": "plan",
+      "disposition_match": true,
+      "required_types": [
+        "atmega328",
+        "bmp280",
+        "i2c_header",
+        "esd_diode"
+      ],
+      "selected_types": [
+        "atmega328",
+        "bmp280",
+        "capacitor",
+        "diode",
+        "esd_diode",
+        "gnd",
+        "i2c_header"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "atmega328",
+          "name": "ATmega328",
+          "alias": "atmega328p",
+          "position": 5,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 18,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "i2c_header",
+          "name": "I2C排针",
+          "alias": "i2c",
+          "position": 27,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "esd_diode",
+          "name": "ESD保护二极管",
+          "alias": "esd二极管",
+          "position": 41,
+          "position_basis": "normalized",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "diode",
+          "name": "二极管",
+          "alias": "二极管",
+          "position": 53,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "gnd",
+          "name": "接地",
+          "alias": "公共地",
+          "position": 65,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "capacitor",
+          "name": "电容",
+          "alias": "去耦电容",
+          "position": 73,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 4.36,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C15_T2",
+      "case_id": "C15",
+      "split": "dev",
+      "category": "ambiguous",
+      "expected_disposition": "clarify",
+      "observed_preflight_disposition": "clarify",
+      "disposition_match": true,
+      "required_types": [
+        "atmega328",
+        "i2c_header",
+        "esd_diode"
+      ],
+      "selected_types": [
+        "atmega328",
+        "diode",
+        "esd_diode",
+        "i2c_header"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [
+        "device_model"
+      ],
+      "clarify_questions": [
+        {
+          "question": "I2C 从设备具体使用哪一型号？",
+          "options": [
+            "BMP280",
+            "MPU6050",
+            "SSD1306 OLED",
+            "其他型号（请写明）"
+          ],
+          "reason": "不同从设备的引脚、供电和地址配置不同"
+        }
+      ],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "atmega328",
+          "name": "ATmega328",
+          "alias": "atmega328p",
+          "position": 5,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "i2c_header",
+          "name": "I2C排针",
+          "alias": "i2c",
+          "position": 20,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "esd_diode",
+          "name": "ESD保护二极管",
+          "alias": "esd二极管",
+          "position": 30,
+          "position_basis": "normalized",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "diode",
+          "name": "二极管",
+          "alias": "二极管",
+          "position": 39,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 3.519,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C15_T3",
+      "case_id": "C15",
+      "split": "dev",
+      "category": "unsupported_model",
+      "expected_disposition": "reject",
+      "observed_preflight_disposition": "reject",
+      "disposition_match": true,
+      "required_types": [
+        "esp32",
+        "i2c_header",
+        "esd_diode"
+      ],
+      "selected_types": [
+        "diode",
+        "esd_diode",
+        "esp32",
+        "i2c_header"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [
+        "SHT31"
+      ],
+      "observed_unsupported_models": [
+        "SHT31"
+      ],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [
+        {
+          "question": "I2C 从设备具体使用哪一型号？",
+          "options": [
+            "BMP280",
+            "MPU6050",
+            "SSD1306 OLED",
+            "其他型号（请写明）"
+          ],
+          "reason": "不同从设备的引脚、供电和地址配置不同"
+        }
+      ],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "esp32",
+          "name": "ESP32模块",
+          "alias": "esp32",
+          "position": 5,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "i2c_header",
+          "name": "I2C排针",
+          "alias": "i2c",
+          "position": 21,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "esd_diode",
+          "name": "ESD保护二极管",
+          "alias": "esd二极管",
+          "position": 32,
+          "position_basis": "normalized",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "diode",
+          "name": "二极管",
+          "alias": "二极管",
+          "position": 44,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 3.893,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C16_T1",
+      "case_id": "C16",
+      "split": "dev",
+      "category": "explicit",
+      "expected_disposition": "plan",
+      "observed_preflight_disposition": "plan",
+      "disposition_match": true,
+      "required_types": [
+        "esp32",
+        "oled_ssd1306",
+        "i2c_header",
+        "tvs_array"
+      ],
+      "selected_types": [
+        "esp32",
+        "gnd",
+        "i2c_header",
+        "oled_ssd1306",
+        "tvs",
+        "tvs_array"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "esp32",
+          "name": "ESP32模块",
+          "alias": "esp32",
+          "position": 5,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "oled_ssd1306",
+          "name": "OLED屏",
+          "alias": "ssd1306",
+          "position": 13,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "i2c_header",
+          "name": "I2C排针",
+          "alias": "i2c",
+          "position": 29,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "tvs_array",
+          "name": "TVS阵列",
+          "alias": "TVS阵列",
+          "position": 43,
+          "position_basis": "normalized",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "tvs",
+          "name": "TVS二极管",
+          "alias": "tvs",
+          "position": 51,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "gnd",
+          "name": "接地",
+          "alias": "gnd",
+          "position": 63,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 5.088,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C16_T2",
+      "case_id": "C16",
+      "split": "dev",
+      "category": "negative",
+      "expected_disposition": "reject",
+      "observed_preflight_disposition": "reject",
+      "disposition_match": true,
+      "required_types": [
+        "esp32",
+        "oled_ssd1306",
+        "i2c_header",
+        "tvs_array"
+      ],
+      "selected_types": [
+        "battery",
+        "esp32",
+        "gnd",
+        "i2c_header",
+        "oled_ssd1306",
+        "tvs",
+        "tvs_array"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [
+        "PROTECTION_GROUND_WRONG"
+      ],
+      "requirement_blockers": [
+        {
+          "rule_id": "PROTECTION_GROUND_WRONG",
+          "severity": "error",
+          "message": "保护器件 GND 被要求接到电源，需核对保护端口并修正泄放网络。",
+          "evidence": "把阵列 GND 直接接 3.3V 电源",
+          "span": [
+            43,
+            62
+          ],
+          "source": "explicit_requirement_rule"
+        }
+      ],
+      "observed_negative_rule_ids": [
+        "PROTECTION_GROUND_WRONG"
+      ],
+      "negative_rule_detection": true,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "esp32",
+          "name": "ESP32模块",
+          "alias": "esp32",
+          "position": 5,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "oled_ssd1306",
+          "name": "OLED屏",
+          "alias": "ssd1306",
+          "position": 11,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "i2c_header",
+          "name": "I2C排针",
+          "alias": "I2C排针",
+          "position": 22,
+          "position_basis": "normalized",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "tvs_array",
+          "name": "TVS阵列",
+          "alias": "TVS阵列",
+          "position": 28,
+          "position_basis": "normalized",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "tvs",
+          "name": "TVS二极管",
+          "alias": "tvs",
+          "position": 34,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "gnd",
+          "name": "接地",
+          "alias": "gnd",
+          "position": 47,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "battery",
+          "name": "电池/直流源",
+          "alias": "电源",
+          "position": 60,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 3.934,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C16_T3",
+      "case_id": "C16",
+      "split": "dev",
+      "category": "negative",
+      "expected_disposition": "reject",
+      "observed_preflight_disposition": "reject",
+      "disposition_match": true,
+      "required_types": [
+        "esp32",
+        "oled_ssd1306",
+        "i2c_header",
+        "tvs_array"
+      ],
+      "selected_types": [
+        "esp32",
+        "gnd",
+        "i2c_header",
+        "oled_ssd1306",
+        "tvs",
+        "tvs_array"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [
+        "PROTECTION_GROUND_OMITTED"
+      ],
+      "requirement_blockers": [
+        {
+          "rule_id": "PROTECTION_GROUND_OMITTED",
+          "severity": "error",
+          "message": "保护器件的地端被要求悬空，需明确有效泄放回路。",
+          "evidence": "阵列 GND 必须悬空且禁止连接公共地",
+          "span": [
+            41,
+            60
+          ],
+          "source": "explicit_requirement_rule"
+        }
+      ],
+      "observed_negative_rule_ids": [
+        "PROTECTION_GROUND_OMITTED"
+      ],
+      "negative_rule_detection": true,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "esp32",
+          "name": "ESP32模块",
+          "alias": "esp32",
+          "position": 5,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "oled_ssd1306",
+          "name": "OLED屏",
+          "alias": "ssd1306",
+          "position": 11,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "i2c_header",
+          "name": "I2C排针",
+          "alias": "I2C排针",
+          "position": 22,
+          "position_basis": "normalized",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "tvs_array",
+          "name": "TVS阵列",
+          "alias": "TVS阵列",
+          "position": 28,
+          "position_basis": "normalized",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "tvs",
+          "name": "TVS二极管",
+          "alias": "tvs",
+          "position": 34,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "gnd",
+          "name": "接地",
+          "alias": "gnd",
+          "position": 44,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 4.206,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C17_T1",
+      "case_id": "C17",
+      "split": "dev",
+      "category": "explicit",
+      "expected_disposition": "plan",
+      "observed_preflight_disposition": "plan",
+      "disposition_match": true,
+      "required_types": [
+        "atmega328",
+        "bmp280",
+        "voltage_monitor"
+      ],
+      "selected_types": [
+        "atmega328",
+        "bmp280",
+        "gnd",
+        "resistor",
+        "voltage_monitor"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "atmega328",
+          "name": "ATmega328",
+          "alias": "atmega328p",
+          "position": 5,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 24,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "voltage_monitor",
+          "name": "电压监控器",
+          "alias": "电压监控器",
+          "position": 33,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "gnd",
+          "name": "接地",
+          "alias": "地",
+          "position": 54,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "resistor",
+          "name": "电阻",
+          "alias": "上拉电阻",
+          "position": 64,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 4.428,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C17_T2",
+      "case_id": "C17",
+      "split": "dev",
+      "category": "ambiguous",
+      "expected_disposition": "clarify",
+      "observed_preflight_disposition": "clarify",
+      "disposition_match": true,
+      "required_types": [
+        "bmp280",
+        "voltage_monitor"
+      ],
+      "selected_types": [
+        "bmp280",
+        "voltage_monitor"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [
+        "controller_model"
+      ],
+      "clarify_questions": [
+        {
+          "question": "I2C 主控具体使用哪一型号？",
+          "options": [
+            "ATmega328P",
+            "ESP32-WROOM",
+            "其他型号（请写明）"
+          ],
+          "reason": "主控型号决定 SDA/SCL 的真实引脚与供电范围"
+        }
+      ],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 15,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "voltage_monitor",
+          "name": "电压监控器",
+          "alias": "电压监控器",
+          "position": 24,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 3.517,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C17_T3",
+      "case_id": "C17",
+      "split": "dev",
+      "category": "unsupported_model",
+      "expected_disposition": "reject",
+      "observed_preflight_disposition": "reject",
+      "disposition_match": true,
+      "required_types": [
+        "atmega328",
+        "bmp280"
+      ],
+      "selected_types": [
+        "atmega328",
+        "bmp280",
+        "voltage_monitor"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [
+        "TPS3839"
+      ],
+      "observed_unsupported_models": [
+        "TPS3839"
+      ],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "atmega328",
+          "name": "ATmega328",
+          "alias": "atmega328p",
+          "position": 5,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 18,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "voltage_monitor",
+          "name": "电压监控器",
+          "alias": "复位监控",
+          "position": 25,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 3.473,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C18_T1",
+      "case_id": "C18",
+      "split": "dev",
+      "category": "explicit",
+      "expected_disposition": "plan",
+      "observed_preflight_disposition": "plan",
+      "disposition_match": true,
+      "required_types": [
+        "esp32",
+        "oled_ssd1306",
+        "pushbutton"
+      ],
+      "selected_types": [
+        "esp32",
+        "gnd",
+        "oled_ssd1306",
+        "pushbutton",
+        "resistor"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "esp32",
+          "name": "ESP32模块",
+          "alias": "esp32",
+          "position": 5,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "oled_ssd1306",
+          "name": "OLED屏",
+          "alias": "ssd1306",
+          "position": 20,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "resistor",
+          "name": "电阻",
+          "alias": "电阻",
+          "position": 37,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "pushbutton",
+          "name": "按钮",
+          "alias": "按钮",
+          "position": 44,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "gnd",
+          "name": "接地",
+          "alias": "地",
+          "position": 55,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 3.916,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C18_T2",
+      "case_id": "C18",
+      "split": "dev",
+      "category": "negative",
+      "expected_disposition": "reject",
+      "observed_preflight_disposition": "reject",
+      "disposition_match": true,
+      "required_types": [
+        "esp32",
+        "oled_ssd1306"
+      ],
+      "selected_types": [
+        "esp32",
+        "gnd",
+        "oled_ssd1306"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [
+        "MCU_ENABLE_HELD_INACTIVE"
+      ],
+      "requirement_blockers": [
+        {
+          "rule_id": "MCU_ENABLE_HELD_INACTIVE",
+          "severity": "error",
+          "message": "ESP32 EN 为高有效，永久接地与主控保持运行的要求矛盾。",
+          "evidence": "要求 EN 永久短接 GND",
+          "span": [
+            33,
+            47
+          ],
+          "source": "explicit_requirement_rule"
+        }
+      ],
+      "observed_negative_rule_ids": [
+        "MCU_ENABLE_HELD_INACTIVE"
+      ],
+      "negative_rule_detection": true,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "esp32",
+          "name": "ESP32模块",
+          "alias": "esp32",
+          "position": 5,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "oled_ssd1306",
+          "name": "OLED屏",
+          "alias": "ssd1306",
+          "position": 20,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "gnd",
+          "name": "接地",
+          "alias": "gnd",
+          "position": 44,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 3.77,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C18_T3",
+      "case_id": "C18",
+      "split": "dev",
+      "category": "ambiguous",
+      "expected_disposition": "clarify",
+      "observed_preflight_disposition": "clarify",
+      "disposition_match": true,
+      "required_types": [
+        "esp32",
+        "oled_ssd1306",
+        "pushbutton"
+      ],
+      "selected_types": [
+        "battery",
+        "esp32",
+        "oled_ssd1306",
+        "pushbutton"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [
+        "bus_voltage"
+      ],
+      "clarify_questions": [
+        {
+          "question": "I2C 总线和器件使用什么电压？",
+          "options": [
+            "全部 3.3V",
+            "全部 5V（器件均须支持）",
+            "5V 主控与 3.3V 从设备（需电平转换）"
+          ],
+          "reason": "总线电压决定上拉电源及器件输入是否兼容"
+        }
+      ],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "esp32",
+          "name": "ESP32模块",
+          "alias": "esp32",
+          "position": 0,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "oled_ssd1306",
+          "name": "OLED屏",
+          "alias": "ssd1306",
+          "position": 8,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "pushbutton",
+          "name": "按钮",
+          "alias": "按钮",
+          "position": 29,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "battery",
+          "name": "电池/直流源",
+          "alias": "供电",
+          "position": 35,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 3.947,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C19_T1",
+      "case_id": "C19",
+      "split": "dev",
+      "category": "explicit",
+      "expected_disposition": "plan",
+      "observed_preflight_disposition": "plan",
+      "disposition_match": true,
+      "required_types": [
+        "atmega328",
+        "bmp280",
+        "capacitor"
+      ],
+      "selected_types": [
+        "atmega328",
+        "bmp280",
+        "capacitor",
+        "gnd",
+        "vcc"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "atmega328",
+          "name": "ATmega328",
+          "alias": "atmega328p",
+          "position": 0,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "vcc",
+          "name": "电源正",
+          "alias": "vcc",
+          "position": 13,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "capacitor",
+          "name": "电容",
+          "alias": "电容",
+          "position": 41,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 69,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "gnd",
+          "name": "接地",
+          "alias": "地",
+          "position": 82,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 4.645,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C19_T2",
+      "case_id": "C19",
+      "split": "dev",
+      "category": "ambiguous",
+      "expected_disposition": "clarify",
+      "observed_preflight_disposition": "clarify",
+      "disposition_match": true,
+      "required_types": [
+        "bmp280"
+      ],
+      "selected_types": [
+        "bmp280"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [
+        "controller_model"
+      ],
+      "clarify_questions": [
+        {
+          "question": "I2C 主控具体使用哪一型号？",
+          "options": [
+            "ATmega328P",
+            "ESP32-WROOM",
+            "其他型号（请写明）"
+          ],
+          "reason": "主控型号决定 SDA/SCL 的真实引脚与供电范围"
+        }
+      ],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 10,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 3.548,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C19_T3",
+      "case_id": "C19",
+      "split": "dev",
+      "category": "unsupported_model",
+      "expected_disposition": "reject",
+      "observed_preflight_disposition": "reject",
+      "disposition_match": true,
+      "required_types": [
+        "bmp280"
+      ],
+      "selected_types": [
+        "atmega328",
+        "bmp280"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [
+        "ATmega4809"
+      ],
+      "observed_unsupported_models": [
+        "ATmega4809"
+      ],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 15,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "atmega328",
+          "name": "ATmega328",
+          "alias": "atmega328p",
+          "position": 41,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 3.738,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C20_T1",
+      "case_id": "C20",
+      "split": "dev",
+      "category": "explicit",
+      "expected_disposition": "plan",
+      "observed_preflight_disposition": "plan",
+      "disposition_match": true,
+      "required_types": [
+        "atmega328",
+        "bmp280",
+        "led",
+        "resistor"
+      ],
+      "selected_types": [
+        "atmega328",
+        "bmp280",
+        "capacitor",
+        "led",
+        "resistor"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "atmega328",
+          "name": "ATmega328",
+          "alias": "atmega328p",
+          "position": 5,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 24,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "resistor",
+          "name": "电阻",
+          "alias": "限流电阻",
+          "position": 39,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "led",
+          "name": "发光二极管",
+          "alias": "led",
+          "position": 48,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "capacitor",
+          "name": "电容",
+          "alias": "去耦电容",
+          "position": 63,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 5.175,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C20_T2",
+      "case_id": "C20",
+      "split": "dev",
+      "category": "negative",
+      "expected_disposition": "reject",
+      "observed_preflight_disposition": "reject",
+      "disposition_match": true,
+      "required_types": [
+        "atmega328",
+        "bmp280",
+        "led"
+      ],
+      "selected_types": [
+        "atmega328",
+        "bmp280",
+        "led",
+        "resistor"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [
+        "LED_CURRENT_LIMIT_OMITTED"
+      ],
+      "requirement_blockers": [
+        {
+          "rule_id": "LED_CURRENT_LIMIT_OMITTED",
+          "severity": "error",
+          "message": "LED 被要求取消限流且未声明恒流驱动，需补充有效限流路径。",
+          "evidence": "不允许限流电阻",
+          "span": [
+            46,
+            53
+          ],
+          "source": "explicit_requirement_rule"
+        }
+      ],
+      "observed_negative_rule_ids": [
+        "LED_CURRENT_LIMIT_OMITTED"
+      ],
+      "negative_rule_detection": true,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "atmega328",
+          "name": "ATmega328",
+          "alias": "atmega328p",
+          "position": 5,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 18,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "led",
+          "name": "发光二极管",
+          "alias": "led",
+          "position": 42,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "resistor",
+          "name": "电阻",
+          "alias": "限流电阻",
+          "position": 49,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 3.641,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C20_T3",
+      "case_id": "C20",
+      "split": "dev",
+      "category": "ambiguous",
+      "expected_disposition": "clarify",
+      "observed_preflight_disposition": "clarify",
+      "disposition_match": true,
+      "required_types": [
+        "atmega328",
+        "bmp280",
+        "led"
+      ],
+      "selected_types": [
+        "atmega328",
+        "battery",
+        "bmp280",
+        "led"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [
+        "bus_voltage"
+      ],
+      "clarify_questions": [
+        {
+          "question": "I2C 总线和器件使用什么电压？",
+          "options": [
+            "全部 3.3V",
+            "全部 5V（器件均须支持）",
+            "5V 主控与 3.3V 从设备（需电平转换）"
+          ],
+          "reason": "总线电压决定上拉电源及器件输入是否兼容"
+        }
+      ],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "atmega328",
+          "name": "ATmega328",
+          "alias": "atmega328p",
+          "position": 0,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 13,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "led",
+          "name": "发光二极管",
+          "alias": "led",
+          "position": 28,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "battery",
+          "name": "电池/直流源",
+          "alias": "供电",
+          "position": 38,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 3.437,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C21_T1",
+      "case_id": "C21",
+      "split": "holdout",
+      "category": "explicit",
+      "expected_disposition": "plan",
+      "observed_preflight_disposition": "plan",
+      "disposition_match": true,
+      "required_types": [
+        "fuse",
+        "schottky",
+        "ldo_3v3",
+        "atmega328",
+        "bmp280"
+      ],
+      "selected_types": [
+        "atmega328",
+        "battery",
+        "bmp280",
+        "capacitor",
+        "fuse",
+        "gnd",
+        "ldo_3v3",
+        "schottky"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "fuse",
+          "name": "保险丝",
+          "alias": "保险丝",
+          "position": 7,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "schottky",
+          "name": "肖特基二极管",
+          "alias": "肖特基二极管",
+          "position": 11,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "ldo_3v3",
+          "name": "LDO3.3V稳压",
+          "alias": "ams1117",
+          "position": 21,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "atmega328",
+          "name": "ATmega328",
+          "alias": "atmega328p",
+          "position": 35,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 48,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "battery",
+          "name": "电池/直流源",
+          "alias": "供电",
+          "position": 55,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "gnd",
+          "name": "接地",
+          "alias": "地",
+          "position": 72,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "capacitor",
+          "name": "电容",
+          "alias": "电容",
+          "position": 78,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 4.546,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C21_T2",
+      "case_id": "C21",
+      "split": "holdout",
+      "category": "negative",
+      "expected_disposition": "reject",
+      "observed_preflight_disposition": "reject",
+      "disposition_match": true,
+      "required_types": [
+        "fuse",
+        "schottky",
+        "ldo_3v3",
+        "atmega328",
+        "bmp280"
+      ],
+      "selected_types": [
+        "atmega328",
+        "bmp280",
+        "fuse",
+        "gnd",
+        "ldo_3v3",
+        "schottky"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [
+        "REGULATED_SUPPLY_SHORT"
+      ],
+      "requirement_blockers": [
+        {
+          "rule_id": "REGULATED_SUPPLY_SHORT",
+          "severity": "error",
+          "message": "稳压器正输出被要求短接到地，需修正输出电源网络。",
+          "evidence": "把 LDO 的 OUT 和 GND 短接",
+          "span": [
+            48,
+            68
+          ],
+          "source": "explicit_requirement_rule"
+        }
+      ],
+      "observed_negative_rule_ids": [
+        "REGULATED_SUPPLY_SHORT"
+      ],
+      "negative_rule_detection": true,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "fuse",
+          "name": "保险丝",
+          "alias": "保险丝",
+          "position": 3,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "schottky",
+          "name": "肖特基二极管",
+          "alias": "肖特基",
+          "position": 7,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "ldo_3v3",
+          "name": "LDO3.3V稳压",
+          "alias": "ams1117",
+          "position": 13,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "atmega328",
+          "name": "ATmega328",
+          "alias": "atmega328p",
+          "position": 28,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 41,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "gnd",
+          "name": "接地",
+          "alias": "gnd",
+          "position": 62,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 4.317,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C22_T1",
+      "case_id": "C22",
+      "split": "holdout",
+      "category": "explicit",
+      "expected_disposition": "plan",
+      "observed_preflight_disposition": "plan",
+      "disposition_match": true,
+      "required_types": [
+        "usb_c",
+        "ldo_3v3",
+        "esp32",
+        "mpu6050"
+      ],
+      "selected_types": [
+        "battery",
+        "capacitor",
+        "esp32",
+        "gnd",
+        "ldo_3v3",
+        "mpu6050",
+        "usb_c",
+        "usb_port"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "usb_c",
+          "name": "USB Type-C",
+          "alias": "type-c",
+          "position": 0,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "usb_port",
+          "name": "USB接口",
+          "alias": "type-c",
+          "position": 0,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "battery",
+          "name": "电池/直流源",
+          "alias": "电源",
+          "position": 13,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "ldo_3v3",
+          "name": "LDO3.3V稳压",
+          "alias": "ams1117",
+          "position": 20,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "esp32",
+          "name": "ESP32模块",
+          "alias": "esp32",
+          "position": 34,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "mpu6050",
+          "name": "陀螺仪加速度计",
+          "alias": "mpu6050",
+          "position": 42,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "gnd",
+          "name": "接地",
+          "alias": "地",
+          "position": 63,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "capacitor",
+          "name": "电容",
+          "alias": "电容",
+          "position": 76,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 4.245,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C22_T2",
+      "case_id": "C22",
+      "split": "holdout",
+      "category": "unsupported_model",
+      "expected_disposition": "reject",
+      "observed_preflight_disposition": "reject",
+      "disposition_match": true,
+      "required_types": [
+        "usb_c",
+        "esp32",
+        "mpu6050"
+      ],
+      "selected_types": [
+        "battery",
+        "esp32",
+        "ldo_3v3",
+        "mpu6050",
+        "usb_c",
+        "usb_port"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [
+        "AP2112K-3.3"
+      ],
+      "observed_unsupported_models": [
+        "AP2112K-3.3"
+      ],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "usb_c",
+          "name": "USB Type-C",
+          "alias": "type-c",
+          "position": 0,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "usb_port",
+          "name": "USB接口",
+          "alias": "type-c",
+          "position": 0,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "esp32",
+          "name": "ESP32模块",
+          "alias": "esp32",
+          "position": 28,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "mpu6050",
+          "name": "陀螺仪加速度计",
+          "alias": "mpu6050",
+          "position": 36,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "battery",
+          "name": "电池/直流源",
+          "alias": "供电",
+          "position": 55,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "ldo_3v3",
+          "name": "LDO3.3V稳压",
+          "alias": "ldo",
+          "position": 58,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 3.816,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C23_T1",
+      "case_id": "C23",
+      "split": "holdout",
+      "category": "explicit",
+      "expected_disposition": "plan",
+      "observed_preflight_disposition": "plan",
+      "disposition_match": true,
+      "required_types": [
+        "power_sequencer",
+        "esp32",
+        "mpu6050",
+        "oled_ssd1306"
+      ],
+      "selected_types": [
+        "battery",
+        "esp32",
+        "mpu6050",
+        "oled_ssd1306",
+        "power_sequencer",
+        "resistor"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "battery",
+          "name": "电池/直流源",
+          "alias": "电源",
+          "position": 8,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "power_sequencer",
+          "name": "电源时序器",
+          "alias": "电源时序器",
+          "position": 8,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "esp32",
+          "name": "ESP32模块",
+          "alias": "esp32",
+          "position": 15,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "mpu6050",
+          "name": "陀螺仪加速度计",
+          "alias": "mpu6050",
+          "position": 21,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "oled_ssd1306",
+          "name": "OLED屏",
+          "alias": "ssd1306",
+          "position": 31,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "resistor",
+          "name": "电阻",
+          "alias": "上拉电阻",
+          "position": 67,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 4.399,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C23_T2",
+      "case_id": "C23",
+      "split": "holdout",
+      "category": "ambiguous",
+      "expected_disposition": "clarify",
+      "observed_preflight_disposition": "clarify",
+      "disposition_match": true,
+      "required_types": [
+        "power_sequencer",
+        "esp32",
+        "mpu6050",
+        "oled_ssd1306"
+      ],
+      "selected_types": [
+        "battery",
+        "esp32",
+        "mpu6050",
+        "oled_ssd1306",
+        "power_sequencer"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [
+        "power_enable_sequence"
+      ],
+      "clarify_questions": [
+        {
+          "question": "电源好信号与 EN 的使能时序是什么？",
+          "options": [
+            "电源稳定后释放 EN（请给延迟）",
+            "由指定时序器控制（请写明）",
+            "待核对器件手册"
+          ],
+          "reason": "上电时序会影响主控复位和稳定启动"
+        }
+      ],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "battery",
+          "name": "电池/直流源",
+          "alias": "电源",
+          "position": 5,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "power_sequencer",
+          "name": "电源时序器",
+          "alias": "电源时序器",
+          "position": 5,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "esp32",
+          "name": "ESP32模块",
+          "alias": "esp32",
+          "position": 12,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "mpu6050",
+          "name": "陀螺仪加速度计",
+          "alias": "mpu6050",
+          "position": 18,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "oled_ssd1306",
+          "name": "OLED屏",
+          "alias": "ssd1306",
+          "position": 26,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 5.928,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C24_T1",
+      "case_id": "C24",
+      "split": "holdout",
+      "category": "explicit",
+      "expected_disposition": "plan",
+      "observed_preflight_disposition": "plan",
+      "disposition_match": true,
+      "required_types": [
+        "esp32",
+        "i2c_header"
+      ],
+      "selected_types": [
+        "esp32",
+        "gnd",
+        "i2c_header",
+        "resistor"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "esp32",
+          "name": "ESP32模块",
+          "alias": "esp32",
+          "position": 5,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "gnd",
+          "name": "接地",
+          "alias": "gnd",
+          "position": 27,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "i2c_header",
+          "name": "I2C排针",
+          "alias": "I2C排针",
+          "position": 30,
+          "position_basis": "normalized",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "resistor",
+          "name": "电阻",
+          "alias": "上拉电阻",
+          "position": 54,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 4.027,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C24_T2",
+      "case_id": "C24",
+      "split": "holdout",
+      "category": "ambiguous",
+      "expected_disposition": "clarify",
+      "observed_preflight_disposition": "clarify",
+      "disposition_match": true,
+      "required_types": [
+        "esp32",
+        "i2c_header"
+      ],
+      "selected_types": [
+        "esp32",
+        "i2c_header"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [
+        "external_device_model"
+      ],
+      "clarify_questions": [
+        {
+          "question": "I2C 从设备具体使用哪一型号？",
+          "options": [
+            "BMP280",
+            "MPU6050",
+            "SSD1306 OLED",
+            "其他型号（请写明）"
+          ],
+          "reason": "不同从设备的引脚、供电和地址配置不同"
+        }
+      ],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "esp32",
+          "name": "ESP32模块",
+          "alias": "esp32",
+          "position": 5,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "i2c_header",
+          "name": "I2C排针",
+          "alias": "I2C排针",
+          "position": 12,
+          "position_basis": "normalized",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 3.317,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C25_T1",
+      "case_id": "C25",
+      "split": "holdout",
+      "category": "explicit",
+      "expected_disposition": "plan",
+      "observed_preflight_disposition": "plan",
+      "disposition_match": true,
+      "required_types": [
+        "atmega328",
+        "esp32",
+        "bmp280"
+      ],
+      "selected_types": [
+        "atmega328",
+        "bmp280",
+        "esp32",
+        "gnd",
+        "resistor"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "atmega328",
+          "name": "ATmega328",
+          "alias": "atmega328p",
+          "position": 0,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "esp32",
+          "name": "ESP32模块",
+          "alias": "esp32",
+          "position": 13,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 41,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "resistor",
+          "name": "电阻",
+          "alias": "上拉电阻",
+          "position": 86,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "gnd",
+          "name": "接地",
+          "alias": "地",
+          "position": 92,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 4.48,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C25_T2",
+      "case_id": "C25",
+      "split": "holdout",
+      "category": "ambiguous",
+      "expected_disposition": "clarify",
+      "observed_preflight_disposition": "clarify",
+      "disposition_match": true,
+      "required_types": [
+        "atmega328",
+        "esp32",
+        "bmp280"
+      ],
+      "selected_types": [
+        "atmega328",
+        "bmp280",
+        "esp32"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [
+        "multi_controller_arbitration"
+      ],
+      "clarify_questions": [
+        {
+          "question": "多主 I2C 的仲裁协议和两颗主控分工是什么？",
+          "options": [
+            "指定一个主控，另一个从设备",
+            "使用支持多主仲裁的协议（请写明）",
+            "待确定协议"
+          ],
+          "reason": "两颗主控同时驱动总线需要明确的仲裁与冲突处理"
+        }
+      ],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "atmega328",
+          "name": "ATmega328",
+          "alias": "atmega328p",
+          "position": 0,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "esp32",
+          "name": "ESP32模块",
+          "alias": "esp32",
+          "position": 13,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 32,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 4.507,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C26_T1",
+      "case_id": "C26",
+      "split": "holdout",
+      "category": "explicit",
+      "expected_disposition": "plan",
+      "observed_preflight_disposition": "plan",
+      "disposition_match": true,
+      "required_types": [
+        "atmega328",
+        "bmp280",
+        "i2c_header"
+      ],
+      "selected_types": [
+        "atmega328",
+        "bmp280",
+        "gnd",
+        "i2c_header",
+        "resistor"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "atmega328",
+          "name": "ATmega328",
+          "alias": "atmega328p",
+          "position": 8,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 21,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "i2c_header",
+          "name": "I2C排针",
+          "alias": "I2C排针",
+          "position": 28,
+          "position_basis": "normalized",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "gnd",
+          "name": "接地",
+          "alias": "地",
+          "position": 48,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "resistor",
+          "name": "电阻",
+          "alias": "上拉电阻",
+          "position": 52,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 3.936,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C26_T2",
+      "case_id": "C26",
+      "split": "holdout",
+      "category": "unsupported_model",
+      "expected_disposition": "reject",
+      "observed_preflight_disposition": "reject",
+      "disposition_match": true,
+      "required_types": [
+        "bmp280",
+        "i2c_header"
+      ],
+      "selected_types": [
+        "atmega328",
+        "bmp280",
+        "esp32",
+        "i2c_header"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [
+        "nRF52840"
+      ],
+      "observed_unsupported_models": [
+        "nRF52840"
+      ],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 23,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "i2c_header",
+          "name": "I2C排针",
+          "alias": "I2C排针",
+          "position": 27,
+          "position_basis": "normalized",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "atmega328",
+          "name": "ATmega328",
+          "alias": "atmega",
+          "position": 45,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "esp32",
+          "name": "ESP32模块",
+          "alias": "esp32",
+          "position": 54,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 3.894,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C27_T1",
+      "case_id": "C27",
+      "split": "holdout",
+      "category": "explicit",
+      "expected_disposition": "plan",
+      "observed_preflight_disposition": "plan",
+      "disposition_match": true,
+      "required_types": [
+        "atmega328",
+        "bmp280",
+        "ldo_3v3"
+      ],
+      "selected_types": [
+        "atmega328",
+        "bmp280",
+        "gnd",
+        "ldo_3v3",
+        "resistor"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "ldo_3v3",
+          "name": "LDO3.3V稳压",
+          "alias": "ams1117",
+          "position": 7,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "atmega328",
+          "name": "ATmega328",
+          "alias": "atmega328p",
+          "position": 24,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 35,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "resistor",
+          "name": "电阻",
+          "alias": "上拉电阻",
+          "position": 48,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "gnd",
+          "name": "接地",
+          "alias": "地",
+          "position": 69,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 4.231,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C27_T2",
+      "case_id": "C27",
+      "split": "holdout",
+      "category": "negative",
+      "expected_disposition": "reject",
+      "observed_preflight_disposition": "reject",
+      "disposition_match": true,
+      "required_types": [
+        "atmega328",
+        "bmp280",
+        "ldo_3v3"
+      ],
+      "selected_types": [
+        "atmega328",
+        "battery",
+        "bmp280",
+        "ldo_3v3"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [
+        "I2C_PULLUP_WRONG_DOMAIN"
+      ],
+      "requirement_blockers": [
+        {
+          "rule_id": "I2C_PULLUP_WRONG_DOMAIN",
+          "severity": "error",
+          "message": "3.3V 总线被要求上拉到 5V 且无电平转换说明，需先核对输入容限并修正供电域。",
+          "evidence": "I2C 上拉却改用另一根 5V 电源且禁止电平转换",
+          "span": [
+            47,
+            72
+          ],
+          "source": "explicit_requirement_rule"
+        }
+      ],
+      "observed_negative_rule_ids": [
+        "I2C_PULLUP_WRONG_DOMAIN"
+      ],
+      "negative_rule_detection": true,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "ldo_3v3",
+          "name": "LDO3.3V稳压",
+          "alias": "ams1117",
+          "position": 0,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "atmega328",
+          "name": "ATmega328",
+          "alias": "atmega328p",
+          "position": 27,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 40,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "battery",
+          "name": "电池/直流源",
+          "alias": "电源",
+          "position": 63,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 5.035,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C28_T1",
+      "case_id": "C28",
+      "split": "holdout",
+      "category": "explicit",
+      "expected_disposition": "plan",
+      "observed_preflight_disposition": "plan",
+      "disposition_match": true,
+      "required_types": [
+        "atmega328",
+        "bmp280",
+        "i2c_header"
+      ],
+      "selected_types": [
+        "atmega328",
+        "bmp280",
+        "gnd",
+        "i2c_header",
+        "resistor"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "atmega328",
+          "name": "ATmega328",
+          "alias": "atmega328p",
+          "position": 13,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 26,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "i2c_header",
+          "name": "I2C排针",
+          "alias": "i2c",
+          "position": 33,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "resistor",
+          "name": "电阻",
+          "alias": "上拉电阻",
+          "position": 57,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "gnd",
+          "name": "接地",
+          "alias": "地",
+          "position": 63,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 4.126,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C28_T2",
+      "case_id": "C28",
+      "split": "holdout",
+      "category": "unsupported_model",
+      "expected_disposition": "reject",
+      "observed_preflight_disposition": "reject",
+      "disposition_match": true,
+      "required_types": [
+        "atmega328",
+        "bmp280",
+        "i2c_header"
+      ],
+      "selected_types": [
+        "atmega328",
+        "bmp280",
+        "i2c_header"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [
+        "PCA9306"
+      ],
+      "observed_unsupported_models": [
+        "PCA9306"
+      ],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "atmega328",
+          "name": "ATmega328",
+          "alias": "atmega328p",
+          "position": 0,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 17,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "i2c_header",
+          "name": "I2C排针",
+          "alias": "i2c",
+          "position": 32,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 3.751,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C29_T1",
+      "case_id": "C29",
+      "split": "holdout",
+      "category": "explicit",
+      "expected_disposition": "plan",
+      "observed_preflight_disposition": "plan",
+      "disposition_match": true,
+      "required_types": [
+        "atmega328",
+        "bmp280"
+      ],
+      "selected_types": [
+        "atmega328",
+        "battery",
+        "bmp280",
+        "capacitor",
+        "gnd",
+        "resistor",
+        "vcc"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "atmega328",
+          "name": "ATmega328",
+          "alias": "atmega328p",
+          "position": 5,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 24,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "vcc",
+          "name": "电源正",
+          "alias": "vcc",
+          "position": 45,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "battery",
+          "name": "电池/直流源",
+          "alias": "供电",
+          "position": 54,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "gnd",
+          "name": "接地",
+          "alias": "地",
+          "position": 57,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "resistor",
+          "name": "电阻",
+          "alias": "上拉电阻",
+          "position": 65,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "capacitor",
+          "name": "电容",
+          "alias": "去耦电容",
+          "position": 70,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 4.205,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C29_T2",
+      "case_id": "C29",
+      "split": "holdout",
+      "category": "negative",
+      "expected_disposition": "reject",
+      "observed_preflight_disposition": "reject",
+      "disposition_match": true,
+      "required_types": [
+        "atmega328",
+        "bmp280"
+      ],
+      "selected_types": [
+        "atmega328",
+        "bmp280"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [
+        "UNSUPPORTED_LOGICAL_PIN"
+      ],
+      "requirement_blockers": [
+        {
+          "rule_id": "UNSUPPORTED_LOGICAL_PIN",
+          "severity": "error",
+          "message": "需求强制使用不存在的逻辑引脚，需先补齐器件引脚合同或改用已支持引脚。",
+          "evidence": "主控必须使用不存在于目录的 SDA 和 SCL 引脚名",
+          "span": [
+            31,
+            58
+          ],
+          "source": "explicit_requirement_rule"
+        }
+      ],
+      "observed_negative_rule_ids": [
+        "UNSUPPORTED_LOGICAL_PIN"
+      ],
+      "negative_rule_detection": true,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "atmega328",
+          "name": "ATmega328",
+          "alias": "atmega328p",
+          "position": 5,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 18,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 4.899,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C30_T1",
+      "case_id": "C30",
+      "split": "holdout",
+      "category": "explicit",
+      "expected_disposition": "plan",
+      "observed_preflight_disposition": "plan",
+      "disposition_match": true,
+      "required_types": [
+        "esp32",
+        "bmp280",
+        "mpu6050"
+      ],
+      "selected_types": [
+        "bmp280",
+        "esp32",
+        "mpu6050",
+        "resistor"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [],
+      "observed_unsupported_models": [],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "esp32",
+          "name": "ESP32模块",
+          "alias": "esp32",
+          "position": 5,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "bmp280",
+          "name": "气压传感器",
+          "alias": "bmp280",
+          "position": 14,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "mpu6050",
+          "name": "陀螺仪加速度计",
+          "alias": "mpu6050",
+          "position": 23,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        },
+        {
+          "type": "resistor",
+          "name": "电阻",
+          "alias": "上拉电阻",
+          "position": 73,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 4.212,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    },
+    {
+      "task_id": "C30_T2",
+      "case_id": "C30",
+      "split": "holdout",
+      "category": "unsupported_model",
+      "expected_disposition": "reject",
+      "observed_preflight_disposition": "reject",
+      "disposition_match": true,
+      "required_types": [
+        "esp32"
+      ],
+      "selected_types": [
+        "esp32"
+      ],
+      "missing_required_types": [],
+      "forbidden_types_found": [],
+      "catalog_selection_correct": true,
+      "expected_unsupported_models": [
+        "BME688",
+        "BMI270"
+      ],
+      "observed_unsupported_models": [
+        "BME688",
+        "BMI270"
+      ],
+      "unsupported_detection_correct": true,
+      "expected_missing_fields": [],
+      "clarify_questions": [],
+      "expected_negative_rule_ids": [],
+      "requirement_blockers": [],
+      "observed_negative_rule_ids": [],
+      "negative_rule_detection": null,
+      "unexpected_blockers_on_nonnegative_task": false,
+      "candidate_evidence": [
+        {
+          "type": "esp32",
+          "name": "ESP32模块",
+          "alias": "esp32",
+          "position": 5,
+          "position_basis": "original",
+          "score": 1.0,
+          "source": "catalog_exact"
+        }
+      ],
+      "elapsed_ms": 3.549,
+      "generation_path": "not_run_offline",
+      "structure_valid": null,
+      "erc_passed": null,
+      "template_fallback": null,
+      "model_calls": 0
+    }
+  ],
+  "limitations": [
+    "仅测确定性预规划；不评价模型、网表、ERC、PCB或制造结果",
+    "负例规则标签是需求层标注，不等同现有 ERC 规则 ID",
+    "文本阻断只覆盖明确措辞；未解析完整电路，未核对电流、容限、具体 MPN 或元件参数",
+    "规则按本内部需求集开发；负例命中数不能称为独立泛化、ERC 或物理验证效果",
+    "内部案例分区不能称为外部独立盲测；T03 仍未完成"
+  ]
+}

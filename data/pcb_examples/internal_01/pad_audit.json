@@ -1,0 +1,105 @@
+{
+  "status": "routed_candidate_unchecked",
+  "mapping_evidence": "declared_source_requires_engineer_review",
+  "pad_audit": [
+    {
+      "ref": "J1",
+      "pin": "GND",
+      "pad": "1",
+      "net": "Net-(J1-GND)",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",
+      "footprint_sha256": "8952158347d7b7cc13924c62dccb0c48911af892bb009a0de27cb4d3c25cc1bb",
+      "pin_map_source": "internal-engineering:i2c-adapter-pin-assignment-v1"
+    },
+    {
+      "ref": "J1",
+      "pin": "VCC",
+      "pad": "2",
+      "net": "Net-(J1-VCC)",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",
+      "footprint_sha256": "8952158347d7b7cc13924c62dccb0c48911af892bb009a0de27cb4d3c25cc1bb",
+      "pin_map_source": "internal-engineering:i2c-adapter-pin-assignment-v1"
+    },
+    {
+      "ref": "J1",
+      "pin": "SDA",
+      "pad": "3",
+      "net": "Net-(J1-SDA)",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",
+      "footprint_sha256": "8952158347d7b7cc13924c62dccb0c48911af892bb009a0de27cb4d3c25cc1bb",
+      "pin_map_source": "internal-engineering:i2c-adapter-pin-assignment-v1"
+    },
+    {
+      "ref": "J1",
+      "pin": "SCL",
+      "pad": "4",
+      "net": "Net-(J1-SCL)",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",
+      "footprint_sha256": "8952158347d7b7cc13924c62dccb0c48911af892bb009a0de27cb4d3c25cc1bb",
+      "pin_map_source": "internal-engineering:i2c-adapter-pin-assignment-v1"
+    },
+    {
+      "ref": "R1",
+      "pin": "1",
+      "pad": "1",
+      "net": "Net-(J1-VCC)",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "footprint_sha256": "949bbbe025b509557866ddd9fcb0403244571f3ceb4f954c9766ee622d18421c",
+      "pin_map_source": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-074K7L#nonpolar-two-terminal"
+    },
+    {
+      "ref": "R1",
+      "pin": "2",
+      "pad": "2",
+      "net": "Net-(J1-SDA)",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "footprint_sha256": "949bbbe025b509557866ddd9fcb0403244571f3ceb4f954c9766ee622d18421c",
+      "pin_map_source": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-074K7L#nonpolar-two-terminal"
+    },
+    {
+      "ref": "R2",
+      "pin": "1",
+      "pad": "1",
+      "net": "Net-(J1-VCC)",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "footprint_sha256": "949bbbe025b509557866ddd9fcb0403244571f3ceb4f954c9766ee622d18421c",
+      "pin_map_source": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-074K7L#nonpolar-two-terminal"
+    },
+    {
+      "ref": "R2",
+      "pin": "2",
+      "pad": "2",
+      "net": "Net-(J1-SCL)",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "footprint_sha256": "949bbbe025b509557866ddd9fcb0403244571f3ceb4f954c9766ee622d18421c",
+      "pin_map_source": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-074K7L#nonpolar-two-terminal"
+    }
+  ],
+  "footprints": {
+    "J1": {
+      "id": "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",
+      "sha256": "8952158347d7b7cc13924c62dccb0c48911af892bb009a0de27cb4d3c25cc1bb"
+    },
+    "R1": {
+      "id": "Resistor_SMD:R_0805_2012Metric",
+      "sha256": "949bbbe025b509557866ddd9fcb0403244571f3ceb4f954c9766ee622d18421c"
+    },
+    "R2": {
+      "id": "Resistor_SMD:R_0805_2012Metric",
+      "sha256": "949bbbe025b509557866ddd9fcb0403244571f3ceb4f954c9766ee622d18421c"
+    }
+  },
+  "board": {
+    "width_mm": 32.0,
+    "height_mm": 28.0,
+    "layers": 2,
+    "min_clearance_mm": 0.2,
+    "min_trace_width_mm": 0.2
+  },
+  "routing": "explicit_internal_example_plan",
+  "drc": "unavailable",
+  "gerber": "unavailable",
+  "manufacturing": "unavailable",
+  "track_count": 9,
+  "via_count": 2
+}

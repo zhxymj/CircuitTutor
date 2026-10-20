@@ -1,0 +1,109 @@
+{
+  "source": "manual",
+  "name": "candidate",
+  "assurance": "official",
+  "verdict": "fail",
+  "accepted": false,
+  "gate_order": [
+    "structure",
+    "erc",
+    "ratings",
+    "spice_deck",
+    "spice_runtime",
+    "kicad_export",
+    "official_erc",
+    "official_netlist"
+  ],
+  "gates": {
+    "structure": {
+      "status": "pass",
+      "required": true,
+      "issues": [],
+      "evidence": {
+        "version": 2
+      },
+      "reason": ""
+    },
+    "erc": {
+      "status": "fail",
+      "required": true,
+      "issues": [
+        {
+          "rule": "未共地",
+          "message": "电路中没有任何接地（GND）连接，电流无法构成回路",
+          "severity": "major",
+          "pins": []
+        }
+      ],
+      "evidence": {
+        "counts": {
+          "fatal": 0,
+          "major": 1,
+          "minor": 0,
+          "warning": 0
+        }
+      },
+      "reason": ""
+    },
+    "ratings": {
+      "status": "pass",
+      "required": true,
+      "issues": [],
+      "evidence": {
+        "danger_count": 0
+      },
+      "reason": ""
+    },
+    "spice_deck": {
+      "status": "not_applicable",
+      "required": false,
+      "issues": [],
+      "evidence": {
+        "unmodeled_types": [
+          "i2c_header"
+        ]
+      },
+      "reason": "元件缺少可执行 SPICE 模型：i2c_header"
+    },
+    "spice_runtime": {
+      "status": "not_applicable",
+      "required": false,
+      "issues": [],
+      "evidence": {},
+      "reason": "元件缺少可执行 SPICE 模型：i2c_header"
+    },
+    "kicad_export": {
+      "status": "pass",
+      "required": true,
+      "issues": [],
+      "evidence": {
+        "sha256": "d4fe79f38640d82a6b9e2889a106a63be4aaa95e4052d96458906c7e0761e2ac",
+        "bytes": 7166
+      },
+      "reason": ""
+    },
+    "official_erc": {
+      "status": "unavailable",
+      "required": true,
+      "issues": [],
+      "evidence": {},
+      "reason": "未找到 kicad-cli；未进行官方复验"
+    },
+    "official_netlist": {
+      "status": "unavailable",
+      "required": true,
+      "issues": [],
+      "evidence": {},
+      "reason": "未找到 kicad-cli；未进行官方复验"
+    }
+  },
+  "blocking_gates": [
+    "erc",
+    "official_erc",
+    "official_netlist"
+  ],
+  "artifacts": {
+    "schematic": "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\negative_source_missing_ground\\run_a59a33eb225c4bf48e5a4acb3445cca6\\candidate.kicad_sch",
+    "project": "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\negative_source_missing_ground\\run_a59a33eb225c4bf48e5a4acb3445cca6\\candidate.kicad_pro"
+  }
+}

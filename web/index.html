@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>智绘电路 · 专业工程台</title>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232563eb'/%3E%3Cpath d='M5 16h6v-6h10v12H11v-6h16' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E" rel="icon"/>
+<script>
+/* 旧内核兼容提示：页面脚本依赖 Promise/fetch 等 ES2015+ 能力，缺失时给出
+   明确的升级指引而不是白屏（render.js 的 ES2019/ES2020 语法已改写兼容，
+   本检测兜住更老的内核，2026-09-10）。 */
+(function () {
+  var ok = !!(window.Promise && window.fetch && window.Map && window.Object.assign
+              && Array.prototype.includes);
+  if (ok) return;
+  document.write(
+    '<div style="font:15px/1.9 sans-serif;color:#2b2b2b;padding:48px;max-width:520px;margin:0 auto">'
+    + '<h2 style="color:#8a0d0d;margin:0 0 12px">浏览器版本过低</h2>'
+    + '<p>本页面需要较新的浏览器内核：Chrome 60+ / Edge 79+ / Firefox 60+ / Safari 11+。</p>'
+    + '<p>请升级浏览器（或更换现代浏览器）后重新打开。</p></div>');
+  if (window.stop) window.stop();
+})();
+/* 主题首屏套用（P2-12）：必须在 <head> 内、【样式生效前】同步执行，
+   否则深色模式用户会先看到一帧白色再跳深色（FOUC 闪白）。取值失败
+   （隐私模式禁用 localStorage）时回退 system，绝不让脚本异常阻断渲染。 */
+(function () {
+  var t = 'system';
+  try { t = localStorage.getItem('zht-theme') || 'system'; } catch (e) { t = 'system'; }
+  if (t !== 'light' && t !== 'dark' && t !== 'system') t = 'system';
+  document.documentElement.setAttribute('data-theme', t);
+})();
+</script>
+<link href="/static/workbench.css" rel="stylesheet"/>
+</head>
+<body><svg aria-hidden="true" height="0" style="position:absolute" width="0"><defs>
+<symbol id="i-chip" viewbox="0 0 24 24"><rect height="12" rx="2" width="12" x="6" y="6"></rect><path d="M9 2v4m6-4v4M9 18v4m6-4v4M2 9h4m-4 6h4m12-6h4m-4 6h4"></path><rect height="6" rx="1" width="6" x="9" y="9"></rect></symbol>
+<symbol id="i-grid" viewbox="0 0 24 24"><rect height="7" rx="1" width="7" x="3" y="3"></rect><rect height="7" rx="1" width="7" x="14" y="3"></rect><rect height="7" rx="1" width="7" x="3" y="14"></rect><rect height="7" rx="1" width="7" x="14" y="14"></rect></symbol>
+<symbol id="i-circuit" viewbox="0 0 24 24"><path d="M3 7h5v10h8V7h5M8 12h8M12 3v5m0 8v5"></path><circle cx="3" cy="7" r="2"></circle><circle cx="21" cy="7" r="2"></circle></symbol>
+<symbol id="i-file" viewbox="0 0 24 24"><path d="M14 3H5v18h14V8zM14 3v5h5M8 12h8m-8 4h6"></path></symbol>
+<symbol id="i-check" viewbox="0 0 24 24"><path d="M12 3l8 3v6c0 5-8 9-8 9s-8-4-8-9V6zM8 12l3 3 5-6"></path></symbol>
+<symbol id="i-bolt" viewbox="0 0 24 24"><path d="M13 2L5 13h6l-1 9 9-13h-6z"></path></symbol>
+<symbol id="i-settings" viewbox="0 0 24 24"><path d="M4 7h16M4 17h16M8 4v6m8 4v6"></path></symbol>
+<symbol id="i-save" viewbox="0 0 24 24"><path d="M4 3h13l4 4v14H3V3zM7 3v6h10V3M7 21v-8h10v8"></path></symbol>
+<symbol id="i-export" viewbox="0 0 24 24"><path d="M12 3v12m-4-4 4 4 4-4M4 15v6h16v-6"></path></symbol>
+<symbol id="i-arrow" viewbox="0 0 24 24"><path d="M4 3l7 17 2-7 7-2z"></path></symbol>
+<symbol id="i-hand" viewbox="0 0 24 24"><path d="M7 13V6a2 2 0 0 1 4 0v6-8a2 2 0 0 1 4 0v8-6a2 2 0 0 1 4 0v8-3a2 2 0 0 1 4 0v6c0 4-3 5-7 5-5 0-6-2-8-5l-4-4a2 2 0 0 1 3-3l4 3" transform="translate(-2 -1) scale(.95)"></path></symbol>
+<symbol id="i-wire" viewbox="0 0 24 24"><path d="M4 5h7v14h9"></path><circle cx="4" cy="5" r="2"></circle><circle cx="20" cy="19" r="2"></circle></symbol>
+<symbol id="i-plus" viewbox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></symbol>
+<symbol id="i-minus" viewbox="0 0 24 24"><path d="M5 12h14"></path></symbol>
+<symbol id="i-fit" viewbox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5M8 8h8v8H8z"></path></symbol>
+<symbol id="i-chevron" viewbox="0 0 24 24"><path d="M8 5l7 7-7 7"></path></symbol>
+<symbol id="i-info" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 11v6m0-10v1"></path></symbol>
+<symbol id="i-undo" viewbox="0 0 24 24"><path d="M4 10h10a6 6 0 0 1 0 12M4 10l5-5m-5 5 5 5" transform="translate(0 -3)"></path></symbol>
+<symbol id="i-search" viewbox="0 0 24 24"><circle cx="10" cy="10" r="6"></circle><path d="m15 15 6 6"></path></symbol>
+</defs></svg><div id="workbench-shell">
+<nav aria-label="主导航" class="wb-rail"><div class="wb-brandmark" title="智绘电路"><svg class="wb-icon"><use href="#i-circuit"></use></svg></div>
+<button aria-label="电路工作台" class="wb-rail-button active" data-workbench-nav="requirements" title="电路工作台"><svg class="wb-icon"><use href="#i-circuit"></use></svg></button>
+<button aria-label="元件目录" class="wb-rail-button" data-workbench-nav="components" title="元件目录"><svg class="wb-icon"><use href="#i-chip"></use></svg></button>
+<button aria-label="工程文件" class="wb-rail-button" data-workbench-nav="files" title="工程文件"><svg class="wb-icon"><use href="#i-file"></use></svg></button>
+<button aria-label="检查与过程" class="wb-rail-button" data-workbench-nav="checks" title="检查与过程"><svg class="wb-icon"><use href="#i-check"></use></svg></button>
+<div class="wb-rail-spacer"></div><span class="wb-local">LOCAL</span><button aria-label="视图与设置" class="wb-rail-button" data-workbench-nav="settings" title="视图与设置"><svg class="wb-icon"><use href="#i-settings"></use></svg></button><div class="wb-version"><span class="en" id="verBadge" style="font-size:12px;margin-left:8px;color:var(--mut)"></span></div></nav>
+<header class="wb-topbar"><div class="wb-wordmark">智绘电路<small>CIRCUIT WORKBENCH</small></div><div class="wb-header-divider"></div><div class="wb-project-heading"><span id="workbench-title">未命名工程</span><div class="wb-source-slot"><span class="src-badge" id="srcBadge" title="结果来源"></span></div></div><span class="wb-top-spacer"></span><span id="workbench-save-state">尚未创建电路</span><div class="wb-save-slot"><button disabled="" id="save-json" title="保存工程 JSON">
+<svg aria-hidden="true" class="ic" viewbox="0 0 16 16"><path d="M3 3h8l2 2v8H3z"></path><path d="M5 3v4h5V3M5 13v-4h6v4"></path></svg>保存
+      </button></div>
+<div class="wb-export-wrap"><button aria-controls="workbench-export-menu" aria-expanded="false" class="wb-button" id="workbench-export-toggle"><svg class="wb-icon"><use href="#i-export"></use></svg>导出<svg class="wb-icon wb-chevron"><use href="#i-chevron"></use></svg></button><div class="wb-export-menu" hidden="" id="workbench-export-menu"><div class="wb-menu-group" data-export-group="design"><h3>原理图与物料</h3><button disabled="" id="export-svg" title="导出 SVG 图片">
+<svg aria-hidden="true" class="ic" viewbox="0 0 16 16"><path d="M8 2v8M5 7l3 3 3-3"></path><path d="M3 13h10"></path></svg>SVG
+      </button><button disabled="" id="export-bom" title="导出 BOM 物料清单 CSV">
+<svg aria-hidden="true" class="ic" viewbox="0 0 16 16"><path d="M3 3h10v10H3z"></path><path d="M5 6h6M5 8.5h6M5 11h4"></path></svg>BOM
+      </button><button disabled="" id="export-kicad" title="导出 KiCad 工程压缩包">
+<svg aria-hidden="true" class="ic" viewbox="0 0 16 16"><path d="M4 2h6l3 3v9H4z"></path><path d="M10 2v3h3"></path></svg>KiCad
+      </button></div><div class="wb-menu-group" data-export-group="simulation"><h3>SPICE 与仿真</h3><button disabled="" id="export-spice" title="导出 SPICE 电路网表文件（.cir）">
+<svg aria-hidden="true" class="ic" viewbox="0 0 16 16"><path d="M3 2h10v12H3z"></path><path d="M5 5h6M5 8h6M5 11h4"></path></svg>SPICE
+      </button><select aria-label="仿真类型" disabled="" id="sim-kind" title="选择要做的仿真分析">
+<option value="op">直流工作点</option>
+<option value="ac">交流扫频</option>
+<option value="tran">瞬态</option>
+<option value="dc">DC 扫描</option>
+</select><button disabled="" id="btn-sim" title="对当前电路做 SPICE 仿真分析">仿真</button></div><div class="wb-menu-group" data-export-group="pcb"><h3>PCB 与制造候选</h3><p>封装、布线和制造文件均需人工复核。</p><button disabled="" id="btn-pcb" title="导出可视预布局模型，封装未经核对">预布局</button><button disabled="" id="btn-pcb-real" title="使用已核对的器件、封装和焊盘映射生成未布线候选">真实 PCB</button><button disabled="" id="btn-pcb-cam" title="载入与当前 CircuitJSON 对应的已布线 KiCad 板，校验后导出待复核制造文件">校验制造文件</button><input accept=".kicad_pcb" hidden="" id="file-pcb-cam" type="file"/></div></div></div>
+<button class="wb-button wb-primary" disabled="" id="workbench-validate"><svg class="wb-icon"><use href="#i-check"></use></svg><span>运行校验</span></button></header>
+<aside aria-label="需求、元件与文件" class="wb-project" id="workbench-project"><div class="wb-project-card"><div class="wb-eyebrow">PROJECT EXPLORER</div><h2 id="workbench-project-title">当前工程</h2><p id="workbench-project-summary">输入需求，开始设计电路</p></div><div aria-label="工程面板" class="wb-tabs" role="tablist"><button aria-controls="workbench-requirements" aria-selected="true" class="active" data-project-tab="requirements" data-workbench-tab="requirements" role="tab">需求</button><button aria-controls="workbench-components" aria-selected="false" data-project-tab="parts" data-workbench-tab="components" role="tab">元件</button><button aria-controls="workbench-files" aria-selected="false" data-project-tab="files" data-workbench-tab="files" role="tab">文件</button></div>
+<section class="wb-side-content" id="workbench-requirements" role="tabpanel"><div aria-label="学习路径" class="wb-teach-path" hidden="" id="teachPath"><span class="wb-teach-path-title">LEARNING PATH · 学习路径</span><ol class="wb-teach-steps"><li data-step="1">描述需求</li><li data-step="2">生成电路</li><li data-step="3">审核与编辑</li><li data-step="4">运行校验</li><li data-step="5">导出文件</li></ol><p class="wb-teach-path-note">开启“教学模式”后，这里会跟着你的操作高亮当前步骤。</p></div><div class="wb-section-label">描述电路需求<span>中文输入</span></div><div class="wb-form-slot"><form class="bar" id="form">
+<textarea aria-label="电路需求" autocomplete="off" id="q" rows="5">用555定时器做一个LED闪烁灯</textarea>
+<button class="ghost" id="modelBtn" title="选择 AI 模型，或填入自己的 API Key" type="button">
+<svg aria-hidden="true" viewbox="0 0 16 16"><rect height="9" rx="1.5" width="12" x="2" y="4"></rect><path d="M5 4V3a3 3 0 016 0v1M6 8h4M8 8v3"></path></svg>
+      模型
+    </button>
+<button aria-label="生成电路" id="go"><span class="spin" hidden=""></span>生成电路</button>
+</form></div><div class="wb-examples-slot"><div id="examples">
+<span class="ex-label">试一试：</span>
+<button class="chip" data-q="用555定时器做一个LED闪烁灯" type="button">555 闪烁灯</button>
+<button class="chip" data-q="用5V电池经330Ω限流电阻点亮一个红色LED" type="button">LED 限流</button>
+<button class="chip" data-q="运放反相放大电路" type="button">运放放大</button>
+<button aria-expanded="false" class="chip more" id="moreExamples" type="button">更多示例</button>
+<span hidden="" id="examplesExtra">
+<button class="chip" data-q="两个LED并联，共用一个限流电阻" type="button">LED 并联</button>
+<button class="chip" data-q="NPN三极管开关电路" type="button">NPN 开关</button>
+<button class="chip" data-q="电位器分压电路" type="button">分压器</button>
+<button class="chip" data-q="齐纳二极管稳压电路" type="button">齐纳稳压</button>
+</span>
+</div></div><div class="wb-edit-slot"><div class="edit-bar" id="editBar">
+<label for="edit-q">修改当前电路</label>
+<input autocomplete="off" id="edit-q" placeholder="例如：把 R1 改成 470Ω，并增加一个去耦电容"/>
+<button disabled="" id="edit-btn" type="button">预览修改</button>
+<button disabled="" id="revert-edit" title="回到本次 AI 修改之前的电路（也可用工具栏撤销 / Ctrl+Z）" type="button">撤回更改</button>
+<span aria-live="polite" id="edit-status" role="status"></span>
+<div aria-live="polite" id="editChanges"></div>
+</div></div><div class="wb-requirement-actions"><button disabled="" id="btn-schemes" title="按当前需求给出 2 个拓扑草案">多方案</button></div><div class="wb-side-note"><strong>从需求到可编辑电路</strong>明确电源、器件与连接要求。缺失参数会先澄清，候选经审核后再应用到当前工程。</div><div id="modelPanel" style="display:none">
+<div class="mp-title">选择模型
+      <span class="mp-note">（Key 只保存在本浏览器与本机服务内存，不写入工程文件或日志）</span>
+</div>
+<div class="mp-row" id="mp-providers"></div>
+<div class="mp-row" id="mp-models"></div>
+<div class="mp-row" id="mp-keyrow" style="display:none">
+<span class="mp-label" id="mp-keylabel">API Key</span>
+<input autocomplete="off" class="mp-in" id="mp-key" placeholder="sk-…" style="flex:1;min-width:220px" type="password"/>
+<button class="mp-apply" id="mp-apply" type="button">保存并选用</button>
+</div>
+<div id="mp-custom" style="display:none">
+<div class="mp-row">
+<input class="mp-in" id="mp-c-name" placeholder="名称（如：本地 Ollama）"/>
+<input class="mp-in" id="mp-c-model" placeholder="模型名（如：qwen2.5:7b）"/>
+</div>
+<div class="mp-row">
+<input class="mp-in" id="mp-c-url" placeholder="base_url（https://… 或本机 http://127.0.0.1:11434/v1）" style="flex:1;min-width:280px"/>
+</div>
+<div class="mp-row">
+<input autocomplete="off" class="mp-in" id="mp-c-key" placeholder="API Key（本地端点可填任意非空串，如 ollama）" style="flex:1;min-width:220px" type="password"/>
+<button class="mp-apply" id="mp-c-apply" type="button">保存并选用</button>
+</div>
+</div>
+<div class="mp-status" id="mp-status"></div>
+</div><div id="clarify" style="display:none"></div></section>
+<section class="wb-side-content" hidden="" id="workbench-components" role="tabpanel"><label class="wb-section-label" for="workbench-part-search">元件目录<span id="workbench-library-count"></span></label><input autocomplete="off" id="workbench-part-search" placeholder="搜索名称、类型或位号…" type="search"/><div class="wb-insert-slot"><select id="insert-type" title="在画布中央插入一个新元件（插入后需手动连线）">
+<option value="">选择类型…</option>
+</select></div><p class="wb-subtle">点击元件插入画布中央，再连接引脚。</p><div id="workbench-part-list"></div></section>
+<section class="wb-side-content" hidden="" id="workbench-files" role="tabpanel"><section class="wb-file-group" data-file-group="project"><h3>工程文件</h3><p>保存当前电路，或载入本地工程。</p><button id="load-json" title="载入工程 JSON">
+<svg aria-hidden="true" class="ic" viewbox="0 0 16 16"><path d="M3 13V5l3-2h5l2 2v8z"></path><path d="M8 7v4M6 9h4"></path></svg>载入
+      </button><input accept=".json,application/json" hidden="" id="file-json" type="file"/><button id="btn-history" title="查看/载入本地保存的工程">历史</button><button disabled="" id="btn-save-history" title="把当前电路保存到本地工程历史">存档</button></section><section class="wb-file-group" data-file-group="images"><h3>图片识别</h3><p>识别结果先进入人工纠错与候选审核。</p><button id="load-image" title="目前检测轴对齐 IEC 电阻和电容；位图文字使用本机 OCR，均需人工纠错" type="button">识别图片</button><input accept=".svg,image/svg+xml,.png,image/png,.jpg,.jpeg,image/jpeg" hidden="" id="file-image" type="file"/><select aria-label="图片识别方式" id="image-recognition-mode" title="离线几何/OCR或本机 CircuitVision 模型">
+<option value="offline">离线几何 / OCR</option>
+<option value="circuitvision">本机 CircuitVision</option>
+</select><button hidden="" id="cancel-vision-request" type="button">取消本机识别</button></section><section class="wb-file-group" data-file-group="external"><h3>代码与外部电路</h3><p>将外部结果转换为当前工程格式。</p><select aria-label="外部结果格式" id="external-source" title="外部结果转换为本工具 CircuitJSON 后须人工核对">
+<option value="circuitvision_spice">CircuitVision · SPICE 网表</option>
+<option value="hcd">HCD · JSON 识别结果</option>
+<option value="tscircuit">tscircuit · Circuit JSON（独立格式）</option>
+</select><button id="load-external" title="导入外部网表或识别结果，核对缺项与连接后应用草稿" type="button">导入外部结果</button><input accept=".json,.cir,.sp,.spice,.net,.txt,application/json,text/plain" hidden="" id="file-external" type="file"/><button id="open-tscircuit" type="button">代码建电路</button></section><section class="wb-file-group" data-file-group="history"><h3>工程与过程</h3><button id="btn-trace" title="查看本次生成的 AI 调用过程日志">链路</button><button id="btn-evidence" title="查看当前工程来源、缺项与真实校验门禁">证据</button></section><section class="wb-file-group" data-file-group="settings"><h3>视图与设置</h3><div id="themeWrap">
+<label for="theme">主题</label>
+<select id="theme" title="切换界面主题（选择会记住）">
+<option value="system">跟随系统</option>
+<option value="light">浅色</option>
+<option value="dark">深色</option>
+</select>
+</div><div id="teachWrap">
+<label for="teachMode">教学模式</label>
+<input id="teachMode" title="开启后：术语出现解释气泡、学习路径高亮当前步骤、门禁结果附“为什么查这项”" type="checkbox"/>
+</div>
+<p class="wb-teach-hint" id="teachHint">开启后显示术语解释、学习路径与门禁“为什么”；只在界面层生效，不改变电路结果。</p>
+<button id="btn-demo" title="路演时隐藏模型 Key 等敏感入口" type="button">演示模式</button><details id="boundaryBox">
+<summary>能力边界（点开查看）</summary>
+<div><b>支持：</b>
+<ul>
+<li>低压、中小规模 MCU 与 I2C 传感接口等常见电路</li>
+<li>中文需求 → CircuitJSON → 确定性 ERC / 额定值检查</li>
+<li>离线模板演示、KiCad 工程导出、BOM/SPICE/SVG</li>
+<li>AI 增量改图（失败或门禁不通过时拒绝/回退）</li>
+</ul>
+</div>
+<div style="margin-top:6px"><b>不支持 / 不承诺：</b>
+<ul>
+<li>高压、强电、射频功放、安全关键系统</li>
+<li>未经手册/仿真/KiCad 复验即可投产的自动设计</li>
+
+<li>信息不足时的强制猜测；「100% 准确」或全自动投产</li>
+</ul>
+</div>
+</details></section></section>
+<div class="wb-side-footer">拖动元件 · 单击引脚连线<br/><kbd>Ctrl Z</kbd> 撤销 <kbd>R</kbd> 旋转 <kbd>Esc</kbd> 取消</div></aside>
+<main class="wb-stage" id="workbench-stage"><div class="wb-document-bar"><div class="wb-document-tab"><svg class="wb-icon"><use href="#i-circuit"></use></svg><span id="workbench-document-name">原理图</span><span class="wb-sheet-tag">SHEET 01</span></div><div class="wb-mobile-controls"><button aria-controls="workbench-project" aria-expanded="false" aria-label="打开需求与元件" class="wb-button" id="workbench-left-toggle">需求 / 元件</button><button aria-controls="workbench-inspector" aria-expanded="false" aria-label="打开属性与校验" class="wb-button" id="workbench-right-toggle">属性 / 校验</button></div></div>
+<div class="wb-canvas-toolbar"><span class="wb-mode"><svg class="wb-icon"><use href="#i-arrow"></use></svg>选择</span><div class="wb-tool-divider"></div><div class="wb-history-tools"><button aria-label="撤销" class="icon-only" disabled="" id="undo" title="撤销（Ctrl+Z）">
+<svg aria-hidden="true" class="ic" viewbox="0 0 16 16"><path d="M6 3L2 7l4 4"></path><path d="M2 7h7a4 4 0 010 8H7"></path></svg>
+</button><button aria-label="重做" class="icon-only" disabled="" id="redo" title="重做（Ctrl+Y）">
+<svg aria-hidden="true" class="ic" viewbox="0 0 16 16"><path d="M10 3l4 4-4 4"></path><path d="M14 7H7a4 4 0 000 8h2"></path></svg>
+</button></div><span class="wb-toolbar-spacer"></span><span class="wb-toolbar-caption">拖动元件 · 空白处平移</span><div class="wb-theme-slot"><select aria-label="原理图主题" id="sch-theme" title="切换原理图配色主题">
+<option value="kicad">经典 EDA</option>
+<option value="print">黑白打印</option>
+<option value="blueprint">蓝图</option>
+</select></div></div><div class="wb-canvas-slot"><div aria-label="电路图画布" id="canvas" role="region">
+<!-- 工具条：svg 渲染进 #svg-host，避免重渲染时把按钮冲掉 -->
+<div id="canvasEmpty">
+<!-- 自绘骨架：电池-电阻-LED-地，呼应真实符号语言；无外链资源 -->
+<svg aria-label="示例电路骨架" class="sketch" role="img" viewbox="0 0 360 160">
+<g fill="none" opacity=".55" stroke="currentColor" stroke-linecap="round" stroke-width="1.6">
+<!-- battery -->
+<path d="M28 70v20M40 62v36M28 80h12M40 80h18"></path>
+<!-- wire + resistor -->
+<path d="M58 80h22"></path>
+<rect height="16" rx="2" width="36" x="80" y="72"></rect>
+<path d="M116 80h28"></path>
+<!-- led triangle -->
+<path d="M144 70l22 10-22 10z"></path>
+<path d="M166 70v20M170 74l8-6M170 86l8 6"></path>
+<path d="M174 80h36"></path>
+<!-- gnd -->
+<path d="M210 80v16M198 96h24M202 102h16M206 108h8"></path>
+<!-- ghost path highlight -->
+<path d="M28 80h146" opacity=".35" stroke="#8a0d0d" stroke-dasharray="3 4"></path>
+<circle cx="58" cy="80" fill="currentColor" r="2.2" stroke="none"></circle>
+<circle cx="144" cy="80" fill="currentColor" r="2.2" stroke="none"></circle>
+<circle cx="210" cy="80" fill="currentColor" r="2.2" stroke="none"></circle>
+</g>
+<text fill="currentColor" font-size="10" opacity=".7" text-anchor="middle" x="40" y="52">BAT</text>
+<text fill="currentColor" font-size="10" opacity=".7" text-anchor="middle" x="98" y="64">R</text>
+<text fill="currentColor" font-size="10" opacity=".7" text-anchor="middle" x="155" y="64">LED</text>
+<text fill="currentColor" font-size="10" opacity=".7" text-anchor="middle" x="210" y="128">GND</text>
+</svg>
+<div class="es-title">从一个电路需求开始</div>
+<div class="es-sub">在左侧描述需求，或选择下方示例</div>
+<div class="wb-teach-onboard" hidden="" id="teachOnboard">
+<ol class="wb-onboard-steps">
+<li><b>01</b><strong>描述需求</strong><span>在左侧写清电源轨、器件与连接关系；缺供电、缺 I2C 地址等条件会先向你澄清。</span></li>
+<li><b>02</b><strong>审核候选</strong><span>生成后先看器件与连线差异和 ERC 位置，再决定接受或放弃；接受前原图不变。</span></li>
+<li><b>03</b><strong>校验并导出</strong><span>运行统一门禁，通过后再导出 SVG / BOM / SPICE / KiCad；制造始终需人工复核。</span></li>
+</ol>
+</div>
+<div id="emptyExamples">
+<div class="ee-cards" role="list">
+<button aria-label="示例：5V电池经330欧电阻点亮红色LED" class="ee-card" data-q="5V电池经330欧电阻点亮红色LED" role="listitem" type="button">
+<strong>入门 · LED 指示灯</strong>
+            5V电池经330欧电阻点亮红色LED
+          </button>
+<button aria-label="示例：用555定时器做一个LED闪烁灯" class="ee-card" data-q="用555定时器做一个LED闪烁灯" role="listitem" type="button">
+<strong>经典 · 555 定时器</strong>
+            用555定时器做一个LED闪烁灯
+          </button>
+<button aria-label="示例：5V与3.3V MCU与I2C温湿度传感器接口子板" class="ee-card" data-q="设计一个5V输入、3.3V稳压供电的MCU与I2C温湿度传感器接口子板，包含SDA、SCL上拉电阻、每个芯片的100nF去耦电容、电源指示灯和接口连接器" role="listitem" type="button">
+<strong>命题场景 · MCU + I2C</strong>
+            5V/3.3V MCU 与 I2C 温湿度接口子板（含上拉、去耦）
+          </button>
+</div>
+</div>
+</div>
+<div id="svg-host"></div>
+<div class="wb-floating-tools"><button aria-label="缩小" class="icon-only" id="zoom-out" title="缩小">
+<svg aria-hidden="true" class="ic" viewbox="0 0 16 16"><circle cx="7" cy="7" r="4.5"></circle><path d="M10.5 10.5L14 14M5 7h4"></path></svg>
+</button><button aria-label="重置视图" class="icon-only" id="zoom-reset" title="重置视图">
+<svg aria-hidden="true" class="ic" viewbox="0 0 16 16"><rect height="9" rx="1" width="11" x="2.5" y="3.5"></rect><path d="M5 8h6"></path></svg>
+</button><button aria-label="放大" class="icon-only" id="zoom-in" title="放大">
+<svg aria-hidden="true" class="ic" viewbox="0 0 16 16"><circle cx="7" cy="7" r="4.5"></circle><path d="M10.5 10.5L14 14M5 7h4M7 5v4"></path></svg>
+</button></div><div aria-live="polite" id="wireBanner" role="status">
+<span>正在连线：再单击另一个引脚完成，或按 ESC 取消</span>
+<button id="wireCancel" type="button">取消连线</button>
+</div><div class="wb-canvas-info"><span class="wb-eyebrow">SCHEMATIC EDITOR</span><h1 id="workbench-canvas-title">开始绘制你的电路</h1><p id="workbench-canvas-subtitle">需求生成 · 本地编辑 · 校验与导出</p></div><div class="wb-sheet-corner">智绘电路 <span> / SHEET 01</span></div></div></div>
+<section class="wb-checks"><div aria-label="调整底部抽屉高度" aria-orientation="horizontal" class="wb-splitter wb-splitter-h" data-splitter="drawer" role="separator" tabindex="0" title="拖动调整底部抽屉高度（方向键微调，双击恢复默认）"></div><button aria-controls="workbench-checks-body" aria-expanded="false" id="workbench-checks-toggle"><svg class="wb-icon"><use href="#i-check"></use></svg><strong>检查与过程</strong><span id="workbench-checks-summary">尚未运行检查</span><span class="wb-toolbar-spacer"></span><span class="wb-drawer-chevron">⌃</span></button><div hidden="" id="workbench-checks-body"><div class="wb-checks-intro">电气规则、工程估算与本次生成过程</div><div id="meta"></div><div aria-label="生成进度" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" id="progressWrap" role="progressbar">
+<div class="pg-head">
+<span>生成进度</span>
+<span id="progressLabel">准备中…</span>
+</div>
+<div id="progressTrack"><div id="progressFill"></div></div>
+</div><ul id="stages"></ul><div aria-live="polite" id="precisionCard"></div><p id="hint">
+<span>拖动元件 · 单击改参数 · R 旋转 · 滚轮缩放 · 空白平移</span>
+<span>可插入 152 种元件 · 改动后自动重算 ERC</span>
+</p></div></section></main>
+<aside aria-label="属性与校验" class="wb-inspector" id="workbench-inspector"><div class="wb-inspector-head"><span>INSPECTOR</span><svg class="wb-icon"><use href="#i-settings"></use></svg></div><div aria-label="检查器面板" class="wb-tabs" role="tablist"><button aria-controls="workbench-properties" aria-selected="true" class="active" data-inspector-tab="properties" role="tab">元件属性</button><button aria-controls="workbench-validation" aria-selected="false" data-inspector-tab="validation" role="tab">电路校验</button></div>
+<section id="workbench-properties" role="tabpanel"><div id="workbench-selection-empty"><div class="wb-empty-chip"><svg class="wb-icon"><use href="#i-chip"></use></svg></div><h2>选择一个元件</h2><p>在画布中单击元件，查看参数、旋转方向和连接状态。</p></div><div class="wb-props-slot"><div id="props" style="position:relative">
+<button aria-label="关闭属性面板" id="propsClose" title="关闭" type="button">×</button>
+</div></div><section hidden="" id="workbench-part-metadata"></section><div class="wb-selection-caption" id="workbench-selection-caption"></div></section>
+<section hidden="" id="workbench-validation" role="tabpanel"><div class="wb-validation-intro"><h2>官方校验门禁</h2><p>使用当前真实电路运行适用检查。工具或参数缺失会保留为未完成。</p><button class="wb-button wb-primary" disabled="" id="workbench-validate-inspector">校验当前电路</button></div><div aria-live="polite" id="workbench-validation-report">创建或载入电路后运行校验。</div><section hidden="" class="wb-timing" id="workbench-timing"><h4>瞬态时序图（教学）<button id="timingRun" type="button">运行瞬态</button></h4><p class="wb-timing-note" id="timingNote">数据来自本机 ngspice 的真实 .tran 输出，按阈值数字化后绘制；不是实测波形，也不能作为验收依据。</p><div class="wb-timing-stage" id="timingStage"></div></section><div class="wb-erc-slot"><div aria-label="电气规则检查明细" id="ercPanel" role="region">
+<h4>ERC 检查明细 <button aria-label="关闭明细" id="ercPanelClose" type="button">关闭</button></h4>
+<div id="ercPanelBody"></div>
+</div></div></section><div class="wb-inspector-note"><svg class="wb-icon"><use href="#i-info"></use></svg><span>参数与连接由当前工程读取。修改后自动重算电气规则，导出前请核对完整校验。</span></div></aside>
+<div aria-label="调整左侧栏宽度" aria-orientation="vertical" class="wb-splitter wb-splitter-v wb-splitter-left" data-splitter="left" role="separator" tabindex="0" title="拖动调整左侧栏宽度（方向键微调，双击恢复默认）"></div>
+<div aria-label="调整右侧栏宽度" aria-orientation="vertical" class="wb-splitter wb-splitter-v wb-splitter-right" data-splitter="right" role="separator" tabindex="0" title="拖动调整右侧栏宽度（方向键微调，双击恢复默认）"></div>
+<footer class="wb-statusbar"><span class="wb-status-local">本地工作空间</span><span id="workbench-status-counts">0 个元件 · 0 条连线</span><span id="workbench-status-selection">未选中元件</span><span class="wb-toolbar-spacer"></span><div class="wb-status-erc"><span aria-label="电气规则检查状态，点击查看明细" aria-live="polite" class="erc-badge" id="erc-badge" role="button" tabindex="0" title=""></span></div><span class="wb-status-format">CircuitJSON</span><div class="wb-dirty-slot"><span id="dirty"></span></div></footer><button aria-label="关闭侧边面板" hidden="" id="workbench-scrim" tabindex="-1"></button><div hidden="" id="stats">工程工作台</div></div>
+<section aria-label="电路候选审核" id="editReview" role="region">
+<h4>审核候选修改</h4>
+<p class="review-note">先查看器件、连线和 ERC 错误位置。接受前，当前电路不会改变。</p>
+<div id="editReviewBody"></div>
+<div aria-label="原图预览" hidden="" id="imageOriginal"></div>
+<div aria-label="候选电路图预览" id="editReviewSvg"></div>
+<div class="edit-review-actions">
+<button id="editAccept" type="button">接受修改</button>
+<button id="editDiscard" type="button">放弃候选</button>
+</div>
+</section><div aria-live="polite" hidden="" id="visionCorrectionHost"></div><section aria-label="代码建电路" hidden="" id="tscircuit-panel" style="padding:16px;border:1px solid var(--border,#888);border-radius:10px;margin:12px 0">
+<h3 style="margin-top:0">代码建电路</h3>
+<p>填写或载入 TSX / JSX，在本机生成原理图与电路数据。支持电阻、电容、电感及明确的直流电源；候选需审核参数和连接后应用。</p>
+<label>名称 <input id="tscircuit-name" maxlength="240" value="rc.tsx"/></label>
+<button id="tscircuit-example" type="button">载入 RC 示例</button>
+<button id="tscircuit-file-button" type="button">打开代码文件</button>
+<input accept=".tsx,.jsx,.ts,.js,text/plain" hidden="" id="tscircuit-file" type="file"/>
+<textarea aria-label="TSX JSX 电路代码" id="tscircuit-code" spellcheck="false" style="display:block;width:100%;min-height:220px;font-family:Consolas,monospace;margin:12px 0;box-sizing:border-box"></textarea>
+<button id="tscircuit-generate" type="button">本机生成并审核候选</button>
+<button hidden="" id="tscircuit-cancel" type="button">取消生成</button>
+<button id="tscircuit-close" type="button">关闭面板</button>
+<p aria-live="polite" id="tscircuit-status" role="status"></p>
+<div hidden="" id="tscircuit-downloads">
+<button id="tscircuit-download-code" type="button">下载原始代码</button>
+<button id="tscircuit-download-json" type="button">下载上游 Circuit JSON</button>
+<button id="tscircuit-download-svg" type="button">下载原理图 SVG</button>
+</div>
+<iframe hidden="" id="tscircuit-preview" sandbox="" style="width:100%;height:360px;border:0;background:white" title="tscircuit 原理图预览"></iframe>
+<details hidden="" id="tscircuit-json-details"><summary>查看上游 Circuit JSON</summary><pre id="tscircuit-json" style="max-height:220px;overflow:auto;white-space:pre-wrap"></pre></details>
+</section><div aria-label="多方案拓扑草案" id="schemesPanel" role="region">
+<h4>多方案草案 <button aria-label="关闭方案面板" id="schemesClose" type="button">关闭</button></h4>
+<div id="tplCatBar" style="display:none;margin:6px 0;font-size:12px;color:var(--mut)"></div>
+<div id="schemesBody"></div>
+</div><div aria-label="工程历史" id="historyPanel" role="region">
+<h4>工程历史 <button aria-label="关闭历史面板" id="historyClose" type="button">关闭</button></h4>
+<div id="historyBody"></div>
+</div><div aria-label="AI 调用日志" id="tracePanel" role="region">
+<h4>AI 调用日志 <button aria-label="关闭日志面板" id="traceClose" type="button">关闭</button></h4>
+<div id="traceBody"></div>
+</div><div aria-label="当前工程证据" id="evidencePanel" role="dialog">
+<h4>当前工程证据
+<button aria-label="关闭证据面板" id="evidenceClose" type="button">关闭</button>
+</h4>
+<div id="evidenceBody">加载中…</div>
+</div><div aria-label="KiCad 导出说明" id="kicadModal" role="dialog">
+<h4>KiCad 工程已导出
+      <button aria-label="关闭" id="kicadModalClose" type="button">关闭</button>
+</h4>
+<div aria-label="原理图网页预览" class="km-preview" id="kicadPreview"></div>
+<div class="km-step">1. 解压下载的 zip，进入工程文件夹</div>
+<div class="km-step">2. 双击 <b>OPEN_IN_KICAD.bat</b>，或 KiCad →「打开工程」选择 <b>*.kicad_pro</b></div>
+<div class="km-step">3. 在项目管理器双击同名 <b>*.kicad_sch</b>；若空白请按 Home/适合页面</div>
+<div class="km-note">不要使用「文件 → 导入」。网页预览仅供参考，以 zip 内工程文件为准；可先看包内 PREVIEW.svg。</div>
+<div class="km-actions">
+<button id="kicadCopySteps" type="button">复制打开步骤</button>
+<button id="kicadModalOk" type="button">知道了</button>
+</div>
+</div><script src="/static/symbols.js"></script><script src="/static/wire_geometry.js"></script><script src="/static/layout.js"></script><script src="/static/render.js"></script><script src="/static/interact.js"></script><script src="/static/image_recognition.js"></script><script src="/static/upstream_vision.js"></script><script src="/static/tscircuit_editor.js"></script><script src="/static/wavedrom.unpkg.min.js"></script><script src="/static/workbench.js"></script><script src="/static/app.js"></script></body>
+</html>

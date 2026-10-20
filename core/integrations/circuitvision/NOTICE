@@ -1,0 +1,33 @@
+CircuitVision built-in source subset
+Upstream: https://github.com/JKc66/CircuitVision
+Pinned commit: fc5b775043b577668906b6d0bbb238a690a82965
+License: Apache-2.0; see the complete accompanying LICENSE.
+No upstream NOTICE was present. The source files contain no copyright header;
+all original comments in the migrated definitions are preserved.
+
+Source-to-local mappings:
+- src/circuit_analyzer.py -> circuit_analyzer.py: CircuitAnalyzer.__init__
+  (SAM2 LoRA targets, model assembly, checkpoint loading, transforms),
+  CircuitAnalyzer.bboxes, CircuitAnalyzer.segment_with_sam2.
+- src/sam2_infer.py -> sam2_infer.py: SAM2Transforms, MultiKernelRefinement,
+  SAM2ImageWrapper, get_modified_sam2 (including all their methods).
+- src/utils.py inspected but no definitions are included: load_classes reads
+  classes.json for unused upstream properties; inference gets names from YOLO.
+
+Modifications:
+- Extract only detection/segmentation; omit Streamlit, dotenv, cloud clients,
+  VLM/OCR, topology/netlist generation, unrelated class maps and unused imports.
+- Force CPU in construction/prediction and default model factory device.
+- Use installed SAM-2 config registry names directly, without worktree chdir.
+- Load fine-tuned state with explicit weights_only=True; initialization errors
+  propagate instead of silently disabling SAM2. Segmentation keeps the original
+  None-on-error result, which the worker rejects as failed inference.
+- Worker imports these local modules, appends HCD geometry candidates, retains
+  checkpoint hashes, restricted YOLO loading and manual correction API boundary.
+- Preserve upstream refinement architecture (including its fixed 4 channels);
+  checkpoint-compatible shapes and zero threshold are unchanged.
+
+Exact original source SHA-256:
+92da32b7010b02ebf3b48551efcc63b6ffd798d332c0645b38eb706ae637900d  src/circuit_analyzer.py
+832d1866a994223e67a9e469a840397e8faeadbeab6e9b5f90b73f6b7699c046  src/sam2_infer.py
+05b95e75d194577b1fe1e7032ab14f3c47f46c817d3e49efa92de6032639d321  src/utils.py

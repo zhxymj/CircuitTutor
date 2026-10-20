@@ -1,0 +1,4949 @@
+{
+  "meta": {
+    "tool": "benchmark.py（智绘电路 CircuitTutor LLM 生成成功率基准）",
+    "time": "2026-09-14T21:51:48",
+    "model": "deterministic-fake",
+    "suite_size": 55,
+    "suite_hash": "1add1ae4e9e94d56",
+    "script_hash": "dc6abc30a9477d84",
+    "snapshot": true,
+    "ran": 55,
+    "limit": 0,
+    "budget_per_case": 5,
+    "verdict_rule": "成功 = 结构校验通过 且 ERC 无 fatal/major"
+  },
+  "summary": {
+    "total": 55,
+    "cases_in_suite": 55,
+    "success": 50,
+    "success_rate": 0.9091,
+    "structure_pass": 51,
+    "structure_pass_rate": 0.9273,
+    "circuit_produced": 51,
+    "erc_pass": 50,
+    "erc_pass_rate": 0.9804,
+    "local_extract_rate": 0.8182,
+    "avg_llm_calls": 2.24,
+    "max_llm_calls": 5,
+    "avg_elapsed_ms": 17,
+    "total_elapsed_ms": 922,
+    "fatal_total": 0,
+    "major_total": 1,
+    "minor_total": 0,
+    "warning_total": 0
+  },
+  "cases": [
+    {
+      "index": 1,
+      "prompt": "用5V电池经330Ω限流电阻点亮一个红色LED",
+      "components": [
+        "resistor",
+        "led",
+        "battery"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 203,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "LED 限流电路（5V-330Ω-LED）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "prompt": "3V纽扣电池点亮一个绿色发光二极管，串联220Ω限流电阻",
+      "components": [
+        "resistor",
+        "led",
+        "battery"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 16,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "LED 限流电路（5V-330Ω-LED）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "prompt": "拨动开关控制5V电池给LED供电，LED串联470Ω限流电阻",
+      "components": [
+        "resistor",
+        "led",
+        "battery",
+        "switch",
+        "switch_toggle"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 0,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "LED 限流电路（5V-330Ω-LED）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "prompt": "5V电池经100Ω限流电阻驱动红外LED发射电路，负极接地",
+      "components": [
+        "resistor",
+        "led",
+        "battery",
+        "gnd"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 15,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "LED 限流电路（5V-330Ω-LED）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 5,
+      "prompt": "用NE555做一个1Hz的LED闪烁灯，电源用5V电池，定时电阻10k、定时电容100µF，LED串330Ω限流电阻，再加100nF去耦电容",
+      "components": [
+        "resistor",
+        "capacitor",
+        "led",
+        "battery",
+        "ne555"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 16,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "NE555 多谐振荡器闪烁灯",
+        "parts": [
+          {
+            "type": "vcc",
+            "id": "V1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "ne555",
+            "id": "U1",
+            "attrs": {
+              "value": "NE555"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "1k"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R2",
+            "attrs": {
+              "value": "10k"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R3",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "capacitor",
+            "id": "C1",
+            "attrs": {
+              "value": "10µF"
+            }
+          },
+          {
+            "type": "capacitor",
+            "id": "C2",
+            "attrs": {
+              "value": "100nF"
+            }
+          },
+          {
+            "type": "capacitor",
+            "id": "C3",
+            "attrs": {
+              "value": "100nF"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "V1:1",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "U1:DISCH",
+            "red",
+            []
+          ],
+          [
+            "U1:DISCH",
+            "R2:1",
+            "red",
+            []
+          ],
+          [
+            "R2:2",
+            "U1:THR",
+            "red",
+            []
+          ],
+          [
+            "U1:THR",
+            "U1:TRIG",
+            "red",
+            []
+          ],
+          [
+            "U1:TRIG",
+            "C1:+",
+            "red",
+            []
+          ],
+          [
+            "C1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "U1:CTRL",
+            "C2:+",
+            "blue",
+            []
+          ],
+          [
+            "C2:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "V1:1",
+            "U1:RESET",
+            "red",
+            []
+          ],
+          [
+            "V1:1",
+            "U1:VCC",
+            "red",
+            []
+          ],
+          [
+            "V1:1",
+            "C3:+",
+            "red",
+            []
+          ],
+          [
+            "C3:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "U1:OUT",
+            "R3:1",
+            "green",
+            []
+          ],
+          [
+            "R3:2",
+            "LED1:+",
+            "green",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "U1:GND",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 6,
+      "prompt": "用555定时器做单稳态定时电路，电源用电池，按下按钮后LED亮1秒再熄灭，需要电阻、电容、按钮和LED",
+      "components": [
+        "resistor",
+        "capacitor",
+        "led",
+        "battery",
+        "ne555",
+        "pushbutton"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 16,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "NE555 多谐振荡器闪烁灯",
+        "parts": [
+          {
+            "type": "vcc",
+            "id": "V1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "ne555",
+            "id": "U1",
+            "attrs": {
+              "value": "NE555"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "1k"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R2",
+            "attrs": {
+              "value": "10k"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R3",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "capacitor",
+            "id": "C1",
+            "attrs": {
+              "value": "10µF"
+            }
+          },
+          {
+            "type": "capacitor",
+            "id": "C2",
+            "attrs": {
+              "value": "100nF"
+            }
+          },
+          {
+            "type": "capacitor",
+            "id": "C3",
+            "attrs": {
+              "value": "100nF"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "V1:1",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "U1:DISCH",
+            "red",
+            []
+          ],
+          [
+            "U1:DISCH",
+            "R2:1",
+            "red",
+            []
+          ],
+          [
+            "R2:2",
+            "U1:THR",
+            "red",
+            []
+          ],
+          [
+            "U1:THR",
+            "U1:TRIG",
+            "red",
+            []
+          ],
+          [
+            "U1:TRIG",
+            "C1:+",
+            "red",
+            []
+          ],
+          [
+            "C1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "U1:CTRL",
+            "C2:+",
+            "blue",
+            []
+          ],
+          [
+            "C2:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "V1:1",
+            "U1:RESET",
+            "red",
+            []
+          ],
+          [
+            "V1:1",
+            "U1:VCC",
+            "red",
+            []
+          ],
+          [
+            "V1:1",
+            "C3:+",
+            "red",
+            []
+          ],
+          [
+            "C3:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "U1:OUT",
+            "R3:1",
+            "green",
+            []
+          ],
+          [
+            "R3:2",
+            "LED1:+",
+            "green",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "U1:GND",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 7,
+      "prompt": "NE555无稳态电路驱动蜂鸣器间歇鸣叫，电源用电池，包含定时电阻、定时电容和蜂鸣器",
+      "components": [
+        "resistor",
+        "capacitor",
+        "battery",
+        "buzzer",
+        "ne555"
+      ],
+      "component_source": "local",
+      "has_circuit": false,
+      "structure_ok": false,
+      "erc_passed": false,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 5,
+      "elapsed_ms": 15,
+      "stages": [
+        "plan",
+        "generate",
+        "repair_struct",
+        "repair_struct",
+        "repair_struct"
+      ],
+      "error": "ValueError: LLM 输出始终无法通过结构校验：['connections[0] 第 1 个端点必须是 “元件id:引脚名” 格式的字符串', '元件 BAT1 没有参与任何连接']",
+      "verdict": "fail",
+      "circuit": null
+    },
+    {
+      "index": 8,
+      "prompt": "NE555输出经330Ω限流电阻驱动LED，电源用电池，定时电容10µF，用电位器调节占空比",
+      "components": [
+        "resistor",
+        "capacitor",
+        "potentiometer",
+        "led",
+        "battery",
+        "ne555"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 16,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "NE555 多谐振荡器闪烁灯",
+        "parts": [
+          {
+            "type": "vcc",
+            "id": "V1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "ne555",
+            "id": "U1",
+            "attrs": {
+              "value": "NE555"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "1k"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R2",
+            "attrs": {
+              "value": "10k"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R3",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "capacitor",
+            "id": "C1",
+            "attrs": {
+              "value": "10µF"
+            }
+          },
+          {
+            "type": "capacitor",
+            "id": "C2",
+            "attrs": {
+              "value": "100nF"
+            }
+          },
+          {
+            "type": "capacitor",
+            "id": "C3",
+            "attrs": {
+              "value": "100nF"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "V1:1",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "U1:DISCH",
+            "red",
+            []
+          ],
+          [
+            "U1:DISCH",
+            "R2:1",
+            "red",
+            []
+          ],
+          [
+            "R2:2",
+            "U1:THR",
+            "red",
+            []
+          ],
+          [
+            "U1:THR",
+            "U1:TRIG",
+            "red",
+            []
+          ],
+          [
+            "U1:TRIG",
+            "C1:+",
+            "red",
+            []
+          ],
+          [
+            "C1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "U1:CTRL",
+            "C2:+",
+            "blue",
+            []
+          ],
+          [
+            "C2:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "V1:1",
+            "U1:RESET",
+            "red",
+            []
+          ],
+          [
+            "V1:1",
+            "U1:VCC",
+            "red",
+            []
+          ],
+          [
+            "V1:1",
+            "C3:+",
+            "red",
+            []
+          ],
+          [
+            "C3:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "U1:OUT",
+            "R3:1",
+            "green",
+            []
+          ],
+          [
+            "R3:2",
+            "LED1:+",
+            "green",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "U1:GND",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 9,
+      "prompt": "设计一个反相比例放大器，输入电阻10k、反馈电阻100k，输入信号用电池提供，同相端接地",
+      "components": [
+        "resistor",
+        "battery",
+        "gnd",
+        "opamp_inverting"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 16,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "LED 限流电路（5V-330Ω-LED）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 10,
+      "prompt": "画一个增益11倍的同相比例放大器，信号由电池提供，输出经10k负载电阻接地",
+      "components": [
+        "resistor",
+        "battery",
+        "gnd",
+        "opamp_noninverting"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 15,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "LED 限流电路（5V-330Ω-LED）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 11,
+      "prompt": "反相放大器输出经330Ω限流电阻接LED到地做指示，输入电阻10k、反馈电阻100k，信号源用电池",
+      "components": [
+        "resistor",
+        "led",
+        "battery",
+        "gnd",
+        "opamp_inverting"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 16,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "反相比例放大器（含反馈回路）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "0.1V"
+            }
+          },
+          {
+            "type": "opamp_inverting",
+            "id": "U1"
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "10k"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R2",
+            "attrs": {
+              "value": "100k"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R3",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "绿"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "U1:-",
+            "red",
+            []
+          ],
+          [
+            "U1:-",
+            "R2:1",
+            "red",
+            []
+          ],
+          [
+            "R2:2",
+            "U1:out",
+            "red",
+            []
+          ],
+          [
+            "U1:+",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "U1:out",
+            "R3:1",
+            "green",
+            []
+          ],
+          [
+            "R3:2",
+            "LED1:+",
+            "green",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 12,
+      "prompt": "做一个电压跟随器缓冲电路，输入来自两个10k电阻对电池分压的中点",
+      "components": [
+        "resistor",
+        "battery",
+        "opamp_follower"
+      ],
+      "component_source": "local",
+      "has_circuit": false,
+      "structure_ok": false,
+      "erc_passed": false,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 5,
+      "elapsed_ms": 15,
+      "stages": [
+        "plan",
+        "generate",
+        "repair_struct",
+        "repair_struct",
+        "repair_struct"
+      ],
+      "error": "ValueError: LLM 输出始终无法通过结构校验：['connections[0] 第 1 个端点必须是 “元件id:引脚名” 格式的字符串', '元件 BAT1 没有参与任何连接']",
+      "verdict": "fail",
+      "circuit": null
+    },
+    {
+      "index": 13,
+      "prompt": "电位器接电池两端做可调电压，滑片经电压跟随器缓冲后输出",
+      "components": [
+        "potentiometer",
+        "battery",
+        "opamp_follower"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 16,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "电位器调光电路（滑片调亮度）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "potentiometer",
+            "id": "RV1",
+            "attrs": {
+              "value": "10k"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "RV1:1",
+            "red",
+            []
+          ],
+          [
+            "RV1:2",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "RV1:3",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 14,
+      "prompt": "做一个过零电压比较器，输入信号用电池，比较器同相端接地，输出经1kΩ限流电阻接LED到地",
+      "components": [
+        "resistor",
+        "led",
+        "battery",
+        "gnd",
+        "opamp_comparator"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 16,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "LED 限流电路（5V-330Ω-LED）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 15,
+      "prompt": "用电压比较器监测电池电压是否超过稳压二极管基准，输出经限流电阻驱动LED报警",
+      "components": [
+        "resistor",
+        "zener",
+        "led",
+        "battery",
+        "opamp_comparator"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 0,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "LED 限流电路（5V-330Ω-LED）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 16,
+      "prompt": "用NPN三极管驱动LED：基极经10k电阻接电池正极，集电极经330Ω电阻和LED接电池正极，发射极接地",
+      "components": [
+        "resistor",
+        "led",
+        "npn",
+        "battery",
+        "gnd"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 15,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "LED 限流电路（5V-330Ω-LED）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 17,
+      "prompt": "NPN三极管驱动有源蜂鸣器，基极经1kΩ电阻接电池正极，蜂鸣器接在电池正极和集电极之间，发射极接电池负极",
+      "components": [
+        "resistor",
+        "npn",
+        "battery",
+        "buzzer"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": false,
+      "fatal": 0,
+      "major": 1,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [
+        "[major] LED缺限流电阻：LED LED1 被导线直接跨接在电源/输出与地之间，没有限流电阻会烧毁 LED，应串联 220Ω~1kΩ 限流电阻"
+      ],
+      "llm_calls": 3,
+      "elapsed_ms": 32,
+      "stages": [
+        "plan",
+        "generate",
+        "repair_erc",
+        "done"
+      ],
+      "error": "ERC 未通过：fatal=0，major=1",
+      "verdict": "fail",
+      "circuit": {
+        "version": 1,
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1"
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 18,
+      "prompt": "上电延时电路：电池经10k电阻给100µF电容充电，经NPN三极管缓冲后点亮LED，LED带330Ω限流电阻",
+      "components": [
+        "resistor",
+        "capacitor",
+        "led",
+        "npn",
+        "battery"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 15,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "LED 限流电路（5V-330Ω-LED）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 19,
+      "prompt": "电池经NPN三极管驱动电感线圈，线圈两端反向并联1N4148续流二极管，基极经10k电阻驱动",
+      "components": [
+        "resistor",
+        "inductor",
+        "diode",
+        "npn",
+        "battery"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 16,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "NPN 三极管低边开关驱动 LED",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "pushbutton",
+            "id": "SW1",
+            "attrs": {
+              "value": "NO"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "1k"
+            }
+          },
+          {
+            "type": "npn",
+            "id": "Q1",
+            "attrs": {
+              "value": "2N3904"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R2",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "SW1:1",
+            "red",
+            []
+          ],
+          [
+            "SW1:2",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "Q1:B",
+            "red",
+            []
+          ],
+          [
+            "Q1:E",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:+",
+            "R2:1",
+            "red",
+            []
+          ],
+          [
+            "R2:2",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "Q1:C",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 20,
+      "prompt": "N沟道MOS管驱动电感负载，电感两端并联1N4148续流二极管，栅极经10k电阻接电池",
+      "components": [
+        "resistor",
+        "inductor",
+        "diode",
+        "nmos",
+        "battery"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 0,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "两路 LED 并联（各配限流电阻）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R2",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED2",
+            "attrs": {
+              "value": "绿"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:+",
+            "R2:1",
+            "red",
+            []
+          ],
+          [
+            "R2:2",
+            "LED2:+",
+            "green",
+            []
+          ],
+          [
+            "LED2:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 21,
+      "prompt": "12V电池经7805稳压到5V，输入端加100µF电解电容、输出端加100nF瓷片电容，输入输出共地",
+      "components": [
+        "capacitor",
+        "battery",
+        "gnd",
+        "regulator_7805",
+        "electrolytic",
+        "capacitor_ceramic"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 31,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "LED 限流电路（5V-330Ω-LED）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 22,
+      "prompt": "用LM7805和电容搭一个5V线性稳压电源，输入用9V电池，输出接100nF滤波电容",
+      "components": [
+        "capacitor",
+        "battery",
+        "regulator_7805"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 16,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "LED 限流电路（5V-330Ω-LED）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 23,
+      "prompt": "用两个10k电阻对5V电池分压得到2.5V基准，分压下端接电池负极",
+      "components": [
+        "resistor",
+        "battery"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 0,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "电位器调光电路（滑片调亮度）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "potentiometer",
+            "id": "RV1",
+            "attrs": {
+              "value": "10k"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "RV1:1",
+            "red",
+            []
+          ],
+          [
+            "RV1:2",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "RV1:3",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 24,
+      "prompt": "电位器两端接电池正负极做可调分压，滑片输出0到5V连续可调电压",
+      "components": [
+        "potentiometer",
+        "battery"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 15,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "电位器调光电路（滑片调亮度）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "potentiometer",
+            "id": "RV1",
+            "attrs": {
+              "value": "10k"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "RV1:1",
+            "red",
+            []
+          ],
+          [
+            "RV1:2",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "RV1:3",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 25,
+      "prompt": "10k上拉电阻把按键一端拉到电池正极，按键另一端接电池负极，按键两端并联0.1µF电容去抖",
+      "components": [
+        "resistor",
+        "capacitor",
+        "battery",
+        "pushbutton"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 16,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "两路 LED 并联（各配限流电阻）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R2",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED2",
+            "attrs": {
+              "value": "绿"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:+",
+            "R2:1",
+            "red",
+            []
+          ],
+          [
+            "R2:2",
+            "LED2:+",
+            "green",
+            []
+          ],
+          [
+            "LED2:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 26,
+      "prompt": "RC充放电实验电路：5V电池经10k电阻给100µF电容充电，电容负极接电池负极",
+      "components": [
+        "resistor",
+        "capacitor",
+        "battery"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 16,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "LED 限流电路（5V-330Ω-LED）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 27,
+      "prompt": "用12V电池经470Ω电阻接5.1V稳压二极管到地，组成简单并联稳压电路",
+      "components": [
+        "resistor",
+        "zener",
+        "battery",
+        "gnd"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 15,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "稳压二极管基准（限流电阻 + 齐纳钳位）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "9V"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "470Ω"
+            }
+          },
+          {
+            "type": "zener",
+            "id": "DZ1",
+            "attrs": {
+              "value": "5.1V"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "DZ1:K",
+            "red",
+            []
+          ],
+          [
+            "DZ1:A",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 28,
+      "prompt": "用保险丝保护5V电池供电回路，输出经220Ω限流电阻接LED指示通电",
+      "components": [
+        "resistor",
+        "led",
+        "fuse",
+        "battery"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 0,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "LED 限流电路（5V-330Ω-LED）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 29,
+      "prompt": "电感和电容组成LC低通滤波，接在电池输出与地之间",
+      "components": [
+        "capacitor",
+        "inductor",
+        "battery",
+        "gnd"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 16,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "LED 限流电路（5V-330Ω-LED）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 30,
+      "prompt": "晶振两端各接一个22pF电容到地组成时钟振荡网络，电源用电池",
+      "components": [
+        "capacitor",
+        "crystal",
+        "battery",
+        "gnd"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 15,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "LED 限流电路（5V-330Ω-LED）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 31,
+      "prompt": "做个让指示灯一闪一闪的电路",
+      "components": [
+        "led"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 16,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "LED 限流电路（5V-330Ω-LED）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 32,
+      "prompt": "把传感器出来的微弱信号放大到能点亮一个指示灯",
+      "components": [
+        "led"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 0,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "LED 限流电路（5V-330Ω-LED）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 33,
+      "prompt": "按下按钮灯就亮，松开就灭的简单控制",
+      "components": [
+        "led",
+        "pushbutton"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 16,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "LED 限流电路（5V-330Ω-LED）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 34,
+      "prompt": "做一个把较高直流电压稳定成5伏给单片机供电的电源",
+      "components": [
+        "battery"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 0,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "LED 限流电路（5V-330Ω-LED）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 35,
+      "prompt": "做一个通电后会延时几秒才让负载动作的电路",
+      "components": [],
+      "component_source": "llm",
+      "has_circuit": false,
+      "structure_ok": false,
+      "erc_passed": false,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 1,
+      "elapsed_ms": 0,
+      "stages": [],
+      "error": "元件抽取未命中任何元件（本地与 LLM 均未识别）",
+      "verdict": "fail",
+      "circuit": null
+    },
+    {
+      "index": 36,
+      "prompt": "用一节电池同时点亮两个指示灯",
+      "components": [
+        "led",
+        "battery"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 15,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "LED 限流电路（5V-330Ω-LED）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 37,
+      "prompt": "当输入电压超过某个设定值时点亮报警灯",
+      "components": [
+        "led"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 0,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "按钮控制蜂鸣器",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "pushbutton",
+            "id": "SW1",
+            "attrs": {
+              "value": "NO"
+            }
+          },
+          {
+            "type": "buzzer",
+            "id": "BZ1",
+            "attrs": {
+              "value": "有源"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "SW1:1",
+            "red",
+            []
+          ],
+          [
+            "SW1:2",
+            "BZ1:+",
+            "red",
+            []
+          ],
+          [
+            "BZ1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 38,
+      "prompt": "给数字芯片的供电脚旁边加一个消除高频干扰的小元件",
+      "components": [
+        "battery"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 16,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "LED 限流电路（5V-330Ω-LED）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 39,
+      "prompt": "做一个旋钮转一转就能连续改变输出电压高低的电路",
+      "components": [],
+      "component_source": "llm",
+      "has_circuit": false,
+      "structure_ok": false,
+      "erc_passed": false,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 1,
+      "elapsed_ms": 0,
+      "stages": [],
+      "error": "元件抽取未命中任何元件（本地与 LLM 均未识别）",
+      "verdict": "fail",
+      "circuit": null
+    },
+    {
+      "index": 40,
+      "prompt": "做一个电池快没电时指示灯会亮起来的提醒电路",
+      "components": [
+        "led",
+        "battery"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 0,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "LED 限流电路（5V-330Ω-LED）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 41,
+      "prompt": "天黑了灯会自动亮起来的那种小夜灯电路",
+      "components": [
+        "led"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 16,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "LED 限流电路（5V-330Ω-LED）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 42,
+      "prompt": "用手摸一下风扇就开始转的感应开关",
+      "components": [
+        "switch"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 0,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "LED 限流电路（5V-330Ω-LED）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 43,
+      "prompt": "做一个能数数的东西，每按一下前进一位",
+      "components": [
+        "battery",
+        "resistor",
+        "led",
+        "gnd"
+      ],
+      "component_source": "llm",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 3,
+      "elapsed_ms": 31,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "LED 限流电路（5V-330Ω-LED）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 44,
+      "prompt": "把家里插座的高压交流变成安全的低压直流",
+      "components": [
+        "battery",
+        "resistor",
+        "led",
+        "gnd"
+      ],
+      "component_source": "llm",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 3,
+      "elapsed_ms": 15,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "LED 限流电路（5V-330Ω-LED）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 45,
+      "prompt": "做一个小喇叭，按一下就发出滴滴声",
+      "components": [
+        "buzzer",
+        "speaker_8ohm"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 16,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "按钮控制蜂鸣器",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "pushbutton",
+            "id": "SW1",
+            "attrs": {
+              "value": "NO"
+            }
+          },
+          {
+            "type": "buzzer",
+            "id": "BZ1",
+            "attrs": {
+              "value": "有源"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "SW1:1",
+            "red",
+            []
+          ],
+          [
+            "SW1:2",
+            "BZ1:+",
+            "red",
+            []
+          ],
+          [
+            "BZ1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 46,
+      "prompt": "让小车轮子能正转也能反转的驱动电路",
+      "components": [
+        "battery",
+        "resistor",
+        "led",
+        "gnd"
+      ],
+      "component_source": "llm",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 3,
+      "elapsed_ms": 16,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "LED 限流电路（5V-330Ω-LED）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 47,
+      "prompt": "做一个测体温的小装置，温度高了就报警",
+      "components": [
+        "thermistor"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 15,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "按钮控制蜂鸣器",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "pushbutton",
+            "id": "SW1",
+            "attrs": {
+              "value": "NO"
+            }
+          },
+          {
+            "type": "buzzer",
+            "id": "BZ1",
+            "attrs": {
+              "value": "有源"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "SW1:1",
+            "red",
+            []
+          ],
+          [
+            "SW1:2",
+            "BZ1:+",
+            "red",
+            []
+          ],
+          [
+            "BZ1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 48,
+      "prompt": "烟雾大的时候自动报警的电路",
+      "components": [
+        "battery",
+        "pushbutton",
+        "buzzer",
+        "gnd"
+      ],
+      "component_source": "llm",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 3,
+      "elapsed_ms": 16,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "按钮控制蜂鸣器",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "pushbutton",
+            "id": "SW1",
+            "attrs": {
+              "value": "NO"
+            }
+          },
+          {
+            "type": "buzzer",
+            "id": "BZ1",
+            "attrs": {
+              "value": "有源"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "SW1:1",
+            "red",
+            []
+          ],
+          [
+            "SW1:2",
+            "BZ1:+",
+            "red",
+            []
+          ],
+          [
+            "BZ1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 49,
+      "prompt": "让两个设备之间隔离干扰的信号传递电路",
+      "components": [
+        "battery",
+        "resistor",
+        "led",
+        "gnd"
+      ],
+      "component_source": "llm",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 3,
+      "elapsed_ms": 31,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "LED 限流电路（5V-330Ω-LED）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 50,
+      "prompt": "做一个能记忆刚才按钮按没按过的电路",
+      "components": [
+        "pushbutton"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 0,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "LED 限流电路（5V-330Ω-LED）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 51,
+      "prompt": "光照强弱变化时输出电压跟着变的电路",
+      "components": [
+        "battery",
+        "resistor",
+        "led",
+        "gnd"
+      ],
+      "component_source": "llm",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 3,
+      "elapsed_ms": 31,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "LED 限流电路（5V-330Ω-LED）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 52,
+      "prompt": "做一个可调亮度的小台灯驱动电路",
+      "components": [
+        "led"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 0,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "LED 限流电路（5V-330Ω-LED）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 53,
+      "prompt": "把不稳定的输入电压变成很稳的输出电压",
+      "components": [
+        "battery",
+        "resistor",
+        "led",
+        "gnd"
+      ],
+      "component_source": "llm",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 3,
+      "elapsed_ms": 32,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "LED 限流电路（5V-330Ω-LED）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 54,
+      "prompt": "用旋钮调速的小风扇控制电路",
+      "components": [
+        "battery",
+        "resistor",
+        "led",
+        "gnd"
+      ],
+      "component_source": "llm",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 3,
+      "elapsed_ms": 15,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "LED 限流电路（5V-330Ω-LED）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    },
+    {
+      "index": 55,
+      "prompt": "做一个一键开关机的延时断电电路",
+      "components": [
+        "switch"
+      ],
+      "component_source": "local",
+      "has_circuit": true,
+      "structure_ok": true,
+      "erc_passed": true,
+      "fatal": 0,
+      "major": 0,
+      "minor": 0,
+      "warning": 0,
+      "erc_issues": [],
+      "llm_calls": 2,
+      "elapsed_ms": 16,
+      "stages": [
+        "plan",
+        "generate",
+        "done"
+      ],
+      "error": "",
+      "verdict": "success",
+      "circuit": {
+        "title": "LED 限流电路（5V-330Ω-LED）",
+        "parts": [
+          {
+            "type": "battery",
+            "id": "BAT1",
+            "attrs": {
+              "value": "5V"
+            }
+          },
+          {
+            "type": "resistor",
+            "id": "R1",
+            "attrs": {
+              "value": "330Ω"
+            }
+          },
+          {
+            "type": "led",
+            "id": "LED1",
+            "attrs": {
+              "value": "红"
+            }
+          },
+          {
+            "type": "gnd",
+            "id": "GND1"
+          }
+        ],
+        "connections": [
+          [
+            "BAT1:+",
+            "R1:1",
+            "red",
+            []
+          ],
+          [
+            "R1:2",
+            "LED1:+",
+            "red",
+            []
+          ],
+          [
+            "LED1:-",
+            "GND1:1",
+            "black",
+            []
+          ],
+          [
+            "BAT1:-",
+            "GND1:1",
+            "black",
+            []
+          ]
+        ]
+      }
+    }
+  ]
+}

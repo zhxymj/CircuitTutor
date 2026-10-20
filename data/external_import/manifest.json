@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "purpose": "format_contract_interoperability_not_recognition_accuracy",
+  "partition": "contract_interop",
+  "fixtures": [
+    {
+      "path": "data/external_import/fixtures/circuitvision_supported.net",
+      "source": "circuitvision_spice",
+      "sha256": "f901492318c3c215c18215bfbcf250583f97974972ef2f597dceacb1091850aa",
+      "origin": "constructed_contract",
+      "upstream_reference": "https://github.com/JKc66/CircuitVision",
+      "upstream_commit": "fc5b775043b577668906b6d0bbb238a690a82965",
+      "license": "Apache-2.0",
+      "partition": "contract_interop",
+      "model_prediction": false
+    },
+    {
+      "path": "data/external_import/fixtures/hcd_supported.final.json",
+      "source": "hcd",
+      "sha256": "0676ae9d4edfd4e3a11cbbd1aadd07f557304b55e4bef9661acfc1c600bd7c5d",
+      "origin": "constructed_contract",
+      "upstream_reference": "https://github.com/wanghaoyu6661/Hand-Drawn-Circuit-Diagram-Recognition",
+      "upstream_commit": "5e5a957f41bdb60f4835fb7c887452a6dc469520",
+      "license": "unresolved",
+      "partition": "contract_interop",
+      "model_prediction": false
+    },
+    {
+      "path": "data/external_import/fixtures/tscircuit_supported.json",
+      "source": "tscircuit",
+      "sha256": "f8aba93cf2d209901af4e04a1dca2914c68e3e450e77f8386b14e2f1ddba2d83",
+      "origin": "constructed_contract",
+      "upstream_reference": "https://github.com/tscircuit/tscircuit",
+      "upstream_commit": "9dd304bbc4f234a386af1298d672e92a7cdd5416",
+      "license": "MIT",
+      "partition": "contract_interop",
+      "model_prediction": false
+    },
+    {
+      "path": "evidence/upgrade/open_source_integration/runtime/tscircuit_rc.json",
+      "source": "tscircuit",
+      "sha256": "bd332a8eaf1d115c5e623049d7e52b9c75455ce9298bda5adbe4d0fb9e0fb266",
+      "origin": "actual_upstream_runtime",
+      "generator": "evidence/upgrade/open_source_integration/runtime/generate_tscircuit_rc.mjs",
+      "partition": "contract_interop",
+      "model_prediction": false,
+      "license": "MIT",
+      "upstream_commit": "9dd304bbc4f234a386af1298d672e92a7cdd5416"
+    }
+  ]
+}

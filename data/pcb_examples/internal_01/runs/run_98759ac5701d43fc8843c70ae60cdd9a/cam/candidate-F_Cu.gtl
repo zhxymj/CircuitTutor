@@ -1,0 +1,104 @@
+%TF.GenerationSoftware,KiCad,Pcbnew,10.0.6*%
+%TF.CreationDate,2026-09-26T22:13:24+08:00*%
+%TF.ProjectId,candidate,63616e64-6964-4617-9465-2e6b69636164,rev?*%
+%TF.SameCoordinates,Original*%
+%TF.FileFunction,Copper,L1,Top*%
+%TF.FilePolarity,Positive*%
+%FSLAX46Y46*%
+G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
+G04 Created by KiCad (PCBNEW 10.0.6) date 2026-09-26 22:13:24*
+%MOMM*%
+%LPD*%
+G01*
+G04 APERTURE LIST*
+G04 Aperture macros list*
+%AMRoundRect*
+0 Rectangle with rounded corners*
+0 $1 Rounding radius*
+0 $2 $3 $4 $5 $6 $7 $8 $9 X,Y pos of 4 corners*
+0 Add a 4 corners polygon primitive as box body*
+4,1,4,$2,$3,$4,$5,$6,$7,$8,$9,$2,$3,0*
+0 Add four circle primitives for the rounded corners*
+1,1,$1+$1,$2,$3*
+1,1,$1+$1,$4,$5*
+1,1,$1+$1,$6,$7*
+1,1,$1+$1,$8,$9*
+0 Add four rect primitives between the rounded corners*
+20,1,$1+$1,$2,$3,$4,$5,0*
+20,1,$1+$1,$4,$5,$6,$7,0*
+20,1,$1+$1,$6,$7,$8,$9,0*
+20,1,$1+$1,$8,$9,$2,$3,0*%
+G04 Aperture macros list end*
+%TA.AperFunction,ComponentPad*%
+%ADD10R,1.700000X1.700000*%
+%TD*%
+%TA.AperFunction,ComponentPad*%
+%ADD11C,1.700000*%
+%TD*%
+%TA.AperFunction,SMDPad,CuDef*%
+%ADD12RoundRect,0.250000X-0.262500X-0.450000X0.262500X-0.450000X0.262500X0.450000X-0.262500X0.450000X0*%
+%TD*%
+%TA.AperFunction,ViaPad*%
+%ADD13C,0.600000*%
+%TD*%
+%TA.AperFunction,Conductor*%
+%ADD14C,0.250000*%
+%TD*%
+G04 APERTURE END LIST*
+D10*
+%TO.P,J1,1*%
+%TO.N,Net-(J1-GND)*%
+X8000000Y-8000000D03*
+D11*
+%TO.P,J1,2*%
+%TO.N,Net-(J1-VCC)*%
+X8000000Y-10540000D03*
+%TO.P,J1,3*%
+%TO.N,Net-(J1-SDA)*%
+X8000000Y-13080000D03*
+%TO.P,J1,4*%
+%TO.N,Net-(J1-SCL)*%
+X8000000Y-15620000D03*
+%TD*%
+D12*
+%TO.P,R1,1*%
+%TO.N,Net-(J1-VCC)*%
+X15087500Y-13080000D03*
+%TO.P,R1,2*%
+%TO.N,Net-(J1-SDA)*%
+X16912500Y-13080000D03*
+%TD*%
+%TO.P,R2,1*%
+%TO.N,Net-(J1-VCC)*%
+X20087500Y-15620000D03*
+%TO.P,R2,2*%
+%TO.N,Net-(J1-SCL)*%
+X21912500Y-15620000D03*
+%TD*%
+D13*
+%TO.N,Net-(J1-SDA)*%
+X18512500Y-13080000D03*
+%TO.N,Net-(J1-SCL)*%
+X23512500Y-15620000D03*
+%TD*%
+%TO.N,Net-(J1-VCC)*%
+D14*
+X8000000Y-10540000D02*
+X15087500Y-10540000D01*
+X15087500Y-10540000D02*
+X15087500Y-13080000D01*
+%TO.N,Net-(J1-SDA)*%
+X16912500Y-13080000D02*
+X18512500Y-13080000D01*
+%TO.N,Net-(J1-VCC)*%
+X8000000Y-10540000D02*
+X12000000Y-10540000D01*
+X12000000Y-10540000D02*
+X12000000Y-15620000D01*
+X12000000Y-15620000D02*
+X20087500Y-15620000D01*
+%TO.N,Net-(J1-SCL)*%
+X21912500Y-15620000D02*
+X23512500Y-15620000D01*
+%TD*%
+M02*

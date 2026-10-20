@@ -1,0 +1,58 @@
+{
+  "status": "drc_failed",
+  "manufacturing_release": false,
+  "review_required": [
+    "electronic_engineer",
+    "fabricator"
+  ],
+  "run_dir": "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\negative_deliberate_short\\run_0c2b071ed35e4b7390ee0c36aa3cc333",
+  "board_sha256": "d9d3b1a5cfeb0d62f6643334d6939dad0f2745b8514ae7218be2c92d02101c34",
+  "pad_net_audit": {
+    "status": "pass",
+    "pads_audited": 8,
+    "nets_audited": 3,
+    "footprint_sha256": {
+      "J1": "8952158347d7b7cc13924c62dccb0c48911af892bb009a0de27cb4d3c25cc1bb",
+      "R1": "949bbbe025b509557866ddd9fcb0403244571f3ceb4f954c9766ee622d18421c",
+      "R2": "949bbbe025b509557866ddd9fcb0403244571f3ceb4f954c9766ee622d18421c"
+    }
+  },
+  "drc": {
+    "status": "fail",
+    "counts": {
+      "violations": 2,
+      "unconnected_items": 0,
+      "schematic_parity": 0
+    },
+    "kicad_version": "10.0.6",
+    "source": "candidate.kicad_pcb",
+    "official_schematic_parity_checked": false,
+    "report_sha256": "d60f89d6d0fc1368671e36ef90acfd5e96540c84ab9fc4b4ed9da639706f8de4"
+  },
+  "commands": [
+    {
+      "argv": [
+        "F:\\智绘电路工具链\\kicad\\bin\\kicad-cli.exe",
+        "pcb",
+        "drc",
+        "--format",
+        "json",
+        "--severity-all",
+        "--exit-code-violations",
+        "-o",
+        "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\negative_deliberate_short\\run_0c2b071ed35e4b7390ee0c36aa3cc333\\drc.json",
+        "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\negative_deliberate_short\\run_0c2b071ed35e4b7390ee0c36aa3cc333\\candidate.kicad_pcb"
+      ],
+      "exit_code": 5,
+      "stdout": "发现 2 条违规项\n发现 0 个未连接的项目\n保存 DRC 报告到 C:/Users/姚/Desktop/智绘电路-企业命题演示包/智绘电路/data/pcb_examples/negative_deliberate_short/run_0c2b071ed35e4b7390ee0c36aa3cc333/drc.json\n",
+      "stderr": "",
+      "elapsed_s": 0.942
+    }
+  ],
+  "artifacts": [],
+  "failure": {
+    "code": "drc_failed",
+    "message": "官方 DRC 未通过，制造导出未执行"
+  },
+  "manifest_path": "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\negative_deliberate_short\\run_0c2b071ed35e4b7390ee0c36aa3cc333\\manifest.json"
+}

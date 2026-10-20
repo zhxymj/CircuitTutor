@@ -1,0 +1,172 @@
+{
+  "manufacturing_release": false,
+  "review_required": [
+    "electronic_engineer",
+    "fabricator"
+  ],
+  "board_sha256": "11e3dcd2409bac1a8f85dccb5217e664214a9cebfe47fe6d8a86a16e2699838f",
+  "drc": {
+    "status": "pass",
+    "counts": {
+      "violations": 0,
+      "unconnected_items": 0,
+      "schematic_parity": 0
+    },
+    "kicad_version": "10.0.6",
+    "source": "candidate.kicad_pcb",
+    "official_schematic_parity_checked": true,
+    "report_sha256": "84e80fe6b6009e70a12c958da5c1040c789041696b1ac40635600b186357ac9b"
+  },
+  "pad_net_audit": {
+    "status": "pass",
+    "pads_audited": 16,
+    "nets_audited": 4,
+    "footprint_sha256": {
+      "J1": "8952158347d7b7cc13924c62dccb0c48911af892bb009a0de27cb4d3c25cc1bb",
+      "J2": "8952158347d7b7cc13924c62dccb0c48911af892bb009a0de27cb4d3c25cc1bb",
+      "J3": "8952158347d7b7cc13924c62dccb0c48911af892bb009a0de27cb4d3c25cc1bb",
+      "R1": "949bbbe025b509557866ddd9fcb0403244571f3ceb4f954c9766ee622d18421c",
+      "R2": "949bbbe025b509557866ddd9fcb0403244571f3ceb4f954c9766ee622d18421c"
+    }
+  },
+  "source_erc": {
+    "status": "pass",
+    "count": 0,
+    "kicad_version": "10.0.6",
+    "report_sha256": "5bce1873c074ef28485c70618180f869d3e490e8c06d54fdf3de436c8182a97c"
+  },
+  "source_netlist": {
+    "status": "pass",
+    "differences": [],
+    "net_count": 4,
+    "report_sha256": "fc20e1174931fcfe48ffb744d6222817de81dddede041bcc88cd4d482239f206"
+  },
+  "source_sha256": "fdb23abb3dfc5bee49ffcdd19921706161c8c4deff6b7366f5fb924ccdac30f5",
+  "semantic_validation": {
+    "source": "manual",
+    "name": "candidate",
+    "assurance": "internal",
+    "verdict": "pass",
+    "accepted": true,
+    "gate_order": [
+      "structure",
+      "erc",
+      "ratings",
+      "spice_deck",
+      "spice_runtime",
+      "kicad_export",
+      "official_erc",
+      "official_netlist"
+    ],
+    "gates": {
+      "structure": {
+        "status": "pass",
+        "required": true,
+        "issues": [],
+        "evidence": {
+          "version": 2
+        },
+        "reason": ""
+      },
+      "erc": {
+        "status": "pass",
+        "required": true,
+        "issues": [
+          {
+            "rule": "并联供电输出",
+            "message": "网络 N4 中多个供电输出脚 ['J1:VCC', 'J2:VCC', 'J3:VCC'] 接到同一网络（两路稳压输出并联，输出电压难以一致，建议只用一路供电）",
+            "severity": "warning",
+            "pins": [
+              "J1:VCC",
+              "J2:VCC",
+              "J3:VCC"
+            ]
+          }
+        ],
+        "evidence": {
+          "counts": {
+            "fatal": 0,
+            "major": 0,
+            "minor": 0,
+            "warning": 1
+          }
+        },
+        "reason": ""
+      },
+      "ratings": {
+        "status": "pass",
+        "required": true,
+        "issues": [],
+        "evidence": {
+          "danger_count": 0
+        },
+        "reason": ""
+      },
+      "spice_deck": {
+        "status": "not_applicable",
+        "required": false,
+        "issues": [],
+        "evidence": {
+          "unmodeled_types": [
+            "i2c_header"
+          ]
+        },
+        "reason": "元件缺少可执行 SPICE 模型：i2c_header"
+      },
+      "spice_runtime": {
+        "status": "not_applicable",
+        "required": false,
+        "issues": [],
+        "evidence": {},
+        "reason": "元件缺少可执行 SPICE 模型：i2c_header"
+      },
+      "kicad_export": {
+        "status": "pass",
+        "required": true,
+        "issues": [],
+        "evidence": {
+          "sha256": "5d1836404837cfda53c95b0cf01cff5c6fdbd89614587ed842491370ccf1c620",
+          "bytes": 13414
+        },
+        "reason": ""
+      },
+      "official_erc": {
+        "status": "not_run",
+        "required": false,
+        "issues": [],
+        "evidence": {},
+        "reason": "调用方选择离线内部验证模式"
+      },
+      "official_netlist": {
+        "status": "not_run",
+        "required": false,
+        "issues": [],
+        "evidence": {},
+        "reason": "调用方选择离线内部验证模式"
+      }
+    },
+    "blocking_gates": [],
+    "artifacts": {
+      "schematic": "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_08\\runs\\run_d0f341b5b50e40a7985ebb9325d2b045\\semantic_source\\candidate.kicad_sch",
+      "project": "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_08\\runs\\run_d0f341b5b50e40a7985ebb9325d2b045\\semantic_source\\candidate.kicad_pro"
+    }
+  },
+  "provenance": {
+    "origin": "manual",
+    "source_id": "internal-pcb-08"
+  },
+  "engineering_example": {
+    "classification": "internal_engineering_example",
+    "topology": "i2c_3_port_pullup_adapter",
+    "ports": 3,
+    "independent_external_sample": false,
+    "review_required": true,
+    "sources": [
+      "https://www.samtec.com/products/tsw-104-07-g-s",
+      "https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-074K7L",
+      "https://gitlab.com/kicad/libraries/kicad-footprints"
+    ],
+    "pin_assignment": "Design choice: pad1=GND,pad2=VCC,pad3=SDA,pad4=SCL; not a universal cable standard",
+    "assumptions": "External MCU/sensor use the same voltage; bus capacitance/speed and existing pullups must be reviewed"
+  }
+}

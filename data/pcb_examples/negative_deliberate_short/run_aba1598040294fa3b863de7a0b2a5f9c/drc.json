@@ -1,0 +1,84 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-26T18:17:22",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "candidate.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "短路了两个不同网络的项目 (网络 Net-(J1-VCC) 和 )",
+            "items": [
+                {
+                    "description": "走线 [Net-(J1-VCC)] (F.Cu), 长度: 2.5400 mm",
+                    "pos": {
+                        "x": 8.0,
+                        "y": 8.0
+                    },
+                    "uuid": "a19a808b-769e-5ed9-adb9-bb1377db93d6"
+                },
+                {
+                    "description": "J1 的PTH 焊盘 1 [<no net>]",
+                    "pos": {
+                        "x": 8.0,
+                        "y": 8.0
+                    },
+                    "uuid": "f5453ef6-4ec7-5f15-8b49-c8f34550ed6e"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "顶层阻焊开窗区域与不同网络的项目相连",
+            "items": [
+                {
+                    "description": "走线 [Net-(J1-VCC)] (F.Cu), 长度: 2.5400 mm",
+                    "pos": {
+                        "x": 8.0,
+                        "y": 8.0
+                    },
+                    "uuid": "a19a808b-769e-5ed9-adb9-bb1377db93d6"
+                },
+                {
+                    "description": "J1 的PTH 焊盘 1 [<no net>]",
+                    "pos": {
+                        "x": 8.0,
+                        "y": 8.0
+                    },
+                    "uuid": "f5453ef6-4ec7-5f15-8b49-c8f34550ed6e"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        }
+    ]
+}

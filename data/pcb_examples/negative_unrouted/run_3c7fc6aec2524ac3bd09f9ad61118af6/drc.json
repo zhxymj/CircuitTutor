@@ -1,0 +1,130 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-26T22:09:08",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "candidate.kicad_pcb",
+    "unconnected_items": [
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "J1 的PTH 焊盘 4 [Net-(J1-SCL)]",
+                    "pos": {
+                        "x": 8.0,
+                        "y": 15.62
+                    },
+                    "uuid": "490b828f-01a9-5f02-a709-4290c5719d5a"
+                },
+                {
+                    "description": "F.Cu 上 R2 的焊盘 2 [Net-(J1-SCL)]",
+                    "pos": {
+                        "x": 21.9125,
+                        "y": 15.62
+                    },
+                    "uuid": "64a8013f-5796-5015-b6a6-d5557010ae1b"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "J1 的PTH 焊盘 3 [Net-(J1-SDA)]",
+                    "pos": {
+                        "x": 8.0,
+                        "y": 13.08
+                    },
+                    "uuid": "00f43edc-6ac2-5634-8088-6b97ac392391"
+                },
+                {
+                    "description": "F.Cu 上 R1 的焊盘 2 [Net-(J1-SDA)]",
+                    "pos": {
+                        "x": 16.9125,
+                        "y": 13.08
+                    },
+                    "uuid": "60b8b293-d42e-5e1c-a556-cec79814092a"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "F.Cu 上 R1 的焊盘 1 [Net-(J1-VCC)]",
+                    "pos": {
+                        "x": 15.0875,
+                        "y": 13.08
+                    },
+                    "uuid": "84e91d3c-b3b1-52a3-8c2c-28efe2591acb"
+                },
+                {
+                    "description": "J1 的PTH 焊盘 2 [Net-(J1-VCC)]",
+                    "pos": {
+                        "x": 8.0,
+                        "y": 10.54
+                    },
+                    "uuid": "c4d6d72a-db21-5a3b-953b-aa4e51ca859e"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "F.Cu 上 R2 的焊盘 1 [Net-(J1-VCC)]",
+                    "pos": {
+                        "x": 20.0875,
+                        "y": 15.62
+                    },
+                    "uuid": "7d64392c-76d6-5b56-b562-34e5851797d4"
+                },
+                {
+                    "description": "F.Cu 上 R1 的焊盘 1 [Net-(J1-VCC)]",
+                    "pos": {
+                        "x": 15.0875,
+                        "y": 13.08
+                    },
+                    "uuid": "84e91d3c-b3b1-52a3-8c2c-28efe2591acb"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        }
+    ],
+    "violations": []
+}

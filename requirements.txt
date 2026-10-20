@@ -1,0 +1,11 @@
+# 智绘电路 CircuitTutor（②_可直接移植port）依赖说明
+#
+# 本项目全部使用 Python 3.10+ 标准库（http.client / ssl / json / re /
+# difflib / dataclasses / http.server 等），前端为原生 JavaScript，
+# 无任何第三方运行时依赖 —— 解压即跑，无需 pip install。
+#
+# 可选开发工具（不影响运行）：
+#   flake8          # 代码风格检查（可选）
+#   mypy            # 类型检查（可选，代码已带类型标注）
+#
+# 环境变量配置见 config.py 与 README.md（DEEPSEEK_API_KEY 等）。

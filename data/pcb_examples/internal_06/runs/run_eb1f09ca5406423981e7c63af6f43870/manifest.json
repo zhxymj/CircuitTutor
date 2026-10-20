@@ -1,0 +1,22 @@
+{
+  "status": "unavailable",
+  "manufacturing_release": false,
+  "review_required": [
+    "electronic_engineer",
+    "fabricator"
+  ],
+  "run_dir": "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_06\\runs\\run_eb1f09ca5406423981e7c63af6f43870",
+  "board_sha256": "173f8d98cde7a65a8377ed7c30b926b7a74b68522634c03fc415e08258e01caa",
+  "pad_net_audit": null,
+  "drc": {
+    "status": "unavailable",
+    "counts": null
+  },
+  "commands": [],
+  "artifacts": [],
+  "failure": {
+    "code": "board_placement",
+    "message": "R2 的板上放置与 CircuitJSON 不一致"
+  },
+  "manifest_path": "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_06\\runs\\run_eb1f09ca5406423981e7c63af6f43870\\manifest.json"
+}

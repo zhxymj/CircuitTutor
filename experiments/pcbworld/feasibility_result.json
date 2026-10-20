@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0",
+  "observed_at": "2026-09-19T01:25:54.5655899+08:00",
+  "gate_policy": "六项全部实际通过才允许进入轻量 PPO；任一前置门失败即停止并降级",
+  "overall_status": "fail",
+  "decision": "downgraded_to_interface_evaluator_and_rule_fallback",
+  "elapsed_s": null,
+  "elapsed_note": "探测开始时间未由计时器记录，因此不填写估算耗时",
+  "environment": {
+    "wsl_distribution": "Ubuntu",
+    "kernel": "6.6.87.2-microsoft-standard-WSL2",
+    "architecture": "x86_64",
+    "python": "3.12.3",
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "gpu_memory_mib": 8188,
+    "wsl_memory_gib_observed": 7.4,
+    "wsl_swap_gib_observed": 2.0,
+    "conda_available": false,
+    "cmake_available": false,
+    "ninja_available": false
+  },
+  "source_probe": {
+    "repository": "https://github.com/LGAI-Research/PCBWorld",
+    "declared_upstream_version": "v1.0.1",
+    "checkout_created": false,
+    "windows_git_with_configured_proxy": {
+      "status": "fail",
+      "error": "Failed to connect to github.com:443 over proxy 127.0.0.1 after 2085 ms: Could not connect to server"
+    },
+    "windows_git_without_proxy": {
+      "status": "fail",
+      "error": "Failed to connect to github.com:443 after 21116 ms: Could not connect to server"
+    },
+    "wsl_git": {
+      "status": "fail",
+      "error": "git ls-remote produced no repository response before the 20-second timeout"
+    }
+  },
+  "checks": [
+    {
+      "id": 1,
+      "name": "PCBWorld在WSL2中运行",
+      "status": "fail",
+      "evidence": "WSL2/Python/GPU 可见，但源码无法获取且运行依赖未安装",
+      "action": "恢复 GitHub 网络后按上游 setup_all.sh 在隔离环境复验"
+    },
+    {
+      "id": 2,
+      "name": "PCBWorld Engine构建或使用",
+      "status": "skip",
+      "evidence": "源码/子模块未获取；CMake、Ninja、conda 不可用",
+      "action": "门1未通过，按时间盒规则不继续构建"
+    },
+    {
+      "id": 3,
+      "name": "加载最小.kicad_pcb",
+      "status": "skip",
+      "evidence": "环境和 Engine 不可用",
+      "action": "门1、2通过后使用上游 simple_routing_board fixture"
+    },
+    {
+      "id": 4,
+      "name": "执行一次路由动作",
+      "status": "skip",
+      "evidence": "未创建 PCBWorld 环境实例",
+      "action": "不得用核心规则预布局冒充 PCBWorld 路由动作"
+    },
+    {
+      "id": 5,
+      "name": "返回奖励和DRC信息",
+      "status": "skip",
+      "evidence": "未执行路由动作或 KiCad Engine DRC",
+      "action": "未测值在接口结果中保持 null"
+    },
+    {
+      "id": 6,
+      "name": "启动一次短PPO训练",
+      "status": "skip",
+      "evidence": "前五项未通过；未生成日志或检查点",
+      "action": "不报告 PPO 指标或提升比例"
+    }
+  ],
+  "implemented_fallback_evidence": {
+    "module": "core/routing_job.py",
+    "api": "POST /api/routing_job",
+    "tests": "tests/test_routing_job.py",
+    "policy": "外部失败不影响 A 主线；保留原板并返回可解释结果"
+  },
+  "ppo_metrics": null,
+  "checkpoint": null
+}

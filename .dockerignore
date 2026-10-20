@@ -1,0 +1,14 @@
+﻿__pycache__
+*.pyc
+.git
+.github
+.env
+.env.local
+kicad_drafts
+data/history
+旧文件
+_report_build
+_docx_work
+*.zip
+*.docx
+*.pdf

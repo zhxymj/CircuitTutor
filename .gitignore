@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.pyc
+
+# 测试夹具与渲染产物（test_pipeline.py / test_render.js 可再生）
+erc_results.json
+frontend_manifest.json
+render_*.svg
+symbols_preview.svg
+symbols_preview.png
+
+# 基准报告保留入库（96.7% 成功率等实测证据），如需忽略取消下行注释
+# benchmark_report*.json
+# benchmark_smoke.json
+
+# 编辑器/系统
+.vscode/
+.idea/
+Thumbs.db
+
+# 端到端演示产物（ai2kicad.py 一条命令可再生）
+demo_out/
+.playwright-cli/
+
+# KiCad official lib batch drafts (generated)
+kicad_drafts/
+
+# 环境变量（含 API Key，绝不入库）
+.env
+.env.local
+
+# 运行日志
+logs/
+*.log
+
+# ---------------------------------------------------------------------------
+# 大型本地产物：保留在磁盘，但不入库，避免仓库无法克隆
+# ---------------------------------------------------------------------------
+
+# 本地验收证据与打包产物（体积达 GB 级，且含本机路径）
+/evidence/
+/dist/
+/tmp/
+
+# 报告与演示包装产物
+/报告书.tex
+/报告书-原稿备份.pdf
+
+# 大型数据集（运行非必需；示例与小型配置仍入库）
+/data/external_references/
+/data/image_samples/
+/data/pcb_active/
+/data/pcb_runs/
+/data/kicad_drafts/
+
+# 上游快照中的大体积部分（许可、NOTICE 与归因文件仍入库）
+/third_party/upstream/CircuitVision/
+/third_party/upstream/HCD/

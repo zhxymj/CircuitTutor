@@ -1,0 +1,177 @@
+{
+  "status": "fabrication_candidate_for_review",
+  "manufacturing_release": false,
+  "review_required": [
+    "electronic_engineer",
+    "fabricator"
+  ],
+  "run_dir": "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_03\\runs\\run_02364462c3e24a65ad00f45e7befeea7",
+  "board_sha256": "a10fc45e4ad034846271d30299bb4a51a06cf368708b29dc1beec434eda1ce92",
+  "pad_net_audit": {
+    "status": "pass",
+    "pads_audited": 8,
+    "nets_audited": 3,
+    "footprint_sha256": {
+      "J1": "8952158347d7b7cc13924c62dccb0c48911af892bb009a0de27cb4d3c25cc1bb",
+      "R1": "949bbbe025b509557866ddd9fcb0403244571f3ceb4f954c9766ee622d18421c",
+      "R2": "949bbbe025b509557866ddd9fcb0403244571f3ceb4f954c9766ee622d18421c"
+    }
+  },
+  "drc": {
+    "status": "pass",
+    "counts": {
+      "violations": 0,
+      "unconnected_items": 0,
+      "schematic_parity": 0
+    },
+    "kicad_version": "10.0.6",
+    "source": "candidate.kicad_pcb",
+    "report_sha256": "e4d13ec58c66094d3fc362a08a3ab31d823d1e35b5121c67f5a58051af4759b4"
+  },
+  "commands": [
+    {
+      "argv": [
+        "F:\\智绘电路工具链\\kicad\\bin\\kicad-cli.exe",
+        "pcb",
+        "drc",
+        "--format",
+        "json",
+        "--severity-all",
+        "--exit-code-violations",
+        "-o",
+        "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_03\\runs\\run_02364462c3e24a65ad00f45e7befeea7\\drc.json",
+        "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_03\\runs\\run_02364462c3e24a65ad00f45e7befeea7\\candidate.kicad_pcb"
+      ],
+      "exit_code": 0,
+      "stdout": "发现 0 条违规项\n发现 0 个未连接的项目\n保存 DRC 报告到 C:/Users/姚/Desktop/智绘电路-企业命题演示包/智绘电路/data/pcb_examples/internal_03/runs/run_02364462c3e24a65ad00f45e7befeea7/drc.json\n",
+      "stderr": "",
+      "elapsed_s": 0.876
+    },
+    {
+      "argv": [
+        "F:\\智绘电路工具链\\kicad\\bin\\kicad-cli.exe",
+        "pcb",
+        "export",
+        "gerbers",
+        "--layers",
+        "F.Cu,B.Cu,F.Mask,B.Mask,F.SilkS,F.Paste,Edge.Cuts",
+        "--output",
+        "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_03\\runs\\run_02364462c3e24a65ad00f45e7befeea7\\cam\\",
+        "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_03\\runs\\run_02364462c3e24a65ad00f45e7befeea7\\candidate.kicad_pcb"
+      ],
+      "exit_code": 0,
+      "stdout": "绘制到 'C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_03\\runs\\run_02364462c3e24a65ad00f45e7befeea7\\cam\\candidate-F_Cu.gtl'。\n绘制到 'C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_03\\runs\\run_02364462c3e24a65ad00f45e7befeea7\\cam\\candidate-B_Cu.gbl'。\n绘制到 'C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_03\\runs\\run_02364462c3e24a65ad00f45e7befeea7\\cam\\candidate-F_Paste.gtp'。\n绘制到 'C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_03\\runs\\run_02364462c3e24a65ad00f45e7befeea7\\cam\\candidate-F_Silkscreen.gto'。\n绘制到 'C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_03\\runs\\run_02364462c3e24a65ad00f45e7befeea7\\cam\\candidate-F_Mask.gts'。\n绘制到 'C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_03\\runs\\run_02364462c3e24a65ad00f45e7befeea7\\cam\\candidate-B_Mask.gbs'。\n绘制到 'C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_03\\runs\\run_02364462c3e24a65ad00f45e7befeea7\\cam\\candidate-Edge_Cuts.gm1'。\n",
+      "stderr": "",
+      "elapsed_s": 0.476
+    },
+    {
+      "argv": [
+        "F:\\智绘电路工具链\\kicad\\bin\\kicad-cli.exe",
+        "pcb",
+        "export",
+        "drill",
+        "--format",
+        "excellon",
+        "--excellon-units",
+        "mm",
+        "--excellon-separate-th",
+        "--output",
+        "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_03\\runs\\run_02364462c3e24a65ad00f45e7befeea7\\cam\\",
+        "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_03\\runs\\run_02364462c3e24a65ad00f45e7befeea7\\candidate.kicad_pcb"
+      ],
+      "exit_code": 0,
+      "stdout": "已创建文件 'C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_03\\runs\\run_02364462c3e24a65ad00f45e7befeea7\\cam\\candidate-PTH.drl'\n已创建文件 'C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_03\\runs\\run_02364462c3e24a65ad00f45e7befeea7\\cam\\candidate-NPTH.drl'\n完成。\n",
+      "stderr": "",
+      "elapsed_s": 0.377
+    },
+    {
+      "argv": [
+        "F:\\智绘电路工具链\\kicad\\bin\\kicad-cli.exe",
+        "pcb",
+        "export",
+        "pos",
+        "--format",
+        "csv",
+        "--units",
+        "mm",
+        "--side",
+        "both",
+        "--output",
+        "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_03\\runs\\run_02364462c3e24a65ad00f45e7befeea7\\cam\\positions.csv",
+        "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_03\\runs\\run_02364462c3e24a65ad00f45e7befeea7\\candidate.kicad_pcb"
+      ],
+      "exit_code": 0,
+      "stdout": "Wrote position data to 'C:\\Users\\",
+      "stderr": "",
+      "elapsed_s": 0.348
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_03\\runs\\run_02364462c3e24a65ad00f45e7befeea7\\cam\\bom.csv",
+      "sha256": "f5fe285e2f3d8f39c843cb749c0dec94ed5438552a9081acf36d4684e79ea9e3",
+      "bytes": 505
+    },
+    {
+      "path": "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_03\\runs\\run_02364462c3e24a65ad00f45e7befeea7\\cam\\candidate-B_Cu.gbl",
+      "sha256": "40e7da40c275f98e298f22f211887c1a5d8f7115732ca2ba6d176cce45c49359",
+      "bytes": 1230
+    },
+    {
+      "path": "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_03\\runs\\run_02364462c3e24a65ad00f45e7befeea7\\cam\\candidate-B_Mask.gbs",
+      "sha256": "e7557bab235847ac88b3f8c4c7792fa835eead59c6892e02c3f3b2a973db90dc",
+      "bytes": 653
+    },
+    {
+      "path": "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_03\\runs\\run_02364462c3e24a65ad00f45e7befeea7\\cam\\candidate-Edge_Cuts.gm1",
+      "sha256": "5e669ab28e3a598e9e15b479ebb86ed3c0ffbcfba126907236e5c8a3e03aceb5",
+      "bytes": 642
+    },
+    {
+      "path": "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_03\\runs\\run_02364462c3e24a65ad00f45e7befeea7\\cam\\candidate-F_Cu.gtl",
+      "sha256": "5341a2bfd9b9efdf8d7d8ac1fdc3ecee5481a4719321924dccfbadbc2d55c903",
+      "bytes": 2497
+    },
+    {
+      "path": "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_03\\runs\\run_02364462c3e24a65ad00f45e7befeea7\\cam\\candidate-F_Mask.gts",
+      "sha256": "9ff456bfd3fcec65dbd0d84ee0270248c69ab86cebc8b8cfd55b71489d836b32",
+      "bytes": 1466
+    },
+    {
+      "path": "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_03\\runs\\run_02364462c3e24a65ad00f45e7befeea7\\cam\\candidate-F_Paste.gtp",
+      "sha256": "f5d9c0d82a545bbf64afa3f4c72bb20dc0c91c2cc3433e888aef93370f0b6306",
+      "bytes": 1282
+    },
+    {
+      "path": "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_03\\runs\\run_02364462c3e24a65ad00f45e7befeea7\\cam\\candidate-F_Silkscreen.gto",
+      "sha256": "da1a197cc364eb475a6a0e45e676c3d0e187dacb8ee9c1723b23c7df5c0fe783",
+      "bytes": 3384
+    },
+    {
+      "path": "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_03\\runs\\run_02364462c3e24a65ad00f45e7befeea7\\cam\\candidate-job.gbrjob",
+      "sha256": "bf007575c6adf10e9bacae1457fe406dca37c8476ac6d54fc841499d5eab6dba",
+      "bytes": 2503
+    },
+    {
+      "path": "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_03\\runs\\run_02364462c3e24a65ad00f45e7befeea7\\cam\\candidate-NPTH.drl",
+      "sha256": "0b94dc5717a32db6517f0002afef9c3b9e2de8d7daa7a5f53521a6984d354e43",
+      "bytes": 276
+    },
+    {
+      "path": "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_03\\runs\\run_02364462c3e24a65ad00f45e7befeea7\\cam\\candidate-PTH.drl",
+      "sha256": "f77bb7bbe61430591e75d964b473c050bcd947ee84b725d08ee90f7beeccdb6e",
+      "bytes": 478
+    },
+    {
+      "path": "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_03\\runs\\run_02364462c3e24a65ad00f45e7befeea7\\cam\\positions.csv",
+      "sha256": "fbb44793530861ca1715d38eda3e391fe3ae5fe0aa0da22d322af7884621f124",
+      "bytes": 265
+    }
+  ],
+  "failure": null,
+  "bundle": {
+    "path": "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_03\\runs\\run_02364462c3e24a65ad00f45e7befeea7\\fabrication_candidate.zip",
+    "sha256": "bcd1b923a01c64d4d50daf6cb693b1bac1bd7e86c7394cdfbdc30c62f8a0838e"
+  },
+  "manifest_path": "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\internal_03\\runs\\run_02364462c3e24a65ad00f45e7befeea7\\manifest.json"
+}

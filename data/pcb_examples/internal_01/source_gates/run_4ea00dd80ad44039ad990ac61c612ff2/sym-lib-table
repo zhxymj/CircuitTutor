@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "CircuitTutor")(type "KiCad")(uri "${KIPRJMOD}/CircuitTutor.kicad_sym")(options "")(descr "智绘电路 AI 生成符号库"))
+)

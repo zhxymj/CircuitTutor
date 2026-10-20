@@ -1,0 +1,25 @@
+{
+  "metadata": {
+    "schema_version": "1.0",
+    "source": "project_authored",
+    "source_license": "project_original",
+    "scenario": "5V/3.3V MCU 与 I2C 传感接口子板",
+    "purpose": "离线检验需求澄清、目录候选与型号拒绝；不评价在线模型或电路正确率",
+    "independence": "开发者构造的回归样本，非外部公开集或独立盲测",
+    "external_examples_imported": 0
+  },
+  "cases": [
+    {"id":"i2c_bmp","split":"dev","prompt":"设计 3.3V ATmega328P 与 BMP280 的 I2C 接口，SDA/SCL 各有 4.7k 上拉电阻。","required_types":["atmega328","bmp280","resistor"],"forbidden_types":["i2c_header"],"expected_clarify":"clear"},
+    {"id":"i2c_mpu","split":"dev","prompt":"ESP32 和 MPU6050 通过 3.3V I2C 总线相连，分别给 SDA、SCL 加上拉。","required_types":["esp32","mpu6050"],"forbidden_types":["i2c_header"],"expected_clarify":"clear"},
+    {"id":"i2c_oled","split":"dev","prompt":"ATmega328P 以 3.3V I2C 驱动 SSD1306 OLED 显示屏。","required_types":["atmega328","oled_ssd1306"],"forbidden_types":["led","i2c_header"],"expected_clarify":"clear"},
+    {"id":"i2c_header","split":"dev","prompt":"做一个 3.3V I2C 四针排针，带 SDA、SCL、VCC 和 GND。","required_types":["i2c_header"],"forbidden_types":[],"expected_clarify":"clear"},
+    {"id":"generic_mcu","split":"dev","prompt":"用单片机连接一个 3.3V I2C 传感器。","required_types":[],"forbidden_types":[],"expected_clarify":"clarify"},
+    {"id":"missing_voltage","split":"dev","prompt":"ATmega328P 连接 BMP280 走 I2C。","required_types":["atmega328","bmp280"],"forbidden_types":["i2c_header"],"expected_clarify":"clarify"},
+    {"id":"unknown_mcu","split":"dev","prompt":"STM32F103 接 BMP280 做 3.3V I2C。","required_types":["bmp280"],"forbidden_types":[],"expected_unsupported":["STM32F103"],"expected_clarify":"clear"},
+    {"id":"power_ldo","split":"dev","prompt":"用 AMS1117-3.3 将 5V 转为 3.3V，输入输出都加 10uF 电容。","required_types":["ldo_3v3","capacitor"],"forbidden_types":["regulator_7805"],"expected_clarify":"clear"},
+    {"id":"two_slaves","split":"holdout","prompt":"3.3V ESP32 同时连接 BMP280 和 MPU6050，二者共用 I2C 的 SDA/SCL。","required_types":["esp32","bmp280","mpu6050"],"forbidden_types":["i2c_header"],"expected_clarify":"clear"},
+    {"id":"unknown_sensor","split":"holdout","prompt":"ESP32 通过 3.3V I2C 读取 BME680。","required_types":["esp32"],"forbidden_types":["bmp280"],"expected_unsupported":["BME680"],"expected_clarify":"clear"},
+    {"id":"esd_connector","split":"holdout","prompt":"3.3V I2C 外部接口采用四针排针，并在 SDA、SCL 旁加 ESD 二极管。","required_types":["i2c_header","esd_diode"],"forbidden_types":[],"expected_clarify":"clear"},
+    {"id":"oled_no_led","split":"holdout","prompt":"3.3V ESP32 接 OLED 屏，走 I2C 总线。","required_types":["esp32","oled_ssd1306"],"forbidden_types":["led","i2c_header"],"expected_clarify":"clarify","annotation_note":"OLED 未指定控制器型号；目录可以提供 SSD1306 候选，但仍须澄清具体型号。"}
+  ]
+}

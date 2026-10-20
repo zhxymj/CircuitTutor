@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  circuittutor:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: circuittutor:latest
+    container_name: circuittutor
+    ports:
+      - "8765:8765"
+    env_file:
+      - .env
+    environment:
+      - LSQC_HOST=0.0.0.0
+      - LSQC_PORT=8765
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8765/api/health', timeout=3)"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"

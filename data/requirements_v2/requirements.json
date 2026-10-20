@@ -1,0 +1,2184 @@
+{
+  "metadata": {
+    "schema_version": "2.0",
+    "dataset_kind": "internal_original_requirements",
+    "created_on": "2026-09-26",
+    "scenario": "5V/3.3V MCU 与 I2C 传感接口子板",
+    "source_license": "project_original",
+    "external_examples_imported": 0,
+    "reference_circuit_count": 0,
+    "case_group_count": 30,
+    "task_count": 80,
+    "holdout_task_count": 20,
+    "split_policy": "同一案例的任务只在一个划分中；相关族可能跨划分",
+    "training_use": "未用于训练",
+    "holdout_status": "内部预留分区，非独立盲测",
+    "T03_external_circuit_goal_met": false,
+    "limitations": [
+      "内部原创需求合同，未附30个独立外部电路或已验证网表",
+      "任务变体属于同一案例；30个场景不能当成30个真实独立泛化样本",
+      "元件参数与最终电路仍需电子工程师和具体器件数据手册复核",
+      "留出分区按案例组隔离，但同族场景可能重叠且开发者已查看标注"
+    ]
+  },
+  "cases": [
+    {
+      "case_id": "C01",
+      "title": "ATmega 气压采集",
+      "related_family": "single_sensor",
+      "scenario_subtype": "single_sensor",
+      "split": "dev",
+      "intended_parts": [
+        "atmega328",
+        "bmp280"
+      ],
+      "requirements": [
+        "3.3V 共地",
+        "PC4/PC5 对应 SDA/SCL",
+        "各一只上拉电阻"
+      ],
+      "source": "internal_original_requirement",
+      "has_reference_circuit": false
+    },
+    {
+      "case_id": "C02",
+      "title": "ESP32 姿态采集",
+      "related_family": "single_sensor",
+      "scenario_subtype": "single_sensor",
+      "split": "dev",
+      "intended_parts": [
+        "esp32",
+        "mpu6050"
+      ],
+      "requirements": [
+        "3.3V 共地",
+        "GPIO21/22 对应 SDA/SCL",
+        "AD0 地址配置明确"
+      ],
+      "source": "internal_original_requirement",
+      "has_reference_circuit": false
+    },
+    {
+      "case_id": "C03",
+      "title": "ATmega 状态显示",
+      "related_family": "sensor_display",
+      "scenario_subtype": "display",
+      "split": "dev",
+      "intended_parts": [
+        "atmega328",
+        "oled_ssd1306"
+      ],
+      "requirements": [
+        "3.3V I2C",
+        "不增加独立 LED",
+        "显示地址固定"
+      ],
+      "source": "internal_original_requirement",
+      "has_reference_circuit": false
+    },
+    {
+      "case_id": "C04",
+      "title": "ESP32 气压与姿态共线",
+      "related_family": "sensor_display",
+      "scenario_subtype": "two_sensor",
+      "split": "dev",
+      "intended_parts": [
+        "esp32",
+        "bmp280",
+        "mpu6050"
+      ],
+      "requirements": [
+        "3.3V 共享 SDA/SCL",
+        "每线一组上拉",
+        "每个从设备独立去耦"
+      ],
+      "source": "internal_original_requirement",
+      "has_reference_circuit": false
+    },
+    {
+      "case_id": "C05",
+      "title": "ATmega 气压与显示共线",
+      "related_family": "sensor_display",
+      "scenario_subtype": "sensor_display",
+      "split": "dev",
+      "intended_parts": [
+        "atmega328",
+        "bmp280",
+        "oled_ssd1306"
+      ],
+      "requirements": [
+        "3.3V 共享 I2C",
+        "按器件分别配置地址",
+        "不产生排针"
+      ],
+      "source": "internal_original_requirement",
+      "has_reference_circuit": false
+    },
+    {
+      "case_id": "C06",
+      "title": "ESP32 姿态与显示共线",
+      "related_family": "sensor_display",
+      "scenario_subtype": "sensor_display",
+      "split": "dev",
+      "intended_parts": [
+        "esp32",
+        "mpu6050",
+        "oled_ssd1306"
+      ],
+      "requirements": [
+        "3.3V I2C",
+        "只一组总线上拉",
+        "OLED 不等于 LED"
+      ],
+      "source": "internal_original_requirement",
+      "has_reference_circuit": false
+    },
+    {
+      "case_id": "C07",
+      "title": "三从设备控制子板",
+      "related_family": "sensor_display",
+      "scenario_subtype": "three_slave",
+      "split": "dev",
+      "intended_parts": [
+        "atmega328",
+        "bmp280",
+        "mpu6050",
+        "oled_ssd1306"
+      ],
+      "requirements": [
+        "3.3V 三从设备共享 I2C",
+        "地址不冲突",
+        "分支分别去耦"
+      ],
+      "source": "internal_original_requirement",
+      "has_reference_circuit": false
+    },
+    {
+      "case_id": "C08",
+      "title": "双气压传感器寻址",
+      "related_family": "sensor_display",
+      "scenario_subtype": "duplicate_address",
+      "split": "dev",
+      "intended_parts": [
+        "atmega328",
+        "bmp280"
+      ],
+      "requirements": [
+        "两只 BMP280 地址配置不同",
+        "3.3V I2C",
+        "SDO 电平分别确定"
+      ],
+      "source": "internal_original_requirement",
+      "has_reference_circuit": false
+    },
+    {
+      "case_id": "C09",
+      "title": "双姿态传感器寻址",
+      "related_family": "sensor_display",
+      "scenario_subtype": "duplicate_address",
+      "split": "dev",
+      "intended_parts": [
+        "esp32",
+        "mpu6050"
+      ],
+      "requirements": [
+        "两只 MPU6050 地址配置不同",
+        "3.3V I2C",
+        "AD0 电平分别确定"
+      ],
+      "source": "internal_original_requirement",
+      "has_reference_circuit": false
+    },
+    {
+      "case_id": "C10",
+      "title": "ATmega 稳压气压子板",
+      "related_family": "regulated_board",
+      "scenario_subtype": "regulated_board",
+      "split": "dev",
+      "intended_parts": [
+        "ldo_3v3",
+        "atmega328",
+        "bmp280"
+      ],
+      "requirements": [
+        "5V 输入经 3.3V LDO",
+        "LDO 输入输出电容",
+        "逻辑仅 3.3V"
+      ],
+      "source": "internal_original_requirement",
+      "has_reference_circuit": false
+    },
+    {
+      "case_id": "C11",
+      "title": "ESP32 稳压姿态子板",
+      "related_family": "regulated_board",
+      "scenario_subtype": "regulated_board",
+      "split": "dev",
+      "intended_parts": [
+        "ldo_3v3",
+        "esp32",
+        "mpu6050"
+      ],
+      "requirements": [
+        "5V 经 LDO 输出 3.3V",
+        "EN 保持有效",
+        "I2C 共地"
+      ],
+      "source": "internal_original_requirement",
+      "has_reference_circuit": false
+    },
+    {
+      "case_id": "C12",
+      "title": "低压气压显示稳压板",
+      "related_family": "regulated_board",
+      "scenario_subtype": "regulated_display",
+      "split": "dev",
+      "intended_parts": [
+        "ldo_3v3",
+        "atmega328",
+        "bmp280",
+        "oled_ssd1306"
+      ],
+      "requirements": [
+        "5V 到 3.3V 电源",
+        "气压与 OLED 共享 I2C",
+        "各端去耦"
+      ],
+      "source": "internal_original_requirement",
+      "has_reference_circuit": false
+    },
+    {
+      "case_id": "C13",
+      "title": "外部气压维护口",
+      "related_family": "external_header",
+      "scenario_subtype": "external_header",
+      "split": "dev",
+      "intended_parts": [
+        "atmega328",
+        "bmp280",
+        "i2c_header"
+      ],
+      "requirements": [
+        "3.3V 本地气压器件",
+        "四针 I2C 维护口",
+        "只一组上拉"
+      ],
+      "source": "internal_original_requirement",
+      "has_reference_circuit": false
+    },
+    {
+      "case_id": "C14",
+      "title": "外部姿态维护口",
+      "related_family": "external_header",
+      "scenario_subtype": "external_header",
+      "split": "dev",
+      "intended_parts": [
+        "esp32",
+        "mpu6050",
+        "i2c_header"
+      ],
+      "requirements": [
+        "3.3V I2C",
+        "外部接口共地",
+        "本地与排针共网"
+      ],
+      "source": "internal_original_requirement",
+      "has_reference_circuit": false
+    },
+    {
+      "case_id": "C15",
+      "title": "气压子板信号 ESD",
+      "related_family": "external_header",
+      "scenario_subtype": "signal_protection",
+      "split": "dev",
+      "intended_parts": [
+        "atmega328",
+        "bmp280",
+        "i2c_header",
+        "esd_diode"
+      ],
+      "requirements": [
+        "3.3V I2C 外部口",
+        "两线分别 ESD 保护",
+        "保护器件共地"
+      ],
+      "source": "internal_original_requirement",
+      "has_reference_circuit": false
+    },
+    {
+      "case_id": "C16",
+      "title": "显示子板保护阵列",
+      "related_family": "external_header",
+      "scenario_subtype": "signal_protection",
+      "split": "dev",
+      "intended_parts": [
+        "esp32",
+        "oled_ssd1306",
+        "i2c_header",
+        "tvs_array"
+      ],
+      "requirements": [
+        "3.3V I2C 外部口",
+        "使用多路 TVS 阵列",
+        "阵列接公共地"
+      ],
+      "source": "internal_original_requirement",
+      "has_reference_circuit": false
+    },
+    {
+      "case_id": "C17",
+      "title": "ATmega 复位监控气压板",
+      "related_family": "supervised_reset",
+      "scenario_subtype": "supervised_reset",
+      "split": "dev",
+      "intended_parts": [
+        "atmega328",
+        "bmp280",
+        "voltage_monitor"
+      ],
+      "requirements": [
+        "3.3V 电压监控",
+        "复位信号进入主控",
+        "I2C 与供电分网"
+      ],
+      "source": "internal_original_requirement",
+      "has_reference_circuit": false
+    },
+    {
+      "case_id": "C18",
+      "title": "ESP32 使能控制显示板",
+      "related_family": "sensor_display",
+      "scenario_subtype": "enable_control",
+      "split": "dev",
+      "intended_parts": [
+        "esp32",
+        "oled_ssd1306",
+        "pushbutton"
+      ],
+      "requirements": [
+        "3.3V I2C",
+        "EN 上拉",
+        "按钮对 EN 拉低用于复位"
+      ],
+      "source": "internal_original_requirement",
+      "has_reference_circuit": false
+    },
+    {
+      "case_id": "C19",
+      "title": "ATmega 模拟供电气压板",
+      "related_family": "single_sensor",
+      "scenario_subtype": "mcu_power_pins",
+      "split": "dev",
+      "intended_parts": [
+        "atmega328",
+        "bmp280",
+        "capacitor"
+      ],
+      "requirements": [
+        "3.3V VCC/AVCC 都供电",
+        "AREF 按方案配置",
+        "I2C 正确脚"
+      ],
+      "source": "internal_original_requirement",
+      "has_reference_circuit": false
+    },
+    {
+      "case_id": "C20",
+      "title": "气压板状态指示支路",
+      "related_family": "status_branch",
+      "scenario_subtype": "status_branch",
+      "split": "dev",
+      "intended_parts": [
+        "atmega328",
+        "bmp280",
+        "led",
+        "resistor"
+      ],
+      "requirements": [
+        "3.3V I2C",
+        "LED 独立限流",
+        "指示支路不干扰总线"
+      ],
+      "source": "internal_original_requirement",
+      "has_reference_circuit": false
+    },
+    {
+      "case_id": "C21",
+      "title": "保险与反接保护气压板",
+      "related_family": "regulated_board",
+      "scenario_subtype": "protected_input",
+      "split": "holdout",
+      "intended_parts": [
+        "fuse",
+        "schottky",
+        "ldo_3v3",
+        "atmega328",
+        "bmp280"
+      ],
+      "requirements": [
+        "5V 经保险丝与肖特基保护",
+        "LDO 后逻辑 3.3V",
+        "I2C 同域"
+      ],
+      "source": "internal_original_requirement",
+      "has_reference_circuit": false
+    },
+    {
+      "case_id": "C22",
+      "title": "Type-C 输入姿态板",
+      "related_family": "regulated_board",
+      "scenario_subtype": "type_c_input",
+      "split": "holdout",
+      "intended_parts": [
+        "usb_c",
+        "ldo_3v3",
+        "esp32",
+        "mpu6050"
+      ],
+      "requirements": [
+        "Type-C 仅作 5V 输入",
+        "3.3V 控制域",
+        "接口配置待器件复核"
+      ],
+      "source": "internal_original_requirement",
+      "has_reference_circuit": false
+    },
+    {
+      "case_id": "C23",
+      "title": "电源时序姿态显示板",
+      "related_family": "regulated_board",
+      "scenario_subtype": "power_sequence",
+      "split": "holdout",
+      "intended_parts": [
+        "power_sequencer",
+        "esp32",
+        "mpu6050",
+        "oled_ssd1306"
+      ],
+      "requirements": [
+        "3.3V 受控上电",
+        "ESP32 EN 与有效电源关联",
+        "I2C 共地"
+      ],
+      "source": "internal_original_requirement",
+      "has_reference_circuit": false
+    },
+    {
+      "case_id": "C24",
+      "title": "外部未知传感扩展口",
+      "related_family": "external_header",
+      "scenario_subtype": "external_unknown_device",
+      "split": "holdout",
+      "intended_parts": [
+        "esp32",
+        "i2c_header"
+      ],
+      "requirements": [
+        "主控 3.3V",
+        "外部四针 I2C",
+        "外部器件需明确型号后验收"
+      ],
+      "source": "internal_original_requirement",
+      "has_reference_circuit": false
+    },
+    {
+      "case_id": "C25",
+      "title": "两主控共享总线审核",
+      "related_family": "sensor_display",
+      "scenario_subtype": "multi_controller",
+      "split": "holdout",
+      "intended_parts": [
+        "atmega328",
+        "esp32",
+        "bmp280"
+      ],
+      "requirements": [
+        "两个主控 3.3V",
+        "声明多主协议",
+        "单一上拉组"
+      ],
+      "source": "internal_original_requirement",
+      "has_reference_circuit": false
+    },
+    {
+      "case_id": "C26",
+      "title": "未知主控受控替换",
+      "related_family": "external_header",
+      "scenario_subtype": "controller_substitution",
+      "split": "holdout",
+      "intended_parts": [
+        "atmega328",
+        "bmp280",
+        "i2c_header"
+      ],
+      "requirements": [
+        "明确 ATmega328P 3.3V",
+        "气压与排针同总线",
+        "型号不得静默替换"
+      ],
+      "source": "internal_original_requirement",
+      "has_reference_circuit": false
+    },
+    {
+      "case_id": "C27",
+      "title": "总线电源隔离约束",
+      "related_family": "regulated_board",
+      "scenario_subtype": "bus_domain_boundary",
+      "split": "holdout",
+      "intended_parts": [
+        "atmega328",
+        "bmp280",
+        "ldo_3v3"
+      ],
+      "requirements": [
+        "5V 只到 LDO 输入",
+        "MCU/传感/上拉全 3.3V",
+        "地连续"
+      ],
+      "source": "internal_original_requirement",
+      "has_reference_circuit": false
+    },
+    {
+      "case_id": "C28",
+      "title": "未知电平转换器审核",
+      "related_family": "external_header",
+      "scenario_subtype": "level_conversion",
+      "split": "holdout",
+      "intended_parts": [
+        "atmega328",
+        "bmp280",
+        "i2c_header"
+      ],
+      "requirements": [
+        "本期基线全部 3.3V",
+        "外部口电压明确",
+        "跨域需另行选型"
+      ],
+      "source": "internal_original_requirement",
+      "has_reference_circuit": false
+    },
+    {
+      "case_id": "C29",
+      "title": "逻辑引脚合同审核",
+      "related_family": "single_sensor",
+      "scenario_subtype": "logical_pin_contract",
+      "split": "holdout",
+      "intended_parts": [
+        "atmega328",
+        "bmp280"
+      ],
+      "requirements": [
+        "PC4/PC5 合法逻辑引脚",
+        "不臆造 SDA 主控脚",
+        "3.3V I2C"
+      ],
+      "source": "internal_original_requirement",
+      "has_reference_circuit": false
+    },
+    {
+      "case_id": "C30",
+      "title": "未知传感阵列审核",
+      "related_family": "sensor_display",
+      "scenario_subtype": "sensor_substitution",
+      "split": "holdout",
+      "intended_parts": [
+        "esp32",
+        "bmp280",
+        "mpu6050"
+      ],
+      "requirements": [
+        "3.3V 已支持传感阵列",
+        "I2C 一组上拉",
+        "目录外阵列单独拒绝"
+      ],
+      "source": "internal_original_requirement",
+      "has_reference_circuit": false
+    }
+  ],
+  "tasks": [
+    {
+      "task_id": "C01_T1",
+      "case_id": "C01",
+      "split": "dev",
+      "category": "explicit",
+      "prompt": "3.3V ATmega328P 通过 PC4/PC5 连接 BMP280 的 SDA/SCL；各加一只 4.7k 上拉电阻和 100nF 去耦电容，所有地共地。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "plan",
+      "required_types": [
+        "atmega328",
+        "bmp280"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    },
+    {
+      "task_id": "C01_T2",
+      "case_id": "C01",
+      "split": "dev",
+      "category": "ambiguous",
+      "prompt": "3.3V 单片机用 I2C 读取 BMP280，请生成接口。",
+      "missing_fields": [
+        "controller_model"
+      ],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "clarify",
+      "required_types": [
+        "bmp280"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    },
+    {
+      "task_id": "C01_T3",
+      "case_id": "C01",
+      "split": "dev",
+      "category": "unsupported_model",
+      "prompt": "用 STM32F103 与 BMP280 做 3.3V I2C 气压采集。",
+      "missing_fields": [],
+      "unsupported_models": [
+        "STM32F103"
+      ],
+      "negative_rule_ids": [],
+      "expected_disposition": "reject",
+      "required_types": [
+        "bmp280"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    },
+    {
+      "task_id": "C02_T1",
+      "case_id": "C02",
+      "split": "dev",
+      "category": "explicit",
+      "prompt": "ESP32-WROOM 和 MPU6050 都使用 3.3V，GPIO21 接 SDA、GPIO22 接 SCL，AD0 接地，加入两只上拉电阻与各器件去耦电容。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "plan",
+      "required_types": [
+        "esp32",
+        "mpu6050"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    },
+    {
+      "task_id": "C02_T2",
+      "case_id": "C02",
+      "split": "dev",
+      "category": "negative",
+      "prompt": "3.3V ESP32 接 MPU6050 走 I2C，把 SDA 和 SCL 短接成一条导线以节约空间。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [
+        "SDA_SCL_SHORT"
+      ],
+      "expected_disposition": "reject",
+      "required_types": [
+        "esp32",
+        "mpu6050"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    },
+    {
+      "task_id": "C02_T3",
+      "case_id": "C02",
+      "split": "dev",
+      "category": "ambiguous",
+      "prompt": "ESP32 读取 MPU6050 的 I2C 数据，但供电和上拉电压还没确定。",
+      "missing_fields": [
+        "bus_voltage"
+      ],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "clarify",
+      "required_types": [
+        "esp32",
+        "mpu6050"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    },
+    {
+      "task_id": "C03_T1",
+      "case_id": "C03",
+      "split": "dev",
+      "category": "explicit",
+      "prompt": "ATmega328P 用 3.3V I2C 连接 SSD1306 OLED，PC4 接 SDA、PC5 接 SCL；总线上拉电阻与 OLED 去耦电容齐全，不要添加独立 LED。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "plan",
+      "required_types": [
+        "atmega328",
+        "oled_ssd1306"
+      ],
+      "forbidden_types": [
+        "i2c_header",
+        "led"
+      ]
+    },
+    {
+      "task_id": "C03_T2",
+      "case_id": "C03",
+      "split": "dev",
+      "category": "ambiguous",
+      "prompt": "3.3V ATmega328P 接一个 I2C 显示模块，请先决定型号。",
+      "missing_fields": [
+        "device_model"
+      ],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "clarify",
+      "required_types": [
+        "atmega328"
+      ],
+      "forbidden_types": [
+        "i2c_header",
+        "led"
+      ]
+    },
+    {
+      "task_id": "C03_T3",
+      "case_id": "C03",
+      "split": "dev",
+      "category": "unsupported_model",
+      "prompt": "3.3V ATmega328P 通过 I2C 驱动 SH1106 显示屏，不可替换成 SSD1306。",
+      "missing_fields": [],
+      "unsupported_models": [
+        "SH1106"
+      ],
+      "negative_rule_ids": [],
+      "expected_disposition": "reject",
+      "required_types": [
+        "atmega328"
+      ],
+      "forbidden_types": [
+        "i2c_header",
+        "led"
+      ]
+    },
+    {
+      "task_id": "C04_T1",
+      "case_id": "C04",
+      "split": "dev",
+      "category": "explicit",
+      "prompt": "3.3V ESP32 连接 BMP280 和 MPU6050，两只从设备共用 GPIO21/SDA 与 GPIO22/SCL；每线一只上拉电阻，各有去耦电容并共地。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "plan",
+      "required_types": [
+        "esp32",
+        "bmp280",
+        "mpu6050"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    },
+    {
+      "task_id": "C04_T2",
+      "case_id": "C04",
+      "split": "dev",
+      "category": "negative",
+      "prompt": "3.3V ESP32、BMP280、MPU6050 共用 I2C；禁止接任何公共地，仍要求可靠通信。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [
+        "NO_COMMON_GROUND"
+      ],
+      "expected_disposition": "reject",
+      "required_types": [
+        "esp32",
+        "bmp280",
+        "mpu6050"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    },
+    {
+      "task_id": "C04_T3",
+      "case_id": "C04",
+      "split": "dev",
+      "category": "ambiguous",
+      "prompt": "ESP32 与 BMP280、MPU6050 共用 I2C，器件供电尚未选择。",
+      "missing_fields": [
+        "bus_voltage"
+      ],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "clarify",
+      "required_types": [
+        "esp32",
+        "bmp280",
+        "mpu6050"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    },
+    {
+      "task_id": "C05_T1",
+      "case_id": "C05",
+      "split": "dev",
+      "category": "explicit",
+      "prompt": "3.3V ATmega328P 的 I2C 同时连接 BMP280 和 SSD1306 OLED，分别配置地址，每条总线只放一只上拉电阻，所有芯片去耦并共地。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "plan",
+      "required_types": [
+        "atmega328",
+        "bmp280",
+        "oled_ssd1306"
+      ],
+      "forbidden_types": [
+        "i2c_header",
+        "led"
+      ]
+    },
+    {
+      "task_id": "C05_T2",
+      "case_id": "C05",
+      "split": "dev",
+      "category": "ambiguous",
+      "prompt": "3.3V ATmega328P 需要气压传感器和 I2C 显示屏，两个器件的型号都未确定。",
+      "missing_fields": [
+        "device_models"
+      ],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "clarify",
+      "required_types": [
+        "atmega328"
+      ],
+      "forbidden_types": [
+        "i2c_header",
+        "led"
+      ]
+    },
+    {
+      "task_id": "C05_T3",
+      "case_id": "C05",
+      "split": "dev",
+      "category": "unsupported_model",
+      "prompt": "3.3V ATmega328P 接 BME680 和 SSD1306 OLED，BME680 型号不可替换。",
+      "missing_fields": [],
+      "unsupported_models": [
+        "BME680"
+      ],
+      "negative_rule_ids": [],
+      "expected_disposition": "reject",
+      "required_types": [
+        "atmega328",
+        "oled_ssd1306"
+      ],
+      "forbidden_types": [
+        "i2c_header",
+        "led"
+      ]
+    },
+    {
+      "task_id": "C06_T1",
+      "case_id": "C06",
+      "split": "dev",
+      "category": "explicit",
+      "prompt": "3.3V ESP32 用 GPIO21/22 共接 MPU6050 和 SSD1306 OLED；增加两只总线上拉电阻，每个模块加去耦电容，不需要 LED 指示灯。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "plan",
+      "required_types": [
+        "esp32",
+        "mpu6050",
+        "oled_ssd1306"
+      ],
+      "forbidden_types": [
+        "i2c_header",
+        "led"
+      ]
+    },
+    {
+      "task_id": "C06_T2",
+      "case_id": "C06",
+      "split": "dev",
+      "category": "negative",
+      "prompt": "ESP32、MPU6050、SSD1306 OLED 都接 3.3V I2C，将 ESP32 的 GPIO21/SDA 直接焊到 3.3V 电源。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [
+        "SIGNAL_TIED_TO_SUPPLY"
+      ],
+      "expected_disposition": "reject",
+      "required_types": [
+        "esp32",
+        "mpu6050",
+        "oled_ssd1306"
+      ],
+      "forbidden_types": [
+        "i2c_header",
+        "led"
+      ]
+    },
+    {
+      "task_id": "C06_T3",
+      "case_id": "C06",
+      "split": "dev",
+      "category": "ambiguous",
+      "prompt": "ESP32 用 I2C 接 MPU6050 与 OLED，但希望后续再决定总线电压。",
+      "missing_fields": [
+        "bus_voltage"
+      ],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "clarify",
+      "required_types": [
+        "esp32",
+        "mpu6050",
+        "oled_ssd1306"
+      ],
+      "forbidden_types": [
+        "i2c_header",
+        "led"
+      ]
+    },
+    {
+      "task_id": "C07_T1",
+      "case_id": "C07",
+      "split": "dev",
+      "category": "explicit",
+      "prompt": "ATmega328P、BMP280、MPU6050 与 SSD1306 OLED 都供电 3.3V，三个从设备共用 PC4/PC5 I2C，每线只一只上拉电阻并分别去耦。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "plan",
+      "required_types": [
+        "atmega328",
+        "bmp280",
+        "mpu6050",
+        "oled_ssd1306"
+      ],
+      "forbidden_types": [
+        "i2c_header",
+        "led"
+      ]
+    },
+    {
+      "task_id": "C07_T2",
+      "case_id": "C07",
+      "split": "dev",
+      "category": "ambiguous",
+      "prompt": "3.3V 主控接 BMP280、MPU6050、SSD1306 OLED 共用 I2C，主控型号尚未确定。",
+      "missing_fields": [
+        "controller_model"
+      ],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "clarify",
+      "required_types": [
+        "bmp280",
+        "mpu6050",
+        "oled_ssd1306"
+      ],
+      "forbidden_types": [
+        "i2c_header",
+        "led"
+      ]
+    },
+    {
+      "task_id": "C07_T3",
+      "case_id": "C07",
+      "split": "dev",
+      "category": "unsupported_model",
+      "prompt": "3.3V RP2040 接 BMP280、MPU6050、SSD1306 OLED 共用 I2C。",
+      "missing_fields": [],
+      "unsupported_models": [
+        "RP2040"
+      ],
+      "negative_rule_ids": [],
+      "expected_disposition": "reject",
+      "required_types": [
+        "bmp280",
+        "mpu6050",
+        "oled_ssd1306"
+      ],
+      "forbidden_types": [
+        "i2c_header",
+        "led"
+      ]
+    },
+    {
+      "task_id": "C08_T1",
+      "case_id": "C08",
+      "split": "dev",
+      "category": "explicit",
+      "prompt": "3.3V ATmega328P 同时连接两只 BMP280 的 I2C，第一只 SDO 接地、第二只 SDO 接 3.3V；每个器件去耦，总线只一组上拉电阻。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "plan",
+      "required_types": [
+        "atmega328",
+        "bmp280"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    },
+    {
+      "task_id": "C08_T2",
+      "case_id": "C08",
+      "split": "dev",
+      "category": "negative",
+      "prompt": "3.3V ATmega328P 的同一 I2C 上接两只 BMP280，二者地址都设成 0x76，不加多路复用器但必须分别读取。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [
+        "I2C_ADDRESS_COLLISION"
+      ],
+      "expected_disposition": "reject",
+      "required_types": [
+        "atmega328",
+        "bmp280"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    },
+    {
+      "task_id": "C08_T3",
+      "case_id": "C08",
+      "split": "dev",
+      "category": "ambiguous",
+      "prompt": "3.3V ATmega328P 接两只 BMP280 共用 I2C，两只的地址与 SDO 电平还没决定。",
+      "missing_fields": [
+        "slave_addresses"
+      ],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "clarify",
+      "required_types": [
+        "atmega328",
+        "bmp280"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    },
+    {
+      "task_id": "C09_T1",
+      "case_id": "C09",
+      "split": "dev",
+      "category": "explicit",
+      "prompt": "ESP32 与两只 MPU6050 供电 3.3V，共用 I2C；一只 AD0 接地、另一只接 3.3V，分别去耦并只使用一组总线上拉电阻。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "plan",
+      "required_types": [
+        "esp32",
+        "mpu6050"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    },
+    {
+      "task_id": "C09_T2",
+      "case_id": "C09",
+      "split": "dev",
+      "category": "ambiguous",
+      "prompt": "3.3V 主控接两只 MPU6050 的 I2C，主控型号仍未选。",
+      "missing_fields": [
+        "controller_model"
+      ],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "clarify",
+      "required_types": [
+        "mpu6050"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    },
+    {
+      "task_id": "C09_T3",
+      "case_id": "C09",
+      "split": "dev",
+      "category": "unsupported_model",
+      "prompt": "3.3V ESP32 接两只 ICM20948 走 I2C，不允许改用 MPU6050。",
+      "missing_fields": [],
+      "unsupported_models": [
+        "ICM20948"
+      ],
+      "negative_rule_ids": [],
+      "expected_disposition": "reject",
+      "required_types": [
+        "esp32"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    },
+    {
+      "task_id": "C10_T1",
+      "case_id": "C10",
+      "split": "dev",
+      "category": "explicit",
+      "prompt": "5V 输入经 AMS1117-3.3 供给 ATmega328P 和 BMP280，LDO 两侧按要求各有电容，I2C 上拉到 3.3V并共地。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "plan",
+      "required_types": [
+        "ldo_3v3",
+        "atmega328",
+        "bmp280"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    },
+    {
+      "task_id": "C10_T2",
+      "case_id": "C10",
+      "split": "dev",
+      "category": "negative",
+      "prompt": "5V 输入经 AMS1117-3.3 给 ATmega328P、BMP280 供电，但 I2C 的 SDA/SCL 上拉必须直接接 5V。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [
+        "I2C_PULLUP_WRONG_DOMAIN"
+      ],
+      "expected_disposition": "reject",
+      "required_types": [
+        "ldo_3v3",
+        "atmega328",
+        "bmp280"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    },
+    {
+      "task_id": "C10_T3",
+      "case_id": "C10",
+      "split": "dev",
+      "category": "ambiguous",
+      "prompt": "ATmega328P 接 BMP280 的 I2C，需要输入电源，但还没选输入和逻辑电压。",
+      "missing_fields": [
+        "supply_domains"
+      ],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "clarify",
+      "required_types": [
+        "atmega328",
+        "bmp280"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    },
+    {
+      "task_id": "C11_T1",
+      "case_id": "C11",
+      "split": "dev",
+      "category": "explicit",
+      "prompt": "5V 经 AMS1117-3.3 供给 ESP32-WROOM 与 MPU6050，ESP32 EN 上拉有效，I2C 用 GPIO21/22，LDO 两端电容和器件去耦齐全。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "plan",
+      "required_types": [
+        "ldo_3v3",
+        "esp32",
+        "mpu6050"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    },
+    {
+      "task_id": "C11_T2",
+      "case_id": "C11",
+      "split": "dev",
+      "category": "unsupported_model",
+      "prompt": "5V 输入必须经 MCP1700-3302 给 ESP32 和 MPU6050 的 3.3V I2C 供电，不可换 LDO 型号。",
+      "missing_fields": [],
+      "unsupported_models": [
+        "MCP1700-3302"
+      ],
+      "negative_rule_ids": [],
+      "expected_disposition": "reject",
+      "required_types": [
+        "esp32",
+        "mpu6050"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    },
+    {
+      "task_id": "C11_T3",
+      "case_id": "C11",
+      "split": "dev",
+      "category": "unsupported_model",
+      "prompt": "5V 用 TLV75533 给 3.3V ESP32 与 MPU6050 供电，必须使用这个 LDO。",
+      "missing_fields": [],
+      "unsupported_models": [
+        "TLV75533"
+      ],
+      "negative_rule_ids": [],
+      "expected_disposition": "reject",
+      "required_types": [
+        "esp32",
+        "mpu6050"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    },
+    {
+      "task_id": "C12_T1",
+      "case_id": "C12",
+      "split": "dev",
+      "category": "explicit",
+      "prompt": "5V 输入经 AMS1117-3.3，给 ATmega328P、BMP280 和 SSD1306 OLED 提供 3.3V；三者共地，总线有上拉电阻，LDO 和器件都有电容。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "plan",
+      "required_types": [
+        "ldo_3v3",
+        "atmega328",
+        "bmp280",
+        "oled_ssd1306"
+      ],
+      "forbidden_types": [
+        "i2c_header",
+        "led"
+      ]
+    },
+    {
+      "task_id": "C12_T2",
+      "case_id": "C12",
+      "split": "dev",
+      "category": "negative",
+      "prompt": "5V 经 AMS1117-3.3 给 ATmega328P、BMP280、SSD1306 OLED 供电，删除 LDO 输出电容且禁止补回。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [
+        "LDO_OUTPUT_CAP_OMITTED"
+      ],
+      "expected_disposition": "reject",
+      "required_types": [
+        "ldo_3v3",
+        "atmega328",
+        "bmp280",
+        "oled_ssd1306"
+      ],
+      "forbidden_types": [
+        "i2c_header",
+        "led"
+      ]
+    },
+    {
+      "task_id": "C12_T3",
+      "case_id": "C12",
+      "split": "dev",
+      "category": "negative",
+      "prompt": "AMS1117-3.3 供 ATmega328P、BMP280 和 SSD1306 OLED 的 3.3V I2C，但主控与两个从设备必须各自隔离地且不加隔离器。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [
+        "NO_COMMON_GROUND"
+      ],
+      "expected_disposition": "reject",
+      "required_types": [
+        "ldo_3v3",
+        "atmega328",
+        "bmp280",
+        "oled_ssd1306"
+      ],
+      "forbidden_types": [
+        "i2c_header",
+        "led"
+      ]
+    },
+    {
+      "task_id": "C13_T1",
+      "case_id": "C13",
+      "split": "dev",
+      "category": "explicit",
+      "prompt": "3.3V ATmega328P 接 BMP280，同时引出 SDA、SCL、3.3V、GND 的四针 I2C 排针维护口，整个总线一组上拉电阻并共地。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "plan",
+      "required_types": [
+        "atmega328",
+        "bmp280",
+        "i2c_header"
+      ],
+      "forbidden_types": []
+    },
+    {
+      "task_id": "C13_T2",
+      "case_id": "C13",
+      "split": "dev",
+      "category": "ambiguous",
+      "prompt": "3.3V 单片机接 BMP280，并引出四针 I2C 排针维护口，主控型号待定。",
+      "missing_fields": [
+        "controller_model"
+      ],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "clarify",
+      "required_types": [
+        "bmp280",
+        "i2c_header"
+      ],
+      "forbidden_types": []
+    },
+    {
+      "task_id": "C13_T3",
+      "case_id": "C13",
+      "split": "dev",
+      "category": "unsupported_model",
+      "prompt": "3.3V ATmega328P 接 DPS310，并引出四针 I2C 排针维护口。",
+      "missing_fields": [],
+      "unsupported_models": [
+        "DPS310"
+      ],
+      "negative_rule_ids": [],
+      "expected_disposition": "reject",
+      "required_types": [
+        "atmega328",
+        "i2c_header"
+      ],
+      "forbidden_types": []
+    },
+    {
+      "task_id": "C14_T1",
+      "case_id": "C14",
+      "split": "dev",
+      "category": "explicit",
+      "prompt": "3.3V ESP32 接 MPU6050，SDA/SCL 还引到四针 I2C 排针，排针提供 3.3V 和 GND；本地去耦和总线上拉电阻齐全。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "plan",
+      "required_types": [
+        "esp32",
+        "mpu6050",
+        "i2c_header"
+      ],
+      "forbidden_types": []
+    },
+    {
+      "task_id": "C14_T2",
+      "case_id": "C14",
+      "split": "dev",
+      "category": "negative",
+      "prompt": "ESP32 与 MPU6050 都使用 3.3V I2C；四针 I2C 排针提供 3.3V，却把它的 GND 悬空。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [
+        "EXTERNAL_GROUND_OMITTED"
+      ],
+      "expected_disposition": "reject",
+      "required_types": [
+        "esp32",
+        "mpu6050",
+        "i2c_header"
+      ],
+      "forbidden_types": []
+    },
+    {
+      "task_id": "C14_T3",
+      "case_id": "C14",
+      "split": "dev",
+      "category": "ambiguous",
+      "prompt": "ESP32 接 MPU6050 并引出 I2C 排针，外部口提供什么电压尚未决定。",
+      "missing_fields": [
+        "external_supply_voltage"
+      ],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "clarify",
+      "required_types": [
+        "esp32",
+        "mpu6050",
+        "i2c_header"
+      ],
+      "forbidden_types": []
+    },
+    {
+      "task_id": "C15_T1",
+      "case_id": "C15",
+      "split": "dev",
+      "category": "explicit",
+      "prompt": "3.3V ATmega328P 和 BMP280 的 I2C 引出四针排针，SDA、SCL 各加 ESD 二极管保护，保护器件回到公共地，传感器有去耦电容。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "plan",
+      "required_types": [
+        "atmega328",
+        "bmp280",
+        "i2c_header",
+        "esd_diode"
+      ],
+      "forbidden_types": []
+    },
+    {
+      "task_id": "C15_T2",
+      "case_id": "C15",
+      "split": "dev",
+      "category": "ambiguous",
+      "prompt": "3.3V ATmega328P 接一个 I2C 传感器，外部排针需要 ESD 二极管保护，传感器型号未定。",
+      "missing_fields": [
+        "device_model"
+      ],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "clarify",
+      "required_types": [
+        "atmega328",
+        "i2c_header",
+        "esd_diode"
+      ],
+      "forbidden_types": []
+    },
+    {
+      "task_id": "C15_T3",
+      "case_id": "C15",
+      "split": "dev",
+      "category": "unsupported_model",
+      "prompt": "3.3V ESP32 接 SHT31 的 I2C，排针的 SDA/SCL 都加 ESD 二极管，禁止替换传感器。",
+      "missing_fields": [],
+      "unsupported_models": [
+        "SHT31"
+      ],
+      "negative_rule_ids": [],
+      "expected_disposition": "reject",
+      "required_types": [
+        "esp32",
+        "i2c_header",
+        "esd_diode"
+      ],
+      "forbidden_types": []
+    },
+    {
+      "task_id": "C16_T1",
+      "case_id": "C16",
+      "split": "dev",
+      "category": "explicit",
+      "prompt": "3.3V ESP32 与 SSD1306 OLED 共用 I2C，并引出四针排针；SDA、SCL 用 TVS 阵列保护，阵列 GND 接地，器件分别去耦。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "plan",
+      "required_types": [
+        "esp32",
+        "oled_ssd1306",
+        "i2c_header",
+        "tvs_array"
+      ],
+      "forbidden_types": [
+        "led"
+      ]
+    },
+    {
+      "task_id": "C16_T2",
+      "case_id": "C16",
+      "split": "dev",
+      "category": "negative",
+      "prompt": "3.3V ESP32、SSD1306 OLED 与 I2C 排针加 TVS 阵列保护，把阵列 GND 直接接 3.3V 电源。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [
+        "PROTECTION_GROUND_WRONG"
+      ],
+      "expected_disposition": "reject",
+      "required_types": [
+        "esp32",
+        "oled_ssd1306",
+        "i2c_header",
+        "tvs_array"
+      ],
+      "forbidden_types": [
+        "led"
+      ]
+    },
+    {
+      "task_id": "C16_T3",
+      "case_id": "C16",
+      "split": "dev",
+      "category": "negative",
+      "prompt": "3.3V ESP32、SSD1306 OLED 和 I2C 排针有 TVS 阵列，阵列 GND 必须悬空且禁止连接公共地。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [
+        "PROTECTION_GROUND_OMITTED"
+      ],
+      "expected_disposition": "reject",
+      "required_types": [
+        "esp32",
+        "oled_ssd1306",
+        "i2c_header",
+        "tvs_array"
+      ],
+      "forbidden_types": [
+        "led"
+      ]
+    },
+    {
+      "task_id": "C17_T1",
+      "case_id": "C17",
+      "split": "dev",
+      "category": "explicit",
+      "prompt": "3.3V ATmega328P 用 I2C 接 BMP280，增加电压监控器输出复位信号，监控器和两只芯片共地并分别去耦，总线有上拉电阻。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "plan",
+      "required_types": [
+        "atmega328",
+        "bmp280",
+        "voltage_monitor"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    },
+    {
+      "task_id": "C17_T2",
+      "case_id": "C17",
+      "split": "dev",
+      "category": "ambiguous",
+      "prompt": "3.3V 主控用 I2C 接 BMP280，增加电压监控器复位，主控型号未定。",
+      "missing_fields": [
+        "controller_model"
+      ],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "clarify",
+      "required_types": [
+        "bmp280",
+        "voltage_monitor"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    },
+    {
+      "task_id": "C17_T3",
+      "case_id": "C17",
+      "split": "dev",
+      "category": "unsupported_model",
+      "prompt": "3.3V ATmega328P 接 BMP280，复位监控必须用 TPS3839，型号不得换。",
+      "missing_fields": [],
+      "unsupported_models": [
+        "TPS3839"
+      ],
+      "negative_rule_ids": [],
+      "expected_disposition": "reject",
+      "required_types": [
+        "atmega328",
+        "bmp280"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    },
+    {
+      "task_id": "C18_T1",
+      "case_id": "C18",
+      "split": "dev",
+      "category": "explicit",
+      "prompt": "3.3V ESP32 通过 I2C 接 SSD1306 OLED，EN 用电阻上拉，复位按钮按下将 EN 拉到地，各芯片去耦并共地。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "plan",
+      "required_types": [
+        "esp32",
+        "oled_ssd1306",
+        "pushbutton"
+      ],
+      "forbidden_types": [
+        "i2c_header",
+        "led"
+      ]
+    },
+    {
+      "task_id": "C18_T2",
+      "case_id": "C18",
+      "split": "dev",
+      "category": "negative",
+      "prompt": "3.3V ESP32 通过 I2C 接 SSD1306 OLED，要求 EN 永久短接 GND，但仍要主控运行。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [
+        "MCU_ENABLE_HELD_INACTIVE"
+      ],
+      "expected_disposition": "reject",
+      "required_types": [
+        "esp32",
+        "oled_ssd1306"
+      ],
+      "forbidden_types": [
+        "i2c_header",
+        "led"
+      ]
+    },
+    {
+      "task_id": "C18_T3",
+      "case_id": "C18",
+      "split": "dev",
+      "category": "ambiguous",
+      "prompt": "ESP32 接 SSD1306 OLED 的 I2C，需要按钮复位，但供电电压待定。",
+      "missing_fields": [
+        "bus_voltage"
+      ],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "clarify",
+      "required_types": [
+        "esp32",
+        "oled_ssd1306",
+        "pushbutton"
+      ],
+      "forbidden_types": [
+        "i2c_header",
+        "led"
+      ]
+    },
+    {
+      "task_id": "C19_T1",
+      "case_id": "C19",
+      "split": "dev",
+      "category": "explicit",
+      "prompt": "ATmega328P 的 VCC 和 AVCC 都接 3.3V，各放 100nF 电容，AREF 按外部参考方案保留；PC4/PC5 接 BMP280 I2C 并共地。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "plan",
+      "required_types": [
+        "atmega328",
+        "bmp280",
+        "capacitor"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    },
+    {
+      "task_id": "C19_T2",
+      "case_id": "C19",
+      "split": "dev",
+      "category": "ambiguous",
+      "prompt": "3.3V 单片机接 BMP280 的 I2C，还需要模拟参考端，主控型号没有选。",
+      "missing_fields": [
+        "controller_model"
+      ],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "clarify",
+      "required_types": [
+        "bmp280"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    },
+    {
+      "task_id": "C19_T3",
+      "case_id": "C19",
+      "split": "dev",
+      "category": "unsupported_model",
+      "prompt": "用 ATmega4809 和 BMP280 做 3.3V I2C 控制板，不能换 ATmega328P。",
+      "missing_fields": [],
+      "unsupported_models": [
+        "ATmega4809"
+      ],
+      "negative_rule_ids": [],
+      "expected_disposition": "reject",
+      "required_types": [
+        "bmp280"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    },
+    {
+      "task_id": "C20_T1",
+      "case_id": "C20",
+      "split": "dev",
+      "category": "explicit",
+      "prompt": "3.3V ATmega328P 用 I2C 接 BMP280，并以 PB0 经限流电阻驱动一个 LED 指示灯；总线上拉电阻与去耦电容齐全。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "plan",
+      "required_types": [
+        "atmega328",
+        "bmp280",
+        "led",
+        "resistor"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    },
+    {
+      "task_id": "C20_T2",
+      "case_id": "C20",
+      "split": "dev",
+      "category": "negative",
+      "prompt": "3.3V ATmega328P 接 BMP280 的 I2C，另用 PB0 直接接 LED，不允许限流电阻。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [
+        "LED_CURRENT_LIMIT_OMITTED"
+      ],
+      "expected_disposition": "reject",
+      "required_types": [
+        "atmega328",
+        "bmp280",
+        "led"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    },
+    {
+      "task_id": "C20_T3",
+      "case_id": "C20",
+      "split": "dev",
+      "category": "ambiguous",
+      "prompt": "ATmega328P 接 BMP280 的 I2C，加 LED 状态支路，但供电电压未确定。",
+      "missing_fields": [
+        "bus_voltage"
+      ],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "clarify",
+      "required_types": [
+        "atmega328",
+        "bmp280",
+        "led"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    },
+    {
+      "task_id": "C21_T1",
+      "case_id": "C21",
+      "split": "holdout",
+      "category": "explicit",
+      "prompt": "5V 输入先过保险丝和肖特基二极管，再经 AMS1117-3.3 给 ATmega328P 与 BMP280 供电，I2C 上拉到 3.3V并共地，输入输出电容齐全。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "plan",
+      "required_types": [
+        "fuse",
+        "schottky",
+        "ldo_3v3",
+        "atmega328",
+        "bmp280"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    },
+    {
+      "task_id": "C21_T2",
+      "case_id": "C21",
+      "split": "holdout",
+      "category": "negative",
+      "prompt": "5V 保险丝与肖特基后接 AMS1117-3.3，再接 ATmega328P 和 BMP280；把 LDO 的 OUT 和 GND 短接。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [
+        "REGULATED_SUPPLY_SHORT"
+      ],
+      "expected_disposition": "reject",
+      "required_types": [
+        "fuse",
+        "schottky",
+        "ldo_3v3",
+        "atmega328",
+        "bmp280"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    },
+    {
+      "task_id": "C22_T1",
+      "case_id": "C22",
+      "split": "holdout",
+      "category": "explicit",
+      "prompt": "Type-C 仅作 5V 电源输入，经 AMS1117-3.3 供 ESP32 与 MPU6050 的 3.3V I2C；电源地共地，LDO 与芯片各有电容。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "plan",
+      "required_types": [
+        "usb_c",
+        "ldo_3v3",
+        "esp32",
+        "mpu6050"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    },
+    {
+      "task_id": "C22_T2",
+      "case_id": "C22",
+      "split": "holdout",
+      "category": "unsupported_model",
+      "prompt": "Type-C 5V 输入经 AP2112K-3.3 给 ESP32 与 MPU6050 的 3.3V I2C 供电，LDO 型号不可换。",
+      "missing_fields": [],
+      "unsupported_models": [
+        "AP2112K-3.3"
+      ],
+      "negative_rule_ids": [],
+      "expected_disposition": "reject",
+      "required_types": [
+        "usb_c",
+        "esp32",
+        "mpu6050"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    },
+    {
+      "task_id": "C23_T1",
+      "case_id": "C23",
+      "split": "holdout",
+      "category": "explicit",
+      "prompt": "3.3V 输入经电源时序器给 ESP32、MPU6050 和 SSD1306 OLED 供电；上电有效后使能主控，共享 I2C 总线有上拉电阻与器件去耦。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "plan",
+      "required_types": [
+        "power_sequencer",
+        "esp32",
+        "mpu6050",
+        "oled_ssd1306"
+      ],
+      "forbidden_types": [
+        "i2c_header",
+        "led"
+      ]
+    },
+    {
+      "task_id": "C23_T2",
+      "case_id": "C23",
+      "split": "holdout",
+      "category": "ambiguous",
+      "prompt": "3.3V 电源时序器给 ESP32、MPU6050、SSD1306 OLED 的 I2C 板供电，电源好信号与 EN 的使能时序尚未确定。",
+      "missing_fields": [
+        "power_enable_sequence"
+      ],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "clarify",
+      "required_types": [
+        "power_sequencer",
+        "esp32",
+        "mpu6050",
+        "oled_ssd1306"
+      ],
+      "forbidden_types": [
+        "i2c_header",
+        "led"
+      ]
+    },
+    {
+      "task_id": "C24_T1",
+      "case_id": "C24",
+      "split": "holdout",
+      "category": "explicit",
+      "prompt": "3.3V ESP32 引出 SDA、SCL、3.3V、GND 的四针 I2C 排针扩展口，主控去耦，接口总线上拉电阻齐全；暂不安装从设备。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "plan",
+      "required_types": [
+        "esp32",
+        "i2c_header"
+      ],
+      "forbidden_types": []
+    },
+    {
+      "task_id": "C24_T2",
+      "case_id": "C24",
+      "split": "holdout",
+      "category": "ambiguous",
+      "prompt": "3.3V ESP32 的四针 I2C 排针要接外部传感器，但传感器型号与引脚还没决定。",
+      "missing_fields": [
+        "external_device_model"
+      ],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "clarify",
+      "required_types": [
+        "esp32",
+        "i2c_header"
+      ],
+      "forbidden_types": []
+    },
+    {
+      "task_id": "C25_T1",
+      "case_id": "C25",
+      "split": "holdout",
+      "category": "explicit",
+      "prompt": "ATmega328P 与 ESP32 都使用 3.3V，以多主 I2C 协议共享 BMP280；PC4/GPIO21 共 SDA、PC5/GPIO22 共 SCL，只有一组上拉电阻并共地。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "plan",
+      "required_types": [
+        "atmega328",
+        "esp32",
+        "bmp280"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    },
+    {
+      "task_id": "C25_T2",
+      "case_id": "C25",
+      "split": "holdout",
+      "category": "ambiguous",
+      "prompt": "ATmega328P 与 ESP32 都用 3.3V，共同控制 BMP280 的 I2C，但多主仲裁协议与主控分工尚未确定。",
+      "missing_fields": [
+        "multi_controller_arbitration"
+      ],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "clarify",
+      "required_types": [
+        "atmega328",
+        "esp32",
+        "bmp280"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    },
+    {
+      "task_id": "C26_T1",
+      "case_id": "C26",
+      "split": "holdout",
+      "category": "explicit",
+      "prompt": "使用 3.3V ATmega328P 接 BMP280，并加四针 I2C 排针；主从芯片和排针共地，总线上拉电阻与芯片去耦齐全。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "plan",
+      "required_types": [
+        "atmega328",
+        "bmp280",
+        "i2c_header"
+      ],
+      "forbidden_types": []
+    },
+    {
+      "task_id": "C26_T2",
+      "case_id": "C26",
+      "split": "holdout",
+      "category": "unsupported_model",
+      "prompt": "必须用 nRF52840 在 3.3V 下接 BMP280 与四针 I2C 排针，不接受 ATmega 或 ESP32 替代。",
+      "missing_fields": [],
+      "unsupported_models": [
+        "nRF52840"
+      ],
+      "negative_rule_ids": [],
+      "expected_disposition": "reject",
+      "required_types": [
+        "bmp280",
+        "i2c_header"
+      ],
+      "forbidden_types": []
+    },
+    {
+      "task_id": "C27_T1",
+      "case_id": "C27",
+      "split": "holdout",
+      "category": "explicit",
+      "prompt": "5V 仅进入 AMS1117-3.3 的 IN，ATmega328P、BMP280 和 I2C 上拉电阻全部使用其 3.3V OUT，所有地相连，各域清楚标注。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "plan",
+      "required_types": [
+        "atmega328",
+        "bmp280",
+        "ldo_3v3"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    },
+    {
+      "task_id": "C27_T2",
+      "case_id": "C27",
+      "split": "holdout",
+      "category": "negative",
+      "prompt": "AMS1117-3.3 从 5V 得到 3.3V 给 ATmega328P 和 BMP280，I2C 上拉却改用另一根 5V 电源且禁止电平转换。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [
+        "I2C_PULLUP_WRONG_DOMAIN"
+      ],
+      "expected_disposition": "reject",
+      "required_types": [
+        "atmega328",
+        "bmp280",
+        "ldo_3v3"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    },
+    {
+      "task_id": "C28_T1",
+      "case_id": "C28",
+      "split": "holdout",
+      "category": "explicit",
+      "prompt": "本期使用全 3.3V 的 ATmega328P 与 BMP280 I2C，外部四针排针也输出 3.3V，各信号一只上拉电阻并共地，不做跨域。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "plan",
+      "required_types": [
+        "atmega328",
+        "bmp280",
+        "i2c_header"
+      ],
+      "forbidden_types": []
+    },
+    {
+      "task_id": "C28_T2",
+      "case_id": "C28",
+      "split": "holdout",
+      "category": "unsupported_model",
+      "prompt": "ATmega328P 一侧 5V、BMP280 一侧 3.3V，I2C 中间必须放 PCA9306 并引出四针排针。",
+      "missing_fields": [],
+      "unsupported_models": [
+        "PCA9306"
+      ],
+      "negative_rule_ids": [],
+      "expected_disposition": "reject",
+      "required_types": [
+        "atmega328",
+        "bmp280",
+        "i2c_header"
+      ],
+      "forbidden_types": []
+    },
+    {
+      "task_id": "C29_T1",
+      "case_id": "C29",
+      "split": "holdout",
+      "category": "explicit",
+      "prompt": "3.3V ATmega328P 的 PC4 接 BMP280 SDA、PC5 接 SCL；VCC/AVCC 供电、地连接，加入两只上拉电阻与去耦电容。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "plan",
+      "required_types": [
+        "atmega328",
+        "bmp280"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    },
+    {
+      "task_id": "C29_T2",
+      "case_id": "C29",
+      "split": "holdout",
+      "category": "negative",
+      "prompt": "3.3V ATmega328P 接 BMP280 的 I2C，主控必须使用不存在于目录的 SDA 和 SCL 引脚名，不能用 PC4/PC5。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [
+        "UNSUPPORTED_LOGICAL_PIN"
+      ],
+      "expected_disposition": "reject",
+      "required_types": [
+        "atmega328",
+        "bmp280"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    },
+    {
+      "task_id": "C30_T1",
+      "case_id": "C30",
+      "split": "holdout",
+      "category": "explicit",
+      "prompt": "3.3V ESP32 共接 BMP280 和 MPU6050 的 I2C 阵列，GPIO21/22 做 SDA/SCL，各从设备分别去耦，共用一组上拉电阻。",
+      "missing_fields": [],
+      "unsupported_models": [],
+      "negative_rule_ids": [],
+      "expected_disposition": "plan",
+      "required_types": [
+        "esp32",
+        "bmp280",
+        "mpu6050"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    },
+    {
+      "task_id": "C30_T2",
+      "case_id": "C30",
+      "split": "holdout",
+      "category": "unsupported_model",
+      "prompt": "3.3V ESP32 通过 I2C 同时读取 BME688 与 BMI270，两只型号必须保留。",
+      "missing_fields": [],
+      "unsupported_models": [
+        "BME688",
+        "BMI270"
+      ],
+      "negative_rule_ids": [],
+      "expected_disposition": "reject",
+      "required_types": [
+        "esp32"
+      ],
+      "forbidden_types": [
+        "i2c_header"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "date": "2026-09-26T14:06:46.182Z",
+  "backend": "shipped server.py",
+  "browser": "Microsoft Edge",
+  "mock": false,
+  "csp": "default-src 'self'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; worker-src 'self' blob:",
+  "ocr": {
+    "method": "tesseract.js",
+    "language": "eng",
+    "text": "R14.7k\n",
+    "confidence": 76,
+    "words": [
+      {
+        "text": "R14.7k",
+        "bbox": {
+          "x0": 34,
+          "y0": 65,
+          "x1": 195,
+          "y1": 100
+        },
+        "confidence": 76
+      }
+    ]
+  },
+  "ui_review_text": "新增器件（0）无修改器件（0）无删除器件（0）无新增连线（0）无删除连线（0）无候选图 ERC（致命 0 · 严重 0 · 提示 0 · 警告 0）未发现问题图片识别待确认项（2）未识别到受支持的电阻或电容OCR 已运行；识别文字与器件数值仍需人工确认识别元件与评分（0）无原始识别文字（数值需人工填写）（1）R14.7k · OCR 置信度 76.0/100下载原始识别证据官方校验未完成或未通过（4）spice_deck：failspice_runtime：SPICE 网表导出失败official_erc：未找到 kicad-cli；未进行官方复验official_netlist：未找到 kicad-cli；未进行官方复验",
+  "validation_responses": [
+    {
+      "status": 200,
+      "mime": "application/json"
+    }
+  ],
+  "resources": [
+    {
+      "url": "/static/vision/tesseract.min.js",
+      "status": 200,
+      "mime": "text/javascript"
+    },
+    {
+      "url": "/static/vision/worker.min.js",
+      "status": 200,
+      "mime": "text/javascript"
+    },
+    {
+      "url": "/static/vision/core/tesseract-core-relaxedsimd-lstm.wasm.js",
+      "status": 200,
+      "mime": "text/javascript"
+    },
+    {
+      "url": "/static/vision/lang/eng.traineddata.gz",
+      "status": 200,
+      "mime": "application/gzip"
+    },
+    {
+      "url": "/static/vision/worker.min.js",
+      "status": 200,
+      "mime": "text/javascript"
+    },
+    {
+      "url": "/static/vision/core/tesseract-core-relaxedsimd-lstm.wasm.js",
+      "status": 200,
+      "mime": "text/javascript"
+    },
+    {
+      "url": "/static/vision/lang/eng.traineddata.gz",
+      "status": 200,
+      "mime": "application/gzip"
+    }
+  ],
+  "runtime_errors": [],
+  "csp_errors": [],
+  "passed": true
+}

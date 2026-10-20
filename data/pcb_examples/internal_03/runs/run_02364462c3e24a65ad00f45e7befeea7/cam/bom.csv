@@ -1,0 +1,4 @@
+﻿Reference,Value,MPN,Manufacturer,Footprint,Datasheet
+J1,I2C GND VCC SDA SCL,TSW-104-07-G-S,Samtec,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical,https://www.samtec.com/products/tsw-104-07-g-s
+R1,4.7k,RC0805FR-074K7L,YAGEO,Resistor_SMD:R_0805_2012Metric,https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-074K7L
+R2,4.7k,RC0805FR-074K7L,YAGEO,Resistor_SMD:R_0805_2012Metric,https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-074K7L

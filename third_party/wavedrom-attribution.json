@@ -1,0 +1,28 @@
+{
+  "feature": "Teaching timing diagram (digital timing view of a real .tran run)",
+  "repository": "https://github.com/wavedrom/wavedrom",
+  "package": "wavedrom",
+  "version": "3.7.0",
+  "license": "MIT",
+  "copyright": "Copyright (c) 2011-2026 Aliaksei Chapyzhenka",
+  "acquired_from": "npm registry tarball wavedrom@3.7.0 (npm pack)",
+  "npm_tarball_shasum": "50e4b3a833d55b40b18224a72713abb5593d0918",
+  "npm_tarball_integrity": "sha512-2dd4xLooh+bvk...PgRnr3gTFnf3Q==",
+  "upstream_entry": "third_party/upstream/wavedrom/wavedrom.unpkg.min.js",
+  "served_file": "web/wavedrom.unpkg.min.js",
+  "license_file": "third_party/upstream/wavedrom/LICENSE",
+  "artifacts": [
+    {"path": "third_party/upstream/wavedrom/LICENSE", "bytes": 1092, "sha256": "68f6442e5967ddb6a75ec8a4570215cac8cc415ea293c05cf857843c73fa5a57"},
+    {"path": "third_party/upstream/wavedrom/package.json", "bytes": 2530, "sha256": "28e4655ca4a7d698b249b56f491ab91c16aa4997b2dc9ecfe8082f6ad35aee31"},
+    {"path": "third_party/upstream/wavedrom/wavedrom.unpkg.min.js", "bytes": 98928, "sha256": "e3579493c2a0c11eb0d32344ea0eadb2904a7c85ad729b28b6222ab837297742"},
+    {"path": "web/wavedrom.unpkg.min.js", "bytes": 98928, "sha256": "e3579493c2a0c11eb0d32344ea0eadb2904a7c85ad729b28b6222ab837297742"}
+  ],
+  "reuse": [
+    {"artifact": "wavedrom.unpkg.min.js", "browser_global": "window.wavedrom", "functions": ["renderAny", "onml.stringify", "waveSkin"], "note": "预构建自包含 bundle，依赖已内联；本项目不修改该文件任何字节，也不从源码树重新构建。"}
+  ],
+  "bundled_dependencies": ["onml", "json5", "bit-field", "logidrom", "tspan"],
+  "dependency_note": "以上运行依赖由 wavedrom 官方 unpkg bundle 内联，本项目未单独引入、也未逐一完成传递依赖许可审查。",
+  "runtime": "页面加载时作为普通静态脚本引入（/static/wavedrom.unpkg.min.js）。渲染发生在本机浏览器内，不联网、不请求 CDN。",
+  "project_code": "core/spice_enhanced.py 的 transient_series() 与 server.py 的 /api/spice_transient 为项目集成代码：它们只负责取得并解析真实 ngspice .tran 输出；web/workbench.js 中的教学模式时序面板负责阈值数字化与排版。以上均不是 wavedrom 上游的函数。",
+  "conversion": "时序图数据全部来自本机 ngspice 的实际 .tran 打印输出，按各节点电压中值做阈值数字化后交给 wavedrom 渲染。ngspice 不可用或输出无法解析时返回 ran=false，不生成替代或示意波形。"
+}

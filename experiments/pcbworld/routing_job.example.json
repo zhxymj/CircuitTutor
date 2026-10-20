@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "job_id": "demo-small-2l-001",
+  "board_path": "artifacts/demo-small-2l.kicad_pcb",
+  "output_dir": "artifacts/routing/demo-small-2l-001",
+  "constraints": {
+    "layers": 2,
+    "clearance_mm": 0.2,
+    "max_vias": 20,
+    "max_steps": 500,
+    "timeout_s": 300
+  },
+  "policy": {
+    "name": "ppo-small-v1",
+    "checkpoint": ""
+  },
+  "random_seed": 1550
+}
+

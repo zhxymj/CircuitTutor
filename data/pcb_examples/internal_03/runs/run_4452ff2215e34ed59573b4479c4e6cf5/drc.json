@@ -1,0 +1,83 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-26T18:09:38",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads",
+            "key": "footprint_type_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "candidate.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "当前配置中不包含封装库 'Connector_PinHeader_2.54mm'",
+            "items": [
+                {
+                    "description": "封装 J1",
+                    "pos": {
+                        "x": 11.0,
+                        "y": 9.0
+                    },
+                    "uuid": "c378753a-097d-528e-ad73-acce6c22a46c"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "当前配置中不包含封装库 'Resistor_SMD'",
+            "items": [
+                {
+                    "description": "封装 R1",
+                    "pos": {
+                        "x": 19.0,
+                        "y": 14.08
+                    },
+                    "uuid": "5bc137ad-cc56-51b2-ad26-f4ffef070f65"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "当前配置中不包含封装库 'Resistor_SMD'",
+            "items": [
+                {
+                    "description": "封装 R2",
+                    "pos": {
+                        "x": 24.0,
+                        "y": 16.62
+                    },
+                    "uuid": "6bdd74bc-bd78-5bdf-8a49-2d5611e88156"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        }
+    ]
+}

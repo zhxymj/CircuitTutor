@@ -1,0 +1,30 @@
+{
+  "checked_on": "2026-09-25",
+  "purpose": "T03 外部数据引入前许可证审查；此文件不包含第三方样本",
+  "sources": [
+    {
+      "name": "SchGen code",
+      "url": "https://github.com/microsoft/SchGen",
+      "license_evidence": "https://github.com/microsoft/SchGen/blob/main/LICENSE",
+      "observed_license": "MIT",
+      "imported_examples": 0,
+      "note": "代码许可证与原始参考图纸许可证须分别审查。"
+    },
+    {
+      "name": "SchGen dataset",
+      "url": "https://huggingface.co/datasets/microsoft/SchGen_dataset",
+      "license_evidence": "https://huggingface.co/datasets/microsoft/SchGen_dataset",
+      "observed_license": "MIT (dataset card)",
+      "imported_examples": 0,
+      "note": "数据卡称原参考图纸主要来自 CC BY-SA 4.0 的 SparkFun 材料，最终集不直接包含原图；仍需逐条筛选范围与重复组。"
+    },
+    {
+      "name": "CircuitLM code",
+      "url": "https://github.com/Khandakar227/circuitlm",
+      "license_evidence": "https://github.com/Khandakar227/circuitlm/blob/main/LICENSE",
+      "observed_license": "MIT",
+      "imported_examples": 0,
+      "note": "仅借鉴分阶段生成设计思路，未复制代码或数据。"
+    }
+  ]
+}

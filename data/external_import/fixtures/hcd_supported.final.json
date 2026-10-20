@@ -1,0 +1,122 @@
+{
+  "image": "constructed_interop_divider",
+  "width": 600,
+  "height": 400,
+  "components": [
+    {
+      "id": 0,
+      "cls_name": "voltage.dc",
+      "bbox": [
+        0,
+        0,
+        20,
+        20
+      ]
+    },
+    {
+      "id": 1,
+      "cls_name": "resistor",
+      "bbox": [
+        50,
+        0,
+        70,
+        20
+      ]
+    },
+    {
+      "id": 2,
+      "cls_name": "resistor",
+      "bbox": [
+        100,
+        0,
+        120,
+        20
+      ]
+    }
+  ],
+  "points": [],
+  "edges": [],
+  "endpoints": [
+    {
+      "eid": 0,
+      "kind": "terminal",
+      "comp_id": 0,
+      "port_role": "positive"
+    },
+    {
+      "eid": 1,
+      "kind": "terminal",
+      "comp_id": 0,
+      "port_role": "negative"
+    },
+    {
+      "eid": 2,
+      "kind": "terminal",
+      "comp_id": 1
+    },
+    {
+      "eid": 3,
+      "kind": "terminal",
+      "comp_id": 1
+    },
+    {
+      "eid": 4,
+      "kind": "terminal",
+      "comp_id": 2
+    },
+    {
+      "eid": 5,
+      "kind": "terminal",
+      "comp_id": 2
+    }
+  ],
+  "nets": [
+    {
+      "id": 0,
+      "endpoint_eids": [
+        0,
+        2
+      ],
+      "component_ids": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": 1,
+      "endpoint_eids": [
+        3,
+        4
+      ],
+      "component_ids": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 2,
+      "endpoint_eids": [
+        1,
+        5
+      ],
+      "component_ids": [
+        0,
+        2
+      ]
+    }
+  ],
+  "texts": [
+    {
+      "matched_component_id": 0,
+      "text": "5V"
+    },
+    {
+      "matched_component_id": 1,
+      "text": "1k"
+    },
+    {
+      "matched_component_id": 2,
+      "text": "1k"
+    }
+  ]
+}

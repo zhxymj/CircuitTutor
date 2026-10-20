@@ -1,0 +1,3283 @@
+{
+  "led_limit": {
+    "title": "LED 限流电路（5V-330Ω-LED）",
+    "parts": [
+      {
+        "type": "battery",
+        "id": "BAT1",
+        "attrs": {
+          "value": "5V"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R1",
+        "attrs": {
+          "value": "330Ω"
+        }
+      },
+      {
+        "type": "led",
+        "id": "LED1",
+        "attrs": {
+          "value": "红"
+        }
+      },
+      {
+        "type": "gnd",
+        "id": "GND1"
+      }
+    ],
+    "connections": [
+      [
+        "BAT1:+",
+        "R1:1",
+        "red",
+        []
+      ],
+      [
+        "R1:2",
+        "LED1:+",
+        "red",
+        []
+      ],
+      [
+        "LED1:-",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "BAT1:-",
+        "GND1:1",
+        "black",
+        []
+      ]
+    ],
+    "category": "指示与显示"
+  },
+  "ne555_blink": {
+    "title": "NE555 多谐振荡器闪烁灯",
+    "parts": [
+      {
+        "type": "vcc",
+        "id": "V1",
+        "attrs": {
+          "value": "5V"
+        }
+      },
+      {
+        "type": "ne555",
+        "id": "U1",
+        "attrs": {
+          "value": "NE555"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R1",
+        "attrs": {
+          "value": "1k"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R2",
+        "attrs": {
+          "value": "10k"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R3",
+        "attrs": {
+          "value": "330Ω"
+        }
+      },
+      {
+        "type": "capacitor",
+        "id": "C1",
+        "attrs": {
+          "value": "10µF"
+        }
+      },
+      {
+        "type": "capacitor",
+        "id": "C2",
+        "attrs": {
+          "value": "100nF"
+        }
+      },
+      {
+        "type": "capacitor",
+        "id": "C3",
+        "attrs": {
+          "value": "100nF"
+        }
+      },
+      {
+        "type": "led",
+        "id": "LED1",
+        "attrs": {
+          "value": "红"
+        }
+      },
+      {
+        "type": "gnd",
+        "id": "GND1"
+      }
+    ],
+    "connections": [
+      [
+        "V1:1",
+        "R1:1",
+        "red",
+        []
+      ],
+      [
+        "R1:2",
+        "U1:DISCH",
+        "red",
+        []
+      ],
+      [
+        "U1:DISCH",
+        "R2:1",
+        "red",
+        []
+      ],
+      [
+        "R2:2",
+        "U1:THR",
+        "red",
+        []
+      ],
+      [
+        "U1:THR",
+        "U1:TRIG",
+        "red",
+        []
+      ],
+      [
+        "U1:TRIG",
+        "C1:+",
+        "red",
+        []
+      ],
+      [
+        "C1:-",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "U1:CTRL",
+        "C2:+",
+        "blue",
+        []
+      ],
+      [
+        "C2:-",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "V1:1",
+        "U1:RESET",
+        "red",
+        []
+      ],
+      [
+        "V1:1",
+        "U1:VCC",
+        "red",
+        []
+      ],
+      [
+        "V1:1",
+        "C3:+",
+        "red",
+        []
+      ],
+      [
+        "C3:-",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "U1:OUT",
+        "R3:1",
+        "green",
+        []
+      ],
+      [
+        "R3:2",
+        "LED1:+",
+        "green",
+        []
+      ],
+      [
+        "LED1:-",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "U1:GND",
+        "GND1:1",
+        "black",
+        []
+      ]
+    ],
+    "category": "定时与逻辑"
+  },
+  "opamp_inv": {
+    "title": "反相比例放大器（含反馈回路）",
+    "parts": [
+      {
+        "type": "battery",
+        "id": "BAT1",
+        "attrs": {
+          "value": "0.1V"
+        }
+      },
+      {
+        "type": "opamp_inverting",
+        "id": "U1"
+      },
+      {
+        "type": "resistor",
+        "id": "R1",
+        "attrs": {
+          "value": "10k"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R2",
+        "attrs": {
+          "value": "100k"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R3",
+        "attrs": {
+          "value": "330Ω"
+        }
+      },
+      {
+        "type": "led",
+        "id": "LED1",
+        "attrs": {
+          "value": "绿"
+        }
+      },
+      {
+        "type": "gnd",
+        "id": "GND1"
+      }
+    ],
+    "connections": [
+      [
+        "BAT1:+",
+        "R1:1",
+        "red",
+        []
+      ],
+      [
+        "R1:2",
+        "U1:-",
+        "red",
+        []
+      ],
+      [
+        "U1:-",
+        "R2:1",
+        "red",
+        []
+      ],
+      [
+        "R2:2",
+        "U1:out",
+        "red",
+        []
+      ],
+      [
+        "U1:+",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "U1:out",
+        "R3:1",
+        "green",
+        []
+      ],
+      [
+        "R3:2",
+        "LED1:+",
+        "green",
+        []
+      ],
+      [
+        "LED1:-",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "BAT1:-",
+        "GND1:1",
+        "black",
+        []
+      ]
+    ],
+    "category": "模拟与滤波"
+  },
+  "led_no_limit": {
+    "title": "错误示范：LED 无限流 + 重复位号 + 未连接元件",
+    "parts": [
+      {
+        "type": "battery",
+        "id": "BAT1",
+        "attrs": {
+          "value": "5V"
+        }
+      },
+      {
+        "type": "led",
+        "id": "LED1"
+      },
+      {
+        "type": "gnd",
+        "id": "GND1"
+      },
+      {
+        "type": "resistor",
+        "id": "R1",
+        "attrs": {
+          "value": "330Ω"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R1",
+        "attrs": {
+          "value": "330Ω"
+        }
+      },
+      {
+        "type": "capacitor",
+        "id": "C9",
+        "attrs": {
+          "value": "100nF"
+        }
+      }
+    ],
+    "connections": [
+      [
+        "BAT1:+",
+        "LED1:+",
+        "red",
+        []
+      ],
+      [
+        "LED1:-",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "BAT1:-",
+        "GND1:1",
+        "black",
+        []
+      ]
+    ],
+    "category": "指示与显示"
+  },
+  "pot_divider": {
+    "title": "电位器调光电路（滑片调亮度）",
+    "parts": [
+      {
+        "type": "battery",
+        "id": "BAT1",
+        "attrs": {
+          "value": "5V"
+        }
+      },
+      {
+        "type": "potentiometer",
+        "id": "RV1",
+        "attrs": {
+          "value": "10k"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R1",
+        "attrs": {
+          "value": "330Ω"
+        }
+      },
+      {
+        "type": "led",
+        "id": "LED1",
+        "attrs": {
+          "value": "红"
+        }
+      },
+      {
+        "type": "gnd",
+        "id": "GND1"
+      }
+    ],
+    "connections": [
+      [
+        "BAT1:+",
+        "RV1:1",
+        "red",
+        []
+      ],
+      [
+        "RV1:2",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "RV1:3",
+        "R1:1",
+        "red",
+        []
+      ],
+      [
+        "R1:2",
+        "LED1:+",
+        "red",
+        []
+      ],
+      [
+        "LED1:-",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "BAT1:-",
+        "GND1:1",
+        "black",
+        []
+      ]
+    ],
+    "category": "模拟与滤波"
+  },
+  "button_buzzer": {
+    "title": "按钮控制蜂鸣器",
+    "parts": [
+      {
+        "type": "battery",
+        "id": "BAT1",
+        "attrs": {
+          "value": "5V"
+        }
+      },
+      {
+        "type": "pushbutton",
+        "id": "SW1",
+        "attrs": {
+          "value": "NO"
+        }
+      },
+      {
+        "type": "buzzer",
+        "id": "BZ1",
+        "attrs": {
+          "value": "有源"
+        }
+      },
+      {
+        "type": "gnd",
+        "id": "GND1"
+      }
+    ],
+    "connections": [
+      [
+        "BAT1:+",
+        "SW1:1",
+        "red",
+        []
+      ],
+      [
+        "SW1:2",
+        "BZ1:+",
+        "red",
+        []
+      ],
+      [
+        "BZ1:-",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "BAT1:-",
+        "GND1:1",
+        "black",
+        []
+      ]
+    ],
+    "category": "指示与显示"
+  },
+  "diode_protect": {
+    "title": "二极管防反接保护 + LED 指示",
+    "parts": [
+      {
+        "type": "battery",
+        "id": "BAT1",
+        "attrs": {
+          "value": "9V"
+        }
+      },
+      {
+        "type": "diode",
+        "id": "D1",
+        "attrs": {
+          "value": "1N4007"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R1",
+        "attrs": {
+          "value": "680Ω"
+        }
+      },
+      {
+        "type": "led",
+        "id": "LED1",
+        "attrs": {
+          "value": "红"
+        }
+      },
+      {
+        "type": "gnd",
+        "id": "GND1"
+      }
+    ],
+    "connections": [
+      [
+        "BAT1:+",
+        "D1:A",
+        "red",
+        []
+      ],
+      [
+        "D1:K",
+        "R1:1",
+        "red",
+        []
+      ],
+      [
+        "R1:2",
+        "LED1:+",
+        "red",
+        []
+      ],
+      [
+        "LED1:-",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "BAT1:-",
+        "GND1:1",
+        "black",
+        []
+      ]
+    ],
+    "category": "接口与保护"
+  },
+  "parallel_led": {
+    "title": "两路 LED 并联（各配限流电阻）",
+    "parts": [
+      {
+        "type": "battery",
+        "id": "BAT1",
+        "attrs": {
+          "value": "5V"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R1",
+        "attrs": {
+          "value": "330Ω"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R2",
+        "attrs": {
+          "value": "330Ω"
+        }
+      },
+      {
+        "type": "led",
+        "id": "LED1",
+        "attrs": {
+          "value": "红"
+        }
+      },
+      {
+        "type": "led",
+        "id": "LED2",
+        "attrs": {
+          "value": "绿"
+        }
+      },
+      {
+        "type": "gnd",
+        "id": "GND1"
+      }
+    ],
+    "connections": [
+      [
+        "BAT1:+",
+        "R1:1",
+        "red",
+        []
+      ],
+      [
+        "R1:2",
+        "LED1:+",
+        "red",
+        []
+      ],
+      [
+        "LED1:-",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "BAT1:+",
+        "R2:1",
+        "red",
+        []
+      ],
+      [
+        "R2:2",
+        "LED2:+",
+        "green",
+        []
+      ],
+      [
+        "LED2:-",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "BAT1:-",
+        "GND1:1",
+        "black",
+        []
+      ]
+    ],
+    "category": "指示与显示"
+  },
+  "npn_switch": {
+    "title": "NPN 三极管低边开关驱动 LED",
+    "parts": [
+      {
+        "type": "battery",
+        "id": "BAT1",
+        "attrs": {
+          "value": "5V"
+        }
+      },
+      {
+        "type": "pushbutton",
+        "id": "SW1",
+        "attrs": {
+          "value": "NO"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R1",
+        "attrs": {
+          "value": "1k"
+        }
+      },
+      {
+        "type": "npn",
+        "id": "Q1",
+        "attrs": {
+          "value": "2N3904"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R2",
+        "attrs": {
+          "value": "330Ω"
+        }
+      },
+      {
+        "type": "led",
+        "id": "LED1",
+        "attrs": {
+          "value": "红"
+        }
+      },
+      {
+        "type": "gnd",
+        "id": "GND1"
+      }
+    ],
+    "connections": [
+      [
+        "BAT1:+",
+        "SW1:1",
+        "red",
+        []
+      ],
+      [
+        "SW1:2",
+        "R1:1",
+        "red",
+        []
+      ],
+      [
+        "R1:2",
+        "Q1:B",
+        "red",
+        []
+      ],
+      [
+        "Q1:E",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "BAT1:+",
+        "R2:1",
+        "red",
+        []
+      ],
+      [
+        "R2:2",
+        "LED1:+",
+        "red",
+        []
+      ],
+      [
+        "LED1:-",
+        "Q1:C",
+        "black",
+        []
+      ],
+      [
+        "BAT1:-",
+        "GND1:1",
+        "black",
+        []
+      ]
+    ],
+    "category": "驱动与功率"
+  },
+  "zener_reg": {
+    "title": "稳压二极管基准（限流电阻 + 齐纳钳位）",
+    "parts": [
+      {
+        "type": "battery",
+        "id": "BAT1",
+        "attrs": {
+          "value": "9V"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R1",
+        "attrs": {
+          "value": "470Ω"
+        }
+      },
+      {
+        "type": "zener",
+        "id": "DZ1",
+        "attrs": {
+          "value": "5.1V"
+        }
+      },
+      {
+        "type": "gnd",
+        "id": "GND1"
+      }
+    ],
+    "connections": [
+      [
+        "BAT1:+",
+        "R1:1",
+        "red",
+        []
+      ],
+      [
+        "R1:2",
+        "DZ1:K",
+        "red",
+        []
+      ],
+      [
+        "DZ1:A",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "BAT1:-",
+        "GND1:1",
+        "black",
+        []
+      ]
+    ],
+    "category": "电源"
+  },
+  "rc_filter": {
+    "title": "RC 低通滤波（电源去耦/信号滤波）",
+    "parts": [
+      {
+        "type": "battery",
+        "id": "BAT1",
+        "attrs": {
+          "value": "5V"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R1",
+        "attrs": {
+          "value": "1k"
+        }
+      },
+      {
+        "type": "capacitor",
+        "id": "C1",
+        "attrs": {
+          "value": "100nF"
+        }
+      },
+      {
+        "type": "gnd",
+        "id": "GND1"
+      }
+    ],
+    "connections": [
+      [
+        "BAT1:+",
+        "R1:1",
+        "red",
+        []
+      ],
+      [
+        "R1:2",
+        "C1:+",
+        "blue",
+        []
+      ],
+      [
+        "C1:-",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "BAT1:-",
+        "GND1:1",
+        "black",
+        []
+      ]
+    ],
+    "category": "模拟与滤波"
+  },
+  "rectifier_filter": {
+    "title": "半波整流 + 滤波（交流转直流基础）",
+    "parts": [
+      {
+        "type": "ac_source",
+        "id": "AC1",
+        "attrs": {
+          "value": "12V"
+        }
+      },
+      {
+        "type": "diode",
+        "id": "D1",
+        "attrs": {
+          "value": "1N4007"
+        }
+      },
+      {
+        "type": "capacitor",
+        "id": "C1",
+        "attrs": {
+          "value": "100µF"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R1",
+        "attrs": {
+          "value": "1k"
+        }
+      },
+      {
+        "type": "gnd",
+        "id": "GND1"
+      }
+    ],
+    "connections": [
+      [
+        "AC1:+",
+        "D1:A",
+        "red",
+        []
+      ],
+      [
+        "D1:K",
+        "C1:+",
+        "red",
+        []
+      ],
+      [
+        "C1:-",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "AC1:-",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "C1:+",
+        "R1:1",
+        "red",
+        []
+      ],
+      [
+        "R1:2",
+        "GND1:1",
+        "black",
+        []
+      ]
+    ],
+    "category": "电源"
+  },
+  "pnp_switch": {
+    "title": "PNP 高边开关（按键控制负载）",
+    "parts": [
+      {
+        "type": "battery",
+        "id": "BAT1",
+        "attrs": {
+          "value": "5V"
+        }
+      },
+      {
+        "type": "pnp",
+        "id": "Q1",
+        "attrs": {
+          "value": "2N3906"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R1",
+        "attrs": {
+          "value": "1k"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R2",
+        "attrs": {
+          "value": "330Ω"
+        }
+      },
+      {
+        "type": "led",
+        "id": "LED1",
+        "attrs": {
+          "value": "红"
+        }
+      },
+      {
+        "type": "pushbutton",
+        "id": "SW1",
+        "attrs": {
+          "value": "NO"
+        }
+      },
+      {
+        "type": "gnd",
+        "id": "GND1"
+      }
+    ],
+    "connections": [
+      [
+        "BAT1:+",
+        "Q1:E",
+        "red",
+        []
+      ],
+      [
+        "BAT1:+",
+        "R1:1",
+        "red",
+        []
+      ],
+      [
+        "R1:2",
+        "Q1:B",
+        "red",
+        []
+      ],
+      [
+        "Q1:B",
+        "SW1:1",
+        "red",
+        []
+      ],
+      [
+        "SW1:2",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "Q1:C",
+        "R2:1",
+        "red",
+        []
+      ],
+      [
+        "R2:2",
+        "LED1:+",
+        "red",
+        []
+      ],
+      [
+        "LED1:-",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "BAT1:-",
+        "GND1:1",
+        "black",
+        []
+      ]
+    ],
+    "category": "驱动与功率"
+  },
+  "opamp_buffer": {
+    "title": "电压跟随器（阻抗变换）",
+    "parts": [
+      {
+        "type": "battery",
+        "id": "BAT1",
+        "attrs": {
+          "value": "5V"
+        }
+      },
+      {
+        "type": "potentiometer",
+        "id": "RV1",
+        "attrs": {
+          "value": "10k"
+        }
+      },
+      {
+        "type": "opamp_follower",
+        "id": "U1"
+      },
+      {
+        "type": "resistor",
+        "id": "R1",
+        "attrs": {
+          "value": "1k"
+        }
+      },
+      {
+        "type": "led",
+        "id": "LED1",
+        "attrs": {
+          "value": "绿"
+        }
+      },
+      {
+        "type": "gnd",
+        "id": "GND1"
+      }
+    ],
+    "connections": [
+      [
+        "BAT1:+",
+        "RV1:1",
+        "red",
+        []
+      ],
+      [
+        "RV1:2",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "RV1:3",
+        "U1:+",
+        "red",
+        []
+      ],
+      [
+        "U1:out",
+        "U1:-",
+        "red",
+        []
+      ],
+      [
+        "U1:out",
+        "R1:1",
+        "green",
+        []
+      ],
+      [
+        "R1:2",
+        "LED1:+",
+        "green",
+        []
+      ],
+      [
+        "LED1:-",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "BAT1:-",
+        "GND1:1",
+        "black",
+        []
+      ]
+    ],
+    "category": "模拟与滤波"
+  },
+  "crystal_clock": {
+    "title": "晶振两端负载电容（时钟振荡骨架）",
+    "parts": [
+      {
+        "type": "battery",
+        "id": "BAT1",
+        "attrs": {
+          "value": "5V"
+        }
+      },
+      {
+        "type": "crystal",
+        "id": "Y1",
+        "attrs": {
+          "value": "12MHz"
+        }
+      },
+      {
+        "type": "capacitor",
+        "id": "C1",
+        "attrs": {
+          "value": "22pF"
+        }
+      },
+      {
+        "type": "capacitor",
+        "id": "C2",
+        "attrs": {
+          "value": "22pF"
+        }
+      },
+      {
+        "type": "gnd",
+        "id": "GND1"
+      }
+    ],
+    "connections": [
+      [
+        "BAT1:+",
+        "Y1:1",
+        "red",
+        []
+      ],
+      [
+        "Y1:1",
+        "C1:+",
+        "blue",
+        []
+      ],
+      [
+        "Y1:2",
+        "C2:+",
+        "blue",
+        []
+      ],
+      [
+        "C1:-",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "C2:-",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "BAT1:-",
+        "GND1:1",
+        "black",
+        []
+      ]
+    ],
+    "category": "定时与逻辑"
+  },
+  "optocoupler_led": {
+    "title": "光耦隔离驱动 LED",
+    "parts": [
+      {
+        "type": "battery",
+        "id": "BAT1",
+        "attrs": {
+          "value": "5V"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R1",
+        "attrs": {
+          "value": "330Ω"
+        }
+      },
+      {
+        "type": "optocoupler",
+        "id": "U1",
+        "attrs": {
+          "value": "PC817"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R2",
+        "attrs": {
+          "value": "1k"
+        }
+      },
+      {
+        "type": "led",
+        "id": "LED1",
+        "attrs": {
+          "value": "红"
+        }
+      },
+      {
+        "type": "gnd",
+        "id": "GND1"
+      }
+    ],
+    "connections": [
+      [
+        "BAT1:+",
+        "R1:1",
+        "red",
+        []
+      ],
+      [
+        "R1:2",
+        "U1:A",
+        "red",
+        []
+      ],
+      [
+        "U1:K",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "BAT1:+",
+        "U1:C",
+        "red",
+        []
+      ],
+      [
+        "U1:C",
+        "R2:1",
+        "red",
+        []
+      ],
+      [
+        "R2:2",
+        "LED1:+",
+        "green",
+        []
+      ],
+      [
+        "LED1:-",
+        "U1:E",
+        "green",
+        []
+      ],
+      [
+        "U1:E",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "BAT1:-",
+        "GND1:1",
+        "black",
+        []
+      ]
+    ],
+    "category": "指示与显示"
+  },
+  "buck_module": {
+    "title": "DC-DC 降压模块（12V→5V 给单片机供电）",
+    "parts": [
+      {
+        "type": "battery",
+        "id": "BAT1",
+        "attrs": {
+          "value": "12V"
+        }
+      },
+      {
+        "type": "buck_module",
+        "id": "U1",
+        "attrs": {
+          "value": "LM2596"
+        }
+      },
+      {
+        "type": "gnd",
+        "id": "GND1"
+      }
+    ],
+    "connections": [
+      [
+        "BAT1:+",
+        "U1:IN+",
+        "red",
+        []
+      ],
+      [
+        "U1:IN-",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "BAT1:-",
+        "GND1:1",
+        "black",
+        []
+      ]
+    ],
+    "category": "电源"
+  },
+  "hbridge_motor": {
+    "title": "NPN+PNP 互补驱动直流电机（H 桥半桥）",
+    "parts": [
+      {
+        "type": "battery",
+        "id": "BAT1",
+        "attrs": {
+          "value": "6V"
+        }
+      },
+      {
+        "type": "npn",
+        "id": "Q1",
+        "attrs": {
+          "value": "2N3904"
+        }
+      },
+      {
+        "type": "pnp",
+        "id": "Q2",
+        "attrs": {
+          "value": "2N3906"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R1",
+        "attrs": {
+          "value": "1k"
+        }
+      },
+      {
+        "type": "dc_motor",
+        "id": "M1",
+        "attrs": {
+          "value": "3V"
+        }
+      },
+      {
+        "type": "gnd",
+        "id": "GND1"
+      }
+    ],
+    "connections": [
+      [
+        "BAT1:+",
+        "Q2:E",
+        "red",
+        []
+      ],
+      [
+        "BAT1:+",
+        "R1:1",
+        "red",
+        []
+      ],
+      [
+        "R1:2",
+        "Q1:B",
+        "red",
+        []
+      ],
+      [
+        "R1:2",
+        "Q2:B",
+        "red",
+        []
+      ],
+      [
+        "Q1:E",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "Q2:C",
+        "M1:+",
+        "red",
+        []
+      ],
+      [
+        "M1:-",
+        "Q1:C",
+        "red",
+        []
+      ],
+      [
+        "BAT1:-",
+        "GND1:1",
+        "black",
+        []
+      ]
+    ],
+    "category": "驱动与功率"
+  },
+  "sevenseg_counter": {
+    "title": "CD4017 计数驱动 LED（流水灯骨架）",
+    "parts": [
+      {
+        "type": "battery",
+        "id": "BAT1",
+        "attrs": {
+          "value": "5V"
+        }
+      },
+      {
+        "type": "cd4017",
+        "id": "U1",
+        "attrs": {
+          "value": "CD4017"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R1",
+        "attrs": {
+          "value": "330Ω"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R2",
+        "attrs": {
+          "value": "330Ω"
+        }
+      },
+      {
+        "type": "led",
+        "id": "LED1",
+        "attrs": {
+          "value": "红"
+        }
+      },
+      {
+        "type": "led",
+        "id": "LED2",
+        "attrs": {
+          "value": "绿"
+        }
+      },
+      {
+        "type": "gnd",
+        "id": "GND1"
+      }
+    ],
+    "connections": [
+      [
+        "BAT1:+",
+        "U1:VDD",
+        "red",
+        []
+      ],
+      [
+        "U1:VSS",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "BAT1:-",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "U1:Q0",
+        "R1:1",
+        "green",
+        []
+      ],
+      [
+        "R1:2",
+        "LED1:+",
+        "green",
+        []
+      ],
+      [
+        "LED1:-",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "U1:Q1",
+        "R2:1",
+        "green",
+        []
+      ],
+      [
+        "R2:2",
+        "LED2:+",
+        "green",
+        []
+      ],
+      [
+        "LED2:-",
+        "GND1:1",
+        "black",
+        []
+      ]
+    ],
+    "category": "指示与显示"
+  },
+  "sensor_dht11": {
+    "title": "DHT11 温湿度传感器接线（模块典型接法）",
+    "parts": [
+      {
+        "type": "battery",
+        "id": "BAT1",
+        "attrs": {
+          "value": "5V"
+        }
+      },
+      {
+        "type": "dht11",
+        "id": "U1",
+        "attrs": {
+          "value": "DHT11"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R1",
+        "attrs": {
+          "value": "10k"
+        }
+      },
+      {
+        "type": "gnd",
+        "id": "GND1"
+      }
+    ],
+    "connections": [
+      [
+        "BAT1:+",
+        "U1:VCC",
+        "red",
+        []
+      ],
+      [
+        "BAT1:+",
+        "R1:1",
+        "red",
+        []
+      ],
+      [
+        "R1:2",
+        "U1:DATA",
+        "red",
+        []
+      ],
+      [
+        "U1:GND",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "BAT1:-",
+        "GND1:1",
+        "black",
+        []
+      ]
+    ],
+    "category": "传感"
+  },
+  "lc_filter": {
+    "title": "LC 低通滤波（电感+电容）",
+    "parts": [
+      {
+        "type": "battery",
+        "id": "BAT1",
+        "attrs": {
+          "value": "5V"
+        }
+      },
+      {
+        "type": "inductor",
+        "id": "L1",
+        "attrs": {
+          "value": "10mH"
+        }
+      },
+      {
+        "type": "capacitor",
+        "id": "C1",
+        "attrs": {
+          "value": "100nF"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R1",
+        "attrs": {
+          "value": "1k"
+        }
+      },
+      {
+        "type": "gnd",
+        "id": "GND1"
+      }
+    ],
+    "connections": [
+      [
+        "BAT1:+",
+        "L1:1",
+        "red",
+        []
+      ],
+      [
+        "L1:2",
+        "C1:+",
+        "red",
+        []
+      ],
+      [
+        "C1:-",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "L1:2",
+        "R1:1",
+        "red",
+        []
+      ],
+      [
+        "R1:2",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "BAT1:-",
+        "GND1:1",
+        "black",
+        []
+      ]
+    ],
+    "category": "模拟与滤波"
+  },
+  "fuse_protect": {
+    "title": "保险丝 + LED 通电指示",
+    "parts": [
+      {
+        "type": "battery",
+        "id": "BAT1",
+        "attrs": {
+          "value": "5V"
+        }
+      },
+      {
+        "type": "fuse",
+        "id": "F1",
+        "attrs": {
+          "value": "500mA"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R1",
+        "attrs": {
+          "value": "330Ω"
+        }
+      },
+      {
+        "type": "led",
+        "id": "LED1",
+        "attrs": {
+          "value": "绿"
+        }
+      },
+      {
+        "type": "gnd",
+        "id": "GND1"
+      }
+    ],
+    "connections": [
+      [
+        "BAT1:+",
+        "F1:1",
+        "red",
+        []
+      ],
+      [
+        "F1:2",
+        "R1:1",
+        "red",
+        []
+      ],
+      [
+        "R1:2",
+        "LED1:+",
+        "green",
+        []
+      ],
+      [
+        "LED1:-",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "BAT1:-",
+        "GND1:1",
+        "black",
+        []
+      ]
+    ],
+    "category": "接口与保护"
+  },
+  "servo_driver": {
+    "title": "舵机信号驱动（SG90 典型接法）",
+    "parts": [
+      {
+        "type": "battery",
+        "id": "BAT1",
+        "attrs": {
+          "value": "5V"
+        }
+      },
+      {
+        "type": "servo",
+        "id": "M1",
+        "attrs": {
+          "value": "SG90"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R1",
+        "attrs": {
+          "value": "1k"
+        }
+      },
+      {
+        "type": "gnd",
+        "id": "GND1"
+      }
+    ],
+    "connections": [
+      [
+        "BAT1:+",
+        "M1:VCC",
+        "red",
+        []
+      ],
+      [
+        "BAT1:+",
+        "R1:1",
+        "red",
+        []
+      ],
+      [
+        "R1:2",
+        "M1:SIG",
+        "green",
+        []
+      ],
+      [
+        "M1:GND",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "BAT1:-",
+        "GND1:1",
+        "black",
+        []
+      ]
+    ],
+    "category": "驱动与功率"
+  },
+  "relay_driver": {
+    "title": "继电器线圈驱动（NPN 低边开关）",
+    "parts": [
+      {
+        "type": "battery",
+        "id": "BAT1",
+        "attrs": {
+          "value": "5V"
+        }
+      },
+      {
+        "type": "npn",
+        "id": "Q1",
+        "attrs": {
+          "value": "2N3904"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R1",
+        "attrs": {
+          "value": "1k"
+        }
+      },
+      {
+        "type": "relay",
+        "id": "K1",
+        "attrs": {
+          "value": "5V"
+        }
+      },
+      {
+        "type": "gnd",
+        "id": "GND1"
+      }
+    ],
+    "connections": [
+      [
+        "BAT1:+",
+        "R1:1",
+        "red",
+        []
+      ],
+      [
+        "R1:2",
+        "Q1:B",
+        "red",
+        []
+      ],
+      [
+        "Q1:E",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "BAT1:+",
+        "K1:coil+",
+        "red",
+        []
+      ],
+      [
+        "K1:coil-",
+        "Q1:C",
+        "red",
+        []
+      ],
+      [
+        "BAT1:-",
+        "GND1:1",
+        "black",
+        []
+      ]
+    ],
+    "category": "驱动与功率"
+  },
+  "schottky_protect": {
+    "title": "肖特基防反接保护",
+    "parts": [
+      {
+        "type": "battery",
+        "id": "BAT1",
+        "attrs": {
+          "value": "5V"
+        }
+      },
+      {
+        "type": "schottky",
+        "id": "D1",
+        "attrs": {
+          "value": "1N5819"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R1",
+        "attrs": {
+          "value": "330Ω"
+        }
+      },
+      {
+        "type": "led",
+        "id": "LED1",
+        "attrs": {
+          "value": "红"
+        }
+      },
+      {
+        "type": "gnd",
+        "id": "GND1"
+      }
+    ],
+    "connections": [
+      [
+        "BAT1:+",
+        "D1:A",
+        "red",
+        []
+      ],
+      [
+        "D1:K",
+        "R1:1",
+        "red",
+        []
+      ],
+      [
+        "R1:2",
+        "LED1:+",
+        "green",
+        []
+      ],
+      [
+        "LED1:-",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "BAT1:-",
+        "GND1:1",
+        "black",
+        []
+      ]
+    ],
+    "category": "接口与保护"
+  },
+  "photoresistor_night": {
+    "title": "光敏电阻夜灯（分压指示）",
+    "parts": [
+      {
+        "type": "battery",
+        "id": "BAT1",
+        "attrs": {
+          "value": "5V"
+        }
+      },
+      {
+        "type": "photocell",
+        "id": "RG1",
+        "attrs": {
+          "value": "GL5516"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R1",
+        "attrs": {
+          "value": "10k"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R2",
+        "attrs": {
+          "value": "330Ω"
+        }
+      },
+      {
+        "type": "led",
+        "id": "LED1",
+        "attrs": {
+          "value": "黄"
+        }
+      },
+      {
+        "type": "gnd",
+        "id": "GND1"
+      }
+    ],
+    "connections": [
+      [
+        "BAT1:+",
+        "RG1:1",
+        "red",
+        []
+      ],
+      [
+        "RG1:2",
+        "R1:1",
+        "red",
+        []
+      ],
+      [
+        "R1:2",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "RG1:2",
+        "R2:1",
+        "green",
+        []
+      ],
+      [
+        "R2:2",
+        "LED1:+",
+        "green",
+        []
+      ],
+      [
+        "LED1:-",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "BAT1:-",
+        "GND1:1",
+        "black",
+        []
+      ]
+    ],
+    "category": "传感"
+  },
+  "thermistor_alarm": {
+    "title": "热敏电阻温度指示",
+    "parts": [
+      {
+        "type": "battery",
+        "id": "BAT1",
+        "attrs": {
+          "value": "5V"
+        }
+      },
+      {
+        "type": "thermistor",
+        "id": "TH1",
+        "attrs": {
+          "value": "10k"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R1",
+        "attrs": {
+          "value": "10k"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R2",
+        "attrs": {
+          "value": "330Ω"
+        }
+      },
+      {
+        "type": "led",
+        "id": "LED1",
+        "attrs": {
+          "value": "红"
+        }
+      },
+      {
+        "type": "gnd",
+        "id": "GND1"
+      }
+    ],
+    "connections": [
+      [
+        "BAT1:+",
+        "TH1:1",
+        "red",
+        []
+      ],
+      [
+        "TH1:2",
+        "R1:1",
+        "red",
+        []
+      ],
+      [
+        "R1:2",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "TH1:2",
+        "R2:1",
+        "green",
+        []
+      ],
+      [
+        "R2:2",
+        "LED1:+",
+        "green",
+        []
+      ],
+      [
+        "LED1:-",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "BAT1:-",
+        "GND1:1",
+        "black",
+        []
+      ]
+    ],
+    "category": "传感"
+  },
+  "bridge_regulator": {
+    "title": "整流桥 + 7805 稳压（直流总线教学骨架）",
+    "parts": [
+      {
+        "type": "battery",
+        "id": "BAT1",
+        "attrs": {
+          "value": "12V"
+        }
+      },
+      {
+        "type": "bridge_rectifier",
+        "id": "BR1",
+        "attrs": {
+          "value": "KBP210"
+        }
+      },
+      {
+        "type": "electrolytic",
+        "id": "C1",
+        "attrs": {
+          "value": "100µF"
+        }
+      },
+      {
+        "type": "regulator_7805",
+        "id": "U1",
+        "attrs": {
+          "value": "LM7805"
+        }
+      },
+      {
+        "type": "capacitor",
+        "id": "C2",
+        "attrs": {
+          "value": "100nF"
+        }
+      },
+      {
+        "type": "gnd",
+        "id": "GND1"
+      }
+    ],
+    "connections": [
+      [
+        "BAT1:+",
+        "BR1:+",
+        "red",
+        []
+      ],
+      [
+        "BAT1:-",
+        "BR1:-",
+        "black",
+        []
+      ],
+      [
+        "BAT1:-",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "BR1:+",
+        "C1:+",
+        "red",
+        []
+      ],
+      [
+        "C1:-",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "C1:+",
+        "U1:IN",
+        "red",
+        []
+      ],
+      [
+        "U1:GND",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "U1:OUT",
+        "C2:+",
+        "red",
+        []
+      ],
+      [
+        "C2:-",
+        "GND1:1",
+        "black",
+        []
+      ]
+    ],
+    "category": "电源"
+  },
+  "esd_tvs": {
+    "title": "TVS 瞬态抑制保护",
+    "parts": [
+      {
+        "type": "battery",
+        "id": "BAT1",
+        "attrs": {
+          "value": "5V"
+        }
+      },
+      {
+        "type": "tvs",
+        "id": "D1",
+        "attrs": {
+          "value": "SMBJ5.0A"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R1",
+        "attrs": {
+          "value": "330Ω"
+        }
+      },
+      {
+        "type": "led",
+        "id": "LED1",
+        "attrs": {
+          "value": "蓝"
+        }
+      },
+      {
+        "type": "gnd",
+        "id": "GND1"
+      }
+    ],
+    "connections": [
+      [
+        "BAT1:+",
+        "D1:K",
+        "red",
+        []
+      ],
+      [
+        "D1:A",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "BAT1:+",
+        "R1:1",
+        "red",
+        []
+      ],
+      [
+        "R1:2",
+        "LED1:+",
+        "green",
+        []
+      ],
+      [
+        "LED1:-",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "BAT1:-",
+        "GND1:1",
+        "black",
+        []
+      ]
+    ],
+    "category": "接口与保护"
+  },
+  "varistor_protect": {
+    "title": "压敏电阻防浪涌",
+    "parts": [
+      {
+        "type": "ac_source",
+        "id": "AC1",
+        "attrs": {
+          "value": "220V"
+        }
+      },
+      {
+        "type": "varistor",
+        "id": "RV1",
+        "attrs": {
+          "value": "10D471K"
+        }
+      },
+      {
+        "type": "fuse",
+        "id": "F1",
+        "attrs": {
+          "value": "1A"
+        }
+      },
+      {
+        "type": "gnd",
+        "id": "GND1"
+      }
+    ],
+    "connections": [
+      [
+        "AC1:+",
+        "F1:1",
+        "red",
+        []
+      ],
+      [
+        "F1:2",
+        "RV1:1",
+        "red",
+        []
+      ],
+      [
+        "RV1:2",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "AC1:-",
+        "GND1:1",
+        "black",
+        []
+      ]
+    ],
+    "category": "接口与保护"
+  },
+  "current_mirror": {
+    "title": "电流镜（NPN 镜像电流源）",
+    "parts": [
+      {
+        "type": "battery",
+        "id": "BAT1",
+        "attrs": {
+          "value": "9V"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R1",
+        "attrs": {
+          "value": "4.7k"
+        }
+      },
+      {
+        "type": "npn",
+        "id": "Q1"
+      },
+      {
+        "type": "npn",
+        "id": "Q2"
+      },
+      {
+        "type": "gnd",
+        "id": "GND1"
+      }
+    ],
+    "connections": [
+      [
+        "BAT1:+",
+        "R1:1",
+        "red",
+        []
+      ],
+      [
+        "R1:2",
+        "Q1:C",
+        "red",
+        []
+      ],
+      [
+        "Q1:C",
+        "Q1:B",
+        "red",
+        []
+      ],
+      [
+        "Q1:B",
+        "Q2:B",
+        "red",
+        []
+      ],
+      [
+        "Q2:C",
+        "BAT1:+",
+        "red",
+        []
+      ],
+      [
+        "Q1:E",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "Q2:E",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "BAT1:-",
+        "GND1:1",
+        "black",
+        []
+      ]
+    ],
+    "category": "模拟与滤波"
+  },
+  "differential_amp": {
+    "title": "差分放大器（NPN 长尾对）",
+    "parts": [
+      {
+        "type": "battery",
+        "id": "BAT1",
+        "attrs": {
+          "value": "9V"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R1",
+        "attrs": {
+          "value": "1k"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R2",
+        "attrs": {
+          "value": "1k"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R3",
+        "attrs": {
+          "value": "4.7k"
+        }
+      },
+      {
+        "type": "npn",
+        "id": "Q1"
+      },
+      {
+        "type": "npn",
+        "id": "Q2"
+      },
+      {
+        "type": "gnd",
+        "id": "GND1"
+      }
+    ],
+    "connections": [
+      [
+        "BAT1:+",
+        "R1:1",
+        "red",
+        []
+      ],
+      [
+        "BAT1:+",
+        "R2:1",
+        "red",
+        []
+      ],
+      [
+        "R1:2",
+        "Q1:C",
+        "red",
+        []
+      ],
+      [
+        "R2:2",
+        "Q2:C",
+        "red",
+        []
+      ],
+      [
+        "Q1:E",
+        "Q2:E",
+        "red",
+        []
+      ],
+      [
+        "Q1:E",
+        "R3:1",
+        "red",
+        []
+      ],
+      [
+        "R3:2",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "BAT1:-",
+        "GND1:1",
+        "black",
+        []
+      ]
+    ],
+    "category": "模拟与滤波"
+  },
+  "common_emitter": {
+    "title": "共射放大器（NPN 电压放大）",
+    "parts": [
+      {
+        "type": "battery",
+        "id": "BAT1",
+        "attrs": {
+          "value": "9V"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R1",
+        "attrs": {
+          "value": "47k"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R2",
+        "attrs": {
+          "value": "10k"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R3",
+        "attrs": {
+          "value": "2.2k"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R4",
+        "attrs": {
+          "value": "1k"
+        }
+      },
+      {
+        "type": "npn",
+        "id": "Q1"
+      },
+      {
+        "type": "gnd",
+        "id": "GND1"
+      }
+    ],
+    "connections": [
+      [
+        "BAT1:+",
+        "R1:1",
+        "red",
+        []
+      ],
+      [
+        "BAT1:+",
+        "R3:1",
+        "red",
+        []
+      ],
+      [
+        "R1:2",
+        "R2:1",
+        "red",
+        []
+      ],
+      [
+        "R1:2",
+        "Q1:B",
+        "red",
+        []
+      ],
+      [
+        "R2:2",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "R3:2",
+        "Q1:C",
+        "red",
+        []
+      ],
+      [
+        "Q1:E",
+        "R4:1",
+        "red",
+        []
+      ],
+      [
+        "R4:2",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "BAT1:-",
+        "GND1:1",
+        "black",
+        []
+      ]
+    ],
+    "category": "模拟与滤波"
+  },
+  "voltage_doubler": {
+    "title": "倍压整流电路（二极管-电容）",
+    "parts": [
+      {
+        "type": "ac_source",
+        "id": "AC1",
+        "attrs": {
+          "value": "5V"
+        }
+      },
+      {
+        "type": "diode",
+        "id": "D1"
+      },
+      {
+        "type": "diode",
+        "id": "D2"
+      },
+      {
+        "type": "capacitor",
+        "id": "C1",
+        "attrs": {
+          "value": "100uF"
+        }
+      },
+      {
+        "type": "capacitor",
+        "id": "C2",
+        "attrs": {
+          "value": "100uF"
+        }
+      },
+      {
+        "type": "gnd",
+        "id": "GND1"
+      }
+    ],
+    "connections": [
+      [
+        "AC1:+",
+        "D1:A",
+        "red",
+        []
+      ],
+      [
+        "D1:K",
+        "C1:+",
+        "red",
+        []
+      ],
+      [
+        "C1:-",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "AC1:-",
+        "D2:K",
+        "red",
+        []
+      ],
+      [
+        "D2:A",
+        "C2:-",
+        "red",
+        []
+      ],
+      [
+        "C2:+",
+        "C1:+",
+        "red",
+        []
+      ],
+      [
+        "AC1:-",
+        "GND1:1",
+        "black",
+        []
+      ]
+    ],
+    "category": "电源"
+  },
+  "integrator": {
+    "title": "反相积分器（运放 + RC）",
+    "parts": [
+      {
+        "type": "battery",
+        "id": "BAT1",
+        "attrs": {
+          "value": "5V"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R1",
+        "attrs": {
+          "value": "10k"
+        }
+      },
+      {
+        "type": "capacitor",
+        "id": "C1",
+        "attrs": {
+          "value": "100nF"
+        }
+      },
+      {
+        "type": "opamp_inverting",
+        "id": "U1"
+      },
+      {
+        "type": "gnd",
+        "id": "GND1"
+      }
+    ],
+    "connections": [
+      [
+        "BAT1:+",
+        "R1:1",
+        "red",
+        []
+      ],
+      [
+        "R1:2",
+        "U1:-",
+        "red",
+        []
+      ],
+      [
+        "U1:-",
+        "C1:+",
+        "red",
+        []
+      ],
+      [
+        "C1:-",
+        "U1:out",
+        "red",
+        []
+      ],
+      [
+        "U1:+",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "BAT1:-",
+        "GND1:1",
+        "black",
+        []
+      ]
+    ],
+    "category": "模拟与滤波"
+  },
+  "schmitt_trigger": {
+    "title": "施密特触发器（比较器 + 正反馈）",
+    "parts": [
+      {
+        "type": "battery",
+        "id": "BAT1",
+        "attrs": {
+          "value": "5V"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R1",
+        "attrs": {
+          "value": "10k"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R2",
+        "attrs": {
+          "value": "10k"
+        }
+      },
+      {
+        "type": "opamp_comparator",
+        "id": "U1"
+      },
+      {
+        "type": "gnd",
+        "id": "GND1"
+      }
+    ],
+    "connections": [
+      [
+        "BAT1:+",
+        "R1:1",
+        "red",
+        []
+      ],
+      [
+        "R1:2",
+        "U1:+",
+        "red",
+        []
+      ],
+      [
+        "U1:out",
+        "R2:1",
+        "red",
+        []
+      ],
+      [
+        "R2:2",
+        "U1:+",
+        "red",
+        []
+      ],
+      [
+        "U1:-",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "BAT1:-",
+        "GND1:1",
+        "black",
+        []
+      ]
+    ],
+    "category": "定时与逻辑"
+  },
+  "peak_detector": {
+    "title": "峰值检测器（二极管 + 电容保持）",
+    "parts": [
+      {
+        "type": "battery",
+        "id": "BAT1",
+        "attrs": {
+          "value": "5V"
+        }
+      },
+      {
+        "type": "diode",
+        "id": "D1"
+      },
+      {
+        "type": "capacitor",
+        "id": "C1",
+        "attrs": {
+          "value": "10uF"
+        }
+      },
+      {
+        "type": "opamp_follower",
+        "id": "U1"
+      },
+      {
+        "type": "gnd",
+        "id": "GND1"
+      }
+    ],
+    "connections": [
+      [
+        "BAT1:+",
+        "D1:A",
+        "red",
+        []
+      ],
+      [
+        "D1:K",
+        "C1:+",
+        "red",
+        []
+      ],
+      [
+        "C1:+",
+        "U1:+",
+        "red",
+        []
+      ],
+      [
+        "C1:-",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "U1:out",
+        "U1:-",
+        "red",
+        []
+      ],
+      [
+        "BAT1:-",
+        "GND1:1",
+        "black",
+        []
+      ]
+    ],
+    "category": "模拟与滤波"
+  },
+  "voltage_reference": {
+    "title": "齐纳基准电压源",
+    "parts": [
+      {
+        "type": "battery",
+        "id": "BAT1",
+        "attrs": {
+          "value": "9V"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R1",
+        "attrs": {
+          "value": "1k"
+        }
+      },
+      {
+        "type": "zener",
+        "id": "Z1",
+        "attrs": {
+          "value": "5.1V"
+        }
+      },
+      {
+        "type": "gnd",
+        "id": "GND1"
+      }
+    ],
+    "connections": [
+      [
+        "BAT1:+",
+        "R1:1",
+        "red",
+        []
+      ],
+      [
+        "R1:2",
+        "Z1:K",
+        "red",
+        []
+      ],
+      [
+        "Z1:A",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "BAT1:-",
+        "GND1:1",
+        "black",
+        []
+      ]
+    ],
+    "category": "电源"
+  },
+  "current_source": {
+    "title": "NPN 恒流源（齐纳偏置）",
+    "parts": [
+      {
+        "type": "battery",
+        "id": "BAT1",
+        "attrs": {
+          "value": "12V"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R1",
+        "attrs": {
+          "value": "1k"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R2",
+        "attrs": {
+          "value": "330"
+        }
+      },
+      {
+        "type": "zener",
+        "id": "Z1",
+        "attrs": {
+          "value": "5.1V"
+        }
+      },
+      {
+        "type": "npn",
+        "id": "Q1"
+      },
+      {
+        "type": "gnd",
+        "id": "GND1"
+      }
+    ],
+    "connections": [
+      [
+        "BAT1:+",
+        "R1:1",
+        "red",
+        []
+      ],
+      [
+        "R1:2",
+        "Z1:K",
+        "red",
+        []
+      ],
+      [
+        "Z1:K",
+        "Q1:B",
+        "red",
+        []
+      ],
+      [
+        "Z1:A",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "BAT1:+",
+        "Q1:C",
+        "red",
+        []
+      ],
+      [
+        "Q1:E",
+        "R2:1",
+        "red",
+        []
+      ],
+      [
+        "R2:2",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "BAT1:-",
+        "GND1:1",
+        "black",
+        []
+      ]
+    ],
+    "category": "模拟与滤波"
+  },
+  "crystal_osc": {
+    "title": "晶振振荡器（皮尔斯振荡）",
+    "parts": [
+      {
+        "type": "battery",
+        "id": "BAT1",
+        "attrs": {
+          "value": "5V"
+        }
+      },
+      {
+        "type": "crystal",
+        "id": "Y1",
+        "attrs": {
+          "value": "16MHz"
+        }
+      },
+      {
+        "type": "capacitor",
+        "id": "C1",
+        "attrs": {
+          "value": "22pF"
+        }
+      },
+      {
+        "type": "capacitor",
+        "id": "C2",
+        "attrs": {
+          "value": "22pF"
+        }
+      },
+      {
+        "type": "resistor",
+        "id": "R1",
+        "attrs": {
+          "value": "1M"
+        }
+      },
+      {
+        "type": "npn",
+        "id": "Q1"
+      },
+      {
+        "type": "gnd",
+        "id": "GND1"
+      }
+    ],
+    "connections": [
+      [
+        "BAT1:+",
+        "R1:1",
+        "red",
+        []
+      ],
+      [
+        "R1:2",
+        "Q1:C",
+        "red",
+        []
+      ],
+      [
+        "Q1:C",
+        "Y1:1",
+        "red",
+        []
+      ],
+      [
+        "Y1:2",
+        "Q1:B",
+        "red",
+        []
+      ],
+      [
+        "Y1:1",
+        "C1:+",
+        "red",
+        []
+      ],
+      [
+        "Y1:2",
+        "C2:+",
+        "red",
+        []
+      ],
+      [
+        "C1:-",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "C2:-",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "Q1:E",
+        "GND1:1",
+        "black",
+        []
+      ],
+      [
+        "BAT1:-",
+        "GND1:1",
+        "black",
+        []
+      ]
+    ],
+    "category": "定时与逻辑"
+  }
+}

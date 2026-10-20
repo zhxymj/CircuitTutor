@@ -1,0 +1,195 @@
+{
+  "version": 2,
+  "title": "Internal I2C 2-port adapter 3.3V #6",
+  "parts": [
+    {
+      "id": "J1",
+      "type": "i2c_header",
+      "attrs": {
+        "value": "I2C GND VCC SDA SCL"
+      },
+      "component": {
+        "manufacturer": "Samtec",
+        "mpn": "TSW-104-07-G-S",
+        "datasheet": "https://www.samtec.com/products/tsw-104-07-g-s",
+        "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",
+        "pin_map": {
+          "GND": "1",
+          "VCC": "2",
+          "SDA": "3",
+          "SCL": "4"
+        },
+        "pin_map_source": "internal-engineering:i2c-adapter-pin-assignment-v1"
+      },
+      "pcb": {
+        "x_mm": 12,
+        "y_mm": 9,
+        "rotation_deg": 0,
+        "side": "front"
+      }
+    },
+    {
+      "id": "J2",
+      "type": "i2c_header",
+      "attrs": {
+        "value": "I2C GND VCC SDA SCL"
+      },
+      "component": {
+        "manufacturer": "Samtec",
+        "mpn": "TSW-104-07-G-S",
+        "datasheet": "https://www.samtec.com/products/tsw-104-07-g-s",
+        "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",
+        "pin_map": {
+          "GND": "1",
+          "VCC": "2",
+          "SDA": "3",
+          "SCL": "4"
+        },
+        "pin_map_source": "internal-engineering:i2c-adapter-pin-assignment-v1"
+      },
+      "pcb": {
+        "x_mm": 32,
+        "y_mm": 9,
+        "rotation_deg": 0,
+        "side": "front"
+      }
+    },
+    {
+      "id": "R1",
+      "type": "resistor",
+      "attrs": {
+        "value": "4.7k"
+      },
+      "component": {
+        "manufacturer": "YAGEO",
+        "mpn": "RC0805FR-074K7L",
+        "datasheet": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-074K7L",
+        "footprint": "Resistor_SMD:R_0805_2012Metric",
+        "pin_map": {
+          "1": "1",
+          "2": "2"
+        },
+        "pin_map_source": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-074K7L#nonpolar-two-terminal"
+      },
+      "pcb": {
+        "x_mm": 20,
+        "y_mm": 14.08,
+        "rotation_deg": 0,
+        "side": "front"
+      }
+    },
+    {
+      "id": "R2",
+      "type": "resistor",
+      "attrs": {
+        "value": "4.7k"
+      },
+      "component": {
+        "manufacturer": "YAGEO",
+        "mpn": "RC0805FR-074K7L",
+        "datasheet": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-074K7L",
+        "footprint": "Resistor_SMD:R_0805_2012Metric",
+        "pin_map": {
+          "1": "1",
+          "2": "2"
+        },
+        "pin_map_source": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-074K7L#nonpolar-two-terminal"
+      },
+      "pcb": {
+        "x_mm": 25,
+        "y_mm": 16.619999999999997,
+        "rotation_deg": 0,
+        "side": "front"
+      }
+    },
+    {
+      "id": "GND1",
+      "type": "gnd",
+      "attrs": {
+        "value": "external common ground"
+      }
+    },
+    {
+      "id": "VCC1",
+      "type": "vcc",
+      "attrs": {
+        "value": "3.3V"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "GND1:1",
+      "J1:GND"
+    ],
+    [
+      "J1:GND",
+      "J2:GND"
+    ],
+    [
+      "VCC1:1",
+      "J1:VCC"
+    ],
+    [
+      "J1:VCC",
+      "R1:1"
+    ],
+    [
+      "R1:1",
+      "R2:1"
+    ],
+    [
+      "R2:1",
+      "J2:VCC"
+    ],
+    [
+      "J1:SDA",
+      "R1:2"
+    ],
+    [
+      "R1:2",
+      "J2:SDA"
+    ],
+    [
+      "J1:SCL",
+      "R2:2"
+    ],
+    [
+      "R2:2",
+      "J2:SCL"
+    ]
+  ],
+  "board": {
+    "width_mm": 42,
+    "height_mm": 29,
+    "layers": 2,
+    "min_clearance_mm": 0.2,
+    "min_trace_width_mm": 0.2
+  },
+  "voltage_domains": [
+    {
+      "id": "logic",
+      "nominal_v": 3.3,
+      "min_v": 3.135,
+      "max_v": 3.465
+    }
+  ],
+  "provenance": {
+    "origin": "manual",
+    "source_id": "internal-pcb-06"
+  },
+  "engineering_example": {
+    "classification": "internal_engineering_example",
+    "topology": "i2c_2_port_pullup_adapter",
+    "ports": 2,
+    "independent_external_sample": false,
+    "review_required": true,
+    "sources": [
+      "https://www.samtec.com/products/tsw-104-07-g-s",
+      "https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-074K7L",
+      "https://gitlab.com/kicad/libraries/kicad-footprints"
+    ],
+    "pin_assignment": "Design choice: pad1=GND,pad2=VCC,pad3=SDA,pad4=SCL; not a universal cable standard",
+    "assumptions": "External MCU/sensor use the same voltage; bus capacitance/speed and existing pullups must be reviewed"
+  }
+}

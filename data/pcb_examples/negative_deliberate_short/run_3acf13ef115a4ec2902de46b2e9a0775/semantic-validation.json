@@ -1,0 +1,98 @@
+{
+  "source": "manual",
+  "name": "candidate",
+  "assurance": "internal",
+  "verdict": "pass",
+  "accepted": true,
+  "gate_order": [
+    "structure",
+    "erc",
+    "ratings",
+    "spice_deck",
+    "spice_runtime",
+    "kicad_export",
+    "official_erc",
+    "official_netlist"
+  ],
+  "gates": {
+    "structure": {
+      "status": "pass",
+      "required": true,
+      "issues": [],
+      "evidence": {
+        "version": 2
+      },
+      "reason": ""
+    },
+    "erc": {
+      "status": "pass",
+      "required": true,
+      "issues": [],
+      "evidence": {
+        "counts": {
+          "fatal": 0,
+          "major": 0,
+          "minor": 0,
+          "warning": 0
+        }
+      },
+      "reason": ""
+    },
+    "ratings": {
+      "status": "pass",
+      "required": true,
+      "issues": [],
+      "evidence": {
+        "danger_count": 0
+      },
+      "reason": ""
+    },
+    "spice_deck": {
+      "status": "not_applicable",
+      "required": false,
+      "issues": [],
+      "evidence": {
+        "unmodeled_types": [
+          "i2c_header"
+        ]
+      },
+      "reason": "元件缺少可执行 SPICE 模型：i2c_header"
+    },
+    "spice_runtime": {
+      "status": "not_applicable",
+      "required": false,
+      "issues": [],
+      "evidence": {},
+      "reason": "元件缺少可执行 SPICE 模型：i2c_header"
+    },
+    "kicad_export": {
+      "status": "pass",
+      "required": true,
+      "issues": [],
+      "evidence": {
+        "sha256": "c6b1bbde3e6483570d395082cbfc56509a53c086a01a4b3f662b6b3c616a96cb",
+        "bytes": 9414
+      },
+      "reason": ""
+    },
+    "official_erc": {
+      "status": "not_run",
+      "required": false,
+      "issues": [],
+      "evidence": {},
+      "reason": "调用方选择离线内部验证模式"
+    },
+    "official_netlist": {
+      "status": "not_run",
+      "required": false,
+      "issues": [],
+      "evidence": {},
+      "reason": "调用方选择离线内部验证模式"
+    }
+  },
+  "blocking_gates": [],
+  "artifacts": {
+    "schematic": "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\negative_deliberate_short\\run_3acf13ef115a4ec2902de46b2e9a0775\\semantic_source\\candidate.kicad_sch",
+    "project": "C:\\Users\\姚\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_examples\\negative_deliberate_short\\run_3acf13ef115a4ec2902de46b2e9a0775\\semantic_source\\candidate.kicad_pro"
+  }
+}
