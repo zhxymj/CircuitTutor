@@ -1051,3 +1051,90 @@ body{ font-size:13px; }
   .wb-checks-intro{ font-size:10px; }
   .wb-project{ width:min(280px,calc(100vw - 50px)); }
 }
+
+/* =========================================================================
+   可读性基线（第二轮）：在上一轮基础上整体再放大 1–2px。
+   13px 在 1080p/高分屏上仍偏小；本轮把正文提到 14px、辅助文字提到 11–12px。
+   窄屏保留紧凑尺度，并通过断点单独收敛顶栏与状态栏。
+   ========================================================================= */
+body{ font-size:14px; }
+.wb-wordmark{ font-size:19px; }
+#workbench-title{ font-size:15px; }
+#workbench-save-state,.wb-source-slot .src-badge{ font-size:12px; }
+.wb-button,.wb-save-slot button{ font-size:14px; }
+.wb-eyebrow{ font-size:11px; }
+.wb-project-card h2{ font-size:16px; }
+.wb-project-card p{ font-size:12px; }
+.wb-tabs button{ font-size:14px; }
+.wb-section-label{ font-size:13px; }
+.wb-section-label span{ font-size:11px; }
+.bar #q{ font-size:14px; }
+.bar #modelBtn{ font-size:12px; }
+#examples .chip{ font-size:12px; }
+#editBar label,#editBar input{ font-size:13px; }
+#editBar button,#edit-status,#editChanges{ font-size:12px; }
+.wb-requirement-actions button{ font-size:13px; }
+.wb-side-note,.wb-side-footer{ font-size:12px; }
+.wb-side-note strong{ font-size:13px; }
+.wb-subtle,.wb-library-heading{ font-size:12px; }
+.wb-part-name{ font-size:13px; }
+.wb-part-name small{ font-size:11px; }
+.wb-file-group h3{ font-size:13px; }
+.wb-file-group p{ font-size:12px; }
+.wb-file-group>button,.wb-file-group>select,#workbench-part-search{ font-size:13px; }
+.wb-document-tab{ font-size:13px; }
+.wb-mode,.wb-theme-slot select{ font-size:12px; }
+.wb-toolbar-caption{ font-size:11px; }
+.wb-canvas-info h1{ font-size:17px; }
+.wb-canvas-info p{ font-size:12px; }
+.wb-canvas-info .wb-eyebrow{ font-size:11px; }
+.wb-sheet-tag,.wb-sheet-corner{ font-size:11px; }
+.wb-sheet-corner span{ font-size:10px; }
+#canvasEmpty .es-title{ font-size:18px; }
+#canvasEmpty .es-sub{ font-size:13px; }
+#emptyExamples .ee-card{ font-size:13px; }
+#emptyExamples .ee-card strong{ font-size:12px; }
+.wb-checks strong{ font-size:13px; }
+#workbench-checks-summary{ font-size:12px; }
+#meta,#stages,#stages li{ font-size:13px; }
+#hint{ font-size:12px; }
+.wb-inspector-head{ font-size:11px; }
+.wb-inspector>.wb-tabs button{ font-size:13px; }
+#workbench-selection-empty p,.wb-selection-caption{ font-size:13px; }
+#props h3{ font-size:15px; }
+#props .row label{ font-size:12px; }
+#props .row input{ font-size:13px; }
+#props .tip,.wb-inspector-note{ font-size:12px; }
+.wb-validation-intro h2{ font-size:15px; }
+.wb-validation-intro p{ font-size:12px; }
+.wb-validation-gate strong{ font-size:13px; }
+.wb-validation-gate small{ font-size:12px; }
+.wb-gate-status{ font-size:11px; }
+#workbench-part-metadata h3{ font-size:13px; }
+.wb-metadata-row>span,.wb-metadata-row>div{ font-size:12px; }
+.wb-statusbar{ font-size:12px; }
+.wb-status-erc .erc-badge,.wb-dirty-slot{ font-size:11px; }
+.wb-teach-hint,.wb-teach-path-note,.wb-gate-why,.wb-onboard-steps span{ font-size:12px; }
+.wb-teach-path-title,.wb-teach-steps li{ font-size:11px; }
+.wb-onboard-steps strong{ font-size:13px; }
+.wb-teach-part b,.wb-teach-part p,.wb-teach-part ul,.wb-teach-part .wb-teach-part-meta{ font-size:12px; }
+.wb-timing-note,.wb-timing-empty{ font-size:12px; }
+.wb-timing-facts{ font-size:11px; }
+@media(max-width:760px){
+  body{ font-size:14px; }
+  .wb-topbar>.wb-button,.wb-export-wrap>.wb-button,.wb-mobile-controls .wb-button{ font-size:13px; }
+  .wb-statusbar{ font-size:11px; }
+  .wb-status-erc .erc-badge{ font-size:10px; }
+  .wb-document-tab{ font-size:12px; }
+  .wb-mode,.wb-theme-slot select{ font-size:11px; }
+  .wb-canvas-info h1{ font-size:15px; }
+  .wb-canvas-info p{ font-size:11px; }
+  .wb-canvas-info .wb-eyebrow{ font-size:9px; }
+  #canvasEmpty .es-title{ font-size:16px; }
+  #canvasEmpty .es-sub{ font-size:12px; }
+  #emptyExamples .ee-card{ font-size:12px; }
+  #emptyExamples .ee-card strong{ font-size:11px; }
+  .wb-checks strong{ font-size:12px; }
+  #workbench-checks-summary{ font-size:11px; }
+  .wb-checks-intro{ font-size:11px; }
+}
