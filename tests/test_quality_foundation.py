@@ -133,6 +133,8 @@ class CapabilityContractTests(unittest.TestCase):
             kicad_symbols=True,
             ngspice=False,
             edge=False,
+            sevenzip=False,
+            external_dataset=False,
         )
         self.assertEqual(
             capabilities,
@@ -142,6 +144,8 @@ class CapabilityContractTests(unittest.TestCase):
                 "kicad_symbols": True,
                 "ngspice": False,
                 "edge": False,
+                "sevenzip": False,
+                "external_dataset": False,
             },
         )
 

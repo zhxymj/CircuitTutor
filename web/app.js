@@ -1081,8 +1081,40 @@
     }) ? 'keep' : undefined;
   }
 
+  // 外部导入的网表/图片候选通常没有 left/top：渲染层会自动排版，
+  // 但交互层直接读 circuit.parts 的坐标，若不写回就会把元件全叠在
+  // (0,0)，点击只能命中引脚而无法选中。渲染前把缺失坐标一次性落到
+  // 电路状态里，保证“看到的布局”和“点得到的元件”一致。
+  function materializeMissingPositions() {
+    const parts = circuit && Array.isArray(circuit.parts) ? circuit.parts : null;
+    if (!parts || !parts.length) return;
+    const has = function (value) {
+      return value !== null && value !== undefined && value !== '' && isFinite(Number(value));
+    };
+    const missing = parts.filter(function (part) {
+      return part && (!has(part.left) || !has(part.top));
+    });
+    if (!missing.length) return;
+    const layout = window.CircuitLayout;
+    const symbols = window.CircuitSymbols;
+    if (!layout || !layout.autoLayout || !symbols || !symbols.sizeOf) return;
+    try {
+      const laid = layout.autoLayout(circuit, symbols.sizeOf);
+      const byId = new Map((laid.parts || []).map(function (part) {
+        return [String(part.id), part];
+      }));
+      missing.forEach(function (part) {
+        const target = byId.get(String(part.id));
+        if (!target) return;
+        if (!has(part.left)) part.left = target.left;
+        if (!has(part.top)) part.top = target.top;
+      });
+    } catch (e) { /* 自动布局失败时保持原样，渲染层仍会给出自己的排版 */ }
+  }
+
   function renderAll(extra) {
     if (!circuit) return;
+    materializeMissingPositions();
     extra = extra || {};
     if (extra.fresh) {
       selectedId = null; lastVB = null;
