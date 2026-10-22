@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  fast:
+    name: fast / ${{ matrix.os }} / py${{ matrix.python }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python: ["3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: 运行 fast profile
+        continue-on-error: true
+        run: python tests/run_tests.py --profile fast --json-out ci-fast.json
+
+      - name: 校验结果与跳过白名单
+        run: python tools/verify_ci_result.py ci-fast.json --allow-skip tests/test_external_reference_cases.py
+
+      - name: 上传测试报告
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: fast-${{ matrix.os }}-py${{ matrix.python }}
+          path: ci-fast.json
+          if-no-files-found: warn
+
+  ci:
+    name: ci
+    needs: fast
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "fast 矩阵全部通过"
