@@ -2,7 +2,7 @@
 
 > 说明：文中标注“本地证据”的引用指向本机验收归档目录 `evidence/`（体积达 GB 级、不随仓库分发，因此不提供可点击链接）。该归档按 `evidence/upgrade/<领域>/` 组织，需要复现时请按对应命令重新生成。
 
-版本：`1.4.2`（见 `VERSION` / `GET /api/health`）
+版本：`1.4.3`（见 `VERSION` / `GET /api/health`）
 
 根目录 `VERSION` 是唯一产品版本源；本页版本和接口返回值须与其一致。
 
@@ -216,7 +216,7 @@ CircuitVision 上游独立界面的本机入口与验证边界见[开源项目�
 ```json
 {
   "status": "ok",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "product": "CircuitTutor",
   "llm_key_configured": true,
   "default_model": "deepseek-flash",
@@ -258,7 +258,7 @@ curl -s http://127.0.0.1:8765/api/health
 ```json
 {
   "product": "CircuitTutor",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "中文需求 → 电路原理图 → KiCad/SPICE/BOM 导出",
   "endpoints": [
     {"method": "GET", "path": "/api/health", "desc": "健康检查"},
