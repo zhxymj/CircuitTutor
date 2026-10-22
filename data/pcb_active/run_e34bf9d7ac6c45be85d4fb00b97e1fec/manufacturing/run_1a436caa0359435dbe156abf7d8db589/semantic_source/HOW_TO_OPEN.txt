@@ -1,0 +1,37 @@
+智绘电路 CircuitTutor · KiCad 打开说明
+====================================
+电路标题：candidate
+工程文件：candidate.kicad_pro
+原理图：  candidate.kicad_sch
+一键脚本：OPEN_IN_KICAD.bat
+预览图：  PREVIEW.svg（若已生成）
+
+正确打开方式（社区/KiCad 标准工作流）
+------------------------------------
+0. 【推荐】解压后双击本目录的 OPEN_IN_KICAD.bat，自动打开工程。
+1. 或：先把整个 zip 完整解压到本地文件夹（不要在压缩包预览里双击）。
+2. 打开 KiCad 8 或 9 → 项目管理器 →「打开工程 / Open Project」。
+3. 选择本目录下的 **candidate.kicad_pro**（不是 .kicad_sch/.kicad_sym/.zip）。
+4. 在项目管理器中双击同名原理图 **candidate.kicad_sch** 进入 Eeschema。
+5. 若视野空白，按 Home /「适合页面」缩放到全图；元件与网络标签应可见。
+6. 也可先打开 PREVIEW.svg 确认电路内容确实已导出。
+
+请不要这样打开（会看起来像「啥都没有」）
+--------------------------------------
+- 不要用「文件 → 导入 / File → Import」选择 zip / sch / sym。
+  导入是外部格式转换入口，不是打开本工程；空白多半是选错了入口。
+- 不要只双击 .kicad_sym（符号库），也不要只打开 .net。
+- 不要在未解压的资源管理器压缩包预览中点文件。
+- 不要把 .kicad_pcb 当成原理图（PCB 是另一张图）。
+
+仍然空白时
+----------
+1. 确认解压后同目录存在：*.kicad_pro、*.kicad_sch、CircuitTutor.kicad_sym、sym-lib-table、OPEN_IN_KICAD.bat。
+2. 用官方 CLI 预览（不需要点开 GUI）：
+   kicad-cli sch export svg candidate.kicad_sch -o preview
+3. 本包符号已内嵌在 .kicad_sch 的 lib_symbols 中，一般无需再配置全局库。
+4. 参考 GitHub：dshills/KiCadAI 直接写 .kicad_pro/.kicad_sch/.kicad_pcb
+   完整工程；mikelenko/SolverSCH / jkriege2/kicad-symbol-generator 同理——
+   正确用法是打开生成的工程，而不是「导入」。
+
+由 智绘电路 自动生成，请勿手工改文件名与同名 pro/sch 配对关系。

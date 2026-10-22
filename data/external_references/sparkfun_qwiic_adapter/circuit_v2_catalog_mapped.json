@@ -1,0 +1,743 @@
+{
+  "version": 2,
+  "title": "sparkfun_qwiic_adapter catalog-mapped passive I2C adapter",
+  "parts": [
+    {
+      "id": "GND1",
+      "type": "gnd",
+      "attrs": {
+        "value": "GND"
+      },
+      "component": {
+        "symbol": "Eagle:SparkFun-PowerSymbols:GND",
+        "pin_map_source": "https://github.com/sparkfun/Qwiic_Adapter/blob/3c810f09ea89ea3e10fd5907076c6cccff8b224a/SparkFun%20Qwiic%20Adapter.sch",
+        "pin_map": {}
+      },
+      "source_part": {
+        "reference": "GND1",
+        "value": "",
+        "library": "SparkFun-PowerSymbols",
+        "deviceset": "GND",
+        "library_urn": "",
+        "device": "",
+        "package": ""
+      }
+    },
+    {
+      "id": "GND18",
+      "type": "gnd",
+      "attrs": {
+        "value": "GND"
+      },
+      "component": {
+        "symbol": "Eagle:SparkFun-PowerSymbols:GND",
+        "pin_map_source": "https://github.com/sparkfun/Qwiic_Adapter/blob/3c810f09ea89ea3e10fd5907076c6cccff8b224a/SparkFun%20Qwiic%20Adapter.sch",
+        "pin_map": {}
+      },
+      "source_part": {
+        "reference": "GND18",
+        "value": "",
+        "library": "SparkFun-PowerSymbols",
+        "deviceset": "GND",
+        "library_urn": "",
+        "device": "",
+        "package": ""
+      }
+    },
+    {
+      "id": "GND4",
+      "type": "gnd",
+      "attrs": {
+        "value": "GND"
+      },
+      "component": {
+        "symbol": "Eagle:SparkFun-PowerSymbols:GND",
+        "pin_map_source": "https://github.com/sparkfun/Qwiic_Adapter/blob/3c810f09ea89ea3e10fd5907076c6cccff8b224a/SparkFun%20Qwiic%20Adapter.sch",
+        "pin_map": {}
+      },
+      "source_part": {
+        "reference": "GND4",
+        "value": "",
+        "library": "SparkFun-PowerSymbols",
+        "deviceset": "GND",
+        "library_urn": "",
+        "device": "",
+        "package": ""
+      }
+    },
+    {
+      "id": "J1",
+      "type": "i2c_header",
+      "attrs": {
+        "value": "QWIIC_CONNECTOR"
+      },
+      "component": {
+        "symbol": "Eagle:SparkFun-Connectors:QWIIC_CONNECTOR",
+        "pin_map_source": "https://github.com/sparkfun/Qwiic_Adapter/blob/3c810f09ea89ea3e10fd5907076c6cccff8b224a/SparkFun%20Qwiic%20Adapter.sch",
+        "pin_map": {
+          "GND": "1",
+          "SCL": "4",
+          "SDA": "3",
+          "VCC": "2"
+        },
+        "source_footprint": "Eagle:SparkFun-Connectors:1X04_1MM_RA",
+        "footprint": "EagleRepro_SparkFun-Connectors:1X04_1MM_RA"
+      },
+      "source_part": {
+        "reference": "J1",
+        "value": "",
+        "library": "SparkFun-Connectors",
+        "deviceset": "QWIIC_CONNECTOR",
+        "library_urn": "",
+        "device": "JS-1MM",
+        "package": "1X04_1MM_RA"
+      }
+    },
+    {
+      "id": "J3",
+      "type": "i2c_header",
+      "attrs": {
+        "value": "QWIIC_CONNECTOR"
+      },
+      "component": {
+        "symbol": "Eagle:SparkFun-Connectors:QWIIC_CONNECTOR",
+        "pin_map_source": "https://github.com/sparkfun/Qwiic_Adapter/blob/3c810f09ea89ea3e10fd5907076c6cccff8b224a/SparkFun%20Qwiic%20Adapter.sch",
+        "pin_map": {
+          "GND": "1",
+          "SCL": "4",
+          "SDA": "3",
+          "VCC": "2"
+        },
+        "source_footprint": "Eagle:SparkFun-Connectors:1X04_1MM_RA",
+        "footprint": "EagleRepro_SparkFun-Connectors:1X04_1MM_RA"
+      },
+      "source_part": {
+        "reference": "J3",
+        "value": "",
+        "library": "SparkFun-Connectors",
+        "deviceset": "QWIIC_CONNECTOR",
+        "library_urn": "",
+        "device": "JS-1MM",
+        "package": "1X04_1MM_RA"
+      }
+    },
+    {
+      "id": "J4",
+      "type": "i2c_header",
+      "attrs": {
+        "value": "PTH"
+      },
+      "component": {
+        "symbol": "Eagle:SparkFun-Connectors:I2C_STANDARD",
+        "pin_map_source": "https://github.com/sparkfun/Qwiic_Adapter/blob/3c810f09ea89ea3e10fd5907076c6cccff8b224a/SparkFun%20Qwiic%20Adapter.sch",
+        "pin_map": {
+          "GND": "1",
+          "SCL": "4",
+          "SDA": "3",
+          "VCC": "2"
+        },
+        "source_footprint": "Eagle:SparkFun-Connectors:1X04",
+        "footprint": "EagleRepro_SparkFun-Connectors:1X04"
+      },
+      "source_part": {
+        "reference": "J4",
+        "value": "PTH",
+        "library": "SparkFun-Connectors",
+        "deviceset": "I2C_STANDARD",
+        "library_urn": "",
+        "device": "",
+        "package": "1X04"
+      }
+    },
+    {
+      "id": "SUPPLY1",
+      "type": "vcc",
+      "attrs": {
+        "value": "3.3V"
+      },
+      "component": {
+        "symbol": "Eagle:SparkFun-PowerSymbols:3.3V",
+        "pin_map_source": "https://github.com/sparkfun/Qwiic_Adapter/blob/3c810f09ea89ea3e10fd5907076c6cccff8b224a/SparkFun%20Qwiic%20Adapter.sch",
+        "pin_map": {}
+      },
+      "source_part": {
+        "reference": "SUPPLY1",
+        "value": "",
+        "library": "SparkFun-PowerSymbols",
+        "deviceset": "3.3V",
+        "library_urn": "",
+        "device": "",
+        "package": ""
+      }
+    },
+    {
+      "id": "SUPPLY21",
+      "type": "vcc",
+      "attrs": {
+        "value": "3.3V"
+      },
+      "component": {
+        "symbol": "Eagle:SparkFun-PowerSymbols:3.3V",
+        "pin_map_source": "https://github.com/sparkfun/Qwiic_Adapter/blob/3c810f09ea89ea3e10fd5907076c6cccff8b224a/SparkFun%20Qwiic%20Adapter.sch",
+        "pin_map": {}
+      },
+      "source_part": {
+        "reference": "SUPPLY21",
+        "value": "",
+        "library": "SparkFun-PowerSymbols",
+        "deviceset": "3.3V",
+        "library_urn": "",
+        "device": "",
+        "package": ""
+      }
+    },
+    {
+      "id": "SUPPLY4",
+      "type": "vcc",
+      "attrs": {
+        "value": "3.3V"
+      },
+      "component": {
+        "symbol": "Eagle:SparkFun-PowerSymbols:3.3V",
+        "pin_map_source": "https://github.com/sparkfun/Qwiic_Adapter/blob/3c810f09ea89ea3e10fd5907076c6cccff8b224a/SparkFun%20Qwiic%20Adapter.sch",
+        "pin_map": {}
+      },
+      "source_part": {
+        "reference": "SUPPLY4",
+        "value": "",
+        "library": "SparkFun-PowerSymbols",
+        "deviceset": "3.3V",
+        "library_urn": "",
+        "device": "",
+        "package": ""
+      }
+    }
+  ],
+  "connections": [
+    [
+      "GND18:1",
+      "J3:GND",
+      "GND"
+    ],
+    [
+      "J3:GND",
+      "GND4:1",
+      "GND"
+    ],
+    [
+      "GND4:1",
+      "J4:GND",
+      "GND"
+    ],
+    [
+      "J4:GND",
+      "GND1:1",
+      "GND"
+    ],
+    [
+      "GND1:1",
+      "J1:GND",
+      "GND"
+    ],
+    [
+      "J3:SCL",
+      "J4:SCL",
+      "SCL"
+    ],
+    [
+      "J4:SCL",
+      "J1:SCL",
+      "SCL"
+    ],
+    [
+      "J3:SDA",
+      "J4:SDA",
+      "SDA"
+    ],
+    [
+      "J4:SDA",
+      "J1:SDA",
+      "SDA"
+    ],
+    [
+      "SUPPLY21:1",
+      "J3:VCC",
+      "3.3V"
+    ],
+    [
+      "J3:VCC",
+      "SUPPLY1:1",
+      "3.3V"
+    ],
+    [
+      "SUPPLY1:1",
+      "J4:VCC",
+      "3.3V"
+    ],
+    [
+      "J4:VCC",
+      "SUPPLY4:1",
+      "3.3V"
+    ],
+    [
+      "SUPPLY4:1",
+      "J1:VCC",
+      "3.3V"
+    ]
+  ],
+  "source_nets": [
+    {
+      "name": "GND",
+      "pins": [
+        {
+          "part": "GND18",
+          "gate": "1",
+          "pin": "GND"
+        },
+        {
+          "part": "J3",
+          "gate": "G$1",
+          "pin": "1"
+        },
+        {
+          "part": "GND4",
+          "gate": "1",
+          "pin": "GND"
+        },
+        {
+          "part": "J4",
+          "gate": "G$1",
+          "pin": "1"
+        },
+        {
+          "part": "GND1",
+          "gate": "1",
+          "pin": "GND"
+        },
+        {
+          "part": "J1",
+          "gate": "G$1",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "name": "SCL",
+      "pins": [
+        {
+          "part": "J3",
+          "gate": "G$1",
+          "pin": "4"
+        },
+        {
+          "part": "J4",
+          "gate": "G$1",
+          "pin": "4"
+        },
+        {
+          "part": "J1",
+          "gate": "G$1",
+          "pin": "4"
+        }
+      ]
+    },
+    {
+      "name": "SDA",
+      "pins": [
+        {
+          "part": "J3",
+          "gate": "G$1",
+          "pin": "3"
+        },
+        {
+          "part": "J4",
+          "gate": "G$1",
+          "pin": "3"
+        },
+        {
+          "part": "J1",
+          "gate": "G$1",
+          "pin": "3"
+        }
+      ]
+    },
+    {
+      "name": "3.3V",
+      "pins": [
+        {
+          "part": "SUPPLY21",
+          "gate": "G$1",
+          "pin": "3.3V"
+        },
+        {
+          "part": "J3",
+          "gate": "G$1",
+          "pin": "2"
+        },
+        {
+          "part": "SUPPLY1",
+          "gate": "G$1",
+          "pin": "3.3V"
+        },
+        {
+          "part": "J4",
+          "gate": "G$1",
+          "pin": "2"
+        },
+        {
+          "part": "SUPPLY4",
+          "gate": "G$1",
+          "pin": "3.3V"
+        },
+        {
+          "part": "J1",
+          "gate": "G$1",
+          "pin": "2"
+        }
+      ]
+    }
+  ],
+  "excluded_unconnected_or_graphical_parts": [
+    {
+      "reference": "FRAME1",
+      "value": "",
+      "library": "SparkFun-Aesthetics",
+      "deviceset": "FRAME-LETTER",
+      "library_urn": "",
+      "device": "",
+      "package": "CREATIVE_COMMONS"
+    },
+    {
+      "reference": "LOGO4",
+      "value": "",
+      "library": "SparkFun-Aesthetics",
+      "deviceset": "OSHW-LOGO",
+      "library_urn": "",
+      "device": "S",
+      "package": "OSHW-LOGO-S"
+    },
+    {
+      "reference": "U$1",
+      "value": "SFE_LOGO_FLAME.1_INCH",
+      "library": "SparkFun-Aesthetics",
+      "deviceset": "SFE_LOGO_FLAME",
+      "library_urn": "",
+      "device": ".1_INCH",
+      "package": "SFE_LOGO_FLAME_.1"
+    },
+    {
+      "reference": "FD1",
+      "value": "",
+      "library": "SparkFun-Aesthetics",
+      "deviceset": "FIDUCIAL",
+      "library_urn": "",
+      "device": "UFIDUCIAL",
+      "package": "FIDUCIAL-MICRO"
+    },
+    {
+      "reference": "FD2",
+      "value": "",
+      "library": "SparkFun-Aesthetics",
+      "deviceset": "FIDUCIAL",
+      "library_urn": "",
+      "device": "UFIDUCIAL",
+      "package": "FIDUCIAL-MICRO"
+    },
+    {
+      "reference": "FD3",
+      "value": "",
+      "library": "SparkFun-Aesthetics",
+      "deviceset": "FIDUCIAL",
+      "library_urn": "",
+      "device": "UFIDUCIAL",
+      "package": "FIDUCIAL-MICRO"
+    },
+    {
+      "reference": "FD4",
+      "value": "",
+      "library": "SparkFun-Aesthetics",
+      "deviceset": "FIDUCIAL",
+      "library_urn": "",
+      "device": "UFIDUCIAL",
+      "package": "FIDUCIAL-MICRO"
+    },
+    {
+      "reference": "LOGO1",
+      "value": "",
+      "library": "SparkFun-Aesthetics",
+      "deviceset": "REVISION",
+      "library_urn": "",
+      "device": "",
+      "package": "REVISION"
+    }
+  ],
+  "voltage_domains": [
+    {
+      "id": "3.3V",
+      "nominal_v": 3.3,
+      "nets": [
+        "3.3V"
+      ]
+    }
+  ],
+  "reproduced_footprints": [
+    {
+      "library": "EagleRepro_SparkFun-Connectors",
+      "footprint_id": "EagleRepro_SparkFun-Connectors:1X04",
+      "source_library": "SparkFun-Connectors",
+      "source_package": "1X04",
+      "text": "(footprint \"1X04\"\n  (version 20240108)\n  (generator \"zhihui_eagle_repro\")\n  (layer \"F.Cu\")\n  (descr \"Reproduced from Eagle SparkFun-Connectors/1X04; pad copper geometry only\")\n  (tags \"zhihui eagle-repro 1X04\")\n  (property \"Reference\" \"REF**\"\n    (at 0 0 0)\n    (layer \"F.SilkS\")\n    (effects (font (size 1 1) (thickness 0.15)))\n  )\n  (property \"Value\" \"1X04\"\n    (at 0 0 0)\n    (layer \"F.Fab\")\n    (effects (font (size 1 1) (thickness 0.15)))\n  )\n  (property \"Source_Library\" \"SparkFun-Connectors\" (at 0 0 0) (layer \"F.Fab\") (hide yes)\n    (effects (font (size 1 1) (thickness 0.15)))\n  )\n  (property \"Source_Package\" \"1X04\" (at 0 0 0) (layer \"F.Fab\") (hide yes)\n    (effects (font (size 1 1) (thickness 0.15)))\n  )\n  (property \"Source_SHA256\" \"9321e50e38439681a34d109b8d4c7e8ff1e719dccdaf6e9c74937c53166b576b\" (at 0 0 0) (layer \"F.Fab\") (hide yes)\n    (effects (font (size 1 1) (thickness 0.15)))\n  )\n  (property \"Source_URL\" \"https://github.com/sparkfun/Qwiic_Adapter/blob/3c810f09ea89ea3e10fd5907076c6cccff8b224a/SparkFun%20Qwiic%20Adapter.sch\" (at 0 0 0) (layer \"F.Fab\") (hide yes)\n    (effects (font (size 1 1) (thickness 0.15)))\n  )\n  (pad \"1\" thru_hole circle (at 0 0 90) (size 1.8796 1.8796) (drill 1.016) (layers \"*.Cu\" \"*.Mask\"))\n  (pad \"2\" thru_hole circle (at 2.54 0 90) (size 1.8796 1.8796) (drill 1.016) (layers \"*.Cu\" \"*.Mask\"))\n  (pad \"3\" thru_hole circle (at 5.08 0 90) (size 1.8796 1.8796) (drill 1.016) (layers \"*.Cu\" \"*.Mask\"))\n  (pad \"4\" thru_hole circle (at 7.62 0 90) (size 1.8796 1.8796) (drill 1.016) (layers \"*.Cu\" \"*.Mask\"))\n)\n"
+    },
+    {
+      "library": "EagleRepro_SparkFun-Connectors",
+      "footprint_id": "EagleRepro_SparkFun-Connectors:1X04_1MM_RA",
+      "source_library": "SparkFun-Connectors",
+      "source_package": "1X04_1MM_RA",
+      "text": "(footprint \"1X04_1MM_RA\"\n  (version 20240108)\n  (generator \"zhihui_eagle_repro\")\n  (layer \"F.Cu\")\n  (descr \"Reproduced from Eagle SparkFun-Connectors/1X04_1MM_RA; pad copper geometry only\")\n  (tags \"zhihui eagle-repro 1X04_1MM_RA\")\n  (property \"Reference\" \"REF**\"\n    (at 0 0 0)\n    (layer \"F.SilkS\")\n    (effects (font (size 1 1) (thickness 0.15)))\n  )\n  (property \"Value\" \"1X04_1MM_RA\"\n    (at 0 0 0)\n    (layer \"F.Fab\")\n    (effects (font (size 1 1) (thickness 0.15)))\n  )\n  (property \"Source_Library\" \"SparkFun-Connectors\" (at 0 0 0) (layer \"F.Fab\") (hide yes)\n    (effects (font (size 1 1) (thickness 0.15)))\n  )\n  (property \"Source_Package\" \"1X04_1MM_RA\" (at 0 0 0) (layer \"F.Fab\") (hide yes)\n    (effects (font (size 1 1) (thickness 0.15)))\n  )\n  (property \"Source_SHA256\" \"9321e50e38439681a34d109b8d4c7e8ff1e719dccdaf6e9c74937c53166b576b\" (at 0 0 0) (layer \"F.Fab\") (hide yes)\n    (effects (font (size 1 1) (thickness 0.15)))\n  )\n  (property \"Source_URL\" \"https://github.com/sparkfun/Qwiic_Adapter/blob/3c810f09ea89ea3e10fd5907076c6cccff8b224a/SparkFun%20Qwiic%20Adapter.sch\" (at 0 0 0) (layer \"F.Fab\") (hide yes)\n    (effects (font (size 1 1) (thickness 0.15)))\n  )\n  (pad \"NC2\" smd rect (at -2.8 3.675 0) (size 1.2 2) (layers \"F.Cu\" \"F.Paste\" \"F.Mask\"))\n  (pad \"NC1\" smd rect (at 2.8 3.675 0) (size 1.2 2) (layers \"F.Cu\" \"F.Paste\" \"F.Mask\"))\n  (pad \"1\" smd rect (at -1.5 0 0) (size 0.6 1.35) (layers \"F.Cu\" \"F.Paste\" \"F.Mask\"))\n  (pad \"2\" smd rect (at -0.5 0 0) (size 0.6 1.35) (layers \"F.Cu\" \"F.Paste\" \"F.Mask\"))\n  (pad \"3\" smd rect (at 0.5 0 0) (size 0.6 1.35) (layers \"F.Cu\" \"F.Paste\" \"F.Mask\"))\n  (pad \"4\" smd rect (at 1.5 0 0) (size 0.6 1.35) (layers \"F.Cu\" \"F.Paste\" \"F.Mask\"))\n)\n"
+    }
+  ],
+  "footprint_reproduction": {
+    "source_schematic_sha256": "9321e50e38439681a34d109b8d4c7e8ff1e719dccdaf6e9c74937c53166b576b",
+    "packages": {
+      "SparkFun-Connectors:1X04": {
+        "footprint_id": "EagleRepro_SparkFun-Connectors:1X04",
+        "library": "EagleRepro_SparkFun-Connectors",
+        "source_pad_count": 4,
+        "source_pads": [
+          {
+            "name": "1",
+            "kind": "thru_hole",
+            "shape": "circle",
+            "x_mm": "0",
+            "y_mm": "0",
+            "w_mm": "1.8796",
+            "h_mm": "1.8796",
+            "drill_mm": "1.016",
+            "rotation_deg": "90",
+            "copper_layer": "*.Cu"
+          },
+          {
+            "name": "2",
+            "kind": "thru_hole",
+            "shape": "circle",
+            "x_mm": "2.54",
+            "y_mm": "0",
+            "w_mm": "1.8796",
+            "h_mm": "1.8796",
+            "drill_mm": "1.016",
+            "rotation_deg": "90",
+            "copper_layer": "*.Cu"
+          },
+          {
+            "name": "3",
+            "kind": "thru_hole",
+            "shape": "circle",
+            "x_mm": "5.08",
+            "y_mm": "0",
+            "w_mm": "1.8796",
+            "h_mm": "1.8796",
+            "drill_mm": "1.016",
+            "rotation_deg": "90",
+            "copper_layer": "*.Cu"
+          },
+          {
+            "name": "4",
+            "kind": "thru_hole",
+            "shape": "circle",
+            "x_mm": "7.62",
+            "y_mm": "0",
+            "w_mm": "1.8796",
+            "h_mm": "1.8796",
+            "drill_mm": "1.016",
+            "rotation_deg": "90",
+            "copper_layer": "*.Cu"
+          }
+        ],
+        "verification": {
+          "source_pad_count": 4,
+          "reproduced_pad_count": 4,
+          "matched_pads": 4,
+          "unmatched_pads": 0,
+          "unexpected_extra_pads": [],
+          "per_pad": [
+            {
+              "pad": "1",
+              "matched": true,
+              "mismatches": []
+            },
+            {
+              "pad": "2",
+              "matched": true,
+              "mismatches": []
+            },
+            {
+              "pad": "3",
+              "matched": true,
+              "mismatches": []
+            },
+            {
+              "pad": "4",
+              "matched": true,
+              "mismatches": []
+            }
+          ],
+          "pad_geometry_exact": true,
+          "not_reproduced": [
+            "silkscreen graphics (Eagle tPlace/tNames/tValues)",
+            "documentation layer graphics (Eagle tDocu)",
+            "courtyard (not present in the Eagle source package)",
+            "3D model"
+          ]
+        },
+        "footprint_sha256": "11d2a7f5c5a0fad5f9d67a6cc712473e798fd87ff37367715080acf85f1bdbcc"
+      },
+      "SparkFun-Connectors:1X04_1MM_RA": {
+        "footprint_id": "EagleRepro_SparkFun-Connectors:1X04_1MM_RA",
+        "library": "EagleRepro_SparkFun-Connectors",
+        "source_pad_count": 6,
+        "source_pads": [
+          {
+            "name": "NC2",
+            "kind": "smd",
+            "shape": "rect",
+            "x_mm": "-2.8",
+            "y_mm": "-3.675",
+            "w_mm": "1.2",
+            "h_mm": "2",
+            "drill_mm": null,
+            "rotation_deg": "0",
+            "copper_layer": "F.Cu"
+          },
+          {
+            "name": "NC1",
+            "kind": "smd",
+            "shape": "rect",
+            "x_mm": "2.8",
+            "y_mm": "-3.675",
+            "w_mm": "1.2",
+            "h_mm": "2",
+            "drill_mm": null,
+            "rotation_deg": "0",
+            "copper_layer": "F.Cu"
+          },
+          {
+            "name": "1",
+            "kind": "smd",
+            "shape": "rect",
+            "x_mm": "-1.5",
+            "y_mm": "0",
+            "w_mm": "0.6",
+            "h_mm": "1.35",
+            "drill_mm": null,
+            "rotation_deg": "0",
+            "copper_layer": "F.Cu"
+          },
+          {
+            "name": "2",
+            "kind": "smd",
+            "shape": "rect",
+            "x_mm": "-0.5",
+            "y_mm": "0",
+            "w_mm": "0.6",
+            "h_mm": "1.35",
+            "drill_mm": null,
+            "rotation_deg": "0",
+            "copper_layer": "F.Cu"
+          },
+          {
+            "name": "3",
+            "kind": "smd",
+            "shape": "rect",
+            "x_mm": "0.5",
+            "y_mm": "0",
+            "w_mm": "0.6",
+            "h_mm": "1.35",
+            "drill_mm": null,
+            "rotation_deg": "0",
+            "copper_layer": "F.Cu"
+          },
+          {
+            "name": "4",
+            "kind": "smd",
+            "shape": "rect",
+            "x_mm": "1.5",
+            "y_mm": "0",
+            "w_mm": "0.6",
+            "h_mm": "1.35",
+            "drill_mm": null,
+            "rotation_deg": "0",
+            "copper_layer": "F.Cu"
+          }
+        ],
+        "verification": {
+          "source_pad_count": 6,
+          "reproduced_pad_count": 6,
+          "matched_pads": 6,
+          "unmatched_pads": 0,
+          "unexpected_extra_pads": [],
+          "per_pad": [
+            {
+              "pad": "NC2",
+              "matched": true,
+              "mismatches": []
+            },
+            {
+              "pad": "NC1",
+              "matched": true,
+              "mismatches": []
+            },
+            {
+              "pad": "1",
+              "matched": true,
+              "mismatches": []
+            },
+            {
+              "pad": "2",
+              "matched": true,
+              "mismatches": []
+            },
+            {
+              "pad": "3",
+              "matched": true,
+              "mismatches": []
+            },
+            {
+              "pad": "4",
+              "matched": true,
+              "mismatches": []
+            }
+          ],
+          "pad_geometry_exact": true,
+          "not_reproduced": [
+            "silkscreen graphics (Eagle tPlace/tNames/tValues)",
+            "documentation layer graphics (Eagle tDocu)",
+            "courtyard (not present in the Eagle source package)",
+            "3D model"
+          ]
+        },
+        "footprint_sha256": "97fc03719b852a972df4bd80caced493b5173694ef2e0f99d86b95c68f40e96d"
+      }
+    },
+    "reproduced_scope": "pad copper geometry only",
+    "not_reproduced": [
+      "silkscreen graphics (Eagle tPlace/tNames/tValues)",
+      "documentation layer graphics (Eagle tDocu)",
+      "courtyard (not present in the Eagle source package)",
+      "3D model"
+    ]
+  },
+  "provenance": {
+    "origin": "import",
+    "source_id": "sparkfun_qwiic_adapter",
+    "commit": "3c810f09ea89ea3e10fd5907076c6cccff8b224a",
+    "source_schematic_sha256": "9321e50e38439681a34d109b8d4c7e8ff1e719dccdaf6e9c74937c53166b576b",
+    "hardware_license": "CC-BY-SA-4.0",
+    "derivative_license": "CC-BY-SA-4.0"
+  },
+  "acceptance": {
+    "status": "catalog_mapped_pending_electrical",
+    "catalog_supported": true,
+    "electrical_accepted": false,
+    "reason": "Passive connector topology with reproduced source pad geometry; electrical acceptance is decided by the gate run, not by this converter"
+  }
+}

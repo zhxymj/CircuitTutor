@@ -1,0 +1,1820 @@
+(export
+	(version "E")
+	(design
+		(source "C:\\Users\\30789\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_active\\run_e34bf9d7ac6c45be85d4fb00b97e1fec\\manufacturing\\run_1a436caa0359435dbe156abf7d8db589\\candidate.kicad_sch")
+		(date "2026-10-14T14:10:02")
+		(tool "Eeschema 10.0.6")
+		(sheet
+			(number "1")
+			(name "/")
+			(tstamps "/")
+			(title_block
+				(title)
+				(company)
+				(rev)
+				(date)
+				(source "candidate.kicad_sch")
+				(comment
+					(number "1")
+					(value "")
+				)
+				(comment
+					(number "2")
+					(value "")
+				)
+				(comment
+					(number "3")
+					(value "")
+				)
+				(comment
+					(number "4")
+					(value "")
+				)
+				(comment
+					(number "5")
+					(value "")
+				)
+				(comment
+					(number "6")
+					(value "")
+				)
+				(comment
+					(number "7")
+					(value "")
+				)
+				(comment
+					(number "8")
+					(value "")
+				)
+				(comment
+					(number "9")
+					(value "")
+				)
+			)
+		)
+	)
+	(components
+		(comp
+			(ref "C1")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(datasheet "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71H104KA01-01.pdf")
+			(fields
+				(field
+					(name "MPN") "GRM21BR71H104KA01L")
+				(field
+					(name "Manufacturer") "Murata")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet") "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71H104KA01-01.pdf")
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "ZhihuiReal")
+				(part "Part_C1")
+				(description "")
+			)
+			(property
+				(name "MPN")
+				(value "GRM21BR71H104KA01L")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Murata")
+			)
+			(property
+				(name "Sheetname")
+				(value "candidate")
+			)
+			(property
+				(name "Sheetfile")
+				(value "candidate.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "60ce2bcb-4203-5729-8bf9-b76bbe39b9ef")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C2")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(datasheet "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71H104KA01-01.pdf")
+			(fields
+				(field
+					(name "MPN") "GRM21BR71H104KA01L")
+				(field
+					(name "Manufacturer") "Murata")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet") "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71H104KA01-01.pdf")
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "ZhihuiReal")
+				(part "Part_C2")
+				(description "")
+			)
+			(property
+				(name "MPN")
+				(value "GRM21BR71H104KA01L")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Murata")
+			)
+			(property
+				(name "Sheetname")
+				(value "candidate")
+			)
+			(property
+				(name "Sheetfile")
+				(value "candidate.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "c2388c3e-df30-5287-9503-d1fb6072b269")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C3")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(datasheet "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71H104KA01-01.pdf")
+			(fields
+				(field
+					(name "MPN") "GRM21BR71H104KA01L")
+				(field
+					(name "Manufacturer") "Murata")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet") "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71H104KA01-01.pdf")
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "ZhihuiReal")
+				(part "Part_C3")
+				(description "")
+			)
+			(property
+				(name "MPN")
+				(value "GRM21BR71H104KA01L")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Murata")
+			)
+			(property
+				(name "Sheetname")
+				(value "candidate")
+			)
+			(property
+				(name "Sheetfile")
+				(value "candidate.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "09ba1b50-c2e0-5e62-9b05-283b4f449a87")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C4")
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(datasheet "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71H104KA01-01.pdf")
+			(fields
+				(field
+					(name "MPN") "GRM21BR71H104KA01L")
+				(field
+					(name "Manufacturer") "Murata")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet") "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71H104KA01-01.pdf")
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "ZhihuiReal")
+				(part "Part_C4")
+				(description "")
+			)
+			(property
+				(name "MPN")
+				(value "GRM21BR71H104KA01L")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Murata")
+			)
+			(property
+				(name "Sheetname")
+				(value "candidate")
+			)
+			(property
+				(name "Sheetfile")
+				(value "candidate.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "147037d8-19c7-549c-bd7d-3d266e12d1c9")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J1")
+			(value "I2C GND VCC SDA SCL")
+			(footprint "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical")
+			(datasheet "https://www.samtec.com/products/tsw-104-07-g-s")
+			(fields
+				(field
+					(name "MPN") "TSW-104-07-G-S")
+				(field
+					(name "Manufacturer") "Samtec")
+				(field
+					(name "Footprint") "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical")
+				(field
+					(name "Datasheet") "https://www.samtec.com/products/tsw-104-07-g-s")
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "ZhihuiReal")
+				(part "Part_J1")
+				(description "")
+			)
+			(property
+				(name "MPN")
+				(value "TSW-104-07-G-S")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samtec")
+			)
+			(property
+				(name "Sheetname")
+				(value "candidate")
+			)
+			(property
+				(name "Sheetfile")
+				(value "candidate.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "62712e00-1422-52e5-a2c5-778e0475d9f3")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J2")
+			(value "CUSTOM ISP MISO VCC SCK MOSI RESET GND")
+			(footprint "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical")
+			(datasheet "https://www.samtec.com/products/tsw-106-07-g-s")
+			(fields
+				(field
+					(name "MPN") "TSW-106-07-G-S")
+				(field
+					(name "Manufacturer") "Samtec")
+				(field
+					(name "Footprint") "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical")
+				(field
+					(name "Datasheet") "https://www.samtec.com/products/tsw-106-07-g-s")
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "ZhihuiReal")
+				(part "Part_J2")
+				(description "")
+			)
+			(property
+				(name "MPN")
+				(value "TSW-106-07-G-S")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Samtec")
+			)
+			(property
+				(name "Sheetname")
+				(value "candidate")
+			)
+			(property
+				(name "Sheetfile")
+				(value "candidate.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "5692ac9b-b051-561d-b8e7-e244b490f827")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R1")
+			(value "4.7k")
+			(footprint "Resistor_SMD:R_0805_2012Metric")
+			(datasheet "https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-074K7L")
+			(fields
+				(field
+					(name "MPN") "RC0805FR-074K7L")
+				(field
+					(name "Manufacturer") "YAGEO")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+				(field
+					(name "Datasheet") "https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-074K7L")
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "ZhihuiReal")
+				(part "Part_R1")
+				(description "")
+			)
+			(property
+				(name "MPN")
+				(value "RC0805FR-074K7L")
+			)
+			(property
+				(name "Manufacturer")
+				(value "YAGEO")
+			)
+			(property
+				(name "Sheetname")
+				(value "candidate")
+			)
+			(property
+				(name "Sheetfile")
+				(value "candidate.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "709cfafe-cc2d-5a7b-8ffe-90595072bf8e")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R2")
+			(value "4.7k")
+			(footprint "Resistor_SMD:R_0805_2012Metric")
+			(datasheet "https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-074K7L")
+			(fields
+				(field
+					(name "MPN") "RC0805FR-074K7L")
+				(field
+					(name "Manufacturer") "YAGEO")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+				(field
+					(name "Datasheet") "https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-074K7L")
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "ZhihuiReal")
+				(part "Part_R2")
+				(description "")
+			)
+			(property
+				(name "MPN")
+				(value "RC0805FR-074K7L")
+			)
+			(property
+				(name "Manufacturer")
+				(value "YAGEO")
+			)
+			(property
+				(name "Sheetname")
+				(value "candidate")
+			)
+			(property
+				(name "Sheetfile")
+				(value "candidate.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "3dc4287b-ef1b-5e6a-a131-a6a33c7fc955")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R3")
+			(value "10k")
+			(footprint "Resistor_SMD:R_0805_2012Metric")
+			(datasheet "https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-0710KL")
+			(fields
+				(field
+					(name "MPN") "RC0805FR-0710KL")
+				(field
+					(name "Manufacturer") "YAGEO")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+				(field
+					(name "Datasheet") "https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-0710KL")
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "ZhihuiReal")
+				(part "Part_R3")
+				(description "")
+			)
+			(property
+				(name "MPN")
+				(value "RC0805FR-0710KL")
+			)
+			(property
+				(name "Manufacturer")
+				(value "YAGEO")
+			)
+			(property
+				(name "Sheetname")
+				(value "candidate")
+			)
+			(property
+				(name "Sheetfile")
+				(value "candidate.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "419ff738-229f-5215-b27d-c0623fa566d9")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U1")
+			(value "ATmega328P-PU")
+			(footprint "Package_DIP:DIP-28_W7.62mm")
+			(datasheet "https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/ATmega48A-PA-88A-PA-168A-PA-328-P-DS-DS40002061B.pdf")
+			(fields
+				(field
+					(name "MPN") "ATMEGA328P-PU")
+				(field
+					(name "Manufacturer") "Microchip")
+				(field
+					(name "Footprint") "Package_DIP:DIP-28_W7.62mm")
+				(field
+					(name "Datasheet") "https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/ATmega48A-PA-88A-PA-168A-PA-328-P-DS-DS40002061B.pdf")
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "ZhihuiReal")
+				(part "Part_U1")
+				(description "")
+			)
+			(property
+				(name "MPN")
+				(value "ATMEGA328P-PU")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Microchip")
+			)
+			(property
+				(name "Sheetname")
+				(value "candidate")
+			)
+			(property
+				(name "Sheetfile")
+				(value "candidate.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "e793a3ae-11da-5c03-b9d1-daeec07c1276")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "17")
+						)
+						(pin
+							(num "18")
+						)
+						(pin
+							(num "19")
+						)
+						(pin
+							(num "20")
+						)
+						(pin
+							(num "21")
+						)
+						(pin
+							(num "22")
+						)
+						(pin
+							(num "23")
+						)
+						(pin
+							(num "24")
+						)
+						(pin
+							(num "25")
+						)
+						(pin
+							(num "26")
+						)
+						(pin
+							(num "27")
+						)
+						(pin
+							(num "28")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U2")
+			(value "SHT41-AD1B")
+			(footprint "Sensor_Humidity:Sensirion_DFN-4_1.5x1.5mm_P0.8mm_SHT4x_NoCentralPad")
+			(datasheet "https://sensirion.com/media/documents/33FD6951/624C4357/Datasheet_SHT4x.pdf")
+			(fields
+				(field
+					(name "MPN") "SHT41-AD1B-R2")
+				(field
+					(name "Manufacturer") "Sensirion")
+				(field
+					(name "Footprint") "Sensor_Humidity:Sensirion_DFN-4_1.5x1.5mm_P0.8mm_SHT4x_NoCentralPad")
+				(field
+					(name "Datasheet") "https://sensirion.com/media/documents/33FD6951/624C4357/Datasheet_SHT4x.pdf")
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "ZhihuiReal")
+				(part "Part_U2")
+				(description "")
+			)
+			(property
+				(name "MPN")
+				(value "SHT41-AD1B-R2")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Sensirion")
+			)
+			(property
+				(name "Sheetname")
+				(value "candidate")
+			)
+			(property
+				(name "Sheetfile")
+				(value "candidate.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "7a1c3ff7-b060-5d40-ba8b-05d6a3a2cc6e")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+					)
+				)
+			)
+		)
+	)
+	(groups)
+	(variants)
+	(libparts
+		(libpart
+			(lib "ZhihuiReal")
+			(part "Part_C1")
+			(docs "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71H104KA01-01.pdf")
+			(fields
+				(field
+					(name "Reference") "C")
+				(field
+					(name "Value") "100nF")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet") "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71H104KA01-01.pdf")
+				(field
+					(name "Description")
+				)
+				(field
+					(name "MPN") "GRM21BR71H104KA01L")
+				(field
+					(name "Manufacturer") "Murata")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "+")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "-")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "ZhihuiReal")
+			(part "Part_C2")
+			(docs "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71H104KA01-01.pdf")
+			(fields
+				(field
+					(name "Reference") "C")
+				(field
+					(name "Value") "100nF")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet") "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71H104KA01-01.pdf")
+				(field
+					(name "Description")
+				)
+				(field
+					(name "MPN") "GRM21BR71H104KA01L")
+				(field
+					(name "Manufacturer") "Murata")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "+")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "-")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "ZhihuiReal")
+			(part "Part_C3")
+			(docs "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71H104KA01-01.pdf")
+			(fields
+				(field
+					(name "Reference") "C")
+				(field
+					(name "Value") "100nF")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet") "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71H104KA01-01.pdf")
+				(field
+					(name "Description")
+				)
+				(field
+					(name "MPN") "GRM21BR71H104KA01L")
+				(field
+					(name "Manufacturer") "Murata")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "+")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "-")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "ZhihuiReal")
+			(part "Part_C4")
+			(docs "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71H104KA01-01.pdf")
+			(fields
+				(field
+					(name "Reference") "C")
+				(field
+					(name "Value") "100nF")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet") "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71H104KA01-01.pdf")
+				(field
+					(name "Description")
+				)
+				(field
+					(name "MPN") "GRM21BR71H104KA01L")
+				(field
+					(name "Manufacturer") "Murata")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "+")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "-")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "ZhihuiReal")
+			(part "Part_J1")
+			(docs "https://www.samtec.com/products/tsw-104-07-g-s")
+			(fields
+				(field
+					(name "Reference") "J")
+				(field
+					(name "Value") "I2C GND VCC SDA SCL")
+				(field
+					(name "Footprint") "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical")
+				(field
+					(name "Datasheet") "https://www.samtec.com/products/tsw-104-07-g-s")
+				(field
+					(name "Description")
+				)
+				(field
+					(name "MPN") "TSW-104-07-G-S")
+				(field
+					(name "Manufacturer") "Samtec")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "VCC")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "SDA")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "SCL")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "ZhihuiReal")
+			(part "Part_J2")
+			(docs "https://www.samtec.com/products/tsw-106-07-g-s")
+			(fields
+				(field
+					(name "Reference") "J")
+				(field
+					(name "Value") "CUSTOM ISP MISO VCC SCK MOSI RESET GND")
+				(field
+					(name "Footprint") "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical")
+				(field
+					(name "Datasheet") "https://www.samtec.com/products/tsw-106-07-g-s")
+				(field
+					(name "Description")
+				)
+				(field
+					(name "MPN") "TSW-106-07-G-S")
+				(field
+					(name "Manufacturer") "Samtec")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "MISO")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "VCC")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "SCK")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "MOSI")
+					(type "passive")
+				)
+				(pin
+					(num "5")
+					(name "CS")
+					(type "passive")
+				)
+				(pin
+					(num "6")
+					(name "GND")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "ZhihuiReal")
+			(part "Part_R1")
+			(docs "https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-074K7L")
+			(fields
+				(field
+					(name "Reference") "R")
+				(field
+					(name "Value") "4.7k")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+				(field
+					(name "Datasheet") "https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-074K7L")
+				(field
+					(name "Description")
+				)
+				(field
+					(name "MPN") "RC0805FR-074K7L")
+				(field
+					(name "Manufacturer") "YAGEO")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "2")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "ZhihuiReal")
+			(part "Part_R2")
+			(docs "https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-074K7L")
+			(fields
+				(field
+					(name "Reference") "R")
+				(field
+					(name "Value") "4.7k")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+				(field
+					(name "Datasheet") "https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-074K7L")
+				(field
+					(name "Description")
+				)
+				(field
+					(name "MPN") "RC0805FR-074K7L")
+				(field
+					(name "Manufacturer") "YAGEO")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "2")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "ZhihuiReal")
+			(part "Part_R3")
+			(docs "https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-0710KL")
+			(fields
+				(field
+					(name "Reference") "R")
+				(field
+					(name "Value") "10k")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0805_2012Metric")
+				(field
+					(name "Datasheet") "https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-0710KL")
+				(field
+					(name "Description")
+				)
+				(field
+					(name "MPN") "RC0805FR-0710KL")
+				(field
+					(name "Manufacturer") "YAGEO")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "2")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "ZhihuiReal")
+			(part "Part_U1")
+			(docs "https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/ATmega48A-PA-88A-PA-168A-PA-328-P-DS-DS40002061B.pdf")
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "ATmega328P-PU")
+				(field
+					(name "Footprint") "Package_DIP:DIP-28_W7.62mm")
+				(field
+					(name "Datasheet") "https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/ATmega48A-PA-88A-PA-168A-PA-328-P-DS-DS40002061B.pdf")
+				(field
+					(name "Description")
+				)
+				(field
+					(name "MPN") "ATMEGA328P-PU")
+				(field
+					(name "Manufacturer") "Microchip")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "RESET")
+					(type "input")
+				)
+				(pin
+					(num "2")
+					(name "PD0")
+					(type "bidirectional")
+				)
+				(pin
+					(num "3")
+					(name "PD1")
+					(type "bidirectional")
+				)
+				(pin
+					(num "4")
+					(name "PD2")
+					(type "bidirectional")
+				)
+				(pin
+					(num "5")
+					(name "PD3")
+					(type "bidirectional")
+				)
+				(pin
+					(num "6")
+					(name "PD4")
+					(type "bidirectional")
+				)
+				(pin
+					(num "7")
+					(name "VCC")
+					(type "power_in")
+				)
+				(pin
+					(num "8")
+					(name "GND")
+					(type "power_in")
+				)
+				(pin
+					(num "9")
+					(name "XTAL1")
+					(type "input")
+				)
+				(pin
+					(num "10")
+					(name "XTAL2")
+					(type "output")
+				)
+				(pin
+					(num "11")
+					(name "PD5")
+					(type "bidirectional")
+				)
+				(pin
+					(num "12")
+					(name "PD6")
+					(type "bidirectional")
+				)
+				(pin
+					(num "13")
+					(name "PD7")
+					(type "bidirectional")
+				)
+				(pin
+					(num "14")
+					(name "PB0")
+					(type "bidirectional")
+				)
+				(pin
+					(num "15")
+					(name "PB1")
+					(type "bidirectional")
+				)
+				(pin
+					(num "16")
+					(name "PB2")
+					(type "bidirectional")
+				)
+				(pin
+					(num "17")
+					(name "PB3")
+					(type "bidirectional")
+				)
+				(pin
+					(num "18")
+					(name "PB4")
+					(type "bidirectional")
+				)
+				(pin
+					(num "19")
+					(name "PB5")
+					(type "bidirectional")
+				)
+				(pin
+					(num "20")
+					(name "AVCC")
+					(type "power_in")
+				)
+				(pin
+					(num "21")
+					(name "AREF")
+					(type "passive")
+				)
+				(pin
+					(num "22")
+					(name "GND2")
+					(type "power_in")
+				)
+				(pin
+					(num "23")
+					(name "PC0")
+					(type "bidirectional")
+				)
+				(pin
+					(num "24")
+					(name "PC1")
+					(type "bidirectional")
+				)
+				(pin
+					(num "25")
+					(name "PC2")
+					(type "bidirectional")
+				)
+				(pin
+					(num "26")
+					(name "PC3")
+					(type "bidirectional")
+				)
+				(pin
+					(num "27")
+					(name "PC4")
+					(type "bidirectional")
+				)
+				(pin
+					(num "28")
+					(name "PC5")
+					(type "bidirectional")
+				)
+			)
+		)
+		(libpart
+			(lib "ZhihuiReal")
+			(part "Part_U2")
+			(docs "https://sensirion.com/media/documents/33FD6951/624C4357/Datasheet_SHT4x.pdf")
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "SHT41-AD1B")
+				(field
+					(name "Footprint") "Sensor_Humidity:Sensirion_DFN-4_1.5x1.5mm_P0.8mm_SHT4x_NoCentralPad")
+				(field
+					(name "Datasheet") "https://sensirion.com/media/documents/33FD6951/624C4357/Datasheet_SHT4x.pdf")
+				(field
+					(name "Description")
+				)
+				(field
+					(name "MPN") "SHT41-AD1B-R2")
+				(field
+					(name "Manufacturer") "Sensirion")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "SDA")
+					(type "bidirectional")
+				)
+				(pin
+					(num "2")
+					(name "SCL")
+					(type "input")
+				)
+				(pin
+					(num "3")
+					(name "VDD")
+					(type "power_in")
+				)
+				(pin
+					(num "4")
+					(name "VSS")
+					(type "power_in")
+				)
+			)
+		)
+	)
+	(libraries
+		(library
+			(logical "ZhihuiReal")
+			(uri "${KIPRJMOD}/ZhihuiReal.kicad_sym")
+		)
+	)
+	(nets
+		(net
+			(code "1")
+			(name "Net-(C1-+)")
+			(class "Default")
+			(node
+				(ref "C1")
+				(pin "1")
+				(pinfunction "+_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C2")
+				(pin "1")
+				(pinfunction "+_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C4")
+				(pin "1")
+				(pinfunction "+_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J1")
+				(pin "2")
+				(pinfunction "VCC_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "2")
+				(pinfunction "VCC_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R1")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R2")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R3")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "20")
+				(pinfunction "AVCC_20")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U1")
+				(pin "7")
+				(pinfunction "VCC_7")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U2")
+				(pin "3")
+				(pinfunction "VDD_3")
+				(pintype "power_in")
+			)
+		)
+		(net
+			(code "2")
+			(name "Net-(C1--)")
+			(class "Default")
+			(node
+				(ref "C1")
+				(pin "2")
+				(pinfunction "-_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C2")
+				(pin "2")
+				(pinfunction "-_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C3")
+				(pin "2")
+				(pinfunction "-_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C4")
+				(pin "2")
+				(pinfunction "-_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "J1")
+				(pin "1")
+				(pinfunction "GND_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "6")
+				(pinfunction "GND_6")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "22")
+				(pinfunction "GND2_22")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U1")
+				(pin "8")
+				(pinfunction "GND_8")
+				(pintype "power_in")
+			)
+			(node
+				(ref "U2")
+				(pin "4")
+				(pinfunction "VSS_4")
+				(pintype "power_in")
+			)
+		)
+		(net
+			(code "3")
+			(name "Net-(C3-+)")
+			(class "Default")
+			(node
+				(ref "C3")
+				(pin "1")
+				(pinfunction "+_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "21")
+				(pinfunction "AREF_21")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "4")
+			(name "Net-(J1-SCL)")
+			(class "Default")
+			(node
+				(ref "J1")
+				(pin "4")
+				(pinfunction "SCL_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "R2")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "28")
+				(pinfunction "PC5_28")
+				(pintype "bidirectional")
+			)
+			(node
+				(ref "U2")
+				(pin "2")
+				(pinfunction "SCL_2")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "5")
+			(name "Net-(J1-SDA)")
+			(class "Default")
+			(node
+				(ref "J1")
+				(pin "3")
+				(pinfunction "SDA_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "R1")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "27")
+				(pinfunction "PC4_27")
+				(pintype "bidirectional")
+			)
+			(node
+				(ref "U2")
+				(pin "1")
+				(pinfunction "SDA_1")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "6")
+			(name "Net-(J2-CS)")
+			(class "Default")
+			(node
+				(ref "J2")
+				(pin "5")
+				(pinfunction "CS_5")
+				(pintype "passive")
+			)
+			(node
+				(ref "R3")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "1")
+				(pinfunction "RESET_1")
+				(pintype "input")
+			)
+		)
+		(net
+			(code "7")
+			(name "Net-(J2-MISO)")
+			(class "Default")
+			(node
+				(ref "J2")
+				(pin "1")
+				(pinfunction "MISO_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "18")
+				(pinfunction "PB4_18")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "8")
+			(name "Net-(J2-MOSI)")
+			(class "Default")
+			(node
+				(ref "J2")
+				(pin "4")
+				(pinfunction "MOSI_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "17")
+				(pinfunction "PB3_17")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "9")
+			(name "Net-(J2-SCK)")
+			(class "Default")
+			(node
+				(ref "J2")
+				(pin "3")
+				(pinfunction "SCK_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "19")
+				(pinfunction "PB5_19")
+				(pintype "bidirectional")
+			)
+		)
+		(net
+			(code "10")
+			(name "unconnected-(U1-PB0-Pad14)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "14")
+				(pinfunction "PB0_14")
+				(pintype "bidirectional+no_connect")
+			)
+		)
+		(net
+			(code "11")
+			(name "unconnected-(U1-PB1-Pad15)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "15")
+				(pinfunction "PB1_15")
+				(pintype "bidirectional+no_connect")
+			)
+		)
+		(net
+			(code "12")
+			(name "unconnected-(U1-PB2-Pad16)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "16")
+				(pinfunction "PB2_16")
+				(pintype "bidirectional+no_connect")
+			)
+		)
+		(net
+			(code "13")
+			(name "unconnected-(U1-PC0-Pad23)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "23")
+				(pinfunction "PC0_23")
+				(pintype "bidirectional+no_connect")
+			)
+		)
+		(net
+			(code "14")
+			(name "unconnected-(U1-PC1-Pad24)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "24")
+				(pinfunction "PC1_24")
+				(pintype "bidirectional+no_connect")
+			)
+		)
+		(net
+			(code "15")
+			(name "unconnected-(U1-PC2-Pad25)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "25")
+				(pinfunction "PC2_25")
+				(pintype "bidirectional+no_connect")
+			)
+		)
+		(net
+			(code "16")
+			(name "unconnected-(U1-PC3-Pad26)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "26")
+				(pinfunction "PC3_26")
+				(pintype "bidirectional+no_connect")
+			)
+		)
+		(net
+			(code "17")
+			(name "unconnected-(U1-PD0-Pad2)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "2")
+				(pinfunction "PD0_2")
+				(pintype "bidirectional+no_connect")
+			)
+		)
+		(net
+			(code "18")
+			(name "unconnected-(U1-PD1-Pad3)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "3")
+				(pinfunction "PD1_3")
+				(pintype "bidirectional+no_connect")
+			)
+		)
+		(net
+			(code "19")
+			(name "unconnected-(U1-PD2-Pad4)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "4")
+				(pinfunction "PD2_4")
+				(pintype "bidirectional+no_connect")
+			)
+		)
+		(net
+			(code "20")
+			(name "unconnected-(U1-PD3-Pad5)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "5")
+				(pinfunction "PD3_5")
+				(pintype "bidirectional+no_connect")
+			)
+		)
+		(net
+			(code "21")
+			(name "unconnected-(U1-PD4-Pad6)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "6")
+				(pinfunction "PD4_6")
+				(pintype "bidirectional+no_connect")
+			)
+		)
+		(net
+			(code "22")
+			(name "unconnected-(U1-PD5-Pad11)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "11")
+				(pinfunction "PD5_11")
+				(pintype "bidirectional+no_connect")
+			)
+		)
+		(net
+			(code "23")
+			(name "unconnected-(U1-PD6-Pad12)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "12")
+				(pinfunction "PD6_12")
+				(pintype "bidirectional+no_connect")
+			)
+		)
+		(net
+			(code "24")
+			(name "unconnected-(U1-PD7-Pad13)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "13")
+				(pinfunction "PD7_13")
+				(pintype "bidirectional+no_connect")
+			)
+		)
+		(net
+			(code "25")
+			(name "unconnected-(U1-XTAL1-Pad9)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "9")
+				(pinfunction "XTAL1_9")
+				(pintype "input+no_connect")
+			)
+		)
+		(net
+			(code "26")
+			(name "unconnected-(U1-XTAL2-Pad10)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "10")
+				(pinfunction "XTAL2_10")
+				(pintype "output+no_connect")
+			)
+		)
+	)
+)

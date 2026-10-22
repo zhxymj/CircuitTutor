@@ -1,0 +1,531 @@
+{
+  "version": 2,
+  "title": "Internal ATmega328P-PU 3.3V I2C + on-board SHT4x candidate",
+  "parts": [
+    {
+      "id": "U1",
+      "type": "atmega328",
+      "attrs": {
+        "value": "ATmega328P-PU"
+      },
+      "component": {
+        "mpn": "ATMEGA328P-PU",
+        "manufacturer": "Microchip",
+        "footprint": "Package_DIP:DIP-28_W7.62mm",
+        "datasheet": "https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/ATmega48A-PA-88A-PA-168A-PA-328-P-DS-DS40002061B.pdf",
+        "pin_map_source": "https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/ATmega48A-PA-88A-PA-168A-PA-328-P-DS-DS40002061B.pdf",
+        "pin_map": {
+          "RESET": "1",
+          "PD0": "2",
+          "PD1": "3",
+          "PD2": "4",
+          "PD3": "5",
+          "PD4": "6",
+          "VCC": "7",
+          "GND": "8",
+          "XTAL1": "9",
+          "XTAL2": "10",
+          "PD5": "11",
+          "PD6": "12",
+          "PD7": "13",
+          "PB0": "14",
+          "PB1": "15",
+          "PB2": "16",
+          "PB3": "17",
+          "PB4": "18",
+          "PB5": "19",
+          "AVCC": "20",
+          "AREF": "21",
+          "GND2": "22",
+          "PC0": "23",
+          "PC1": "24",
+          "PC2": "25",
+          "PC3": "26",
+          "PC4": "27",
+          "PC5": "28"
+        },
+        "pin_types": {
+          "RESET": "input",
+          "PD0": "bidirectional",
+          "PD1": "bidirectional",
+          "PD2": "bidirectional",
+          "PD3": "bidirectional",
+          "PD4": "bidirectional",
+          "VCC": "power_in",
+          "GND": "power_in",
+          "XTAL1": "input",
+          "XTAL2": "output",
+          "PD5": "bidirectional",
+          "PD6": "bidirectional",
+          "PD7": "bidirectional",
+          "PB0": "bidirectional",
+          "PB1": "bidirectional",
+          "PB2": "bidirectional",
+          "PB3": "bidirectional",
+          "PB4": "bidirectional",
+          "PB5": "bidirectional",
+          "AVCC": "power_in",
+          "AREF": "passive",
+          "GND2": "power_in",
+          "PC0": "bidirectional",
+          "PC1": "bidirectional",
+          "PC2": "bidirectional",
+          "PC3": "bidirectional",
+          "PC4": "bidirectional",
+          "PC5": "bidirectional"
+        }
+      },
+      "pcb": {
+        "x_mm": 14,
+        "y_mm": 8,
+        "rotation_deg": 0,
+        "side": "front"
+      }
+    },
+    {
+      "id": "U2",
+      "type": "i2c_rh_sensor",
+      "attrs": {
+        "value": "SHT41-AD1B"
+      },
+      "component": {
+        "mpn": "SHT41-AD1B-R2",
+        "manufacturer": "Sensirion",
+        "footprint": "Sensor_Humidity:Sensirion_DFN-4_1.5x1.5mm_P0.8mm_SHT4x_NoCentralPad",
+        "datasheet": "https://sensirion.com/media/documents/33FD6951/624C4357/Datasheet_SHT4x.pdf",
+        "pin_map_source": "https://sensirion.com/media/documents/33FD6951/624C4357/Datasheet_SHT4x.pdf",
+        "pin_map": {
+          "SDA": "1",
+          "SCL": "2",
+          "VDD": "3",
+          "VSS": "4"
+        },
+        "pin_types": {
+          "SDA": "bidirectional",
+          "SCL": "input",
+          "VDD": "power_in",
+          "VSS": "power_in"
+        }
+      },
+      "pcb": {
+        "x_mm": 33,
+        "y_mm": 12,
+        "rotation_deg": 0,
+        "side": "front"
+      }
+    },
+    {
+      "id": "J1",
+      "type": "i2c_header",
+      "attrs": {
+        "value": "I2C GND VCC SDA SCL"
+      },
+      "component": {
+        "mpn": "TSW-104-07-G-S",
+        "manufacturer": "Samtec",
+        "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",
+        "datasheet": "https://www.samtec.com/products/tsw-104-07-g-s",
+        "pin_map_source": "https://www.samtec.com/products/tsw-104-07-g-s",
+        "pin_map": {
+          "GND": "1",
+          "VCC": "2",
+          "SDA": "3",
+          "SCL": "4"
+        }
+      },
+      "pcb": {
+        "x_mm": 42,
+        "y_mm": 8,
+        "rotation_deg": 0,
+        "side": "front"
+      }
+    },
+    {
+      "id": "J2",
+      "type": "spi_header",
+      "attrs": {
+        "value": "CUSTOM ISP MISO VCC SCK MOSI RESET GND"
+      },
+      "component": {
+        "mpn": "TSW-106-07-G-S",
+        "manufacturer": "Samtec",
+        "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical",
+        "datasheet": "https://www.samtec.com/products/tsw-106-07-g-s",
+        "pin_map_source": "https://www.samtec.com/products/tsw-106-07-g-s",
+        "pin_map": {
+          "MISO": "1",
+          "VCC": "2",
+          "SCK": "3",
+          "MOSI": "4",
+          "CS": "5",
+          "GND": "6"
+        }
+      },
+      "pcb": {
+        "x_mm": 42,
+        "y_mm": 28,
+        "rotation_deg": 0,
+        "side": "front"
+      }
+    },
+    {
+      "id": "R1",
+      "type": "resistor",
+      "attrs": {
+        "value": "4.7k"
+      },
+      "component": {
+        "mpn": "RC0805FR-074K7L",
+        "manufacturer": "YAGEO",
+        "footprint": "Resistor_SMD:R_0805_2012Metric",
+        "datasheet": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-074K7L",
+        "pin_map_source": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-074K7L",
+        "pin_map": {
+          "1": "1",
+          "2": "2"
+        }
+      },
+      "pcb": {
+        "x_mm": 28,
+        "y_mm": 9,
+        "rotation_deg": 0,
+        "side": "front"
+      }
+    },
+    {
+      "id": "R2",
+      "type": "resistor",
+      "attrs": {
+        "value": "4.7k"
+      },
+      "component": {
+        "mpn": "RC0805FR-074K7L",
+        "manufacturer": "YAGEO",
+        "footprint": "Resistor_SMD:R_0805_2012Metric",
+        "datasheet": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-074K7L",
+        "pin_map_source": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-074K7L",
+        "pin_map": {
+          "1": "1",
+          "2": "2"
+        }
+      },
+      "pcb": {
+        "x_mm": 28,
+        "y_mm": 14,
+        "rotation_deg": 0,
+        "side": "front"
+      }
+    },
+    {
+      "id": "R3",
+      "type": "resistor",
+      "attrs": {
+        "value": "10k"
+      },
+      "component": {
+        "mpn": "RC0805FR-0710KL",
+        "manufacturer": "YAGEO",
+        "footprint": "Resistor_SMD:R_0805_2012Metric",
+        "datasheet": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-0710KL",
+        "pin_map_source": "https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-0710KL",
+        "pin_map": {
+          "1": "1",
+          "2": "2"
+        }
+      },
+      "pcb": {
+        "x_mm": 10,
+        "y_mm": 8,
+        "rotation_deg": 0,
+        "side": "front"
+      }
+    },
+    {
+      "id": "C1",
+      "type": "capacitor",
+      "attrs": {
+        "value": "100nF"
+      },
+      "component": {
+        "mpn": "GRM21BR71H104KA01L",
+        "manufacturer": "Murata",
+        "footprint": "Capacitor_SMD:C_0805_2012Metric",
+        "datasheet": "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71H104KA01-01.pdf",
+        "pin_map_source": "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71H104KA01-01.pdf",
+        "pin_map": {
+          "+": "1",
+          "-": "2"
+        }
+      },
+      "pcb": {
+        "x_mm": 10,
+        "y_mm": 23.24,
+        "rotation_deg": 0,
+        "side": "front"
+      }
+    },
+    {
+      "id": "C2",
+      "type": "capacitor",
+      "attrs": {
+        "value": "100nF"
+      },
+      "component": {
+        "mpn": "GRM21BR71H104KA01L",
+        "manufacturer": "Murata",
+        "footprint": "Capacitor_SMD:C_0805_2012Metric",
+        "datasheet": "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71H104KA01-01.pdf",
+        "pin_map_source": "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71H104KA01-01.pdf",
+        "pin_map": {
+          "+": "1",
+          "-": "2"
+        }
+      },
+      "pcb": {
+        "x_mm": 25,
+        "y_mm": 32,
+        "rotation_deg": 0,
+        "side": "front"
+      }
+    },
+    {
+      "id": "C3",
+      "type": "capacitor",
+      "attrs": {
+        "value": "100nF"
+      },
+      "component": {
+        "mpn": "GRM21BR71H104KA01L",
+        "manufacturer": "Murata",
+        "footprint": "Capacitor_SMD:C_0805_2012Metric",
+        "datasheet": "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71H104KA01-01.pdf",
+        "pin_map_source": "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71H104KA01-01.pdf",
+        "pin_map": {
+          "+": "1",
+          "-": "2"
+        }
+      },
+      "pcb": {
+        "x_mm": 25,
+        "y_mm": 24,
+        "rotation_deg": 0,
+        "side": "front"
+      }
+    },
+    {
+      "id": "C4",
+      "type": "capacitor",
+      "attrs": {
+        "value": "100nF"
+      },
+      "component": {
+        "mpn": "GRM21BR71H104KA01L",
+        "manufacturer": "Murata",
+        "footprint": "Capacitor_SMD:C_0805_2012Metric",
+        "datasheet": "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71H104KA01-01.pdf",
+        "pin_map_source": "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71H104KA01-01.pdf",
+        "pin_map": {
+          "+": "1",
+          "-": "2"
+        }
+      },
+      "pcb": {
+        "x_mm": 33,
+        "y_mm": 16,
+        "rotation_deg": 0,
+        "side": "front"
+      }
+    },
+    {
+      "id": "GND1",
+      "type": "gnd",
+      "attrs": {
+        "value": "external common ground"
+      }
+    },
+    {
+      "id": "VCC1",
+      "type": "vcc",
+      "attrs": {
+        "value": "3.3V"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "GND1:1",
+      "J1:GND"
+    ],
+    [
+      "J1:GND",
+      "U1:GND"
+    ],
+    [
+      "U1:GND",
+      "U1:GND2"
+    ],
+    [
+      "U1:GND2",
+      "U2:VSS"
+    ],
+    [
+      "U2:VSS",
+      "C1:-"
+    ],
+    [
+      "C1:-",
+      "C2:-"
+    ],
+    [
+      "C2:-",
+      "C3:-"
+    ],
+    [
+      "C3:-",
+      "C4:-"
+    ],
+    [
+      "C4:-",
+      "J2:GND"
+    ],
+    [
+      "VCC1:1",
+      "J1:VCC"
+    ],
+    [
+      "J1:VCC",
+      "U1:VCC"
+    ],
+    [
+      "U1:VCC",
+      "U1:AVCC"
+    ],
+    [
+      "U1:AVCC",
+      "U2:VDD"
+    ],
+    [
+      "U2:VDD",
+      "C1:+"
+    ],
+    [
+      "C1:+",
+      "C2:+"
+    ],
+    [
+      "C2:+",
+      "C4:+"
+    ],
+    [
+      "C4:+",
+      "R1:1"
+    ],
+    [
+      "R1:1",
+      "R2:1"
+    ],
+    [
+      "R2:1",
+      "R3:1"
+    ],
+    [
+      "R3:1",
+      "J2:VCC"
+    ],
+    [
+      "U1:PC4",
+      "R1:2"
+    ],
+    [
+      "R1:2",
+      "U2:SDA"
+    ],
+    [
+      "U2:SDA",
+      "J1:SDA"
+    ],
+    [
+      "U1:PC5",
+      "R2:2"
+    ],
+    [
+      "R2:2",
+      "U2:SCL"
+    ],
+    [
+      "U2:SCL",
+      "J1:SCL"
+    ],
+    [
+      "U1:AREF",
+      "C3:+"
+    ],
+    [
+      "U1:RESET",
+      "R3:2"
+    ],
+    [
+      "R3:2",
+      "J2:CS"
+    ],
+    [
+      "U1:PB3",
+      "J2:MOSI"
+    ],
+    [
+      "U1:PB4",
+      "J2:MISO"
+    ],
+    [
+      "U1:PB5",
+      "J2:SCK"
+    ]
+  ],
+  "board": {
+    "width_mm": 50,
+    "height_mm": 55,
+    "layers": 2,
+    "min_clearance_mm": 0.2,
+    "min_trace_width_mm": 0.2
+  },
+  "voltage_domains": [
+    {
+      "id": "logic",
+      "nominal_v": 3.3,
+      "min_v": 3.0,
+      "max_v": 3.6
+    }
+  ],
+  "provenance": {
+    "origin": "manual",
+    "source_id": "internal-active-atmega328p-sht4x-3v3-01"
+  },
+  "engineering_example": {
+    "classification": "internal_engineering_example",
+    "review_required": true,
+    "topology": "active_atmega328p_3v3_onboard_i2c_rh_sensor",
+    "independent_external_sample": false,
+    "sources": [
+      "https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/ATmega48A-PA-88A-PA-168A-PA-328-P-DS-DS40002061B.pdf",
+      "https://ww1.microchip.com/downloads/en/appnotes/atmel-2521-avr-hardware-design-considerations_applicationnote_avr042.pdf",
+      "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71H104KA01-01.pdf",
+      "https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-0710KL",
+      "https://www.samtec.com/products/tsw-104-07-g-s",
+      "https://www.samtec.com/products/tsw-106-07-g-s",
+      "https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-074K7L",
+      "https://gitlab.com/kicad/libraries/kicad-footprints",
+      "https://sensirion.com/media/documents/33FD6951/624C4357/Datasheet_SHT4x.pdf"
+    ],
+    "clock": "Internal calibrated 8MHz RC; at 3.3V the ATmega328P supports this clock per datasheet. No external crystal populated; fuse/firmware state must be verified with ISP.",
+    "analog": "AVCC connected to VCC with 100nF decoupling; AREF only decoupled to GND. ADC precision/filter not validated.",
+    "sensor": "On-board Sensirion SHT4x I2C temperature/humidity sensor, bare DFN-4; pin order 1=SDA 2=SCL 3=VDD 4=VSS taken from the KiCad official Sensor_Humidity symbol/footprint pair. I2C address not declared; sensor reading not validated.",
+    "pin_assignment": "J1 pads GND,VCC,SDA,SCL; J2 single-row custom ISP pads MISO,VCC,SCK,MOSI,RESET,GND. Not the standard 2x3 ISP connector.",
+    "assumptions": "One regulated external 3.3V source; 4.7k on-board pullups to 3.3V; external 3.3V I2C devices optional; no firmware/waveform/assembled board or sensor reading validation.",
+    "limitations": [
+      "ATmega328P is NRND per current manufacturer page",
+      "No ESD/protection circuit or reset pushbutton",
+      "No firmware or fuse programming performed",
+      "No physical assembly, I2C timing or sensor reading validation"
+    ]
+  }
+}

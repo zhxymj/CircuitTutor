@@ -115,7 +115,10 @@ class ExternalImportTests(unittest.TestCase):
             self.assertIsNone(result['circuit'])
 
     def test_hcd_upstream_ground_truth_with_current_source_is_rejected(self):
-        text = (ROOT / 'third_party/upstream/HCD/data/ground_truth/cir1.gt.json').read_text(encoding='utf-8')
+        ground_truth = ROOT / 'third_party/upstream/HCD/data/ground_truth/cir1.gt.json'
+        if not ground_truth.is_file():
+            self.skipTest('HCD 上游快照不随仓库分发（根许可证未明确），跳过该上游样本')
+        text = ground_truth.read_text(encoding='utf-8')
         result = convert('hcd', text)
         self.assertEqual(result['status'], 'rejected')
         self.assertEqual(result['issues'][0]['code'], 'UNSUPPORTED_COMPONENT')

@@ -1,0 +1,128 @@
+{
+  "source": "manual",
+  "name": "candidate",
+  "assurance": "internal",
+  "verdict": "pass",
+  "accepted": true,
+  "gate_order": [
+    "structure",
+    "erc",
+    "ratings",
+    "spice_deck",
+    "spice_runtime",
+    "kicad_export",
+    "official_erc",
+    "official_netlist"
+  ],
+  "gates": {
+    "structure": {
+      "status": "pass",
+      "required": true,
+      "issues": [],
+      "evidence": {
+        "version": 2
+      },
+      "reason": ""
+    },
+    "erc": {
+      "status": "pass",
+      "required": true,
+      "issues": [
+        {
+          "rule": "并联供电输出",
+          "message": "网络 N1 中多个供电输出脚 ['J1:VCC', 'J2:VCC'] 接到同一网络（两路稳压输出并联，输出电压难以一致，建议只用一路供电）",
+          "severity": "warning",
+          "pins": [
+            "J1:VCC",
+            "J2:VCC"
+          ]
+        },
+        {
+          "rule": "悬空输入",
+          "message": "输入脚 U1:XTAL1 没有连接到任何网络",
+          "severity": "warning",
+          "pins": [
+            "U1:XTAL1"
+          ]
+        }
+      ],
+      "evidence": {
+        "counts": {
+          "fatal": 0,
+          "major": 0,
+          "minor": 0,
+          "warning": 2
+        }
+      },
+      "reason": ""
+    },
+    "ratings": {
+      "status": "pass",
+      "required": true,
+      "issues": [
+        {
+          "rule": "大阻值电阻功耗提示",
+          "message": "电阻 R3（10000Ω）在约 10mA 下功耗可达 1000mW，请确认额定功率 ≥250mW",
+          "severity": "warn",
+          "pins": [
+            "R3"
+          ]
+        }
+      ],
+      "evidence": {
+        "danger_count": 0
+      },
+      "reason": ""
+    },
+    "spice_deck": {
+      "status": "not_applicable",
+      "required": false,
+      "issues": [],
+      "evidence": {
+        "unmodeled_types": [
+          "atmega328",
+          "i2c_header",
+          "i2c_rh_sensor",
+          "spi_header"
+        ]
+      },
+      "reason": "元件缺少可执行 SPICE 模型：atmega328, i2c_header, i2c_rh_sensor, spi_header"
+    },
+    "spice_runtime": {
+      "status": "not_applicable",
+      "required": false,
+      "issues": [],
+      "evidence": {},
+      "reason": "元件缺少可执行 SPICE 模型：atmega328, i2c_header, i2c_rh_sensor, spi_header"
+    },
+    "kicad_export": {
+      "status": "pass",
+      "required": true,
+      "issues": [],
+      "evidence": {
+        "sha256": "4eb14816483199edf233f96471c4f205b7a2a3ab437abb5d49180489d4cb221b",
+        "bytes": 36968
+      },
+      "reason": ""
+    },
+    "official_erc": {
+      "status": "not_run",
+      "required": false,
+      "issues": [],
+      "evidence": {},
+      "reason": "调用方选择离线内部验证模式"
+    },
+    "official_netlist": {
+      "status": "not_run",
+      "required": false,
+      "issues": [],
+      "evidence": {},
+      "reason": "调用方选择离线内部验证模式"
+    }
+  },
+  "blocking_gates": [],
+  "artifacts": {
+    "schematic": "C:\\Users\\30789\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_active\\run_e34bf9d7ac6c45be85d4fb00b97e1fec\\manufacturing\\run_1a436caa0359435dbe156abf7d8db589\\semantic_source\\candidate.kicad_sch",
+    "project": "C:\\Users\\30789\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_active\\run_e34bf9d7ac6c45be85d4fb00b97e1fec\\manufacturing\\run_1a436caa0359435dbe156abf7d8db589\\semantic_source\\candidate.kicad_pro"
+  }
+}

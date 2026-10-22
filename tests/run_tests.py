@@ -4,7 +4,7 @@
 用法::
 
     python -B tests/run_tests.py [FILTER ...]
-        [--profile fast|integration|eda|quality|all]
+        [--profile fast|integration|eda|quality|release|all]
         [--require-kicad] [--json-out PATH] [--audit-json-out PATH]
 
 退出码：0=全部通过；1=存在失败；2=能力缺失导致跳过或命令行用法错误。
@@ -28,7 +28,7 @@ from typing import Callable, Iterable, Sequence
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ROOT_PATH = Path(ROOT)
 TIMEOUT_S = 600
-BASE_PROFILES = frozenset({"fast", "integration", "eda", "quality"})
+BASE_PROFILES = frozenset({"fast", "integration", "eda", "quality", "release"})
 VALID_PROFILES = BASE_PROFILES | {"all"}
 _AUTO = object()
 
@@ -73,8 +73,8 @@ SUITES = (
     _suite("tests/test_external_import_http.py", "外部导入随机端口 HTTP 合同", {"integration"}),
     _suite("tests/test_upstream_vision.py", "本地 CircuitVision 隔离桥接合同", {"fast", "integration"}),
     _suite("tests/test_upstream_vision_http.py", "本地 CircuitVision 随机端口 HTTP 合同", {"integration"}),
-    _suite("tests/test_runnable_package.py", "可运行包文件选择、迁移启动与完整性合同", {"fast", "quality"}),
-    _suite("tests/test_runnable_package_refresh.py", "交付包增量更新、压缩流保留与清单合同", {"fast", "quality"}),
+    _suite("tests/test_runnable_package.py", "可运行包文件选择、迁移启动与完整性合同", {"release", "quality"}),
+    _suite("tests/test_runnable_package_refresh.py", "交付包增量更新、压缩流保留与清单合同", {"release", "quality"}, {"sevenzip"}),
     _suite("tests/test_native_model_suites.py", "内置 CircuitVision 与 HCD 数值算法独立环境回归", {"integration", "quality"}),
     _suite("tests/test_tscircuit_engine.py", "本机 tscircuit 代码生成、拒绝与进程回收", {"integration"}, {"node"}),
     _suite("core/autofix.py", "ERC 警告自动修复", {"fast"}),
@@ -101,7 +101,7 @@ SUITES = (
     _suite("tests/test_trace.py", "LLM 链路日志（request_id 贯穿）", {"fast"}),
     _suite("tests/test_footprints_pcb.py", "KiCad 封装映射 + PCB 预布局", {"eda"}),
     _suite("tests/test_eagle_footprint_repro.py", "源封装复现与焊盘几何等价性核对", {"fast", "quality"}),
-    _suite("tests/test_external_reference_cases.py", "外部源完整性、划分隔离与源电气接受合同", {"fast", "quality"}),
+    _suite("tests/test_external_reference_cases.py", "外部源完整性、划分隔离与源电气接受合同", {"fast", "quality"}, {"external_dataset"}),
     _suite("tests/test_pcb_real.py", "真实 KiCad 封装、焊盘映射与未布线 PCB 候选", {"eda", "quality"}),
     _suite("tests/test_pcb_manufacturing.py", "真实焊盘审计、严格 DRC 与制造候选失败回退", {"eda", "quality"}),
     _suite("tests/test_pcb_source_schematic.py", "真实引脚源原理图、官方网表与 PCB 实例一致性", {"eda", "quality"}),
@@ -191,6 +191,8 @@ def detect_capabilities(
     kicad_symbols=_AUTO,
     ngspice=_AUTO,
     edge=_AUTO,
+    sevenzip=_AUTO,
+    external_dataset=_AUTO,
 ) -> dict[str, bool]:
     """Probe optional executables/libraries, with injectable results for tests."""
 
@@ -229,12 +231,30 @@ def detect_capabilities(
             "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe",
             "C:/Program Files/Microsoft/Edge/Application/msedge.exe",
         ) if p)
+    if sevenzip is _AUTO:
+        # 交付打包套件按 tools/build_runnable_package.py 的推导方式定位工具链，
+        # 这里用同一路径探测：仓库不携带 7-Zip，克隆后该套件应整体跳过。
+        toolchain = Path(ROOT).parents[1] / "智绘电路工具链"
+        found = next(iter(toolchain.glob("7zip/**/7z.exe")), None) if toolchain.is_dir() else None
+        sevenzip = str(found) if found else None
+    if external_dataset is _AUTO:
+        # 外部参考数据集（33 块上游板，约 245 MB）不随仓库分发。
+        # 仅当驱动文件齐全且来源目录在位时才认为数据集可用，否则相关套件跳过。
+        dataset = Path(ROOT) / "data" / "external_references"
+        drivers = ("manifest.json", "external_requirement_tasks.json", "conversion_results.json")
+        try:
+            present_dirs = sum(1 for entry in dataset.iterdir() if entry.is_dir())
+        except OSError:
+            present_dirs = 0
+        external_dataset = all((dataset / name).is_file() for name in drivers) and present_dirs >= 20
     return {
         "node": bool(node),
         "kicad_cli": bool(kicad_cli),
         "kicad_symbols": bool(kicad_symbols),
         "ngspice": bool(ngspice),
         "edge": bool(edge),
+        "sevenzip": bool(sevenzip),
+        "external_dataset": bool(external_dataset),
     }
 
 

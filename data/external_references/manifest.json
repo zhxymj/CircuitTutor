@@ -1,0 +1,2035 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-09-26T10:17:14.753626+00:00",
+  "dataset_kind": "licensed_external_reference_sources",
+  "source_design_groups": 32,
+  "independently_validated_circuit_count": 0,
+  "T03_complete": false,
+  "target_external_cases": 30,
+  "sources": [
+    {
+      "source_id": "olimex_esp32_devkit_lipo_rev_d",
+      "repo": "OLIMEX/ESP32-DevKit-LiPo",
+      "commit": "1ebbbb5ceaa84b1d67631d8d542d7f6128c19fc1",
+      "revision": "D",
+      "design_family": "olimex_esp32_lipo",
+      "author": "OLIMEX Ltd",
+      "hardware_directory": "HARDWARE/ESP32-DevKit-LiPo-Rev.D",
+      "schematic": "ESP32-DevKit-Lipo_Rev_D.sch",
+      "libraries": [
+        "ESP32-DevKit-Lipo_Rev_D-cache.lib",
+        "ESP32-DevKit-Lipo_Rev_D.lib"
+      ],
+      "repo_url": "https://github.com/OLIMEX/ESP32-DevKit-LiPo",
+      "hardware_license": "Apache-2.0",
+      "license_verified": true,
+      "license_evidence": {
+        "url": "https://raw.githubusercontent.com/OLIMEX/ESP32-DevKit-LiPo/1ebbbb5ceaa84b1d67631d8d542d7f6128c19fc1/README.md",
+        "declaration": "Hardware is released under Apache 2.0 License",
+        "readme_sha256": "b25f47d6bde52e68181481d3c84fcec3a0485de18a2bf84aa51034ec8b71f181"
+      },
+      "use": "reference only; inspect 5V USB to 3.3V MCU and exposed I2C pins",
+      "split": "reference_only",
+      "files": [
+        {
+          "path": "olimex_esp32_devkit_lipo_rev_d/LICENSE",
+          "role": "license",
+          "upstream_path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/OLIMEX/ESP32-DevKit-LiPo/1ebbbb5ceaa84b1d67631d8d542d7f6128c19fc1/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357,
+          "modified": false
+        },
+        {
+          "path": "olimex_esp32_devkit_lipo_rev_d/ESP32-DevKit-Lipo_Rev_D.sch",
+          "role": "schematic",
+          "upstream_path": "HARDWARE/ESP32-DevKit-LiPo-Rev.D/ESP32-DevKit-Lipo_Rev_D.sch",
+          "url": "https://raw.githubusercontent.com/OLIMEX/ESP32-DevKit-LiPo/1ebbbb5ceaa84b1d67631d8d542d7f6128c19fc1/HARDWARE/ESP32-DevKit-LiPo-Rev.D/ESP32-DevKit-Lipo_Rev_D.sch",
+          "sha256": "c273003d7bbd19e9d95af52919b817a9dda184250a1ecc9147ff2eeb523e39a8",
+          "bytes": 1876258,
+          "modified": false
+        },
+        {
+          "path": "olimex_esp32_devkit_lipo_rev_d/ESP32-DevKit-Lipo_Rev_D-cache.lib",
+          "role": "symbol_library",
+          "upstream_path": "HARDWARE/ESP32-DevKit-LiPo-Rev.D/ESP32-DevKit-Lipo_Rev_D-cache.lib",
+          "url": "https://raw.githubusercontent.com/OLIMEX/ESP32-DevKit-LiPo/1ebbbb5ceaa84b1d67631d8d542d7f6128c19fc1/HARDWARE/ESP32-DevKit-LiPo-Rev.D/ESP32-DevKit-Lipo_Rev_D-cache.lib",
+          "sha256": "7f479fbb7477ad5d086c92cd1cfab0817270cd4a93ad98d43150d960a4ccd2d6",
+          "bytes": 20423,
+          "modified": false
+        },
+        {
+          "path": "olimex_esp32_devkit_lipo_rev_d/ESP32-DevKit-Lipo_Rev_D.lib",
+          "role": "symbol_library",
+          "upstream_path": "HARDWARE/ESP32-DevKit-LiPo-Rev.D/ESP32-DevKit-Lipo_Rev_D.lib",
+          "url": "https://raw.githubusercontent.com/OLIMEX/ESP32-DevKit-LiPo/1ebbbb5ceaa84b1d67631d8d542d7f6128c19fc1/HARDWARE/ESP32-DevKit-LiPo-Rev.D/ESP32-DevKit-Lipo_Rev_D.lib",
+          "sha256": "bc5b2bb8c1baeee01f90eea9e36bceafd6a870e5bf2d63a096ed9dc6d85e7e6a",
+          "bytes": 19423,
+          "modified": false
+        }
+      ],
+      "electrical_review": "not_run",
+      "catalog_conversion": "not_run",
+      "schematic_tool_readback": "not_run"
+    },
+    {
+      "source_id": "olimex_esp32_gateway_rev_i",
+      "repo": "OLIMEX/ESP32-GATEWAY",
+      "commit": "d45c9bc8120534b130a4f8bb8fa6cd3dc78e4ea0",
+      "revision": "I",
+      "design_family": "olimex_esp32_lipo",
+      "author": "OLIMEX Ltd",
+      "hardware_directory": "HARDWARE/Hardware revision I",
+      "schematic": "ESP32-GATEWAY_Rev_I.sch",
+      "libraries": [
+        "ESP32-GATEWAY_Rev_I-cache.lib",
+        "ESP32-GATEWAY_Rev_I-rescue.lib",
+        "ESP32-GATEWAY_Rev_I.lib"
+      ],
+      "repo_url": "https://github.com/OLIMEX/ESP32-GATEWAY",
+      "hardware_license": "Apache-2.0",
+      "license_verified": true,
+      "license_evidence": {
+        "url": "https://raw.githubusercontent.com/OLIMEX/ESP32-GATEWAY/d45c9bc8120534b130a4f8bb8fa6cd3dc78e4ea0/README.md",
+        "declaration": "Hardware is released under Apache 2.0 License",
+        "readme_sha256": "b416c6515c661bc83e623aa52accef9b757e49836555b339ee04765b2aaa8f69"
+      },
+      "use": "reference only; inspect 5V USB to 3.3V MCU and exposed I2C pins",
+      "split": "reference_only",
+      "files": [
+        {
+          "path": "olimex_esp32_gateway_rev_i/LICENSE",
+          "role": "license",
+          "upstream_path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/OLIMEX/ESP32-GATEWAY/d45c9bc8120534b130a4f8bb8fa6cd3dc78e4ea0/LICENSE",
+          "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
+          "bytes": 11357,
+          "modified": false
+        },
+        {
+          "path": "olimex_esp32_gateway_rev_i/ESP32-GATEWAY_Rev_I.sch",
+          "role": "schematic",
+          "upstream_path": "HARDWARE/Hardware revision I/ESP32-GATEWAY_Rev_I.sch",
+          "url": "https://raw.githubusercontent.com/OLIMEX/ESP32-GATEWAY/d45c9bc8120534b130a4f8bb8fa6cd3dc78e4ea0/HARDWARE/Hardware%20revision%20I/ESP32-GATEWAY_Rev_I.sch",
+          "sha256": "36db94b3ba665374e2bc9c13c274f9bf563274edd73fea308aed35f4c99149b4",
+          "bytes": 98487,
+          "modified": false
+        },
+        {
+          "path": "olimex_esp32_gateway_rev_i/ESP32-GATEWAY_Rev_I-cache.lib",
+          "role": "symbol_library",
+          "upstream_path": "HARDWARE/Hardware revision I/ESP32-GATEWAY_Rev_I-cache.lib",
+          "url": "https://raw.githubusercontent.com/OLIMEX/ESP32-GATEWAY/d45c9bc8120534b130a4f8bb8fa6cd3dc78e4ea0/HARDWARE/Hardware%20revision%20I/ESP32-GATEWAY_Rev_I-cache.lib",
+          "sha256": "4f97e585f13c7d53907ae03475f7232f10c7028049e6236acd3cd08f7f87f089",
+          "bytes": 33809,
+          "modified": false
+        },
+        {
+          "path": "olimex_esp32_gateway_rev_i/ESP32-GATEWAY_Rev_I-rescue.lib",
+          "role": "symbol_library",
+          "upstream_path": "HARDWARE/Hardware revision I/ESP32-GATEWAY_Rev_I-rescue.lib",
+          "url": "https://raw.githubusercontent.com/OLIMEX/ESP32-GATEWAY/d45c9bc8120534b130a4f8bb8fa6cd3dc78e4ea0/HARDWARE/Hardware%20revision%20I/ESP32-GATEWAY_Rev_I-rescue.lib",
+          "sha256": "63278ce43f4f94eb427516f7c3a548fd62273928c725b34347fd742d455c9b62",
+          "bytes": 449,
+          "modified": false
+        },
+        {
+          "path": "olimex_esp32_gateway_rev_i/ESP32-GATEWAY_Rev_I.lib",
+          "role": "symbol_library",
+          "upstream_path": "HARDWARE/Hardware revision I/ESP32-GATEWAY_Rev_I.lib",
+          "url": "https://raw.githubusercontent.com/OLIMEX/ESP32-GATEWAY/d45c9bc8120534b130a4f8bb8fa6cd3dc78e4ea0/HARDWARE/Hardware%20revision%20I/ESP32-GATEWAY_Rev_I.lib",
+          "sha256": "78f3d3cf13f7fe5df47a8928860817144f97de445c3bb90d801d6720a3050143",
+          "bytes": 28756,
+          "modified": false
+        }
+      ],
+      "electrical_review": "not_run",
+      "catalog_conversion": "not_run",
+      "schematic_tool_readback": "not_run"
+    },
+    {
+      "source_id": "sparkfun_qwiic_adapter",
+      "repo": "sparkfun/Qwiic_Adapter",
+      "repo_url": "https://github.com/sparkfun/Qwiic_Adapter",
+      "commit": "3c810f09ea89ea3e10fd5907076c6cccff8b224a",
+      "revision": "one source board per repository",
+      "author": "SparkFun Electronics",
+      "design_family": "passive_i2c_adapter",
+      "hardware_directory": "Hardware",
+      "schematic": "SparkFun Qwiic Adapter.sch",
+      "libraries": [],
+      "hardware_license": "CC-BY-SA-4.0",
+      "license_verified": true,
+      "license_evidence": {
+        "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Adapter/3c810f09ea89ea3e10fd5907076c6cccff8b224a/LICENSE.md",
+        "declaration": "Hardware / Creative Commons Share-alike 4.0 International",
+        "license_sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da"
+      },
+      "use": "reference MCU/I2C interface; other source-board functions may be outside target scope",
+      "split": "external_development",
+      "files": [
+        {
+          "path": "sparkfun_qwiic_adapter/LICENSE.md",
+          "role": "license",
+          "upstream_path": "LICENSE.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Adapter/3c810f09ea89ea3e10fd5907076c6cccff8b224a/LICENSE.md",
+          "sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da",
+          "bytes": 2883,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_adapter/README.upstream.md",
+          "role": "license_scope_readme",
+          "upstream_path": "README.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Adapter/3c810f09ea89ea3e10fd5907076c6cccff8b224a/README.md",
+          "sha256": "840ede6acd78132eb211917e348013dafed49cad8b17f13e2cc84e696137001d",
+          "bytes": 1135,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_adapter/SparkFun Qwiic Adapter.sch",
+          "role": "schematic",
+          "upstream_path": "Hardware/SparkFun Qwiic Adapter.sch",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Adapter/3c810f09ea89ea3e10fd5907076c6cccff8b224a/Hardware/SparkFun%20Qwiic%20Adapter.sch",
+          "sha256": "9321e50e38439681a34d109b8d4c7e8ff1e719dccdaf6e9c74937c53166b576b",
+          "bytes": 418766,
+          "modified": false
+        }
+      ],
+      "electrical_review": "not_run",
+      "catalog_conversion": "not_run",
+      "schematic_tool_readback": "not_run"
+    },
+    {
+      "source_id": "sparkfun_qwiic_mux_tca9548a",
+      "repo": "sparkfun/Qwiic_Mux_TCA9548A",
+      "repo_url": "https://github.com/sparkfun/Qwiic_Mux_TCA9548A",
+      "commit": "9548c6af9c1a74b11904dc5b28cc3f25f7cf2ecd",
+      "revision": "one source board per repository",
+      "author": "SparkFun Electronics",
+      "design_family": "i2c_mux",
+      "hardware_directory": "Hardware",
+      "schematic": "Qwiic Mux.sch",
+      "libraries": [],
+      "hardware_license": "CC-BY-SA-4.0",
+      "license_verified": true,
+      "license_evidence": {
+        "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Mux_TCA9548A/9548c6af9c1a74b11904dc5b28cc3f25f7cf2ecd/LICENSE.md",
+        "declaration": "Hardware / Creative Commons Share-alike 4.0 International",
+        "license_sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da"
+      },
+      "use": "reference MCU/I2C interface; other source-board functions may be outside target scope",
+      "split": "external_development",
+      "files": [
+        {
+          "path": "sparkfun_qwiic_mux_tca9548a/LICENSE.md",
+          "role": "license",
+          "upstream_path": "LICENSE.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Mux_TCA9548A/9548c6af9c1a74b11904dc5b28cc3f25f7cf2ecd/LICENSE.md",
+          "sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da",
+          "bytes": 2883,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_mux_tca9548a/README.upstream.md",
+          "role": "license_scope_readme",
+          "upstream_path": "README.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Mux_TCA9548A/9548c6af9c1a74b11904dc5b28cc3f25f7cf2ecd/README.md",
+          "sha256": "9d16e44bb4f49ad0bff505db8916dd44d53f11463267debf543a7f9a724fd76f",
+          "bytes": 1750,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_mux_tca9548a/Qwiic Mux.sch",
+          "role": "schematic",
+          "upstream_path": "Hardware/Qwiic Mux.sch",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Mux_TCA9548A/9548c6af9c1a74b11904dc5b28cc3f25f7cf2ecd/Hardware/Qwiic%20Mux.sch",
+          "sha256": "fb55d1f66d7bce9b5c111786a819d48e8e02ce68c1bfc1bb00a2af437a010566",
+          "bytes": 814815,
+          "modified": false
+        }
+      ],
+      "electrical_review": "not_run",
+      "catalog_conversion": "not_run",
+      "schematic_tool_readback": "not_run"
+    },
+    {
+      "source_id": "sparkfun_qwiic_scale",
+      "repo": "sparkfun/Qwiic_Scale",
+      "repo_url": "https://github.com/sparkfun/Qwiic_Scale",
+      "commit": "ab136d756a781f9ff104c225318d1604af385aac",
+      "revision": "one source board per repository",
+      "author": "SparkFun Electronics",
+      "design_family": "load_cell_interface",
+      "hardware_directory": "Hardware",
+      "schematic": "Qwiic_Scale.sch",
+      "libraries": [],
+      "hardware_license": "CC-BY-SA-4.0",
+      "license_verified": true,
+      "license_evidence": {
+        "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Scale/ab136d756a781f9ff104c225318d1604af385aac/LICENSE.md",
+        "declaration": "Hardware / Creative Commons Share-alike 4.0 International",
+        "license_sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da"
+      },
+      "use": "reference MCU/I2C interface; other source-board functions may be outside target scope",
+      "split": "external_holdout",
+      "files": [
+        {
+          "path": "sparkfun_qwiic_scale/LICENSE.md",
+          "role": "license",
+          "upstream_path": "LICENSE.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Scale/ab136d756a781f9ff104c225318d1604af385aac/LICENSE.md",
+          "sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da",
+          "bytes": 2883,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_scale/README.upstream.md",
+          "role": "license_scope_readme",
+          "upstream_path": "README.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Scale/ab136d756a781f9ff104c225318d1604af385aac/README.md",
+          "sha256": "d191613b03d5a3dd5df926731fdc423f5802e607caea84eba5092a542900292d",
+          "bytes": 2038,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_scale/Qwiic_Scale.sch",
+          "role": "schematic",
+          "upstream_path": "Hardware/Qwiic_Scale.sch",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Scale/ab136d756a781f9ff104c225318d1604af385aac/Hardware/Qwiic_Scale.sch",
+          "sha256": "cf0af9cd355648e56298580aaa822646dfd0b38716a44f55ebf5ee45292bf7a4",
+          "bytes": 971977,
+          "modified": false
+        }
+      ],
+      "electrical_review": "not_run",
+      "catalog_conversion": "not_run",
+      "schematic_tool_readback": "not_run"
+    },
+    {
+      "source_id": "sparkfun_qwiic_bme280_ccs811_combo",
+      "repo": "sparkfun/Qwiic_BME280_CCS811_Combo",
+      "repo_url": "https://github.com/sparkfun/Qwiic_BME280_CCS811_Combo",
+      "commit": "24f21ee7b71bf2f07594b96909ee8045eb931575",
+      "revision": "one source board per repository",
+      "author": "SparkFun Electronics",
+      "design_family": "environmental_combo",
+      "hardware_directory": "Hardware",
+      "schematic": "CSS811_BME280_Breakout.sch",
+      "libraries": [],
+      "hardware_license": "CC-BY-SA-4.0",
+      "license_verified": true,
+      "license_evidence": {
+        "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_BME280_CCS811_Combo/24f21ee7b71bf2f07594b96909ee8045eb931575/LICENSE.md",
+        "declaration": "Hardware / Creative Commons Share-alike 4.0 International",
+        "license_sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da"
+      },
+      "use": "reference MCU/I2C interface; other source-board functions may be outside target scope",
+      "split": "external_development",
+      "files": [
+        {
+          "path": "sparkfun_qwiic_bme280_ccs811_combo/LICENSE.md",
+          "role": "license",
+          "upstream_path": "LICENSE.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_BME280_CCS811_Combo/24f21ee7b71bf2f07594b96909ee8045eb931575/LICENSE.md",
+          "sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da",
+          "bytes": 2883,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_bme280_ccs811_combo/README.upstream.md",
+          "role": "license_scope_readme",
+          "upstream_path": "README.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_BME280_CCS811_Combo/24f21ee7b71bf2f07594b96909ee8045eb931575/README.md",
+          "sha256": "91bd2b0c0fb768479b36d5a0dde2c9a8ee755214ccdd3384edf7b1f955442617",
+          "bytes": 2747,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_bme280_ccs811_combo/CSS811_BME280_Breakout.sch",
+          "role": "schematic",
+          "upstream_path": "Hardware/CSS811_BME280_Breakout.sch",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_BME280_CCS811_Combo/24f21ee7b71bf2f07594b96909ee8045eb931575/Hardware/CSS811_BME280_Breakout.sch",
+          "sha256": "ecd1245bade582313056e5ed3075763ada7acc25b8f57c0be85e95bf76d57ca9",
+          "bytes": 759712,
+          "modified": false
+        }
+      ],
+      "electrical_review": "not_run",
+      "catalog_conversion": "not_run",
+      "schematic_tool_readback": "not_run"
+    },
+    {
+      "source_id": "sparkfun_qwiic_environmental_sensor_bme688",
+      "repo": "sparkfun/Qwiic_Environmental_Sensor_BME688",
+      "repo_url": "https://github.com/sparkfun/Qwiic_Environmental_Sensor_BME688",
+      "commit": "5edfc65e8dcb8d7a70e3810bbef42226bbbdb9cc",
+      "revision": "one source board per repository",
+      "author": "SparkFun Electronics",
+      "design_family": "environmental_combo",
+      "hardware_directory": "Hardware",
+      "schematic": "Qwiic_BME688.sch",
+      "libraries": [],
+      "hardware_license": "CC-BY-SA-4.0",
+      "license_verified": true,
+      "license_evidence": {
+        "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Environmental_Sensor_BME688/5edfc65e8dcb8d7a70e3810bbef42226bbbdb9cc/LICENSE.md",
+        "declaration": "Hardware / Creative Commons Share-alike 4.0 International",
+        "license_sha256": "b33cadecd974e6ec526dbd46bd64fcd8623323299320a199f8d52dabd1ac03cd"
+      },
+      "use": "reference MCU/I2C interface; other source-board functions may be outside target scope",
+      "split": "external_development",
+      "files": [
+        {
+          "path": "sparkfun_qwiic_environmental_sensor_bme688/LICENSE.md",
+          "role": "license",
+          "upstream_path": "LICENSE.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Environmental_Sensor_BME688/5edfc65e8dcb8d7a70e3810bbef42226bbbdb9cc/LICENSE.md",
+          "sha256": "b33cadecd974e6ec526dbd46bd64fcd8623323299320a199f8d52dabd1ac03cd",
+          "bytes": 3327,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_environmental_sensor_bme688/README.upstream.md",
+          "role": "license_scope_readme",
+          "upstream_path": "README.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Environmental_Sensor_BME688/5edfc65e8dcb8d7a70e3810bbef42226bbbdb9cc/README.md",
+          "sha256": "905eeb88dee03580fa4e834ef9f244c0aadbe3e31e62a5ccb323a7f23129a5cb",
+          "bytes": 3849,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_environmental_sensor_bme688/Qwiic_BME688.sch",
+          "role": "schematic",
+          "upstream_path": "Hardware/Qwiic_BME688.sch",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Environmental_Sensor_BME688/5edfc65e8dcb8d7a70e3810bbef42226bbbdb9cc/Hardware/Qwiic_BME688.sch",
+          "sha256": "50b319b67b4f763e71198c28a3f7571919296b6b1d725294cc06feef59f3a016",
+          "bytes": 991646,
+          "modified": false
+        }
+      ],
+      "electrical_review": "not_run",
+      "catalog_conversion": "not_run",
+      "schematic_tool_readback": "not_run"
+    },
+    {
+      "source_id": "sparkfun_qwiic_button",
+      "repo": "sparkfun/Qwiic_Button",
+      "repo_url": "https://github.com/sparkfun/Qwiic_Button",
+      "commit": "e89a82fe2ddb293bfe0d6d9f63ccf4782a77c359",
+      "revision": "one source board per repository",
+      "author": "SparkFun Electronics",
+      "design_family": "i2c_human_input",
+      "hardware_directory": "Hardware",
+      "schematic": "Qwiic_Button.sch",
+      "libraries": [],
+      "hardware_license": "CC-BY-SA-4.0",
+      "license_verified": true,
+      "license_evidence": {
+        "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Button/e89a82fe2ddb293bfe0d6d9f63ccf4782a77c359/LICENSE.md",
+        "declaration": "Hardware / Creative Commons Share-alike 4.0 International",
+        "license_sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da"
+      },
+      "use": "reference MCU/I2C interface; other source-board functions may be outside target scope",
+      "split": "external_development",
+      "files": [
+        {
+          "path": "sparkfun_qwiic_button/LICENSE.md",
+          "role": "license",
+          "upstream_path": "LICENSE.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Button/e89a82fe2ddb293bfe0d6d9f63ccf4782a77c359/LICENSE.md",
+          "sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da",
+          "bytes": 2883,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_button/README.upstream.md",
+          "role": "license_scope_readme",
+          "upstream_path": "README.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Button/e89a82fe2ddb293bfe0d6d9f63ccf4782a77c359/README.md",
+          "sha256": "0d603ee2fd8598b1d0b5600cc5e43d7ad9475e29d6af3aea212c69327b8d9c09",
+          "bytes": 2801,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_button/Qwiic_Button.sch",
+          "role": "schematic",
+          "upstream_path": "Hardware/Qwiic_Button.sch",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Button/e89a82fe2ddb293bfe0d6d9f63ccf4782a77c359/Hardware/Qwiic_Button.sch",
+          "sha256": "25bc8fdd93d1510385b9621aece5b182ba709d6c7d31f36d6d3152237e1ecb0d",
+          "bytes": 898283,
+          "modified": false
+        }
+      ],
+      "electrical_review": "not_run",
+      "catalog_conversion": "not_run",
+      "schematic_tool_readback": "not_run"
+    },
+    {
+      "source_id": "sparkfun_qwiic_joystick",
+      "repo": "sparkfun/Qwiic_Joystick",
+      "repo_url": "https://github.com/sparkfun/Qwiic_Joystick",
+      "commit": "872ce30c7db70375220e67d78398a19f7c60b9ab",
+      "revision": "one source board per repository",
+      "author": "SparkFun Electronics",
+      "design_family": "i2c_human_input",
+      "hardware_directory": "Hardware/Qwiic Joystick_Eagle",
+      "schematic": "Qwiic Joystick.sch",
+      "libraries": [],
+      "hardware_license": "CC-BY-SA-4.0",
+      "license_verified": true,
+      "license_evidence": {
+        "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Joystick/872ce30c7db70375220e67d78398a19f7c60b9ab/LICENSE.md",
+        "declaration": "Hardware / Creative Commons Share-alike 4.0 International",
+        "license_sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da"
+      },
+      "use": "reference MCU/I2C interface; other source-board functions may be outside target scope",
+      "split": "external_development",
+      "files": [
+        {
+          "path": "sparkfun_qwiic_joystick/LICENSE.md",
+          "role": "license",
+          "upstream_path": "LICENSE.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Joystick/872ce30c7db70375220e67d78398a19f7c60b9ab/LICENSE.md",
+          "sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da",
+          "bytes": 2883,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_joystick/README.upstream.md",
+          "role": "license_scope_readme",
+          "upstream_path": "README.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Joystick/872ce30c7db70375220e67d78398a19f7c60b9ab/README.md",
+          "sha256": "f27dceca354e7b691d3d3a69dc4855bd7514c1c7931404bb225e750d00988dfa",
+          "bytes": 3789,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_joystick/Qwiic Joystick.sch",
+          "role": "schematic",
+          "upstream_path": "Hardware/Qwiic Joystick_Eagle/Qwiic Joystick.sch",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Joystick/872ce30c7db70375220e67d78398a19f7c60b9ab/Hardware/Qwiic%20Joystick_Eagle/Qwiic%20Joystick.sch",
+          "sha256": "208c3e6add22aab057ddc77aca1a3d92ee5d8c8e084aea271a7f68ec340ff965",
+          "bytes": 772389,
+          "modified": false
+        }
+      ],
+      "electrical_review": "not_run",
+      "catalog_conversion": "not_run",
+      "schematic_tool_readback": "not_run"
+    },
+    {
+      "source_id": "sparkfun_qwiic_keypad",
+      "repo": "sparkfun/Qwiic_Keypad",
+      "repo_url": "https://github.com/sparkfun/Qwiic_Keypad",
+      "commit": "3c219d96fedc362823868bff1757e3e6ec07d017",
+      "revision": "one source board per repository",
+      "author": "SparkFun Electronics",
+      "design_family": "i2c_human_input",
+      "hardware_directory": "Hardware",
+      "schematic": "Qwiic_keypad.sch",
+      "libraries": [],
+      "hardware_license": "CC-BY-SA-4.0",
+      "license_verified": true,
+      "license_evidence": {
+        "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Keypad/3c219d96fedc362823868bff1757e3e6ec07d017/LICENSE.md",
+        "declaration": "Hardware / Creative Commons Share-alike 4.0 International",
+        "license_sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da"
+      },
+      "use": "reference MCU/I2C interface; other source-board functions may be outside target scope",
+      "split": "external_development",
+      "files": [
+        {
+          "path": "sparkfun_qwiic_keypad/LICENSE.md",
+          "role": "license",
+          "upstream_path": "LICENSE.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Keypad/3c219d96fedc362823868bff1757e3e6ec07d017/LICENSE.md",
+          "sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da",
+          "bytes": 2883,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_keypad/README.upstream.md",
+          "role": "license_scope_readme",
+          "upstream_path": "README.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Keypad/3c219d96fedc362823868bff1757e3e6ec07d017/README.md",
+          "sha256": "33dcdf3db066e0861dd62f9c46bdb76a15979adff8709f85d4b9d8ed454cec45",
+          "bytes": 2976,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_keypad/Qwiic_keypad.sch",
+          "role": "schematic",
+          "upstream_path": "Hardware/Qwiic_keypad.sch",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Keypad/3c219d96fedc362823868bff1757e3e6ec07d017/Hardware/Qwiic_keypad.sch",
+          "sha256": "c0062316e6e891d2898415903194570a32907a6b1789337758201a926f714920",
+          "bytes": 886848,
+          "modified": false
+        }
+      ],
+      "electrical_review": "not_run",
+      "catalog_conversion": "not_run",
+      "schematic_tool_readback": "not_run"
+    },
+    {
+      "source_id": "sparkfun_qwiic_human_presence_sensor_breakout_ak9753",
+      "repo": "sparkfun/Qwiic_Human_Presence_Sensor_Breakout_AK9753",
+      "repo_url": "https://github.com/sparkfun/Qwiic_Human_Presence_Sensor_Breakout_AK9753",
+      "commit": "bba6d9cf4ac79bd573f39fae4c4ac378468edfe0",
+      "revision": "one source board per repository",
+      "author": "SparkFun Electronics",
+      "design_family": "infrared_presence",
+      "hardware_directory": "Hardware",
+      "schematic": "AK9753 Human Movement Sensor.sch",
+      "libraries": [],
+      "hardware_license": "CC-BY-SA-4.0",
+      "license_verified": true,
+      "license_evidence": {
+        "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Human_Presence_Sensor_Breakout_AK9753/bba6d9cf4ac79bd573f39fae4c4ac378468edfe0/LICENSE.md",
+        "declaration": "Hardware / Creative Commons Share-alike 4.0 International",
+        "license_sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da"
+      },
+      "use": "reference MCU/I2C interface; other source-board functions may be outside target scope",
+      "split": "external_holdout",
+      "files": [
+        {
+          "path": "sparkfun_qwiic_human_presence_sensor_breakout_ak9753/LICENSE.md",
+          "role": "license",
+          "upstream_path": "LICENSE.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Human_Presence_Sensor_Breakout_AK9753/bba6d9cf4ac79bd573f39fae4c4ac378468edfe0/LICENSE.md",
+          "sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da",
+          "bytes": 2883,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_human_presence_sensor_breakout_ak9753/README.upstream.md",
+          "role": "license_scope_readme",
+          "upstream_path": "README.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Human_Presence_Sensor_Breakout_AK9753/bba6d9cf4ac79bd573f39fae4c4ac378468edfe0/README.md",
+          "sha256": "6ae7aeb984cc5bd72984eee3c32ca4aa18e703bfa725c5342110283cdbff9d48",
+          "bytes": 1452,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_human_presence_sensor_breakout_ak9753/AK9753 Human Movement Sensor.sch",
+          "role": "schematic",
+          "upstream_path": "Hardware/AK9753 Human Movement Sensor.sch",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Human_Presence_Sensor_Breakout_AK9753/bba6d9cf4ac79bd573f39fae4c4ac378468edfe0/Hardware/AK9753%20Human%20Movement%20Sensor.sch",
+          "sha256": "9d555ae9eb5ab0aff428b36d8d3b6bda92052d8d68cd495b0f176aaa0dd0185f",
+          "bytes": 709119,
+          "modified": false
+        }
+      ],
+      "electrical_review": "not_run",
+      "catalog_conversion": "not_run",
+      "schematic_tool_readback": "not_run",
+      "fetch_evidence": {
+        "method": "official codeload ZIP",
+        "commit_from": "Git archive ZIP comment",
+        "archive_sha256": "4a191134d538b58df14a4b26685a6f121b4fd21c4e20ad9b646f693f94f1ce10",
+        "pinned_archive_url": "https://codeload.github.com/sparkfun/Qwiic_Human_Presence_Sensor_Breakout_AK9753/zip/bba6d9cf4ac79bd573f39fae4c4ac378468edfe0",
+        "pre_download_hardware_license_review": {
+          "reviewed_on": "2026-09-26",
+          "license": "CC-BY-SA-4.0",
+          "hardware_scope_verified": true,
+          "review_method": "individual GitHub license web review before archive download",
+          "url": "https://github.com/sparkfun/Qwiic_Human_Presence_Sensor_Breakout_AK9753/blob/master/LICENSE.md"
+        }
+      }
+    },
+    {
+      "source_id": "sparkfun_qwiic_distance_vl53l1x",
+      "repo": "sparkfun/Qwiic_Distance_VL53L1X",
+      "repo_url": "https://github.com/sparkfun/Qwiic_Distance_VL53L1X",
+      "commit": "543b1e2d80325a39c2585882808757361f86cc66",
+      "revision": "one source board per repository",
+      "author": "SparkFun Electronics",
+      "design_family": "time_of_flight",
+      "hardware_directory": "Hardware",
+      "schematic": "Qwiic Distance Sensor - VL53L1X.sch",
+      "libraries": [],
+      "hardware_license": "CC-BY-SA-4.0",
+      "license_verified": true,
+      "license_evidence": {
+        "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Distance_VL53L1X/543b1e2d80325a39c2585882808757361f86cc66/LICENSE.md",
+        "declaration": "Hardware / Creative Commons Share-alike 4.0 International",
+        "license_sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da"
+      },
+      "use": "reference MCU/I2C interface; other source-board functions may be outside target scope",
+      "split": "external_holdout",
+      "files": [
+        {
+          "path": "sparkfun_qwiic_distance_vl53l1x/LICENSE.md",
+          "role": "license",
+          "upstream_path": "LICENSE.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Distance_VL53L1X/543b1e2d80325a39c2585882808757361f86cc66/LICENSE.md",
+          "sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da",
+          "bytes": 2883,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_distance_vl53l1x/README.upstream.md",
+          "role": "license_scope_readme",
+          "upstream_path": "README.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Distance_VL53L1X/543b1e2d80325a39c2585882808757361f86cc66/README.md",
+          "sha256": "a6819ddaf73e50d5d3055d28db309b46566c8545c488e0469acced51cb092f85",
+          "bytes": 2615,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_distance_vl53l1x/Qwiic Distance Sensor - VL53L1X.sch",
+          "role": "schematic",
+          "upstream_path": "Hardware/Qwiic Distance Sensor - VL53L1X.sch",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Distance_VL53L1X/543b1e2d80325a39c2585882808757361f86cc66/Hardware/Qwiic%20Distance%20Sensor%20-%20VL53L1X.sch",
+          "sha256": "b1fbc00f11de5e5e7dfd44feace261043fc47c179a8182157090dc9147d43acc",
+          "bytes": 1070165,
+          "modified": false
+        }
+      ],
+      "electrical_review": "not_run",
+      "catalog_conversion": "not_run",
+      "schematic_tool_readback": "not_run",
+      "fetch_evidence": {
+        "method": "official codeload ZIP",
+        "commit_from": "Git archive ZIP comment",
+        "archive_sha256": "cd753d34a6004f605bee57e9275ea4c654280742e91cef7e96de78f6745e5df5",
+        "pinned_archive_url": "https://codeload.github.com/sparkfun/Qwiic_Distance_VL53L1X/zip/543b1e2d80325a39c2585882808757361f86cc66",
+        "pre_download_hardware_license_review": {
+          "reviewed_on": "2026-09-26",
+          "license": "CC-BY-SA-4.0",
+          "hardware_scope_verified": true,
+          "review_method": "individual GitHub license web review before archive download",
+          "url": "https://github.com/sparkfun/Qwiic_Distance_VL53L1X/blob/master/LICENSE.md"
+        }
+      }
+    },
+    {
+      "source_id": "sparkfun_sparkfun_as3935_lightning_detector",
+      "repo": "sparkfun/SparkFun_AS3935_Lightning_Detector",
+      "repo_url": "https://github.com/sparkfun/SparkFun_AS3935_Lightning_Detector",
+      "commit": "e5c68988694d06dc4b19c65a573f02f4260eb706",
+      "revision": "one source board per repository",
+      "author": "SparkFun Electronics",
+      "design_family": "lightning_sensor",
+      "hardware_directory": "Hardware",
+      "schematic": "SparkFun_AS3935_Lightning_Detector.sch",
+      "libraries": [],
+      "hardware_license": "CC-BY-SA-4.0",
+      "license_verified": true,
+      "license_evidence": {
+        "url": "https://raw.githubusercontent.com/sparkfun/SparkFun_AS3935_Lightning_Detector/e5c68988694d06dc4b19c65a573f02f4260eb706/LICENSE.md",
+        "declaration": "Hardware / Creative Commons Share-alike 4.0 International",
+        "license_sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da"
+      },
+      "use": "reference MCU/I2C interface; other source-board functions may be outside target scope",
+      "split": "external_holdout",
+      "files": [
+        {
+          "path": "sparkfun_sparkfun_as3935_lightning_detector/LICENSE.md",
+          "role": "license",
+          "upstream_path": "LICENSE.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/SparkFun_AS3935_Lightning_Detector/e5c68988694d06dc4b19c65a573f02f4260eb706/LICENSE.md",
+          "sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da",
+          "bytes": 2883,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_sparkfun_as3935_lightning_detector/README.upstream.md",
+          "role": "license_scope_readme",
+          "upstream_path": "README.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/SparkFun_AS3935_Lightning_Detector/e5c68988694d06dc4b19c65a573f02f4260eb706/README.md",
+          "sha256": "c77ebd0942c1beaf9463d488730d836022dcd3b8a4dd2b5442868f4d8101cfd5",
+          "bytes": 2659,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_sparkfun_as3935_lightning_detector/SparkFun_AS3935_Lightning_Detector.sch",
+          "role": "schematic",
+          "upstream_path": "Hardware/SparkFun_AS3935_Lightning_Detector.sch",
+          "url": "https://raw.githubusercontent.com/sparkfun/SparkFun_AS3935_Lightning_Detector/e5c68988694d06dc4b19c65a573f02f4260eb706/Hardware/SparkFun_AS3935_Lightning_Detector.sch",
+          "sha256": "87a7b3742304e6a27c3b53f501b002cf2f4f34706f456471f760684191e8667c",
+          "bytes": 828470,
+          "modified": false
+        }
+      ],
+      "electrical_review": "not_run",
+      "catalog_conversion": "not_run",
+      "schematic_tool_readback": "not_run",
+      "fetch_evidence": {
+        "method": "official codeload ZIP",
+        "commit_from": "Git archive ZIP comment",
+        "archive_sha256": "6ef6fd5a937557169b4b444f7bc532f318fae98c3823fc82d461e0817416ea3d",
+        "pinned_archive_url": "https://codeload.github.com/sparkfun/SparkFun_AS3935_Lightning_Detector/zip/e5c68988694d06dc4b19c65a573f02f4260eb706",
+        "pre_download_hardware_license_review": {
+          "reviewed_on": "2026-09-26",
+          "license": "CC-BY-SA-4.0",
+          "hardware_scope_verified": true,
+          "review_method": "individual GitHub license web review before archive download",
+          "url": "https://github.com/sparkfun/SparkFun_AS3935_Lightning_Detector/blob/master/LICENSE.md"
+        }
+      }
+    },
+    {
+      "source_id": "sparkfun_qwiic_grideye",
+      "repo": "sparkfun/Qwiic_GRIDEye",
+      "repo_url": "https://github.com/sparkfun/Qwiic_GRIDEye",
+      "commit": "465f70b1e79fbb3b3d0d95e501549b212098c5de",
+      "revision": "one source board per repository",
+      "author": "SparkFun Electronics",
+      "design_family": "thermal_array",
+      "hardware_directory": "Hardware",
+      "schematic": "Qwiic_Grideye.sch",
+      "libraries": [],
+      "hardware_license": "CC-BY-SA-4.0",
+      "license_verified": true,
+      "license_evidence": {
+        "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_GRIDEye/465f70b1e79fbb3b3d0d95e501549b212098c5de/LICENSE.md",
+        "declaration": "Hardware / Creative Commons Share-alike 4.0 International",
+        "license_sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da"
+      },
+      "use": "reference MCU/I2C interface; other source-board functions may be outside target scope",
+      "split": "external_holdout",
+      "files": [
+        {
+          "path": "sparkfun_qwiic_grideye/LICENSE.md",
+          "role": "license",
+          "upstream_path": "LICENSE.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_GRIDEye/465f70b1e79fbb3b3d0d95e501549b212098c5de/LICENSE.md",
+          "sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da",
+          "bytes": 2883,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_grideye/README.upstream.md",
+          "role": "license_scope_readme",
+          "upstream_path": "README.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_GRIDEye/465f70b1e79fbb3b3d0d95e501549b212098c5de/README.md",
+          "sha256": "ee24e08ce6fc670a01bf92de77b9f91e46594e9a256d9cf208ff5480a49d5799",
+          "bytes": 2240,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_grideye/Qwiic_Grideye.sch",
+          "role": "schematic",
+          "upstream_path": "Hardware/Qwiic_Grideye.sch",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_GRIDEye/465f70b1e79fbb3b3d0d95e501549b212098c5de/Hardware/Qwiic_Grideye.sch",
+          "sha256": "3919fa1c1bfc9aef3d11e7390ce852da7652e69d8d2752f834488fb911346aef",
+          "bytes": 1055380,
+          "modified": false
+        }
+      ],
+      "electrical_review": "not_run",
+      "catalog_conversion": "not_run",
+      "schematic_tool_readback": "not_run",
+      "fetch_evidence": {
+        "method": "official codeload ZIP",
+        "commit_from": "Git archive ZIP comment",
+        "archive_sha256": "f2e878d41f04476387b08cdd06b02270e3b675eadb3d5de989ae9d859085c2e8",
+        "pinned_archive_url": "https://codeload.github.com/sparkfun/Qwiic_GRIDEye/zip/465f70b1e79fbb3b3d0d95e501549b212098c5de",
+        "pre_download_hardware_license_review": {
+          "reviewed_on": "2026-09-26",
+          "license": "CC-BY-SA-4.0",
+          "hardware_scope_verified": true,
+          "review_method": "individual GitHub license web review before archive download",
+          "url": "https://github.com/sparkfun/Qwiic_GRIDEye/blob/master/LICENSE.md"
+        }
+      }
+    },
+    {
+      "source_id": "sparkfun_qwiic_ir_array_mlx90640",
+      "repo": "sparkfun/Qwiic_IR_Array_MLX90640",
+      "repo_url": "https://github.com/sparkfun/Qwiic_IR_Array_MLX90640",
+      "commit": "035dccca8460e6320ef446646534df33f39546f3",
+      "revision": "one source board per repository",
+      "author": "SparkFun Electronics",
+      "design_family": "thermal_array",
+      "hardware_directory": "Hardware",
+      "schematic": "sparkfun-mlx90640-qwiic-breakout.sch",
+      "libraries": [],
+      "hardware_license": "CC-BY-SA-4.0",
+      "license_verified": true,
+      "license_evidence": {
+        "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_IR_Array_MLX90640/035dccca8460e6320ef446646534df33f39546f3/LICENSE.md",
+        "declaration": "Hardware / Creative Commons Share-alike 4.0 International",
+        "license_sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da"
+      },
+      "use": "reference MCU/I2C interface; other source-board functions may be outside target scope",
+      "split": "external_holdout",
+      "files": [
+        {
+          "path": "sparkfun_qwiic_ir_array_mlx90640/LICENSE.md",
+          "role": "license",
+          "upstream_path": "LICENSE.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_IR_Array_MLX90640/035dccca8460e6320ef446646534df33f39546f3/LICENSE.md",
+          "sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da",
+          "bytes": 2883,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_ir_array_mlx90640/README.upstream.md",
+          "role": "license_scope_readme",
+          "upstream_path": "README.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_IR_Array_MLX90640/035dccca8460e6320ef446646534df33f39546f3/README.md",
+          "sha256": "aad4a388e1d2c47ad41aed84d5ec632c8b7254d1192116800dc8eda08af03d1b",
+          "bytes": 1663,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_ir_array_mlx90640/sparkfun-mlx90640-qwiic-breakout.sch",
+          "role": "schematic",
+          "upstream_path": "Hardware/sparkfun-mlx90640-qwiic-breakout.sch",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_IR_Array_MLX90640/035dccca8460e6320ef446646534df33f39546f3/Hardware/sparkfun-mlx90640-qwiic-breakout.sch",
+          "sha256": "0c68c978e7e11e37efb27d8fcbc71d6c8cf3b9c8d6b25e3364d52870264948b0",
+          "bytes": 988623,
+          "modified": false
+        }
+      ],
+      "electrical_review": "not_run",
+      "catalog_conversion": "not_run",
+      "schematic_tool_readback": "not_run",
+      "fetch_evidence": {
+        "method": "official codeload ZIP",
+        "commit_from": "Git archive ZIP comment",
+        "archive_sha256": "0c1e69d641cecac815feb5f87942d8a22cdf714a950f6dc60435559f2ef853d4",
+        "pinned_archive_url": "https://codeload.github.com/sparkfun/Qwiic_IR_Array_MLX90640/zip/035dccca8460e6320ef446646534df33f39546f3",
+        "pre_download_hardware_license_review": {
+          "reviewed_on": "2026-09-26",
+          "license": "CC-BY-SA-4.0",
+          "hardware_scope_verified": true,
+          "review_method": "individual GitHub license web review before archive download",
+          "url": "https://github.com/sparkfun/Qwiic_IR_Array_MLX90640/blob/master/LICENSE.md"
+        }
+      }
+    },
+    {
+      "source_id": "sparkfun_qwiic_spectral_sensor_as726x",
+      "repo": "sparkfun/Qwiic_Spectral_Sensor_AS726X",
+      "repo_url": "https://github.com/sparkfun/Qwiic_Spectral_Sensor_AS726X",
+      "commit": "4a5ba39e5a32962e019a8dc454d0946af5c83de7",
+      "revision": "one source board per repository",
+      "author": "SparkFun Electronics",
+      "design_family": "spectral_sensor",
+      "hardware_directory": "Hardware",
+      "schematic": "Qwiic_Spectral_Sensor-AS726x.sch",
+      "libraries": [],
+      "hardware_license": "CC-BY-SA-4.0",
+      "license_verified": true,
+      "license_evidence": {
+        "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Spectral_Sensor_AS726X/4a5ba39e5a32962e019a8dc454d0946af5c83de7/LICENSE.md",
+        "declaration": "Hardware / Creative Commons Share-alike 4.0 International",
+        "license_sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da"
+      },
+      "use": "reference MCU/I2C interface; other source-board functions may be outside target scope",
+      "split": "external_development",
+      "files": [
+        {
+          "path": "sparkfun_qwiic_spectral_sensor_as726x/LICENSE.md",
+          "role": "license",
+          "upstream_path": "LICENSE.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Spectral_Sensor_AS726X/4a5ba39e5a32962e019a8dc454d0946af5c83de7/LICENSE.md",
+          "sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da",
+          "bytes": 2883,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_spectral_sensor_as726x/README.upstream.md",
+          "role": "license_scope_readme",
+          "upstream_path": "README.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Spectral_Sensor_AS726X/4a5ba39e5a32962e019a8dc454d0946af5c83de7/README.md",
+          "sha256": "a22ff7a853df4673fd9db3ff879c2be5830116135a1ec76aaddb6022378d3382",
+          "bytes": 2461,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_spectral_sensor_as726x/Qwiic_Spectral_Sensor-AS726x.sch",
+          "role": "schematic",
+          "upstream_path": "Hardware/Qwiic_Spectral_Sensor-AS726x.sch",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Spectral_Sensor_AS726X/4a5ba39e5a32962e019a8dc454d0946af5c83de7/Hardware/Qwiic_Spectral_Sensor-AS726x.sch",
+          "sha256": "375c6e1d2e246c9328b6afd6083170efa6fb880ca77074373310dc00be06e65d",
+          "bytes": 586721,
+          "modified": false
+        }
+      ],
+      "electrical_review": "not_run",
+      "catalog_conversion": "not_run",
+      "schematic_tool_readback": "not_run",
+      "fetch_evidence": {
+        "method": "official codeload ZIP",
+        "commit_from": "Git archive ZIP comment",
+        "archive_sha256": "8e4b75c014e585aed5e4ab10740e1f83ff173d8236b0320ed6001d19e3fa92ef",
+        "pinned_archive_url": "https://codeload.github.com/sparkfun/Qwiic_Spectral_Sensor_AS726X/zip/4a5ba39e5a32962e019a8dc454d0946af5c83de7",
+        "pre_download_hardware_license_review": {
+          "reviewed_on": "2026-09-26",
+          "license": "CC-BY-SA-4.0",
+          "hardware_scope_verified": true,
+          "review_method": "individual GitHub license web review before archive download",
+          "url": "https://github.com/sparkfun/Qwiic_Spectral_Sensor_AS726X/blob/master/LICENSE.md"
+        }
+      }
+    },
+    {
+      "source_id": "sparkfun_qwiic_imu_bno080",
+      "repo": "sparkfun/Qwiic_IMU_BNO080",
+      "repo_url": "https://github.com/sparkfun/Qwiic_IMU_BNO080",
+      "commit": "b821d9c1c76c2700fa70ade7783cc522cd3cc683",
+      "revision": "one source board per repository",
+      "author": "SparkFun Electronics",
+      "design_family": "inertial_sensor",
+      "hardware_directory": "Hardware",
+      "schematic": "Qwiic_IMU_Bonobo.sch",
+      "libraries": [],
+      "hardware_license": "CC-BY-SA-4.0",
+      "license_verified": true,
+      "license_evidence": {
+        "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_IMU_BNO080/b821d9c1c76c2700fa70ade7783cc522cd3cc683/LICENSE.md",
+        "declaration": "Hardware / Creative Commons Share-alike 4.0 International",
+        "license_sha256": "85ea78f46cbbb4a911d4e7aefe4928e442affe56da20cc2ed2ef09a9d05b3ca8"
+      },
+      "use": "reference MCU/I2C interface; other source-board functions may be outside target scope",
+      "split": "external_development",
+      "files": [
+        {
+          "path": "sparkfun_qwiic_imu_bno080/LICENSE.md",
+          "role": "license",
+          "upstream_path": "LICENSE.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_IMU_BNO080/b821d9c1c76c2700fa70ade7783cc522cd3cc683/LICENSE.md",
+          "sha256": "85ea78f46cbbb4a911d4e7aefe4928e442affe56da20cc2ed2ef09a9d05b3ca8",
+          "bytes": 2883,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_imu_bno080/README.upstream.md",
+          "role": "license_scope_readme",
+          "upstream_path": "README.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_IMU_BNO080/b821d9c1c76c2700fa70ade7783cc522cd3cc683/README.md",
+          "sha256": "eaf25a356d2f37567fe8991991bb14f89568aca91eb5d042d5409726d9bb5696",
+          "bytes": 2463,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_imu_bno080/Qwiic_IMU_Bonobo.sch",
+          "role": "schematic",
+          "upstream_path": "Hardware/Qwiic_IMU_Bonobo.sch",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_IMU_BNO080/b821d9c1c76c2700fa70ade7783cc522cd3cc683/Hardware/Qwiic_IMU_Bonobo.sch",
+          "sha256": "646d14dabcc4314fd99b1464b7838f84fe9530b675296449c55fe5d8d9edbe00",
+          "bytes": 1040931,
+          "modified": false
+        }
+      ],
+      "electrical_review": "not_run",
+      "catalog_conversion": "not_run",
+      "schematic_tool_readback": "not_run",
+      "fetch_evidence": {
+        "method": "official codeload ZIP",
+        "commit_from": "Git archive ZIP comment",
+        "archive_sha256": "a5d2629ca799b3fe0017e27e85ea5d24529e2362645e2e00137cd0aa655678cf",
+        "pinned_archive_url": "https://codeload.github.com/sparkfun/Qwiic_IMU_BNO080/zip/b821d9c1c76c2700fa70ade7783cc522cd3cc683",
+        "pre_download_hardware_license_review": {
+          "reviewed_on": "2026-09-26",
+          "license": "CC-BY-SA-4.0",
+          "hardware_scope_verified": true,
+          "review_method": "individual GitHub license web review before archive download",
+          "url": "https://github.com/sparkfun/Qwiic_IMU_BNO080/blob/master/LICENSE.md"
+        }
+      }
+    },
+    {
+      "source_id": "sparkfun_qwiic_micro_oled",
+      "repo": "sparkfun/Qwiic_Micro_OLED",
+      "repo_url": "https://github.com/sparkfun/Qwiic_Micro_OLED",
+      "commit": "c3ee0d437bd69ed8c1e5bce32e425c81365d2e21",
+      "revision": "one source board per repository",
+      "author": "SparkFun Electronics",
+      "design_family": "oled_display",
+      "hardware_directory": "Hardware",
+      "schematic": "Qwiic_OLED_Breakout.sch",
+      "libraries": [],
+      "hardware_license": "CC-BY-SA-4.0",
+      "license_verified": true,
+      "license_evidence": {
+        "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Micro_OLED/c3ee0d437bd69ed8c1e5bce32e425c81365d2e21/LICENSE.md",
+        "declaration": "Hardware / Creative Commons Share-alike 4.0 International",
+        "license_sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da"
+      },
+      "use": "reference MCU/I2C interface; other source-board functions may be outside target scope",
+      "split": "external_development",
+      "files": [
+        {
+          "path": "sparkfun_qwiic_micro_oled/LICENSE.md",
+          "role": "license",
+          "upstream_path": "LICENSE.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Micro_OLED/c3ee0d437bd69ed8c1e5bce32e425c81365d2e21/LICENSE.md",
+          "sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da",
+          "bytes": 2883,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_micro_oled/README.upstream.md",
+          "role": "license_scope_readme",
+          "upstream_path": "README.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Micro_OLED/c3ee0d437bd69ed8c1e5bce32e425c81365d2e21/README.md",
+          "sha256": "d6c1ccc6adffa973611d98122ea46e8ea76433b3d7e2de237e2cc06464cd2e51",
+          "bytes": 2494,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_micro_oled/Qwiic_OLED_Breakout.sch",
+          "role": "schematic",
+          "upstream_path": "Hardware/Qwiic_OLED_Breakout.sch",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Micro_OLED/c3ee0d437bd69ed8c1e5bce32e425c81365d2e21/Hardware/Qwiic_OLED_Breakout.sch",
+          "sha256": "c88909cd17a131c820f016075bf8ef047f0723c099f6d52c1805d9abb9f99edb",
+          "bytes": 1009715,
+          "modified": false
+        }
+      ],
+      "electrical_review": "not_run",
+      "catalog_conversion": "not_run",
+      "schematic_tool_readback": "not_run",
+      "fetch_evidence": {
+        "method": "official codeload ZIP",
+        "commit_from": "Git archive ZIP comment",
+        "archive_sha256": "ac3e4edf86fe17b05190570fc1c6a8723328b0c2148a6f7b4d383848b0db6e4c",
+        "pinned_archive_url": "https://codeload.github.com/sparkfun/Qwiic_Micro_OLED/zip/c3ee0d437bd69ed8c1e5bce32e425c81365d2e21",
+        "pre_download_hardware_license_review": {
+          "reviewed_on": "2026-09-26",
+          "license": "CC-BY-SA-4.0",
+          "hardware_scope_verified": true,
+          "review_method": "individual GitHub license web review before archive download",
+          "url": "https://github.com/sparkfun/Qwiic_Micro_OLED/blob/master/LICENSE.md"
+        }
+      }
+    },
+    {
+      "source_id": "sparkfun_qwiic_openlog",
+      "repo": "sparkfun/Qwiic_OpenLog",
+      "repo_url": "https://github.com/sparkfun/Qwiic_OpenLog",
+      "commit": "f3f6a3ec3f70fe4c14612b38fac360f26ee79a4c",
+      "revision": "one source board per repository",
+      "author": "SparkFun Electronics",
+      "design_family": "i2c_data_logger",
+      "hardware_directory": "Hardware",
+      "schematic": "Qwiic-OpenLog.sch",
+      "libraries": [],
+      "hardware_license": "CC-BY-SA-4.0",
+      "license_verified": true,
+      "license_evidence": {
+        "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_OpenLog/f3f6a3ec3f70fe4c14612b38fac360f26ee79a4c/License.md",
+        "declaration": "Hardware / Creative Commons Share-alike 4.0 International",
+        "license_sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da"
+      },
+      "use": "reference MCU/I2C interface; other source-board functions may be outside target scope",
+      "split": "external_development",
+      "files": [
+        {
+          "path": "sparkfun_qwiic_openlog/LICENSE.md",
+          "role": "license",
+          "upstream_path": "License.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_OpenLog/f3f6a3ec3f70fe4c14612b38fac360f26ee79a4c/License.md",
+          "sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da",
+          "bytes": 2883,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_openlog/README.upstream.md",
+          "role": "license_scope_readme",
+          "upstream_path": "README.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_OpenLog/f3f6a3ec3f70fe4c14612b38fac360f26ee79a4c/README.md",
+          "sha256": "a368f09587838c17f3ca0509d045f74cecec348499bbb9fc0bfe3b8c1c29e0dc",
+          "bytes": 3154,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_openlog/Qwiic-OpenLog.sch",
+          "role": "schematic",
+          "upstream_path": "Hardware/Qwiic-OpenLog.sch",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_OpenLog/f3f6a3ec3f70fe4c14612b38fac360f26ee79a4c/Hardware/Qwiic-OpenLog.sch",
+          "sha256": "9c7c5e36c6c33858044099e6118e59d11d1a490edf871ef86924eaa22c68af57",
+          "bytes": 967330,
+          "modified": false
+        }
+      ],
+      "electrical_review": "not_run",
+      "catalog_conversion": "not_run",
+      "schematic_tool_readback": "not_run",
+      "fetch_evidence": {
+        "method": "official codeload ZIP",
+        "commit_from": "Git archive ZIP comment",
+        "archive_sha256": "b70cefae8b7d8afd96ababfe429c33172801c1a8da5216439d16ae5d70e3c4ac",
+        "pinned_archive_url": "https://codeload.github.com/sparkfun/Qwiic_OpenLog/zip/f3f6a3ec3f70fe4c14612b38fac360f26ee79a4c",
+        "pre_download_hardware_license_review": {
+          "reviewed_on": "2026-09-26",
+          "license": "CC-BY-SA-4.0",
+          "hardware_scope_verified": true,
+          "review_method": "individual GitHub license web review before archive download",
+          "url": "https://github.com/sparkfun/Qwiic_OpenLog/blob/master/License.md"
+        }
+      }
+    },
+    {
+      "source_id": "sparkfun_pro_micro",
+      "repo": "sparkfun/Pro_Micro",
+      "repo_url": "https://github.com/sparkfun/Pro_Micro",
+      "commit": "df836f3bf2955c4f1199a852f618d2ac80866d47",
+      "revision": "one source board per repository",
+      "author": "SparkFun Electronics",
+      "design_family": "avr_mcu",
+      "hardware_directory": "Hardware/v13",
+      "schematic": "SparkFun_Pro_Micro.sch",
+      "libraries": [],
+      "hardware_license": "CC-BY-SA-4.0",
+      "license_verified": true,
+      "license_evidence": {
+        "url": "https://raw.githubusercontent.com/sparkfun/Pro_Micro/df836f3bf2955c4f1199a852f618d2ac80866d47/LICENSE.md",
+        "declaration": "Hardware / Creative Commons Share-alike 4.0 International",
+        "license_sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da"
+      },
+      "use": "reference MCU/I2C interface; other source-board functions may be outside target scope",
+      "split": "external_development",
+      "files": [
+        {
+          "path": "sparkfun_pro_micro/LICENSE.md",
+          "role": "license",
+          "upstream_path": "LICENSE.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Pro_Micro/df836f3bf2955c4f1199a852f618d2ac80866d47/LICENSE.md",
+          "sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da",
+          "bytes": 2883,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_pro_micro/README.upstream.md",
+          "role": "license_scope_readme",
+          "upstream_path": "README.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Pro_Micro/df836f3bf2955c4f1199a852f618d2ac80866d47/README.md",
+          "sha256": "256fa4b5bae2af8c98824ebaea3e19c2ff88f25fa4a5dbbc3158b25b8f85da46",
+          "bytes": 3367,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_pro_micro/SparkFun_Pro_Micro.sch",
+          "role": "schematic",
+          "upstream_path": "Hardware/v13/SparkFun_Pro_Micro.sch",
+          "url": "https://raw.githubusercontent.com/sparkfun/Pro_Micro/df836f3bf2955c4f1199a852f618d2ac80866d47/Hardware/v13/SparkFun_Pro_Micro.sch",
+          "sha256": "0d92b637f5b791d9fcb6b8ea02358ea9eaecd18af28af2d87820d0db6be68c23",
+          "bytes": 1286383,
+          "modified": false
+        }
+      ],
+      "electrical_review": "not_run",
+      "catalog_conversion": "not_run",
+      "schematic_tool_readback": "not_run",
+      "fetch_evidence": {
+        "method": "official codeload ZIP",
+        "commit_from": "Git archive ZIP comment",
+        "archive_sha256": "6ebc0494fcc09b084819b35135635aad5a01851d424f8a84e499029b96da0a77",
+        "pinned_archive_url": "https://codeload.github.com/sparkfun/Pro_Micro/zip/df836f3bf2955c4f1199a852f618d2ac80866d47",
+        "pre_download_hardware_license_review": {
+          "reviewed_on": "2026-09-26",
+          "license": "CC-BY-SA-4.0",
+          "hardware_scope_verified": true,
+          "review_method": "individual GitHub license web review before archive download",
+          "url": "https://github.com/sparkfun/Pro_Micro/blob/main/LICENSE.md"
+        }
+      }
+    },
+    {
+      "source_id": "sparkfun_sparkfun_gps_breakout_xa1110_qwiic",
+      "repo": "sparkfun/SparkFun_GPS_Breakout_XA1110_Qwiic",
+      "repo_url": "https://github.com/sparkfun/SparkFun_GPS_Breakout_XA1110_Qwiic",
+      "commit": "7087523171f5af561265c4c265e2ac88ed164452",
+      "revision": "one source board per repository",
+      "author": "SparkFun Electronics",
+      "design_family": "gnss_interface",
+      "hardware_directory": "Hardware",
+      "schematic": "Qwiic GPS - Titan X1.sch",
+      "libraries": [],
+      "hardware_license": "CC-BY-SA-4.0",
+      "license_verified": true,
+      "license_evidence": {
+        "url": "https://raw.githubusercontent.com/sparkfun/SparkFun_GPS_Breakout_XA1110_Qwiic/7087523171f5af561265c4c265e2ac88ed164452/LICENSE.md",
+        "declaration": "Hardware / Creative Commons Share-alike 4.0 International",
+        "license_sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da"
+      },
+      "use": "reference MCU/I2C interface; other source-board functions may be outside target scope",
+      "split": "external_development",
+      "files": [
+        {
+          "path": "sparkfun_sparkfun_gps_breakout_xa1110_qwiic/LICENSE.md",
+          "role": "license",
+          "upstream_path": "LICENSE.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/SparkFun_GPS_Breakout_XA1110_Qwiic/7087523171f5af561265c4c265e2ac88ed164452/LICENSE.md",
+          "sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da",
+          "bytes": 2883,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_sparkfun_gps_breakout_xa1110_qwiic/README.upstream.md",
+          "role": "license_scope_readme",
+          "upstream_path": "README.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/SparkFun_GPS_Breakout_XA1110_Qwiic/7087523171f5af561265c4c265e2ac88ed164452/README.md",
+          "sha256": "75a40c8aea5d124adc8ac9d5b394c189e55b518c3a9e99880ec7f540c86f35c4",
+          "bytes": 2141,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_sparkfun_gps_breakout_xa1110_qwiic/Qwiic GPS - Titan X1.sch",
+          "role": "schematic",
+          "upstream_path": "Hardware/Qwiic GPS - Titan X1.sch",
+          "url": "https://raw.githubusercontent.com/sparkfun/SparkFun_GPS_Breakout_XA1110_Qwiic/7087523171f5af561265c4c265e2ac88ed164452/Hardware/Qwiic%20GPS%20-%20Titan%20X1.sch",
+          "sha256": "154919f01d9d4d0fbc2bd7733c17f331ba146d558ba300710de0c0c54bb600c8",
+          "bytes": 890343,
+          "modified": false
+        }
+      ],
+      "electrical_review": "not_run",
+      "catalog_conversion": "not_run",
+      "schematic_tool_readback": "not_run",
+      "fetch_evidence": {
+        "method": "official codeload ZIP",
+        "commit_from": "Git archive ZIP comment",
+        "archive_sha256": "de97804d195fb3b80fec15721f9b260343badc92635509456e9a28b839e03be6",
+        "pinned_archive_url": "https://codeload.github.com/sparkfun/SparkFun_GPS_Breakout_XA1110_Qwiic/zip/7087523171f5af561265c4c265e2ac88ed164452",
+        "pre_download_hardware_license_review": {
+          "reviewed_on": "2026-09-26",
+          "license": "CC-BY-SA-4.0",
+          "hardware_scope_verified": true,
+          "review_method": "individual GitHub license web review before archive download",
+          "url": "https://github.com/sparkfun/SparkFun_GPS_Breakout_XA1110_Qwiic/blob/master/LICENSE.md"
+        }
+      }
+    },
+    {
+      "source_id": "sparkfun_sparkfun_photodetector_breakout_max30101_qwiic",
+      "repo": "sparkfun/SparkFun_Photodetector_Breakout_MAX30101_Qwiic",
+      "repo_url": "https://github.com/sparkfun/SparkFun_Photodetector_Breakout_MAX30101_Qwiic",
+      "commit": "854e0efe4b5f3f37585929201035b5f90c2cb1bc",
+      "revision": "one source board per repository",
+      "author": "SparkFun Electronics",
+      "design_family": "optical_sensor",
+      "hardware_directory": "Hardware",
+      "schematic": "SparkFun_MAX30101_Qwiic.sch",
+      "libraries": [],
+      "hardware_license": "CC-BY-SA-4.0",
+      "license_verified": true,
+      "license_evidence": {
+        "url": "https://raw.githubusercontent.com/sparkfun/SparkFun_Photodetector_Breakout_MAX30101_Qwiic/854e0efe4b5f3f37585929201035b5f90c2cb1bc/LICENSE.md",
+        "declaration": "Hardware / Creative Commons Share-alike 4.0 International",
+        "license_sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da"
+      },
+      "use": "reference MCU/I2C interface; other source-board functions may be outside target scope",
+      "split": "external_development",
+      "files": [
+        {
+          "path": "sparkfun_sparkfun_photodetector_breakout_max30101_qwiic/LICENSE.md",
+          "role": "license",
+          "upstream_path": "LICENSE.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/SparkFun_Photodetector_Breakout_MAX30101_Qwiic/854e0efe4b5f3f37585929201035b5f90c2cb1bc/LICENSE.md",
+          "sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da",
+          "bytes": 2883,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_sparkfun_photodetector_breakout_max30101_qwiic/README.upstream.md",
+          "role": "license_scope_readme",
+          "upstream_path": "README.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/SparkFun_Photodetector_Breakout_MAX30101_Qwiic/854e0efe4b5f3f37585929201035b5f90c2cb1bc/README.md",
+          "sha256": "3913f54694f17edf212aec66df50c974f1c4470609135f2743146f7dd10d837c",
+          "bytes": 2630,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_sparkfun_photodetector_breakout_max30101_qwiic/SparkFun_MAX30101_Qwiic.sch",
+          "role": "schematic",
+          "upstream_path": "Hardware/SparkFun_MAX30101_Qwiic.sch",
+          "url": "https://raw.githubusercontent.com/sparkfun/SparkFun_Photodetector_Breakout_MAX30101_Qwiic/854e0efe4b5f3f37585929201035b5f90c2cb1bc/Hardware/SparkFun_MAX30101_Qwiic.sch",
+          "sha256": "8756cbd59cd4f775965098e1910625b5fcd9c9b7472c32ff330fdedd55f70fb7",
+          "bytes": 1046483,
+          "modified": false
+        }
+      ],
+      "electrical_review": "not_run",
+      "catalog_conversion": "not_run",
+      "schematic_tool_readback": "not_run",
+      "fetch_evidence": {
+        "method": "official codeload ZIP",
+        "commit_from": "Git archive ZIP comment",
+        "archive_sha256": "6cb7cf6dda16d0d61d9c74c3556037691629f8bfd6d21ac94c693e4e81474a76",
+        "pinned_archive_url": "https://codeload.github.com/sparkfun/SparkFun_Photodetector_Breakout_MAX30101_Qwiic/zip/854e0efe4b5f3f37585929201035b5f90c2cb1bc",
+        "pre_download_hardware_license_review": {
+          "reviewed_on": "2026-09-26",
+          "license": "CC-BY-SA-4.0",
+          "hardware_scope_verified": true,
+          "review_method": "individual GitHub license web review before archive download",
+          "url": "https://github.com/sparkfun/SparkFun_Photodetector_Breakout_MAX30101_Qwiic/blob/master/LICENSE.md"
+        }
+      }
+    },
+    {
+      "source_id": "sparkfun_qwiic_hat_for_raspberry_pi",
+      "repo": "sparkfun/Qwiic_Hat_for_Raspberry_Pi",
+      "repo_url": "https://github.com/sparkfun/Qwiic_Hat_for_Raspberry_Pi",
+      "commit": "398c9a96426808707a5230f6aac4adc2eb47b9eb",
+      "revision": "one source board per repository",
+      "author": "SparkFun Electronics",
+      "design_family": "passive_i2c_adapter",
+      "hardware_directory": "Hardware",
+      "schematic": "Qwiic Shield for RaspberryPi.sch",
+      "libraries": [],
+      "hardware_license": "CC-BY-SA-4.0",
+      "license_verified": true,
+      "license_evidence": {
+        "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Hat_for_Raspberry_Pi/398c9a96426808707a5230f6aac4adc2eb47b9eb/LICENSE.md",
+        "declaration": "Hardware / Creative Commons Share-alike 4.0 International",
+        "license_sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da"
+      },
+      "use": "reference MCU/I2C interface; other source-board functions may be outside target scope",
+      "split": "external_development",
+      "files": [
+        {
+          "path": "sparkfun_qwiic_hat_for_raspberry_pi/LICENSE.md",
+          "role": "license",
+          "upstream_path": "LICENSE.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Hat_for_Raspberry_Pi/398c9a96426808707a5230f6aac4adc2eb47b9eb/LICENSE.md",
+          "sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da",
+          "bytes": 2883,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_hat_for_raspberry_pi/README.upstream.md",
+          "role": "license_scope_readme",
+          "upstream_path": "README.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Hat_for_Raspberry_Pi/398c9a96426808707a5230f6aac4adc2eb47b9eb/README.md",
+          "sha256": "fcce24452212ba228a2c811745cccc30fa7980791e7e5740b1af750371e18ab7",
+          "bytes": 1025,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_hat_for_raspberry_pi/Qwiic Shield for RaspberryPi.sch",
+          "role": "schematic",
+          "upstream_path": "Hardware/Qwiic Shield for RaspberryPi.sch",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Hat_for_Raspberry_Pi/398c9a96426808707a5230f6aac4adc2eb47b9eb/Hardware/Qwiic%20Shield%20for%20RaspberryPi.sch",
+          "sha256": "1cacbe4fca9fa92feca030f5daa718cc0bd64f45f6c8e066e305491c64b50a84",
+          "bytes": 1485183,
+          "modified": false
+        }
+      ],
+      "electrical_review": "not_run",
+      "catalog_conversion": "not_run",
+      "schematic_tool_readback": "not_run",
+      "fetch_evidence": {
+        "method": "official codeload ZIP",
+        "commit_from": "Git archive ZIP comment",
+        "archive_sha256": "592a6060a9b712950e36cb99bc871c2c3444a1dcd2572c0a0cde604a01179d65",
+        "pinned_archive_url": "https://codeload.github.com/sparkfun/Qwiic_Hat_for_Raspberry_Pi/zip/398c9a96426808707a5230f6aac4adc2eb47b9eb",
+        "pre_download_hardware_license_review": {
+          "reviewed_on": "2026-09-26",
+          "license": "CC-BY-SA-4.0",
+          "hardware_scope_verified": true,
+          "review_method": "individual GitHub license web review before archive download",
+          "url": "https://github.com/sparkfun/Qwiic_Hat_for_Raspberry_Pi/blob/master/LICENSE.md"
+        }
+      }
+    },
+    {
+      "source_id": "sparkfun_qwiic_shield_for_teensy",
+      "repo": "sparkfun/Qwiic_Shield_for_Teensy",
+      "repo_url": "https://github.com/sparkfun/Qwiic_Shield_for_Teensy",
+      "commit": "a15d80b1ad051e0e96849727f491e0ada6166392",
+      "revision": "one source board per repository",
+      "author": "SparkFun Electronics",
+      "design_family": "passive_i2c_adapter",
+      "hardware_directory": "Hardware",
+      "schematic": "Qwiic_Shield_for_Teensy.sch",
+      "libraries": [],
+      "hardware_license": "CC-BY-SA-4.0",
+      "license_verified": true,
+      "license_evidence": {
+        "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Shield_for_Teensy/a15d80b1ad051e0e96849727f491e0ada6166392/LICENSE.md",
+        "declaration": "Hardware / Creative Commons Share-alike 4.0 International",
+        "license_sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da"
+      },
+      "use": "reference MCU/I2C interface; other source-board functions may be outside target scope",
+      "split": "external_development",
+      "files": [
+        {
+          "path": "sparkfun_qwiic_shield_for_teensy/LICENSE.md",
+          "role": "license",
+          "upstream_path": "LICENSE.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Shield_for_Teensy/a15d80b1ad051e0e96849727f491e0ada6166392/LICENSE.md",
+          "sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da",
+          "bytes": 2883,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_shield_for_teensy/README.upstream.md",
+          "role": "license_scope_readme",
+          "upstream_path": "README.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Shield_for_Teensy/a15d80b1ad051e0e96849727f491e0ada6166392/README.md",
+          "sha256": "e093e13d96f1611cac059c8178a703d4ff426dcaac2ef0d6575c99d4469a0073",
+          "bytes": 1528,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_shield_for_teensy/Qwiic_Shield_for_Teensy.sch",
+          "role": "schematic",
+          "upstream_path": "Hardware/Qwiic_Shield_for_Teensy.sch",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Shield_for_Teensy/a15d80b1ad051e0e96849727f491e0ada6166392/Hardware/Qwiic_Shield_for_Teensy.sch",
+          "sha256": "c332510e1bb2644f8cc6adf9e2aa8fad4feb10db42071f10f7bf38daac5d2546",
+          "bytes": 1036295,
+          "modified": false
+        }
+      ],
+      "electrical_review": "not_run",
+      "catalog_conversion": "not_run",
+      "schematic_tool_readback": "not_run",
+      "fetch_evidence": {
+        "method": "official codeload ZIP",
+        "commit_from": "Git archive ZIP comment",
+        "archive_sha256": "133d0201c3819ec8805716016fe6da964ac9cc39de9c3e2c82f17b86571daf1c",
+        "pinned_archive_url": "https://codeload.github.com/sparkfun/Qwiic_Shield_for_Teensy/zip/a15d80b1ad051e0e96849727f491e0ada6166392",
+        "pre_download_hardware_license_review": {
+          "reviewed_on": "2026-09-26",
+          "license": "CC-BY-SA-4.0",
+          "hardware_scope_verified": true,
+          "review_method": "individual GitHub license web review before archive download",
+          "url": "https://github.com/sparkfun/Qwiic_Shield_for_Teensy/blob/master/LICENSE.md"
+        }
+      }
+    },
+    {
+      "source_id": "sparkfun_sparkfun_qwiic_micro_samd21e",
+      "repo": "sparkfun/SparkFun_Qwiic_Micro_SAMD21E",
+      "repo_url": "https://github.com/sparkfun/SparkFun_Qwiic_Micro_SAMD21E",
+      "commit": "fa536a4f7180cfc7450435ef9c204fd86e037201",
+      "revision": "one source board per repository",
+      "author": "SparkFun Electronics",
+      "design_family": "samd_mcu",
+      "hardware_directory": "Hardware",
+      "schematic": "SparkFun_Qwiic_Micro_SAMD21E.sch",
+      "libraries": [],
+      "hardware_license": "CC-BY-SA-4.0",
+      "license_verified": true,
+      "license_evidence": {
+        "url": "https://raw.githubusercontent.com/sparkfun/SparkFun_Qwiic_Micro_SAMD21E/fa536a4f7180cfc7450435ef9c204fd86e037201/LICENSE.md",
+        "declaration": "Hardware / Creative Commons Share-alike 4.0 International",
+        "license_sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da"
+      },
+      "use": "reference MCU/I2C interface; other source-board functions may be outside target scope",
+      "split": "external_holdout",
+      "files": [
+        {
+          "path": "sparkfun_sparkfun_qwiic_micro_samd21e/LICENSE.md",
+          "role": "license",
+          "upstream_path": "LICENSE.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/SparkFun_Qwiic_Micro_SAMD21E/fa536a4f7180cfc7450435ef9c204fd86e037201/LICENSE.md",
+          "sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da",
+          "bytes": 2883,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_sparkfun_qwiic_micro_samd21e/README.upstream.md",
+          "role": "license_scope_readme",
+          "upstream_path": "README.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/SparkFun_Qwiic_Micro_SAMD21E/fa536a4f7180cfc7450435ef9c204fd86e037201/README.md",
+          "sha256": "ec960d7d016bf19647a8ffc98d10c7d9a02d85531d4a4c2c50b5ce751165d922",
+          "bytes": 2514,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_sparkfun_qwiic_micro_samd21e/SparkFun_Qwiic_Micro_SAMD21E.sch",
+          "role": "schematic",
+          "upstream_path": "Hardware/SparkFun_Qwiic_Micro_SAMD21E.sch",
+          "url": "https://raw.githubusercontent.com/sparkfun/SparkFun_Qwiic_Micro_SAMD21E/fa536a4f7180cfc7450435ef9c204fd86e037201/Hardware/SparkFun_Qwiic_Micro_SAMD21E.sch",
+          "sha256": "f5e3e71e9d7d146892be3c586f10ee465f098a659a94e7cbfef92f914eb65619",
+          "bytes": 1205105,
+          "modified": false
+        }
+      ],
+      "electrical_review": "not_run",
+      "catalog_conversion": "not_run",
+      "schematic_tool_readback": "not_run",
+      "fetch_evidence": {
+        "method": "official codeload ZIP",
+        "commit_from": "Git archive ZIP comment",
+        "archive_sha256": "be33872fc6d8550eb08b612a520d5af5be6084c1d8add64752c6785eb2838fe0",
+        "pinned_archive_url": "https://codeload.github.com/sparkfun/SparkFun_Qwiic_Micro_SAMD21E/zip/fa536a4f7180cfc7450435ef9c204fd86e037201",
+        "pre_download_hardware_license_review": {
+          "reviewed_on": "2026-09-26",
+          "license": "CC-BY-SA-4.0",
+          "hardware_scope_verified": true,
+          "review_method": "individual GitHub license web review before archive download",
+          "url": "https://github.com/sparkfun/SparkFun_Qwiic_Micro_SAMD21E/blob/main/LICENSE.md"
+        }
+      }
+    },
+    {
+      "source_id": "sparkfun_sparkfun_spectral_uv_sensor_as7331",
+      "repo": "sparkfun/SparkFun_Spectral_UV_Sensor_AS7331",
+      "repo_url": "https://github.com/sparkfun/SparkFun_Spectral_UV_Sensor_AS7331",
+      "commit": "b1354e6939ff35adc6eac51b0e038a8428328bf9",
+      "revision": "one source board per repository",
+      "author": "SparkFun Electronics",
+      "design_family": "spectral_sensor",
+      "hardware_directory": "Hardware/Qwiic_1x1",
+      "schematic": "SparkFun_Qwiic_UV_Sensor_AS7331.sch",
+      "libraries": [],
+      "hardware_license": "CC-BY-SA-4.0",
+      "license_verified": true,
+      "license_evidence": {
+        "url": "https://raw.githubusercontent.com/sparkfun/SparkFun_Spectral_UV_Sensor_AS7331/b1354e6939ff35adc6eac51b0e038a8428328bf9/LICENSE.md",
+        "declaration": "Hardware / Creative Commons Share-alike 4.0 International",
+        "license_sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da"
+      },
+      "use": "reference MCU/I2C interface; other source-board functions may be outside target scope",
+      "split": "external_development",
+      "files": [
+        {
+          "path": "sparkfun_sparkfun_spectral_uv_sensor_as7331/LICENSE.md",
+          "role": "license",
+          "upstream_path": "LICENSE.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/SparkFun_Spectral_UV_Sensor_AS7331/b1354e6939ff35adc6eac51b0e038a8428328bf9/LICENSE.md",
+          "sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da",
+          "bytes": 2883,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_sparkfun_spectral_uv_sensor_as7331/README.upstream.md",
+          "role": "license_scope_readme",
+          "upstream_path": "README.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/SparkFun_Spectral_UV_Sensor_AS7331/b1354e6939ff35adc6eac51b0e038a8428328bf9/README.md",
+          "sha256": "b50d994038b5d7c81eaf9967959bd5353b624d00d8cff1d4a5faf15c40a2d17c",
+          "bytes": 2682,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_sparkfun_spectral_uv_sensor_as7331/SparkFun_Qwiic_UV_Sensor_AS7331.sch",
+          "role": "schematic",
+          "upstream_path": "Hardware/Qwiic_1x1/SparkFun_Qwiic_UV_Sensor_AS7331.sch",
+          "url": "https://raw.githubusercontent.com/sparkfun/SparkFun_Spectral_UV_Sensor_AS7331/b1354e6939ff35adc6eac51b0e038a8428328bf9/Hardware/Qwiic_1x1/SparkFun_Qwiic_UV_Sensor_AS7331.sch",
+          "sha256": "e66e2869ac74eb753f01611e6bc8f7400d03f2406653390ce8c3555928ba76e7",
+          "bytes": 1085945,
+          "modified": false
+        }
+      ],
+      "electrical_review": "not_run",
+      "catalog_conversion": "not_run",
+      "schematic_tool_readback": "not_run",
+      "fetch_evidence": {
+        "method": "official codeload ZIP",
+        "commit_from": "Git archive ZIP comment",
+        "archive_sha256": "ee90f55a0318cbe54660999f483dc4396e9288ad5c854da64b7a033abae9db59",
+        "pinned_archive_url": "https://codeload.github.com/sparkfun/SparkFun_Spectral_UV_Sensor_AS7331/zip/b1354e6939ff35adc6eac51b0e038a8428328bf9",
+        "pre_download_hardware_license_review": {
+          "reviewed_on": "2026-09-26",
+          "license": "CC-BY-SA-4.0",
+          "hardware_scope_verified": true,
+          "review_method": "individual GitHub license web review before archive download",
+          "url": "https://github.com/sparkfun/SparkFun_Spectral_UV_Sensor_AS7331/blob/main/LICENSE.md"
+        }
+      }
+    },
+    {
+      "source_id": "sparkfun_esp32_thing_plus",
+      "repo": "sparkfun/ESP32_Thing_Plus",
+      "repo_url": "https://github.com/sparkfun/ESP32_Thing_Plus",
+      "commit": "ed6d941070fa7756af6d2e24bdcfed8e27b2734a",
+      "revision": "one source board per repository",
+      "author": "SparkFun Electronics",
+      "design_family": "esp32_mcu",
+      "hardware_directory": "Hardware",
+      "schematic": "ESP32_Thing_Plus.sch",
+      "libraries": [],
+      "hardware_license": "CC-BY-SA-4.0",
+      "license_verified": true,
+      "license_evidence": {
+        "url": "https://raw.githubusercontent.com/sparkfun/ESP32_Thing_Plus/ed6d941070fa7756af6d2e24bdcfed8e27b2734a/LICENSE.md",
+        "declaration": "Hardware / Creative Commons Share-alike 4.0 International",
+        "license_sha256": "eb0ab46fdbb3806278560b35092564c28d0739b51efe52400fe4826500e8fc9b"
+      },
+      "use": "reference MCU/I2C interface; other source-board functions may be outside target scope",
+      "split": "external_development",
+      "files": [
+        {
+          "path": "sparkfun_esp32_thing_plus/LICENSE.md",
+          "role": "license",
+          "upstream_path": "LICENSE.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/ESP32_Thing_Plus/ed6d941070fa7756af6d2e24bdcfed8e27b2734a/LICENSE.md",
+          "sha256": "eb0ab46fdbb3806278560b35092564c28d0739b51efe52400fe4826500e8fc9b",
+          "bytes": 2871,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_esp32_thing_plus/README.upstream.md",
+          "role": "license_scope_readme",
+          "upstream_path": "README.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/ESP32_Thing_Plus/ed6d941070fa7756af6d2e24bdcfed8e27b2734a/README.md",
+          "sha256": "723c8746120ec2ad5fb26b43fb63c3e96eb006919ad322d1d75128b86d4e78a9",
+          "bytes": 2209,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_esp32_thing_plus/ESP32_Thing_Plus.sch",
+          "role": "schematic",
+          "upstream_path": "Hardware/ESP32_Thing_Plus.sch",
+          "url": "https://raw.githubusercontent.com/sparkfun/ESP32_Thing_Plus/ed6d941070fa7756af6d2e24bdcfed8e27b2734a/Hardware/ESP32_Thing_Plus.sch",
+          "sha256": "1743c9e387842123e8201d8bf20bda6b6692659ad50b7ac1585e7b31e31d25b8",
+          "bytes": 1147113,
+          "modified": false
+        }
+      ],
+      "electrical_review": "not_run",
+      "catalog_conversion": "not_run",
+      "schematic_tool_readback": "not_run",
+      "fetch_evidence": {
+        "method": "official codeload ZIP",
+        "commit_from": "Git archive ZIP comment",
+        "archive_sha256": "f34f79c2e2e0478c04104349666fece209d3df2b840314d43c5bd2f006cdbb56",
+        "pinned_archive_url": "https://codeload.github.com/sparkfun/ESP32_Thing_Plus/zip/ed6d941070fa7756af6d2e24bdcfed8e27b2734a",
+        "pre_download_hardware_license_review": {
+          "reviewed_on": "2026-09-26",
+          "license": "CC-BY-SA-4.0",
+          "hardware_scope_verified": true,
+          "review_method": "individual GitHub license web review before archive download",
+          "url": "https://github.com/sparkfun/ESP32_Thing_Plus/blob/master/LICENSE.md"
+        }
+      }
+    },
+    {
+      "source_id": "sparkfun_sparkfun_pro_micro_rp2040",
+      "repo": "sparkfun/SparkFun_Pro_Micro-RP2040",
+      "repo_url": "https://github.com/sparkfun/SparkFun_Pro_Micro-RP2040",
+      "commit": "6d461a6c0654f616d3c3a9033668a68160f70fcb",
+      "revision": "one source board per repository",
+      "author": "SparkFun Electronics",
+      "design_family": "rp2040_mcu",
+      "hardware_directory": "Hardware",
+      "schematic": "SparkFun_ProMicro-RP2040.sch",
+      "libraries": [],
+      "hardware_license": "CC-BY-SA-4.0",
+      "license_verified": true,
+      "license_evidence": {
+        "url": "https://raw.githubusercontent.com/sparkfun/SparkFun_Pro_Micro-RP2040/6d461a6c0654f616d3c3a9033668a68160f70fcb/LICENSE.md",
+        "declaration": "Hardware / Creative Commons Share-alike 4.0 International",
+        "license_sha256": "b33cadecd974e6ec526dbd46bd64fcd8623323299320a199f8d52dabd1ac03cd"
+      },
+      "use": "reference MCU/I2C interface; other source-board functions may be outside target scope",
+      "split": "external_holdout",
+      "files": [
+        {
+          "path": "sparkfun_sparkfun_pro_micro_rp2040/LICENSE.md",
+          "role": "license",
+          "upstream_path": "LICENSE.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/SparkFun_Pro_Micro-RP2040/6d461a6c0654f616d3c3a9033668a68160f70fcb/LICENSE.md",
+          "sha256": "b33cadecd974e6ec526dbd46bd64fcd8623323299320a199f8d52dabd1ac03cd",
+          "bytes": 3327,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_sparkfun_pro_micro_rp2040/README.upstream.md",
+          "role": "license_scope_readme",
+          "upstream_path": "README.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/SparkFun_Pro_Micro-RP2040/6d461a6c0654f616d3c3a9033668a68160f70fcb/README.md",
+          "sha256": "9d811a2ce548fcb2ecbd0a7e05320f877b9c8dfa8814edb1e9178ef11dd874a1",
+          "bytes": 1560,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_sparkfun_pro_micro_rp2040/SparkFun_ProMicro-RP2040.sch",
+          "role": "schematic",
+          "upstream_path": "Hardware/SparkFun_ProMicro-RP2040.sch",
+          "url": "https://raw.githubusercontent.com/sparkfun/SparkFun_Pro_Micro-RP2040/6d461a6c0654f616d3c3a9033668a68160f70fcb/Hardware/SparkFun_ProMicro-RP2040.sch",
+          "sha256": "c7b9d6064cf55b1693699b5aa6a4eb9515af8ba98d02f92dcc73b0305162b150",
+          "bytes": 1242881,
+          "modified": false
+        }
+      ],
+      "electrical_review": "not_run",
+      "catalog_conversion": "not_run",
+      "schematic_tool_readback": "not_run",
+      "fetch_evidence": {
+        "method": "official codeload ZIP",
+        "commit_from": "Git archive ZIP comment",
+        "archive_sha256": "9d3684d354d9925083c8e5ed81f7f4b009f0a23bd64a052a690464e6369e40e5",
+        "pinned_archive_url": "https://codeload.github.com/sparkfun/SparkFun_Pro_Micro-RP2040/zip/6d461a6c0654f616d3c3a9033668a68160f70fcb",
+        "pre_download_hardware_license_review": {
+          "reviewed_on": "2026-09-26",
+          "license": "CC-BY-SA-4.0",
+          "hardware_scope_verified": true,
+          "review_method": "individual GitHub license web review before archive download",
+          "url": "https://github.com/sparkfun/SparkFun_Pro_Micro-RP2040/blob/main/LICENSE.md"
+        }
+      }
+    },
+    {
+      "source_id": "sparkfun_qwiic_transparent_graphical_oled",
+      "repo": "sparkfun/Qwiic_Transparent_Graphical_OLED",
+      "repo_url": "https://github.com/sparkfun/Qwiic_Transparent_Graphical_OLED",
+      "commit": "bd3d83e027a54ab27c442cdbed2abbb434173052",
+      "revision": "one source board per repository",
+      "author": "SparkFun Electronics",
+      "design_family": "oled_display",
+      "hardware_directory": "Hardware",
+      "schematic": "SparkFun_Transparent_Graphical_OLED_Breakout.sch",
+      "libraries": [],
+      "hardware_license": "CC-BY-SA-4.0",
+      "license_verified": true,
+      "license_evidence": {
+        "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Transparent_Graphical_OLED/bd3d83e027a54ab27c442cdbed2abbb434173052/LICENSE.md",
+        "declaration": "Hardware / Creative Commons Share-alike 4.0 International",
+        "license_sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da"
+      },
+      "use": "reference MCU/I2C interface; other source-board functions may be outside target scope",
+      "split": "external_development",
+      "files": [
+        {
+          "path": "sparkfun_qwiic_transparent_graphical_oled/LICENSE.md",
+          "role": "license",
+          "upstream_path": "LICENSE.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Transparent_Graphical_OLED/bd3d83e027a54ab27c442cdbed2abbb434173052/LICENSE.md",
+          "sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da",
+          "bytes": 2883,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_transparent_graphical_oled/README.upstream.md",
+          "role": "license_scope_readme",
+          "upstream_path": "README.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Transparent_Graphical_OLED/bd3d83e027a54ab27c442cdbed2abbb434173052/README.md",
+          "sha256": "a53b156ffcdd799722fe0326434876a95364e3ba582b85d31c207f103b0f4035",
+          "bytes": 2657,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_transparent_graphical_oled/SparkFun_Transparent_Graphical_OLED_Breakout.sch",
+          "role": "schematic",
+          "upstream_path": "Hardware/SparkFun_Transparent_Graphical_OLED_Breakout.sch",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_Transparent_Graphical_OLED/bd3d83e027a54ab27c442cdbed2abbb434173052/Hardware/SparkFun_Transparent_Graphical_OLED_Breakout.sch",
+          "sha256": "587f4291c7aa954178274159e8095d1256c6cec08bcf4c83e6f89c94fd5a9f90",
+          "bytes": 871228,
+          "modified": false
+        }
+      ],
+      "electrical_review": "not_run",
+      "catalog_conversion": "not_run",
+      "schematic_tool_readback": "not_run",
+      "fetch_evidence": {
+        "method": "official codeload ZIP",
+        "commit_from": "Git archive ZIP comment",
+        "archive_sha256": "0a17626174eb2022414662176b92afccb18784165a9b1b7f9a91181af1048c27",
+        "pinned_archive_url": "https://codeload.github.com/sparkfun/Qwiic_Transparent_Graphical_OLED/zip/bd3d83e027a54ab27c442cdbed2abbb434173052",
+        "pre_download_hardware_license_review": {
+          "reviewed_on": "2026-09-26",
+          "license": "CC-BY-SA-4.0",
+          "hardware_scope_verified": true,
+          "review_method": "individual GitHub license web review before archive download",
+          "url": "https://github.com/sparkfun/Qwiic_Transparent_Graphical_OLED/blob/master/LICENSE.md"
+        }
+      }
+    },
+    {
+      "source_id": "sparkfun_qwiic_gps_rtk",
+      "repo": "sparkfun/Qwiic_GPS-RTK",
+      "repo_url": "https://github.com/sparkfun/Qwiic_GPS-RTK",
+      "commit": "d4f7a0d1130eb3352325d8a333c648e706525aac",
+      "revision": "one source board per repository",
+      "author": "SparkFun Electronics",
+      "design_family": "gnss_interface",
+      "hardware_directory": "Hardware",
+      "schematic": "Qwiic GPS-RTK - ublox NEO-M8P.sch",
+      "libraries": [],
+      "hardware_license": "CC-BY-SA-4.0",
+      "license_verified": true,
+      "license_evidence": {
+        "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_GPS-RTK/d4f7a0d1130eb3352325d8a333c648e706525aac/LICENSE.md",
+        "declaration": "Hardware / Creative Commons Share-alike 4.0 International",
+        "license_sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da"
+      },
+      "use": "reference MCU/I2C interface; other source-board functions may be outside target scope",
+      "split": "external_development",
+      "files": [
+        {
+          "path": "sparkfun_qwiic_gps_rtk/LICENSE.md",
+          "role": "license",
+          "upstream_path": "LICENSE.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_GPS-RTK/d4f7a0d1130eb3352325d8a333c648e706525aac/LICENSE.md",
+          "sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da",
+          "bytes": 2883,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_gps_rtk/README.upstream.md",
+          "role": "license_scope_readme",
+          "upstream_path": "README.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_GPS-RTK/d4f7a0d1130eb3352325d8a333c648e706525aac/README.md",
+          "sha256": "a1bbf3d45a2ef82b0c0d80e009b4ed08ea245a4207b8a42df838f5537c16a916",
+          "bytes": 2041,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_gps_rtk/Qwiic GPS-RTK - ublox NEO-M8P.sch",
+          "role": "schematic",
+          "upstream_path": "Hardware/Qwiic GPS-RTK - ublox NEO-M8P.sch",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_GPS-RTK/d4f7a0d1130eb3352325d8a333c648e706525aac/Hardware/Qwiic%20GPS-RTK%20-%20ublox%20NEO-M8P.sch",
+          "sha256": "b08bbfe8f817d8906c8d11ed9a8f3b25de8dd8eb805ed5f43d420e64903e7a8b",
+          "bytes": 1001476,
+          "modified": false
+        }
+      ],
+      "electrical_review": "not_run",
+      "catalog_conversion": "not_run",
+      "schematic_tool_readback": "not_run",
+      "fetch_evidence": {
+        "method": "official codeload ZIP",
+        "commit_from": "Git archive ZIP comment",
+        "archive_sha256": "03d9af1823b8162a53caa395a5fd9cc6af1a87a88d95b7e4a803fe88b9439420",
+        "pinned_archive_url": "https://codeload.github.com/sparkfun/Qwiic_GPS-RTK/zip/d4f7a0d1130eb3352325d8a333c648e706525aac",
+        "pre_download_hardware_license_review": {
+          "reviewed_on": "2026-09-26",
+          "license": "CC-BY-SA-4.0",
+          "hardware_scope_verified": true,
+          "review_method": "individual GitHub license web review before archive download",
+          "url": "https://github.com/sparkfun/Qwiic_GPS-RTK/blob/master/LICENSE.md"
+        }
+      }
+    },
+    {
+      "source_id": "sparkfun_qwiic_gps_rtk2",
+      "repo": "sparkfun/Qwiic_GPS-RTK2",
+      "repo_url": "https://github.com/sparkfun/Qwiic_GPS-RTK2",
+      "commit": "898a676f3136b68118331e3683299951df3e7133",
+      "revision": "one source board per repository",
+      "author": "SparkFun Electronics",
+      "design_family": "gnss_interface",
+      "hardware_directory": "Hardware",
+      "schematic": "Qwiic GPS-RTK2 - ublox ZED-F9P.sch",
+      "libraries": [],
+      "hardware_license": "CC-BY-SA-4.0",
+      "license_verified": true,
+      "license_evidence": {
+        "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_GPS-RTK2/898a676f3136b68118331e3683299951df3e7133/LICENSE.md",
+        "declaration": "Hardware / Creative Commons Share-alike 4.0 International",
+        "license_sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da"
+      },
+      "use": "reference MCU/I2C interface; other source-board functions may be outside target scope",
+      "split": "external_development",
+      "files": [
+        {
+          "path": "sparkfun_qwiic_gps_rtk2/LICENSE.md",
+          "role": "license",
+          "upstream_path": "LICENSE.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_GPS-RTK2/898a676f3136b68118331e3683299951df3e7133/LICENSE.md",
+          "sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da",
+          "bytes": 2883,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_gps_rtk2/README.upstream.md",
+          "role": "license_scope_readme",
+          "upstream_path": "README.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_GPS-RTK2/898a676f3136b68118331e3683299951df3e7133/README.md",
+          "sha256": "1ae89d52f0a3ace8f7fb24581be56512bf0bfffe13eaf1d01e78c8b3f4b6e891",
+          "bytes": 2220,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_qwiic_gps_rtk2/Qwiic GPS-RTK2 - ublox ZED-F9P.sch",
+          "role": "schematic",
+          "upstream_path": "Hardware/Qwiic GPS-RTK2 - ublox ZED-F9P.sch",
+          "url": "https://raw.githubusercontent.com/sparkfun/Qwiic_GPS-RTK2/898a676f3136b68118331e3683299951df3e7133/Hardware/Qwiic%20GPS-RTK2%20-%20ublox%20ZED-F9P.sch",
+          "sha256": "07a8af85ce0608ebf143d2958efff88c25de08f2baa251dd6682a029eb038b7d",
+          "bytes": 1095381,
+          "modified": false
+        }
+      ],
+      "electrical_review": "not_run",
+      "catalog_conversion": "not_run",
+      "schematic_tool_readback": "not_run",
+      "fetch_evidence": {
+        "method": "official codeload ZIP",
+        "commit_from": "Git archive ZIP comment",
+        "archive_sha256": "a17dade2b0e91aefeb3988bc0a845b426b72e5cec33c005cb5e6a9fa853db73b",
+        "pinned_archive_url": "https://codeload.github.com/sparkfun/Qwiic_GPS-RTK2/zip/898a676f3136b68118331e3683299951df3e7133",
+        "pre_download_hardware_license_review": {
+          "reviewed_on": "2026-09-26",
+          "license": "CC-BY-SA-4.0",
+          "hardware_scope_verified": true,
+          "review_method": "individual GitHub license web review before archive download",
+          "url": "https://github.com/sparkfun/Qwiic_GPS-RTK2/blob/master/LICENSE.md"
+        }
+      }
+    },
+    {
+      "source_id": "sparkfun_sparkfun_qwiic_9dof_imu_breakout",
+      "repo": "sparkfun/SparkFun_Qwiic_9DoF_IMU_Breakout",
+      "repo_url": "https://github.com/sparkfun/SparkFun_Qwiic_9DoF_IMU_Breakout",
+      "commit": "215f5227694c089130660f485c3af065fbbc1ef9",
+      "revision": "one source board per repository",
+      "author": "SparkFun Electronics",
+      "design_family": "inertial_sensor",
+      "hardware_directory": "Hardware",
+      "schematic": "SparkFun_IMU_Breakout_ICM-20948.sch",
+      "libraries": [],
+      "hardware_license": "CC-BY-SA-4.0",
+      "license_verified": true,
+      "license_evidence": {
+        "url": "https://raw.githubusercontent.com/sparkfun/SparkFun_Qwiic_9DoF_IMU_Breakout/215f5227694c089130660f485c3af065fbbc1ef9/LICENSE.md",
+        "declaration": "Hardware / Creative Commons Share-alike 4.0 International",
+        "license_sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da"
+      },
+      "use": "reference MCU/I2C interface; other source-board functions may be outside target scope",
+      "split": "external_development",
+      "files": [
+        {
+          "path": "sparkfun_sparkfun_qwiic_9dof_imu_breakout/LICENSE.md",
+          "role": "license",
+          "upstream_path": "LICENSE.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/SparkFun_Qwiic_9DoF_IMU_Breakout/215f5227694c089130660f485c3af065fbbc1ef9/LICENSE.md",
+          "sha256": "6532771f09b24eadc3e75b9c2ecb035c38ebea295542833e892fab9018c678da",
+          "bytes": 2883,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_sparkfun_qwiic_9dof_imu_breakout/README.upstream.md",
+          "role": "license_scope_readme",
+          "upstream_path": "README.md",
+          "url": "https://raw.githubusercontent.com/sparkfun/SparkFun_Qwiic_9DoF_IMU_Breakout/215f5227694c089130660f485c3af065fbbc1ef9/README.md",
+          "sha256": "649a0b122fb293bee3838640cd35ce5a949c62f55233f10c04f194fa668d5067",
+          "bytes": 2563,
+          "modified": false
+        },
+        {
+          "path": "sparkfun_sparkfun_qwiic_9dof_imu_breakout/SparkFun_IMU_Breakout_ICM-20948.sch",
+          "role": "schematic",
+          "upstream_path": "Hardware/SparkFun_IMU_Breakout_ICM-20948.sch",
+          "url": "https://raw.githubusercontent.com/sparkfun/SparkFun_Qwiic_9DoF_IMU_Breakout/215f5227694c089130660f485c3af065fbbc1ef9/Hardware/SparkFun_IMU_Breakout_ICM-20948.sch",
+          "sha256": "caefa94527f2b667a11b733e7828953c326cb615393c10f0992cf7d04fd3794a",
+          "bytes": 847700,
+          "modified": false
+        }
+      ],
+      "electrical_review": "not_run",
+      "catalog_conversion": "not_run",
+      "schematic_tool_readback": "not_run",
+      "fetch_evidence": {
+        "method": "official codeload ZIP",
+        "commit_from": "Git archive ZIP comment",
+        "archive_sha256": "b59ab30977cfa75a58087ff76356ac9d58f6ee8bd133380dfd4ebdb12dacca68",
+        "pinned_archive_url": "https://codeload.github.com/sparkfun/SparkFun_Qwiic_9DoF_IMU_Breakout/zip/215f5227694c089130660f485c3af065fbbc1ef9",
+        "pre_download_hardware_license_review": {
+          "reviewed_on": "2026-09-26",
+          "license": "CC-BY-SA-4.0",
+          "hardware_scope_verified": true,
+          "review_method": "individual GitHub license web review before archive download",
+          "url": "https://github.com/sparkfun/SparkFun_Qwiic_9DoF_IMU_Breakout/blob/master/LICENSE.md"
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Different original source boards, not independent electrical certification",
+    "Related boards share design families and remain in one partition",
+    "Reserved external families were inspected by the developer and are not blind holdout",
+    "Battery, RF, GNSS, Ethernet and other non-I2C functions may fall outside scope",
+    "Source parsing and hardware licensing do not certify physical or electrical correctness"
+  ],
+  "updated_at": "2026-09-26T14:16:47.639041+00:00"
+}

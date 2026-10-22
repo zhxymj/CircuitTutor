@@ -1,0 +1,756 @@
+{
+  "description": "30 synthetic SVG fixtures from one resistor-capacitor geometry family; 10 test-only variants are not an independent real-world benchmark.",
+  "license": "CC0-1.0",
+  "samples": [
+    {
+      "id": "synthetic_printed_01",
+      "split": "development",
+      "origin": "self_generated_geometry",
+      "media_type": "image/svg+xml",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"80\"><line x1=\"20\" y1=\"22\" x2=\"44\" y2=\"22\"/><rect x=\"44\" y=\"17\" width=\"20\" height=\"10\"/><line x1=\"64\" y1=\"22\" x2=\"96\" y2=\"22\"/><line x1=\"96\" y1=\"12\" x2=\"96\" y2=\"32\"/><line x1=\"102\" y1=\"12\" x2=\"102\" y2=\"32\"/><line x1=\"102\" y1=\"22\" x2=\"134\" y2=\"22\"/><text x=\"44\" y=\"13\">R1</text><text x=\"96\" y=\"8\">C1</text></svg>",
+      "annotation": {
+        "parts": [
+          {
+            "type": "resistor",
+            "id": "R1"
+          },
+          {
+            "type": "capacitor",
+            "id": "C1"
+          }
+        ],
+        "connections": [
+          [
+            "R1:2",
+            "C1:+"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "synthetic_printed_02",
+      "split": "development",
+      "origin": "self_generated_geometry",
+      "media_type": "image/svg+xml",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"80\"><line x1=\"23\" y1=\"22\" x2=\"47\" y2=\"22\"/><rect x=\"47\" y=\"17\" width=\"22\" height=\"10\"/><line x1=\"69\" y1=\"22\" x2=\"103\" y2=\"22\"/><line x1=\"103\" y1=\"12\" x2=\"103\" y2=\"32\"/><line x1=\"109\" y1=\"12\" x2=\"109\" y2=\"32\"/><line x1=\"109\" y1=\"22\" x2=\"141\" y2=\"22\"/><text x=\"47\" y=\"13\">R2</text><text x=\"103\" y=\"8\">C2</text></svg>",
+      "annotation": {
+        "parts": [
+          {
+            "type": "resistor",
+            "id": "R2"
+          },
+          {
+            "type": "capacitor",
+            "id": "C2"
+          }
+        ],
+        "connections": [
+          [
+            "R2:2",
+            "C2:+"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "synthetic_printed_03",
+      "split": "development",
+      "origin": "self_generated_geometry",
+      "media_type": "image/svg+xml",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"80\"><line x1=\"26\" y1=\"22\" x2=\"50\" y2=\"22\"/><rect x=\"50\" y=\"17\" width=\"24\" height=\"10\"/><line x1=\"74\" y1=\"22\" x2=\"110\" y2=\"22\"/><line x1=\"110\" y1=\"12\" x2=\"110\" y2=\"32\"/><line x1=\"116\" y1=\"12\" x2=\"116\" y2=\"32\"/><line x1=\"116\" y1=\"22\" x2=\"148\" y2=\"22\"/><text x=\"50\" y=\"13\">R3</text><text x=\"110\" y=\"8\">C3</text></svg>",
+      "annotation": {
+        "parts": [
+          {
+            "type": "resistor",
+            "id": "R3"
+          },
+          {
+            "type": "capacitor",
+            "id": "C3"
+          }
+        ],
+        "connections": [
+          [
+            "R3:2",
+            "C3:+"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "synthetic_printed_04",
+      "split": "development",
+      "origin": "self_generated_geometry",
+      "media_type": "image/svg+xml",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"80\"><line x1=\"29\" y1=\"22\" x2=\"53\" y2=\"22\"/><rect x=\"53\" y=\"17\" width=\"20\" height=\"10\"/><line x1=\"73\" y1=\"22\" x2=\"111\" y2=\"22\"/><line x1=\"111\" y1=\"12\" x2=\"111\" y2=\"32\"/><line x1=\"117\" y1=\"12\" x2=\"117\" y2=\"32\"/><line x1=\"117\" y1=\"22\" x2=\"149\" y2=\"22\"/><text x=\"53\" y=\"13\">R4</text><text x=\"111\" y=\"8\">C4</text></svg>",
+      "annotation": {
+        "parts": [
+          {
+            "type": "resistor",
+            "id": "R4"
+          },
+          {
+            "type": "capacitor",
+            "id": "C4"
+          }
+        ],
+        "connections": [
+          [
+            "R4:2",
+            "C4:+"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "synthetic_printed_05",
+      "split": "development",
+      "origin": "self_generated_geometry",
+      "media_type": "image/svg+xml",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"80\"><line x1=\"32\" y1=\"22\" x2=\"56\" y2=\"22\"/><rect x=\"56\" y=\"17\" width=\"22\" height=\"10\"/><line x1=\"78\" y1=\"22\" x2=\"110\" y2=\"22\"/><line x1=\"110\" y1=\"12\" x2=\"110\" y2=\"32\"/><line x1=\"116\" y1=\"12\" x2=\"116\" y2=\"32\"/><line x1=\"116\" y1=\"22\" x2=\"148\" y2=\"22\"/><text x=\"56\" y=\"13\">R5</text><text x=\"110\" y=\"8\">C5</text></svg>",
+      "annotation": {
+        "parts": [
+          {
+            "type": "resistor",
+            "id": "R5"
+          },
+          {
+            "type": "capacitor",
+            "id": "C5"
+          }
+        ],
+        "connections": [
+          [
+            "R5:2",
+            "C5:+"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "synthetic_printed_06",
+      "split": "development",
+      "origin": "self_generated_geometry",
+      "media_type": "image/svg+xml",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"80\"><line x1=\"20\" y1=\"24\" x2=\"44\" y2=\"24\"/><rect x=\"44\" y=\"19\" width=\"24\" height=\"10\"/><line x1=\"68\" y1=\"24\" x2=\"102\" y2=\"24\"/><line x1=\"102\" y1=\"14\" x2=\"102\" y2=\"34\"/><line x1=\"108\" y1=\"14\" x2=\"108\" y2=\"34\"/><line x1=\"108\" y1=\"24\" x2=\"140\" y2=\"24\"/><text x=\"44\" y=\"15\">R6</text><text x=\"102\" y=\"10\">C6</text></svg>",
+      "annotation": {
+        "parts": [
+          {
+            "type": "resistor",
+            "id": "R6"
+          },
+          {
+            "type": "capacitor",
+            "id": "C6"
+          }
+        ],
+        "connections": [
+          [
+            "R6:2",
+            "C6:+"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "synthetic_printed_07",
+      "split": "development",
+      "origin": "self_generated_geometry",
+      "media_type": "image/svg+xml",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"80\"><line x1=\"23\" y1=\"24\" x2=\"47\" y2=\"24\"/><rect x=\"47\" y=\"19\" width=\"20\" height=\"10\"/><line x1=\"67\" y1=\"24\" x2=\"103\" y2=\"24\"/><line x1=\"103\" y1=\"14\" x2=\"103\" y2=\"34\"/><line x1=\"109\" y1=\"14\" x2=\"109\" y2=\"34\"/><line x1=\"109\" y1=\"24\" x2=\"141\" y2=\"24\"/><text x=\"47\" y=\"15\">R7</text><text x=\"103\" y=\"10\">C7</text></svg>",
+      "annotation": {
+        "parts": [
+          {
+            "type": "resistor",
+            "id": "R7"
+          },
+          {
+            "type": "capacitor",
+            "id": "C7"
+          }
+        ],
+        "connections": [
+          [
+            "R7:2",
+            "C7:+"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "synthetic_printed_08",
+      "split": "development",
+      "origin": "self_generated_geometry",
+      "media_type": "image/svg+xml",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"80\"><line x1=\"26\" y1=\"24\" x2=\"50\" y2=\"24\"/><rect x=\"50\" y=\"19\" width=\"22\" height=\"10\"/><line x1=\"72\" y1=\"24\" x2=\"110\" y2=\"24\"/><line x1=\"110\" y1=\"14\" x2=\"110\" y2=\"34\"/><line x1=\"116\" y1=\"14\" x2=\"116\" y2=\"34\"/><line x1=\"116\" y1=\"24\" x2=\"148\" y2=\"24\"/><text x=\"50\" y=\"15\">R8</text><text x=\"110\" y=\"10\">C8</text></svg>",
+      "annotation": {
+        "parts": [
+          {
+            "type": "resistor",
+            "id": "R8"
+          },
+          {
+            "type": "capacitor",
+            "id": "C8"
+          }
+        ],
+        "connections": [
+          [
+            "R8:2",
+            "C8:+"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "synthetic_printed_09",
+      "split": "development",
+      "origin": "self_generated_geometry",
+      "media_type": "image/svg+xml",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"80\"><line x1=\"29\" y1=\"24\" x2=\"53\" y2=\"24\"/><rect x=\"53\" y=\"19\" width=\"24\" height=\"10\"/><line x1=\"77\" y1=\"24\" x2=\"109\" y2=\"24\"/><line x1=\"109\" y1=\"14\" x2=\"109\" y2=\"34\"/><line x1=\"115\" y1=\"14\" x2=\"115\" y2=\"34\"/><line x1=\"115\" y1=\"24\" x2=\"147\" y2=\"24\"/><text x=\"53\" y=\"15\">R9</text><text x=\"109\" y=\"10\">C9</text></svg>",
+      "annotation": {
+        "parts": [
+          {
+            "type": "resistor",
+            "id": "R9"
+          },
+          {
+            "type": "capacitor",
+            "id": "C9"
+          }
+        ],
+        "connections": [
+          [
+            "R9:2",
+            "C9:+"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "synthetic_printed_10",
+      "split": "development",
+      "origin": "self_generated_geometry",
+      "media_type": "image/svg+xml",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"80\"><line x1=\"32\" y1=\"24\" x2=\"56\" y2=\"24\"/><rect x=\"56\" y=\"19\" width=\"20\" height=\"10\"/><line x1=\"76\" y1=\"24\" x2=\"110\" y2=\"24\"/><line x1=\"110\" y1=\"14\" x2=\"110\" y2=\"34\"/><line x1=\"116\" y1=\"14\" x2=\"116\" y2=\"34\"/><line x1=\"116\" y1=\"24\" x2=\"148\" y2=\"24\"/><text x=\"56\" y=\"15\">R10</text><text x=\"110\" y=\"10\">C10</text></svg>",
+      "annotation": {
+        "parts": [
+          {
+            "type": "resistor",
+            "id": "R10"
+          },
+          {
+            "type": "capacitor",
+            "id": "C10"
+          }
+        ],
+        "connections": [
+          [
+            "R10:2",
+            "C10:+"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "synthetic_printed_11",
+      "split": "development",
+      "origin": "self_generated_geometry",
+      "media_type": "image/svg+xml",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"80\"><line x1=\"20\" y1=\"26\" x2=\"44\" y2=\"26\"/><rect x=\"44\" y=\"21\" width=\"22\" height=\"10\"/><line x1=\"66\" y1=\"26\" x2=\"102\" y2=\"26\"/><line x1=\"102\" y1=\"16\" x2=\"102\" y2=\"36\"/><line x1=\"108\" y1=\"16\" x2=\"108\" y2=\"36\"/><line x1=\"108\" y1=\"26\" x2=\"140\" y2=\"26\"/><text x=\"44\" y=\"17\">R11</text><text x=\"102\" y=\"12\">C11</text></svg>",
+      "annotation": {
+        "parts": [
+          {
+            "type": "resistor",
+            "id": "R11"
+          },
+          {
+            "type": "capacitor",
+            "id": "C11"
+          }
+        ],
+        "connections": [
+          [
+            "R11:2",
+            "C11:+"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "synthetic_printed_12",
+      "split": "development",
+      "origin": "self_generated_geometry",
+      "media_type": "image/svg+xml",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"80\"><line x1=\"23\" y1=\"26\" x2=\"47\" y2=\"26\"/><rect x=\"47\" y=\"21\" width=\"24\" height=\"10\"/><line x1=\"71\" y1=\"26\" x2=\"109\" y2=\"26\"/><line x1=\"109\" y1=\"16\" x2=\"109\" y2=\"36\"/><line x1=\"115\" y1=\"16\" x2=\"115\" y2=\"36\"/><line x1=\"115\" y1=\"26\" x2=\"147\" y2=\"26\"/><text x=\"47\" y=\"17\">R12</text><text x=\"109\" y=\"12\">C12</text></svg>",
+      "annotation": {
+        "parts": [
+          {
+            "type": "resistor",
+            "id": "R12"
+          },
+          {
+            "type": "capacitor",
+            "id": "C12"
+          }
+        ],
+        "connections": [
+          [
+            "R12:2",
+            "C12:+"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "synthetic_printed_13",
+      "split": "development",
+      "origin": "self_generated_geometry",
+      "media_type": "image/svg+xml",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"80\"><line x1=\"26\" y1=\"26\" x2=\"50\" y2=\"26\"/><rect x=\"50\" y=\"21\" width=\"20\" height=\"10\"/><line x1=\"70\" y1=\"26\" x2=\"102\" y2=\"26\"/><line x1=\"102\" y1=\"16\" x2=\"102\" y2=\"36\"/><line x1=\"108\" y1=\"16\" x2=\"108\" y2=\"36\"/><line x1=\"108\" y1=\"26\" x2=\"140\" y2=\"26\"/><text x=\"50\" y=\"17\">R13</text><text x=\"102\" y=\"12\">C13</text></svg>",
+      "annotation": {
+        "parts": [
+          {
+            "type": "resistor",
+            "id": "R13"
+          },
+          {
+            "type": "capacitor",
+            "id": "C13"
+          }
+        ],
+        "connections": [
+          [
+            "R13:2",
+            "C13:+"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "synthetic_printed_14",
+      "split": "development",
+      "origin": "self_generated_geometry",
+      "media_type": "image/svg+xml",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"80\"><line x1=\"29\" y1=\"26\" x2=\"53\" y2=\"26\"/><rect x=\"53\" y=\"21\" width=\"22\" height=\"10\"/><line x1=\"75\" y1=\"26\" x2=\"109\" y2=\"26\"/><line x1=\"109\" y1=\"16\" x2=\"109\" y2=\"36\"/><line x1=\"115\" y1=\"16\" x2=\"115\" y2=\"36\"/><line x1=\"115\" y1=\"26\" x2=\"147\" y2=\"26\"/><text x=\"53\" y=\"17\">R14</text><text x=\"109\" y=\"12\">C14</text></svg>",
+      "annotation": {
+        "parts": [
+          {
+            "type": "resistor",
+            "id": "R14"
+          },
+          {
+            "type": "capacitor",
+            "id": "C14"
+          }
+        ],
+        "connections": [
+          [
+            "R14:2",
+            "C14:+"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "synthetic_printed_15",
+      "split": "development",
+      "origin": "self_generated_geometry",
+      "media_type": "image/svg+xml",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"80\"><line x1=\"32\" y1=\"26\" x2=\"56\" y2=\"26\"/><rect x=\"56\" y=\"21\" width=\"24\" height=\"10\"/><line x1=\"80\" y1=\"26\" x2=\"116\" y2=\"26\"/><line x1=\"116\" y1=\"16\" x2=\"116\" y2=\"36\"/><line x1=\"122\" y1=\"16\" x2=\"122\" y2=\"36\"/><line x1=\"122\" y1=\"26\" x2=\"154\" y2=\"26\"/><text x=\"56\" y=\"17\">R15</text><text x=\"116\" y=\"12\">C15</text></svg>",
+      "annotation": {
+        "parts": [
+          {
+            "type": "resistor",
+            "id": "R15"
+          },
+          {
+            "type": "capacitor",
+            "id": "C15"
+          }
+        ],
+        "connections": [
+          [
+            "R15:2",
+            "C15:+"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "synthetic_printed_16",
+      "split": "development",
+      "origin": "self_generated_geometry",
+      "media_type": "image/svg+xml",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"80\"><line x1=\"20\" y1=\"28\" x2=\"44\" y2=\"28\"/><rect x=\"44\" y=\"23\" width=\"20\" height=\"10\"/><line x1=\"64\" y1=\"28\" x2=\"102\" y2=\"28\"/><line x1=\"102\" y1=\"18\" x2=\"102\" y2=\"38\"/><line x1=\"108\" y1=\"18\" x2=\"108\" y2=\"38\"/><line x1=\"108\" y1=\"28\" x2=\"140\" y2=\"28\"/><text x=\"44\" y=\"19\">R16</text><text x=\"102\" y=\"14\">C16</text></svg>",
+      "annotation": {
+        "parts": [
+          {
+            "type": "resistor",
+            "id": "R16"
+          },
+          {
+            "type": "capacitor",
+            "id": "C16"
+          }
+        ],
+        "connections": [
+          [
+            "R16:2",
+            "C16:+"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "synthetic_printed_17",
+      "split": "development",
+      "origin": "self_generated_geometry",
+      "media_type": "image/svg+xml",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"80\"><line x1=\"23\" y1=\"28\" x2=\"47\" y2=\"28\"/><rect x=\"47\" y=\"23\" width=\"22\" height=\"10\"/><line x1=\"69\" y1=\"28\" x2=\"101\" y2=\"28\"/><line x1=\"101\" y1=\"18\" x2=\"101\" y2=\"38\"/><line x1=\"107\" y1=\"18\" x2=\"107\" y2=\"38\"/><line x1=\"107\" y1=\"28\" x2=\"139\" y2=\"28\"/><text x=\"47\" y=\"19\">R17</text><text x=\"101\" y=\"14\">C17</text></svg>",
+      "annotation": {
+        "parts": [
+          {
+            "type": "resistor",
+            "id": "R17"
+          },
+          {
+            "type": "capacitor",
+            "id": "C17"
+          }
+        ],
+        "connections": [
+          [
+            "R17:2",
+            "C17:+"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "synthetic_printed_18",
+      "split": "development",
+      "origin": "self_generated_geometry",
+      "media_type": "image/svg+xml",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"80\"><line x1=\"26\" y1=\"28\" x2=\"50\" y2=\"28\"/><rect x=\"50\" y=\"23\" width=\"24\" height=\"10\"/><line x1=\"74\" y1=\"28\" x2=\"108\" y2=\"28\"/><line x1=\"108\" y1=\"18\" x2=\"108\" y2=\"38\"/><line x1=\"114\" y1=\"18\" x2=\"114\" y2=\"38\"/><line x1=\"114\" y1=\"28\" x2=\"146\" y2=\"28\"/><text x=\"50\" y=\"19\">R18</text><text x=\"108\" y=\"14\">C18</text></svg>",
+      "annotation": {
+        "parts": [
+          {
+            "type": "resistor",
+            "id": "R18"
+          },
+          {
+            "type": "capacitor",
+            "id": "C18"
+          }
+        ],
+        "connections": [
+          [
+            "R18:2",
+            "C18:+"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "synthetic_printed_19",
+      "split": "development",
+      "origin": "self_generated_geometry",
+      "media_type": "image/svg+xml",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"80\"><line x1=\"29\" y1=\"28\" x2=\"53\" y2=\"28\"/><rect x=\"53\" y=\"23\" width=\"20\" height=\"10\"/><line x1=\"73\" y1=\"28\" x2=\"109\" y2=\"28\"/><line x1=\"109\" y1=\"18\" x2=\"109\" y2=\"38\"/><line x1=\"115\" y1=\"18\" x2=\"115\" y2=\"38\"/><line x1=\"115\" y1=\"28\" x2=\"147\" y2=\"28\"/><text x=\"53\" y=\"19\">R19</text><text x=\"109\" y=\"14\">C19</text></svg>",
+      "annotation": {
+        "parts": [
+          {
+            "type": "resistor",
+            "id": "R19"
+          },
+          {
+            "type": "capacitor",
+            "id": "C19"
+          }
+        ],
+        "connections": [
+          [
+            "R19:2",
+            "C19:+"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "synthetic_printed_20",
+      "split": "development",
+      "origin": "self_generated_geometry",
+      "media_type": "image/svg+xml",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"80\"><line x1=\"32\" y1=\"28\" x2=\"56\" y2=\"28\"/><rect x=\"56\" y=\"23\" width=\"22\" height=\"10\"/><line x1=\"78\" y1=\"28\" x2=\"116\" y2=\"28\"/><line x1=\"116\" y1=\"18\" x2=\"116\" y2=\"38\"/><line x1=\"122\" y1=\"18\" x2=\"122\" y2=\"38\"/><line x1=\"122\" y1=\"28\" x2=\"154\" y2=\"28\"/><text x=\"56\" y=\"19\">R20</text><text x=\"116\" y=\"14\">C20</text></svg>",
+      "annotation": {
+        "parts": [
+          {
+            "type": "resistor",
+            "id": "R20"
+          },
+          {
+            "type": "capacitor",
+            "id": "C20"
+          }
+        ],
+        "connections": [
+          [
+            "R20:2",
+            "C20:+"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "synthetic_printed_21",
+      "split": "fixture_holdout",
+      "origin": "self_generated_geometry",
+      "media_type": "image/svg+xml",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"80\"><line x1=\"20\" y1=\"30\" x2=\"44\" y2=\"30\"/><rect x=\"44\" y=\"25\" width=\"24\" height=\"10\"/><line x1=\"68\" y1=\"30\" x2=\"100\" y2=\"30\"/><line x1=\"100\" y1=\"20\" x2=\"100\" y2=\"40\"/><line x1=\"106\" y1=\"20\" x2=\"106\" y2=\"40\"/><line x1=\"106\" y1=\"30\" x2=\"138\" y2=\"30\"/><text x=\"44\" y=\"21\">R21</text><text x=\"100\" y=\"16\">C21</text></svg>",
+      "annotation": {
+        "parts": [
+          {
+            "type": "resistor",
+            "id": "R21"
+          },
+          {
+            "type": "capacitor",
+            "id": "C21"
+          }
+        ],
+        "connections": [
+          [
+            "R21:2",
+            "C21:+"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "synthetic_printed_22",
+      "split": "fixture_holdout",
+      "origin": "self_generated_geometry",
+      "media_type": "image/svg+xml",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"80\"><line x1=\"23\" y1=\"30\" x2=\"47\" y2=\"30\"/><rect x=\"47\" y=\"25\" width=\"20\" height=\"10\"/><line x1=\"67\" y1=\"30\" x2=\"101\" y2=\"30\"/><line x1=\"101\" y1=\"20\" x2=\"101\" y2=\"40\"/><line x1=\"107\" y1=\"20\" x2=\"107\" y2=\"40\"/><line x1=\"107\" y1=\"30\" x2=\"139\" y2=\"30\"/><text x=\"47\" y=\"21\">R22</text><text x=\"101\" y=\"16\">C22</text></svg>",
+      "annotation": {
+        "parts": [
+          {
+            "type": "resistor",
+            "id": "R22"
+          },
+          {
+            "type": "capacitor",
+            "id": "C22"
+          }
+        ],
+        "connections": [
+          [
+            "R22:2",
+            "C22:+"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "synthetic_printed_23",
+      "split": "fixture_holdout",
+      "origin": "self_generated_geometry",
+      "media_type": "image/svg+xml",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"80\"><line x1=\"26\" y1=\"30\" x2=\"50\" y2=\"30\"/><rect x=\"50\" y=\"25\" width=\"22\" height=\"10\"/><line x1=\"72\" y1=\"30\" x2=\"108\" y2=\"30\"/><line x1=\"108\" y1=\"20\" x2=\"108\" y2=\"40\"/><line x1=\"114\" y1=\"20\" x2=\"114\" y2=\"40\"/><line x1=\"114\" y1=\"30\" x2=\"146\" y2=\"30\"/><text x=\"50\" y=\"21\">R23</text><text x=\"108\" y=\"16\">C23</text></svg>",
+      "annotation": {
+        "parts": [
+          {
+            "type": "resistor",
+            "id": "R23"
+          },
+          {
+            "type": "capacitor",
+            "id": "C23"
+          }
+        ],
+        "connections": [
+          [
+            "R23:2",
+            "C23:+"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "synthetic_printed_24",
+      "split": "fixture_holdout",
+      "origin": "self_generated_geometry",
+      "media_type": "image/svg+xml",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"80\"><line x1=\"29\" y1=\"30\" x2=\"53\" y2=\"30\"/><rect x=\"53\" y=\"25\" width=\"24\" height=\"10\"/><line x1=\"77\" y1=\"30\" x2=\"115\" y2=\"30\"/><line x1=\"115\" y1=\"20\" x2=\"115\" y2=\"40\"/><line x1=\"121\" y1=\"20\" x2=\"121\" y2=\"40\"/><line x1=\"121\" y1=\"30\" x2=\"153\" y2=\"30\"/><text x=\"53\" y=\"21\">R24</text><text x=\"115\" y=\"16\">C24</text></svg>",
+      "annotation": {
+        "parts": [
+          {
+            "type": "resistor",
+            "id": "R24"
+          },
+          {
+            "type": "capacitor",
+            "id": "C24"
+          }
+        ],
+        "connections": [
+          [
+            "R24:2",
+            "C24:+"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "synthetic_printed_25",
+      "split": "fixture_holdout",
+      "origin": "self_generated_geometry",
+      "media_type": "image/svg+xml",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"80\"><line x1=\"32\" y1=\"30\" x2=\"56\" y2=\"30\"/><rect x=\"56\" y=\"25\" width=\"20\" height=\"10\"/><line x1=\"76\" y1=\"30\" x2=\"108\" y2=\"30\"/><line x1=\"108\" y1=\"20\" x2=\"108\" y2=\"40\"/><line x1=\"114\" y1=\"20\" x2=\"114\" y2=\"40\"/><line x1=\"114\" y1=\"30\" x2=\"146\" y2=\"30\"/><text x=\"56\" y=\"21\">R25</text><text x=\"108\" y=\"16\">C25</text></svg>",
+      "annotation": {
+        "parts": [
+          {
+            "type": "resistor",
+            "id": "R25"
+          },
+          {
+            "type": "capacitor",
+            "id": "C25"
+          }
+        ],
+        "connections": [
+          [
+            "R25:2",
+            "C25:+"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "synthetic_printed_26",
+      "split": "fixture_holdout",
+      "origin": "self_generated_geometry",
+      "media_type": "image/svg+xml",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"80\"><line x1=\"20\" y1=\"32\" x2=\"44\" y2=\"32\"/><rect x=\"44\" y=\"27\" width=\"22\" height=\"10\"/><line x1=\"66\" y1=\"32\" x2=\"100\" y2=\"32\"/><line x1=\"100\" y1=\"22\" x2=\"100\" y2=\"42\"/><line x1=\"106\" y1=\"22\" x2=\"106\" y2=\"42\"/><line x1=\"106\" y1=\"32\" x2=\"138\" y2=\"32\"/><text x=\"44\" y=\"23\">R26</text><text x=\"100\" y=\"18\">C26</text></svg>",
+      "annotation": {
+        "parts": [
+          {
+            "type": "resistor",
+            "id": "R26"
+          },
+          {
+            "type": "capacitor",
+            "id": "C26"
+          }
+        ],
+        "connections": [
+          [
+            "R26:2",
+            "C26:+"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "synthetic_printed_27",
+      "split": "fixture_holdout",
+      "origin": "self_generated_geometry",
+      "media_type": "image/svg+xml",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"80\"><line x1=\"23\" y1=\"32\" x2=\"47\" y2=\"32\"/><rect x=\"47\" y=\"27\" width=\"24\" height=\"10\"/><line x1=\"71\" y1=\"32\" x2=\"107\" y2=\"32\"/><line x1=\"107\" y1=\"22\" x2=\"107\" y2=\"42\"/><line x1=\"113\" y1=\"22\" x2=\"113\" y2=\"42\"/><line x1=\"113\" y1=\"32\" x2=\"145\" y2=\"32\"/><text x=\"47\" y=\"23\">R27</text><text x=\"107\" y=\"18\">C27</text></svg>",
+      "annotation": {
+        "parts": [
+          {
+            "type": "resistor",
+            "id": "R27"
+          },
+          {
+            "type": "capacitor",
+            "id": "C27"
+          }
+        ],
+        "connections": [
+          [
+            "R27:2",
+            "C27:+"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "synthetic_printed_28",
+      "split": "fixture_holdout",
+      "origin": "self_generated_geometry",
+      "media_type": "image/svg+xml",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"80\"><line x1=\"26\" y1=\"32\" x2=\"50\" y2=\"32\"/><rect x=\"50\" y=\"27\" width=\"20\" height=\"10\"/><line x1=\"70\" y1=\"32\" x2=\"108\" y2=\"32\"/><line x1=\"108\" y1=\"22\" x2=\"108\" y2=\"42\"/><line x1=\"114\" y1=\"22\" x2=\"114\" y2=\"42\"/><line x1=\"114\" y1=\"32\" x2=\"146\" y2=\"32\"/><text x=\"50\" y=\"23\">R28</text><text x=\"108\" y=\"18\">C28</text></svg>",
+      "annotation": {
+        "parts": [
+          {
+            "type": "resistor",
+            "id": "R28"
+          },
+          {
+            "type": "capacitor",
+            "id": "C28"
+          }
+        ],
+        "connections": [
+          [
+            "R28:2",
+            "C28:+"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "synthetic_printed_29",
+      "split": "fixture_holdout",
+      "origin": "self_generated_geometry",
+      "media_type": "image/svg+xml",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"80\"><line x1=\"29\" y1=\"32\" x2=\"53\" y2=\"32\"/><rect x=\"53\" y=\"27\" width=\"22\" height=\"10\"/><line x1=\"75\" y1=\"32\" x2=\"107\" y2=\"32\"/><line x1=\"107\" y1=\"22\" x2=\"107\" y2=\"42\"/><line x1=\"113\" y1=\"22\" x2=\"113\" y2=\"42\"/><line x1=\"113\" y1=\"32\" x2=\"145\" y2=\"32\"/><text x=\"53\" y=\"23\">R29</text><text x=\"107\" y=\"18\">C29</text></svg>",
+      "annotation": {
+        "parts": [
+          {
+            "type": "resistor",
+            "id": "R29"
+          },
+          {
+            "type": "capacitor",
+            "id": "C29"
+          }
+        ],
+        "connections": [
+          [
+            "R29:2",
+            "C29:+"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "synthetic_printed_30",
+      "split": "fixture_holdout",
+      "origin": "self_generated_geometry",
+      "media_type": "image/svg+xml",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"80\"><line x1=\"32\" y1=\"32\" x2=\"56\" y2=\"32\"/><rect x=\"56\" y=\"27\" width=\"24\" height=\"10\"/><line x1=\"80\" y1=\"32\" x2=\"114\" y2=\"32\"/><line x1=\"114\" y1=\"22\" x2=\"114\" y2=\"42\"/><line x1=\"120\" y1=\"22\" x2=\"120\" y2=\"42\"/><line x1=\"120\" y1=\"32\" x2=\"152\" y2=\"32\"/><text x=\"56\" y=\"23\">R30</text><text x=\"114\" y=\"18\">C30</text></svg>",
+      "annotation": {
+        "parts": [
+          {
+            "type": "resistor",
+            "id": "R30"
+          },
+          {
+            "type": "capacitor",
+            "id": "C30"
+          }
+        ],
+        "connections": [
+          [
+            "R30:2",
+            "C30:+"
+          ]
+        ]
+      }
+    }
+  ]
+}

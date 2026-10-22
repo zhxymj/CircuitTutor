@@ -259,7 +259,9 @@ def _tscircuit(data):
 
 
 def _source_metadata(source, content):
-    manifest = ROOT / 'evidence/upgrade/open_source_integration/acquisition.json'
+    # 来源获取清单随仓库分发（data/ 下），不再依赖本地 evidence 归档，
+    # 否则全新克隆时外部导入会因缺少该文件而整份拒绝。
+    manifest = ROOT / 'data/external_import/acquisition.json'
     try:
         data = json.loads(manifest.read_text(encoding='utf-8'))
         item = next(p for p in data['projects'] if p['name'] == SOURCES[source])

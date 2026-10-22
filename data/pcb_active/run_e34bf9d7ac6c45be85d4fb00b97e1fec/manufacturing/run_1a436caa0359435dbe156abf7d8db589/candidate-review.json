@@ -1,0 +1,211 @@
+{
+  "manufacturing_release": false,
+  "review_required": [
+    "electronic_engineer",
+    "fabricator"
+  ],
+  "board_sha256": "6c915da0679c7f15f6f40671d95771bda379a715d5ca86d2607640a4cb5c0e95",
+  "drc": {
+    "status": "pass",
+    "counts": {
+      "violations": 0,
+      "unconnected_items": 0,
+      "schematic_parity": 0
+    },
+    "kicad_version": "10.0.6",
+    "source": "candidate.kicad_pcb",
+    "official_schematic_parity_checked": true,
+    "report_sha256": "91908bc4310701da93a680e6f40e4c23882cd1022dfa32c8ed49794520a421c2"
+  },
+  "pad_net_audit": {
+    "status": "pass",
+    "pads_audited": 56,
+    "nets_audited": 9,
+    "footprint_sha256": {
+      "C2": "e890bdf55fa18fc6df6878eb1b5251a991e1b93985509175eb269d3d002880b4",
+      "J2": "e3c3501f520fc1fc39eeb5d72137e680e509c0df2348ca77fef1b9db6ab974f0",
+      "C1": "e890bdf55fa18fc6df6878eb1b5251a991e1b93985509175eb269d3d002880b4",
+      "R1": "949bbbe025b509557866ddd9fcb0403244571f3ceb4f954c9766ee622d18421c",
+      "R2": "949bbbe025b509557866ddd9fcb0403244571f3ceb4f954c9766ee622d18421c",
+      "C3": "e890bdf55fa18fc6df6878eb1b5251a991e1b93985509175eb269d3d002880b4",
+      "R3": "949bbbe025b509557866ddd9fcb0403244571f3ceb4f954c9766ee622d18421c",
+      "C4": "e890bdf55fa18fc6df6878eb1b5251a991e1b93985509175eb269d3d002880b4",
+      "U2": "af36082683f6c5f89e2addf3b93e06b9a8eaddf1f44cbc9a5384df646b44f1c9",
+      "J1": "8952158347d7b7cc13924c62dccb0c48911af892bb009a0de27cb4d3c25cc1bb",
+      "U1": "554208c80f8bd504ce7a1dfcb1b5321c6cd89a465f2deb73d92bce1a1f5e9a8b"
+    }
+  },
+  "source_erc": {
+    "status": "pass",
+    "count": 0,
+    "kicad_version": "10.0.6",
+    "report_sha256": "9819dba61c0f7d2d02553ba3a32e0ea7f16f2f5436b3ec2030666c6d926d6484"
+  },
+  "source_netlist": {
+    "status": "pass",
+    "differences": [],
+    "net_count": 9,
+    "report_sha256": "bc64eca52af01d48224b69c91a35e44fb60fa72104425500ca72424e50bb6444"
+  },
+  "source_sha256": "1a240455661f6d990c01fdfee0b486528d74db232535eee0c64545dc1e31a3b4",
+  "semantic_validation": {
+    "source": "manual",
+    "name": "candidate",
+    "assurance": "internal",
+    "verdict": "pass",
+    "accepted": true,
+    "gate_order": [
+      "structure",
+      "erc",
+      "ratings",
+      "spice_deck",
+      "spice_runtime",
+      "kicad_export",
+      "official_erc",
+      "official_netlist"
+    ],
+    "gates": {
+      "structure": {
+        "status": "pass",
+        "required": true,
+        "issues": [],
+        "evidence": {
+          "version": 2
+        },
+        "reason": ""
+      },
+      "erc": {
+        "status": "pass",
+        "required": true,
+        "issues": [
+          {
+            "rule": "并联供电输出",
+            "message": "网络 N1 中多个供电输出脚 ['J1:VCC', 'J2:VCC'] 接到同一网络（两路稳压输出并联，输出电压难以一致，建议只用一路供电）",
+            "severity": "warning",
+            "pins": [
+              "J1:VCC",
+              "J2:VCC"
+            ]
+          },
+          {
+            "rule": "悬空输入",
+            "message": "输入脚 U1:XTAL1 没有连接到任何网络",
+            "severity": "warning",
+            "pins": [
+              "U1:XTAL1"
+            ]
+          }
+        ],
+        "evidence": {
+          "counts": {
+            "fatal": 0,
+            "major": 0,
+            "minor": 0,
+            "warning": 2
+          }
+        },
+        "reason": ""
+      },
+      "ratings": {
+        "status": "pass",
+        "required": true,
+        "issues": [
+          {
+            "rule": "大阻值电阻功耗提示",
+            "message": "电阻 R3（10000Ω）在约 10mA 下功耗可达 1000mW，请确认额定功率 ≥250mW",
+            "severity": "warn",
+            "pins": [
+              "R3"
+            ]
+          }
+        ],
+        "evidence": {
+          "danger_count": 0
+        },
+        "reason": ""
+      },
+      "spice_deck": {
+        "status": "not_applicable",
+        "required": false,
+        "issues": [],
+        "evidence": {
+          "unmodeled_types": [
+            "atmega328",
+            "i2c_header",
+            "i2c_rh_sensor",
+            "spi_header"
+          ]
+        },
+        "reason": "元件缺少可执行 SPICE 模型：atmega328, i2c_header, i2c_rh_sensor, spi_header"
+      },
+      "spice_runtime": {
+        "status": "not_applicable",
+        "required": false,
+        "issues": [],
+        "evidence": {},
+        "reason": "元件缺少可执行 SPICE 模型：atmega328, i2c_header, i2c_rh_sensor, spi_header"
+      },
+      "kicad_export": {
+        "status": "pass",
+        "required": true,
+        "issues": [],
+        "evidence": {
+          "sha256": "4eb14816483199edf233f96471c4f205b7a2a3ab437abb5d49180489d4cb221b",
+          "bytes": 36968
+        },
+        "reason": ""
+      },
+      "official_erc": {
+        "status": "not_run",
+        "required": false,
+        "issues": [],
+        "evidence": {},
+        "reason": "调用方选择离线内部验证模式"
+      },
+      "official_netlist": {
+        "status": "not_run",
+        "required": false,
+        "issues": [],
+        "evidence": {},
+        "reason": "调用方选择离线内部验证模式"
+      }
+    },
+    "blocking_gates": [],
+    "artifacts": {
+      "schematic": "C:\\Users\\30789\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_active\\run_e34bf9d7ac6c45be85d4fb00b97e1fec\\manufacturing\\run_1a436caa0359435dbe156abf7d8db589\\semantic_source\\candidate.kicad_sch",
+      "project": "C:\\Users\\30789\\Desktop\\智绘电路-企业命题演示包\\智绘电路\\data\\pcb_active\\run_e34bf9d7ac6c45be85d4fb00b97e1fec\\manufacturing\\run_1a436caa0359435dbe156abf7d8db589\\semantic_source\\candidate.kicad_pro"
+    }
+  },
+  "provenance": {
+    "origin": "manual",
+    "source_id": "internal-active-atmega328p-sht4x-3v3-01"
+  },
+  "engineering_example": {
+    "classification": "internal_engineering_example",
+    "review_required": true,
+    "topology": "active_atmega328p_3v3_onboard_i2c_rh_sensor",
+    "independent_external_sample": false,
+    "sources": [
+      "https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/ATmega48A-PA-88A-PA-168A-PA-328-P-DS-DS40002061B.pdf",
+      "https://ww1.microchip.com/downloads/en/appnotes/atmel-2521-avr-hardware-design-considerations_applicationnote_avr042.pdf",
+      "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71H104KA01-01.pdf",
+      "https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-0710KL",
+      "https://www.samtec.com/products/tsw-104-07-g-s",
+      "https://www.samtec.com/products/tsw-106-07-g-s",
+      "https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-074K7L",
+      "https://gitlab.com/kicad/libraries/kicad-footprints",
+      "https://sensirion.com/media/documents/33FD6951/624C4357/Datasheet_SHT4x.pdf"
+    ],
+    "clock": "Internal calibrated 8MHz RC; at 3.3V the ATmega328P supports this clock per datasheet. No external crystal populated; fuse/firmware state must be verified with ISP.",
+    "analog": "AVCC connected to VCC with 100nF decoupling; AREF only decoupled to GND. ADC precision/filter not validated.",
+    "sensor": "On-board Sensirion SHT4x I2C temperature/humidity sensor, bare DFN-4; pin order 1=SDA 2=SCL 3=VDD 4=VSS taken from the KiCad official Sensor_Humidity symbol/footprint pair. I2C address not declared; sensor reading not validated.",
+    "pin_assignment": "J1 pads GND,VCC,SDA,SCL; J2 single-row custom ISP pads MISO,VCC,SCK,MOSI,RESET,GND. Not the standard 2x3 ISP connector.",
+    "assumptions": "One regulated external 3.3V source; 4.7k on-board pullups to 3.3V; external 3.3V I2C devices optional; no firmware/waveform/assembled board or sensor reading validation.",
+    "limitations": [
+      "ATmega328P is NRND per current manufacturer page",
+      "No ESD/protection circuit or reset pushbutton",
+      "No firmware or fuse programming performed",
+      "No physical assembly, I2C timing or sensor reading validation"
+    ]
+  }
+}

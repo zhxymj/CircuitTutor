@@ -5,6 +5,7 @@ __pycache__/
 # 测试夹具与渲染产物（test_pipeline.py / test_render.js 可再生）
 erc_results.json
 frontend_manifest.json
+ci-fast.json
 render_*.svg
 symbols_preview.svg
 symbols_preview.png
@@ -47,9 +48,13 @@ logs/
 /报告书-原稿备份.pdf
 
 # 大型数据集（运行非必需；示例与小型配置仍入库）
-/data/external_references/
-/data/image_samples/
-/data/pcb_active/
+/data/external_references/*
+!/data/external_references/manifest.json
+!/data/external_references/sparkfun_qwiic_adapter/
+/data/image_samples/*
+!/data/image_samples/synthetic_printed_v1.json
+/data/pcb_active/*
+!/data/pcb_active/run_e34bf9d7ac6c45be85d4fb00b97e1fec/
 /data/pcb_runs/
 /data/kicad_drafts/
 

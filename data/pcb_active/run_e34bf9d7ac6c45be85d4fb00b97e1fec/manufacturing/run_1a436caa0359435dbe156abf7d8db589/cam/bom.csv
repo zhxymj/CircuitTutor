@@ -1,0 +1,12 @@
+﻿Reference,Value,MPN,Manufacturer,Footprint,Datasheet
+U1,ATmega328P-PU,ATMEGA328P-PU,Microchip,Package_DIP:DIP-28_W7.62mm,https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/ATmega48A-PA-88A-PA-168A-PA-328-P-DS-DS40002061B.pdf
+U2,SHT41-AD1B,SHT41-AD1B-R2,Sensirion,Sensor_Humidity:Sensirion_DFN-4_1.5x1.5mm_P0.8mm_SHT4x_NoCentralPad,https://sensirion.com/media/documents/33FD6951/624C4357/Datasheet_SHT4x.pdf
+J1,I2C GND VCC SDA SCL,TSW-104-07-G-S,Samtec,Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical,https://www.samtec.com/products/tsw-104-07-g-s
+J2,CUSTOM ISP MISO VCC SCK MOSI RESET GND,TSW-106-07-G-S,Samtec,Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical,https://www.samtec.com/products/tsw-106-07-g-s
+R1,4.7k,RC0805FR-074K7L,YAGEO,Resistor_SMD:R_0805_2012Metric,https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-074K7L
+R2,4.7k,RC0805FR-074K7L,YAGEO,Resistor_SMD:R_0805_2012Metric,https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-074K7L
+R3,10k,RC0805FR-0710KL,YAGEO,Resistor_SMD:R_0805_2012Metric,https://www.yageogroup.com/component-documentation/download/specsheet/RC0805FR-0710KL
+C1,100nF,GRM21BR71H104KA01L,Murata,Capacitor_SMD:C_0805_2012Metric,https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71H104KA01-01.pdf
+C2,100nF,GRM21BR71H104KA01L,Murata,Capacitor_SMD:C_0805_2012Metric,https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71H104KA01-01.pdf
+C3,100nF,GRM21BR71H104KA01L,Murata,Capacitor_SMD:C_0805_2012Metric,https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71H104KA01-01.pdf
+C4,100nF,GRM21BR71H104KA01L,Murata,Capacitor_SMD:C_0805_2012Metric,https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71H104KA01-01.pdf
