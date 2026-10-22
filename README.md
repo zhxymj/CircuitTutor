@@ -2,12 +2,12 @@
 
 > 用中文描述电路需求，在本机生成可编辑的原理图，再用确定性门禁（ERC / 额定值 / ngspice / KiCad 官方 ERC）复验，最后导出 SVG、BOM、SPICE、KiCad 工程与 PCB 候选。
 
-当前产品版本：1.4.1。
+当前产品版本：1.4.2。
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 [![Zero runtime deps](https://img.shields.io/badge/runtime%20deps-0-brightgreen.svg)](#为什么是零依赖)
-![Version](https://img.shields.io/badge/version-1.4.1-informational.svg)
+![Version](https://img.shields.io/badge/version-1.4.2-informational.svg)
 
 ![工程台界面](docs/images/workbench-desktop.png)
 
