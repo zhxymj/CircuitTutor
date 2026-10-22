@@ -2,10 +2,12 @@
 
 > 用中文描述电路需求，在本机生成可编辑的原理图，再用确定性门禁（ERC / 额定值 / ngspice / KiCad 官方 ERC）复验，最后导出 SVG、BOM、SPICE、KiCad 工程与 PCB 候选。
 
+当前产品版本：1.4.0。
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 [![Zero runtime deps](https://img.shields.io/badge/runtime%20deps-0-brightgreen.svg)](#为什么是零依赖)
-![Version](https://img.shields.io/badge/version-1.3.0-informational.svg)
+![Version](https://img.shields.io/badge/version-1.4.0-informational.svg)
 
 ![工程台界面](docs/images/workbench-desktop.png)
 
@@ -66,6 +68,32 @@ export KICAD_CLI_PATH=/path/to/kicad-cli
 export NGSPICE_PATH=/path/to/ngspice
 ```
 
+## 配置
+
+全部通过环境变量或 `.env` 配置，默认值如下（与 `core/config.py` 一致）：
+
+| 变量 | 默认 | 说明 |
+|---|---|---|
+| `LSQC_HOST` | `127.0.0.1` | 监听地址；仅本机可访问 |
+| `LSQC_PORT` | `8765` | 监听端口 |
+| `DEEPSEEK_API_KEY` | `（空）` | 未配置时只走本地模板，不调用在线模型 |
+| `LLM_TIMEOUT_S` | `90` | 单次模型调用超时（秒） |
+| `LLM_RETRIES` | `2` | 模型调用失败重试次数 |
+| `LLM_STRUCT_RETRIES` | `2` | 结构化输出重试次数 |
+| `LLM_ERC_RETRIES` | `1` | 带 ERC 反馈的重试次数 |
+| `LLM_BUDGET` | `5` | 单次生成允许的模型调用预算 |
+| `LLM_MAX_TOKENS` | `4096` | 单次响应最大 token |
+| `MAX_QUERY_LEN` | `500` | 需求文本最大长度 |
+| `KICAD_CLI_TIMEOUT_S` | `90` | 单次 KiCad CLI 超时（秒） |
+| `KICAD_CLI_PATH` | `（自动探测）` | 未设置时在 PATH 与工具链中查找 |
+| `NGSPICE_PATH` | `（自动探测）` | 未设置时在 PATH 与工具链中查找 |
+| `LSQC_RATE_LIMIT` | `30` | 每 IP 每分钟 LLM 端点请求上限，`0` 关闭 |
+| `LSQC_KICAD_RATE_LIMIT` | `20` | 每 IP 每分钟 KiCad 端点请求上限 |
+| `LSQC_SSE_HEARTBEAT_S` | `15` | SSE 心跳间隔（秒） |
+| `LSQC_LOG_LEVEL` | `INFO` | 日志级别 |
+
+**端口回退**：若未设置 `LSQC_PORT`，但环境里存在标准变量 `PORT`（部分云平台会自动注入），服务会采用它并绑定 `0.0.0.0:PORT`。`PORT` 是外部环境变量名，与内部解析后的端口常量同名不同义，因此不列入上表。
+
 ## 项目结构
 
 ```
@@ -87,6 +115,7 @@ export NGSPICE_PATH=/path/to/ngspice
 ```bash
 python tests/run_tests.py --profile fast      # 快速核心
 python tests/run_tests.py --profile eda       # 电气/EDA 相关
+python tests/run_tests.py --profile release   # 交付打包（需本地 7-Zip）
 python tests/run_tests.py --profile all       # 全部
 ```
 

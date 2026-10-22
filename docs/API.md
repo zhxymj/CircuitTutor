@@ -1,12 +1,14 @@
 # API 文档 · 智绘电路 CircuitTutor
 
-版本：`1.3.0`（见 `VERSION` / `GET /api/health`）
+> 说明：文中标注“本地证据”的引用指向本机验收归档目录 `evidence/`（体积达 GB 级、不随仓库分发，因此不提供可点击链接）。该归档按 `evidence/upgrade/<领域>/` 组织，需要复现时请按对应命令重新生成。
+
+版本：`1.4.0`（见 `VERSION` / `GET /api/health`）
 
 根目录 `VERSION` 是唯一产品版本源；本页版本和接口返回值须与其一致。
 
 ## 工程工作台静态资源
 
-主页面使用本地 `GET /static/workbench.css` 和 `GET /static/workbench.js`，分别返回 `text/css; charset=utf-8`、`text/javascript; charset=utf-8`。这两个文件通过既有静态白名单提供，响应字节与 `web/` 中实际文件一致，并保留 ETag、Cache-Control 和 nosniff。默认监听地址、启动参数和业务 API 保持既有合同。2026-10-17 的真实 HTTP 404→200、类型和资源字节验证见[工程台运行证据](../evidence/upgrade/ui_workbench/runtime.json)。
+主页面使用本地 `GET /static/workbench.css` 和 `GET /static/workbench.js`，分别返回 `text/css; charset=utf-8`、`text/javascript; charset=utf-8`。这两个文件通过既有静态白名单提供，响应字节与 `web/` 中实际文件一致，并保留 ETag、Cache-Control 和 nosniff。默认监听地址、启动参数和业务 API 保持既有合同。2026-10-17 的真实 HTTP 404→200、类型和资源字节验证见工程台运行证据（本地证据）。
 
 ## 2026-09-26 改造接口补充
 
@@ -27,7 +29,7 @@
 
 制造接口读取提交的 PCB 文本，不接受客户端服务器文件路径。失败返回 422，并保留逐项门禁和唯一运行目录；通过包包含板文件、源电路/原理图、BOM、贴片、Gerber、钻孔及复验证据。输出始终为 `fabrication_candidate_for_review`，`manufacturing_release:false`。
 
-2026-10-16以当前Handler及KiCad 10.0.6重新运行内部3.3V ATmega328P＋SHT41板：正例HTTP 200，源ERC、网表差异、PCB DRC、未连接及原理图parity均0，12个CAM/BOM文件与HTTP ZIP逐项SHA一致；未布线422（30未连接）、短路422（3违规）、缺共地422（官方ERC拒绝）且三个负例无CAM，合计4/4符合预期。MCU的SPICE为 `not_applicable`；缺共地源拒绝后制造DRC为 `incomplete`，没有执行。该分母是1块内部板及3个构造故障，未实物制作、上电或制造放行。原始工具命令、退出码、报告、请求和包保留在[本轮制造HTTP证据](../evidence/upgrade/full_workflow/eda/manufacturing/results.json)。验收子进程仅将输出ROOT定向至该证据目录，生产Handler和门禁不改写。
+2026-10-16以当前Handler及KiCad 10.0.6重新运行内部3.3V ATmega328P＋SHT41板：正例HTTP 200，源ERC、网表差异、PCB DRC、未连接及原理图parity均0，12个CAM/BOM文件与HTTP ZIP逐项SHA一致；未布线422（30未连接）、短路422（3违规）、缺共地422（官方ERC拒绝）且三个负例无CAM，合计4/4符合预期。MCU的SPICE为 `not_applicable`；缺共地源拒绝后制造DRC为 `incomplete`，没有执行。该分母是1块内部板及3个构造故障，未实物制作、上电或制造放行。原始工具命令、退出码、报告、请求和包保留在本轮制造HTTP证据（本地证据）。验收子进程仅将输出ROOT定向至该证据目录，生产Handler和门禁不改写。
 
 浏览器 OCR 依赖固定 `/static/vision/` 本地资源，不上传图片。原始文字、检测评分及网络候选可在审核界面下载。评分未校准，器件数值须人工确认。
 
@@ -214,7 +216,7 @@ CircuitVision 上游独立界面的本机入口与验证边界见[开源项目�
 ```json
 {
   "status": "ok",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "product": "CircuitTutor",
   "llm_key_configured": true,
   "default_model": "deepseek-flash",
@@ -256,7 +258,7 @@ curl -s http://127.0.0.1:8765/api/health
 ```json
 {
   "product": "CircuitTutor",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "中文需求 → 电路原理图 → KiCad/SPICE/BOM 导出",
   "endpoints": [
     {"method": "GET", "path": "/api/health", "desc": "健康检查"},
@@ -349,7 +351,7 @@ GET /api/generate?q=做一个LED灯&c=[{"question":"电压？","answer":"5V"}]&c
 
 前置拒绝（超长、限流、目录外型号、电气矛盾或缺少关键条件）也走 SSE：`fallback` + `done`，`rejected=true`，不发送 `circuit`。直接调用生成接口也执行缺项检查；供电、I2C 地址等未确定时在 `questions` 中继续追问。`c` 只合并有效问答，部分回答后仍缺条件时继续澄清。
 
-模型未配置或运行失败时，仅对明确匹配且覆盖所需器件的离线模板生成电路，并保留用户显式参数。无匹配模板或模板缺少需求器件时拒绝；5V/3.3V MCU＋I2C 请求在没有匹配模板时不会变成LED示例。本地工作流诊断为9/9预期行为，包含1个匹配模板与8个拒绝用例，不能作为在线生成正确率或泛化指标。原4/9与修复后记录、原始SSE和隔离配置见[本轮EDA验收](../evidence/upgrade/full_workflow/eda.json)。
+模型未配置或运行失败时，仅对明确匹配且覆盖所需器件的离线模板生成电路，并保留用户显式参数。无匹配模板或模板缺少需求器件时拒绝；5V/3.3V MCU＋I2C 请求在没有匹配模板时不会变成LED示例。本地工作流诊断为9/9预期行为，包含1个匹配模板与8个拒绝用例，不能作为在线生成正确率或泛化指标。原4/9与修复后记录、原始SSE和隔离配置见本轮EDA验收（本地证据）。
 
 **示例（成功片段）**
 
