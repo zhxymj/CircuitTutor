@@ -2,6 +2,12 @@
 
 本项目遵循 [语义化版本](https://semver.org/lang/zh-CN/)（SemVer）。
 
+## [1.4.1] - 2026-10-22
+
+### Fixed
+- Linux CI 上 Windows 专用的 taskkill 进程树测试未跳过，导致 `--profile fast` 失败。
+- Windows CI 控制台默认 cp1252，校验脚本输出中文时触发 `UnicodeEncodeError`。
+
 ## [1.4.0] - 2026-10-22
 
 ### Added
