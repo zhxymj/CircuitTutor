@@ -19,6 +19,7 @@ python server.py          # 启动本地服务，默认 http://127.0.0.1:8765/
    ```bash
    python tests/run_tests.py --profile fast      # 快速核心，建议每次提交前都跑
    python tests/run_tests.py --profile eda       # 涉及电气/EDA 时
+   python tests/run_tests.py --profile release   # 涉及交付打包时（需本地 7-Zip）
    python tests/run_tests.py --profile all       # 大改动
    ```
 
