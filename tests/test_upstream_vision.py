@@ -184,6 +184,7 @@ class UpstreamVisionBridgeTests(unittest.TestCase):
             upstream_vision._validate_worker_result(invalid)
         self.assertEqual(caught.exception.code, "inference_failed")
 
+    @unittest.skipUnless(os.name == "nt", "taskkill 进程树回收只在 Windows 上执行")
     def test_timeout_terminates_only_the_worker_process_tree(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)

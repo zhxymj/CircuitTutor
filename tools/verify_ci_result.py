@@ -12,7 +12,17 @@ import sys
 from pathlib import Path
 
 
+def _force_utf8() -> None:
+    """Windows 控制台默认 cp1252，中文报告会触发 UnicodeEncodeError。"""
+
+    for stream in (sys.stdout, sys.stderr):
+        reconfigure = getattr(stream, "reconfigure", None)
+        if callable(reconfigure):
+            reconfigure(encoding="utf-8", errors="replace")
+
+
 def main(argv: list[str] | None = None) -> int:
+    _force_utf8()
     parser = argparse.ArgumentParser(description="校验 run_tests.py 的 JSON 报告")
     parser.add_argument("report", help="run_tests.py --json-out 生成的报告路径")
     parser.add_argument(
