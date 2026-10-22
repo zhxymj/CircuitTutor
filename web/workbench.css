@@ -939,3 +939,115 @@ html[data-teach="on"] [data-teach]:focus-visible{ outline:2px solid var(--focus-
 .wb-timing-canvas svg{ display:block; max-width:100%; height:auto; background:#fff; border-radius:var(--r-sm); }
 .wb-timing-empty{ margin:0; font-size:10px; line-height:1.85; color:var(--mut); }
 .wb-timing-facts{ margin:8px 0 0; font:9px/1.7 var(--wb-mono); color:var(--mut); word-break:break-all; }
+
+/* =========================================================================
+   可读性基线（2026-10-22）
+   目标：中文正文不小于 13px，辅助标号不小于 10px。只提升字号，
+   不改栅格、间距、断点、DOM 与颜色语义。
+   ========================================================================= */
+body{ font-size:13px; }
+.wb-wordmark{ font-size:18px; }
+.wb-wordmark small{ font-size:10px; letter-spacing:1.4px; }
+.wb-local,.wb-version{ font-size:10px; }
+.wb-version #verBadge{ font-size:10px!important; }
+#workbench-title{ font-size:14px; }
+#workbench-save-state,.wb-source-slot .src-badge{ font-size:11px; }
+.wb-button,.wb-save-slot button{ font-size:13px; }
+
+/* 左栏：项目卡、需求输入、示例与说明 */
+.wb-eyebrow{ font-size:10px; }
+.wb-project-card h2{ font-size:15px; }
+.wb-project-card p{ font-size:11px; }
+.wb-tabs button{ font-size:13px; }
+.wb-section-label{ font-size:12px; }
+.wb-section-label span{ font-size:10px; }
+.bar #q{ font-size:13px; }
+.bar #modelBtn{ font-size:11px; }
+#examples .chip{ font-size:11px; }
+#editBar label,#editBar input{ font-size:12px; }
+#editBar button,#edit-status,#editChanges{ font-size:11px; }
+.wb-requirement-actions button{ font-size:12px; }
+.wb-side-note{ font-size:11px; }
+.wb-side-note strong{ font-size:12px; }
+.wb-side-footer{ font-size:11px; }
+.wb-side-footer kbd{ font-size:10px; }
+
+/* 元件与文件列表 */
+.wb-subtle,.wb-library-heading{ font-size:11px; }
+.wb-part-name{ font-size:12px; }
+.wb-part-name small{ font-size:10px; }
+.wb-file-group h3{ font-size:12px; }
+.wb-file-group p{ font-size:11px; }
+.wb-file-group>button,.wb-file-group>select{ font-size:12px; }
+#workbench-part-search{ font-size:12px; }
+
+/* 画布工具条、空态与状态提示 */
+.wb-document-tab{ font-size:12px; }
+.wb-mode{ font-size:11px; }
+.wb-theme-slot select{ font-size:11px; }
+.wb-toolbar-caption{ font-size:10px; }
+.wb-canvas-info h1{ font-size:16px; }
+.wb-canvas-info p{ font-size:11px; }
+.wb-canvas-info .wb-eyebrow{ font-size:10px; }
+.wb-sheet-tag{ font-size:10px; }
+.wb-sheet-corner{ font-size:10px; }
+.wb-sheet-corner span{ font-size:9px; }
+#canvasEmpty .es-title{ font-size:17px; }
+#canvasEmpty .es-sub{ font-size:12px; }
+#emptyExamples .ee-card{ font-size:12px; }
+#emptyExamples .ee-card strong{ font-size:11px; }
+.wb-checks strong{ font-size:12px; }
+#workbench-checks-summary{ font-size:11px; }
+#meta,#stages,#stages li{ font-size:12px; }
+#hint{ font-size:11px; }
+
+/* 右侧检查器与属性面板 */
+.wb-inspector-head{ font-size:10px; }
+.wb-inspector>.wb-tabs button{ font-size:12px; }
+#workbench-selection-empty p,.wb-selection-caption{ font-size:12px; }
+#props h3{ font-size:14px; }
+#props .row label{ font-size:11px; }
+#props .row input{ font-size:12px; }
+#props .tip,.wb-inspector-note{ font-size:11px; }
+.wb-validation-intro h2{ font-size:14px; }
+.wb-validation-intro p{ font-size:11px; }
+.wb-validation-gate strong{ font-size:12px; }
+.wb-validation-gate small{ font-size:11px; }
+.wb-gate-status{ font-size:10px; }
+#workbench-part-metadata h3{ font-size:12px; }
+.wb-metadata-row>span{ font-size:11px; }
+.wb-metadata-row>div{ font-size:11px; }
+
+/* 底部状态栏 */
+.wb-statusbar{ font-size:11px; }
+.wb-status-erc .erc-badge,.wb-dirty-slot{ font-size:10px; }
+
+/* 教学模式辅助文字 */
+.wb-teach-hint,.wb-teach-path-note,.wb-gate-why,.wb-onboard-steps span{ font-size:11px; }
+.wb-teach-path-title,.wb-teach-steps li{ font-size:10px; }
+.wb-onboard-steps strong{ font-size:12px; }
+.wb-teach-part b,.wb-teach-part p,.wb-teach-part ul,.wb-teach-part .wb-teach-part-meta{ font-size:11px; }
+.wb-timing-note,.wb-timing-empty{ font-size:11px; }
+.wb-timing-facts{ font-size:10px; }
+
+/* 窄屏：保持可读，同时避免顶栏与状态栏溢出 */
+@media(max-width:760px){
+  body{ font-size:13px; }
+  .wb-wordmark{ font-size:15px; }
+  .wb-topbar>.wb-button,.wb-export-wrap>.wb-button,.wb-mobile-controls .wb-button{ font-size:12px; }
+  .wb-statusbar{ font-size:10px; }
+  .wb-status-erc .erc-badge{ font-size:9px; }
+  .wb-document-tab{ font-size:11px; }
+  .wb-mode,.wb-theme-slot select{ font-size:10px; }
+  .wb-canvas-info h1{ font-size:14px; }
+  .wb-canvas-info p{ font-size:10px; }
+  .wb-canvas-info .wb-eyebrow{ font-size:8px; }
+  #canvasEmpty .es-title{ font-size:15px; }
+  #canvasEmpty .es-sub{ font-size:11px; }
+  #emptyExamples .ee-card{ font-size:11px; }
+  #emptyExamples .ee-card strong{ font-size:10px; }
+  .wb-checks strong{ font-size:11px; }
+  #workbench-checks-summary{ font-size:10px; }
+  .wb-checks-intro{ font-size:10px; }
+  .wb-project{ width:min(280px,calc(100vw - 50px)); }
+}
