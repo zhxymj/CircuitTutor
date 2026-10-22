@@ -998,49 +998,6 @@ def check_diode_reverse_protection_missing(g: CircuitGraph, rep: ERCReport):
                 return
 
 
-def check_led_series_resistor_missing_partial(g: CircuitGraph, rep: ERCReport):
-    """LED 与电源之间无电阻且无其他负载（部分路径）—— 已有完整规则，这里补：
-    LED 串联电阻值缺失/0Ω。
-    """
-    # 已由 check_passive_values 覆盖 0Ω，这里跳过
-    pass
-
-
-def check_two_pin_floating(g: CircuitGraph, rep: ERCReport):
-    """两脚元件两端都未接（工业级：完全悬空元件）。"""
-    for pid, part in g.parts.items():
-        ptype = part.get("type")
-        pins = g.kb.get(ptype) or {}
-        if len(pins) < 2:
-            continue
-        # 两端都无网络 = 完全悬空（check_unconnected_part 已覆盖）
-        # 这里检查：一端悬空一端有网
-        dangling = []
-        for pin in pins:
-            ref = f"{pid}:{pin}"
-            net = g.net_of(ref)
-            if not net or len(net) == 1:
-                dangling.append(ref)
-        if len(dangling) == 1 and ptype in ("resistor", "capacitor", "inductor",
-                                             "diode", "led", "electrolytic"):
-            # 只挂一端的无源件，可能是未接完
-            # 但 check_single_node_net 已覆盖，避免重复告警
-            pass
-
-
-def check_power_rail_floating(g: CircuitGraph, rep: ERCReport):
-    """电源轨/地轨标记件未接到任何电路（工业级）。"""
-    for pid, part in g.parts.items():
-        ptype = part.get("type")
-        if ptype not in ("vcc", "gnd"):
-            continue
-        ref = f"{pid}:1"
-        net = g.net_of(ref)
-        if net and len(net) == 1:
-            # 已有悬空标记件规则，跳过
-            pass
-
-
 def check_connector_unconnected(g: CircuitGraph, rep: ERCReport):
     """接插件/端子悬空（工业级：接口未接）。"""
     for pid, part in g.parts.items():
