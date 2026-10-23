@@ -2,12 +2,12 @@
 
 > 用中文描述电路需求，在本机生成可编辑的原理图，再用确定性门禁（ERC / 额定值 / ngspice / KiCad 官方 ERC）复验，最后导出 SVG、BOM、SPICE、KiCad 工程与 PCB 候选。
 
-当前产品版本：1.5.1。
+当前产品版本：1.6.0。
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 [![Zero runtime deps](https://img.shields.io/badge/runtime%20deps-0-brightgreen.svg)](#为什么是零依赖)
-![Version](https://img.shields.io/badge/version-1.5.1-informational.svg)
+![Version](https://img.shields.io/badge/version-1.6.0-informational.svg)
 
 ![工程台界面](docs/images/workbench-desktop.png)
 
@@ -67,6 +67,20 @@ cp .env.template .env
 export KICAD_CLI_PATH=/path/to/kicad-cli
 export NGSPICE_PATH=/path/to/ngspice
 ```
+
+### 可选：使用本地微调权重（研究用途）
+
+默认加载工具链里的上游公开权重。若已用 `tools/train_yolo_detector.py` 完成本地训练，可登记为可选权重：
+
+```bash
+python tools/install_local_model.py --run evidence/yolo_training/round4_warmstart50
+python tools/vision_detect.py --input path/to/image.png --model local
+```
+
+- `CIRCUIT_VISION_MODEL`：`upstream`（默认）或 `local`。
+- `CIRCUIT_VISION_LOCAL_MODEL_ROOT`：本地权重目录，默认工具链 `vision-models/hcd-local`。
+- 缺权重、哈希不符或类别不符会直接停止推理，不会静默回退到上游权重。
+- 本地权重只支持 `resistor` 与 `capacitor.unpolarized` 两类，其余符号不会被检测；权重不随仓库分发，仅限研究评估。
 
 ## 配置
 

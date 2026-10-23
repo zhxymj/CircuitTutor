@@ -2,6 +2,13 @@
 
 本项目遵循 [语义化版本](https://semver.org/lang/zh-CN/)（SemVer）。
 
+## [1.6.0] - 2026-10-23
+
+### Added
+- **本地可选检测权重**：`CIRCUIT_VISION_MODEL=local` 可切换到本地微调权重；`tools/install_local_model.py` 负责复制权重并生成含训练摘要、数据集 manifest、类别与“仅研究、禁止再分发”声明的 `registration.json`。
+- `tools/vision_detect.py` 新增 `--model upstream|local` 与 `--model-root`。
+- 缺权重、哈希不符或类别不符时直接停止推理，不回退到上游权重；本地权重输出明确的类别范围与许可提示。
+
 ## [1.5.1] - 2026-10-23
 
 ### Changed

@@ -72,6 +72,7 @@ SUITES = (
     _suite("tests/test_external_import.py", "三种上游结果的无猜测导入合同", {"fast", "integration"}),
     _suite("tests/test_external_import_http.py", "外部导入随机端口 HTTP 合同", {"integration"}),
     _suite("tests/test_upstream_vision.py", "本地 CircuitVision 隔离桥接合同", {"fast", "integration"}),
+    _suite("tests/test_local_model_selection.py", "本地可选权重来源、登记与哈希边界", {"fast", "quality"}),
     _suite("tests/test_upstream_vision_http.py", "本地 CircuitVision 随机端口 HTTP 合同", {"integration"}),
     _suite("tests/test_runnable_package.py", "可运行包文件选择、迁移启动与完整性合同", {"release", "quality"}),
     _suite("tests/test_runnable_package_refresh.py", "交付包增量更新、压缩流保留与清单合同", {"release", "quality"}, {"sevenzip"}),
