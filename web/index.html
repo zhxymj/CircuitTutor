@@ -30,8 +30,15 @@
   if (t !== 'light' && t !== 'dark' && t !== 'system') t = 'system';
   document.documentElement.setAttribute('data-theme', t);
 })();
+/* 界面字号首屏套用：与主题同理，避免先渲染默认字号再跳档。 */
+(function () {
+  var f = 'standard';
+  try { f = localStorage.getItem('zht-font-scale') || 'standard'; } catch (e) { f = 'standard'; }
+  if (f !== 'compact' && f !== 'standard' && f !== 'large') f = 'standard';
+  document.documentElement.setAttribute('data-font', f);
+})();
 </script>
-<link href="/static/workbench.css?v=20261022b" rel="stylesheet"/>
+<link href="/static/workbench.css?v=20261023a" rel="stylesheet"/>
 </head>
 <body><svg aria-hidden="true" height="0" style="position:absolute" width="0"><defs>
 <symbol id="i-chip" viewbox="0 0 24 24"><rect height="12" rx="2" width="12" x="6" y="6"></rect><path d="M9 2v4m6-4v4M9 18v4m6-4v4M2 9h4m-4 6h4m12-6h4m-4 6h4"></path><rect height="6" rx="1" width="6" x="9" y="9"></rect></symbol>
@@ -149,6 +156,13 @@
 <option value="system">跟随系统</option>
 <option value="light">浅色</option>
 <option value="dark">深色</option>
+</select>
+</div><div id="fontWrap">
+<label for="fontScale">界面字号</label>
+<select id="fontScale" title="调整界面文字大小；只影响显示，不改变电路与校验结果">
+<option value="compact">紧凑</option>
+<option value="standard">标准</option>
+<option value="large">大</option>
 </select>
 </div><div id="teachWrap">
 <label for="teachMode">教学模式</label>
@@ -328,5 +342,5 @@
 <button id="kicadCopySteps" type="button">复制打开步骤</button>
 <button id="kicadModalOk" type="button">知道了</button>
 </div>
-</div><script src="/static/symbols.js"></script><script src="/static/wire_geometry.js"></script><script src="/static/layout.js"></script><script src="/static/render.js"></script><script src="/static/interact.js"></script><script src="/static/image_recognition.js"></script><script src="/static/upstream_vision.js"></script><script src="/static/tscircuit_editor.js"></script><script src="/static/wavedrom.unpkg.min.js"></script><script src="/static/workbench.js"></script><script src="/static/app.js"></script></body>
+</div><script src="/static/symbols.js"></script><script src="/static/wire_geometry.js"></script><script src="/static/layout.js"></script><script src="/static/render.js"></script><script src="/static/interact.js"></script><script src="/static/image_recognition.js"></script><script src="/static/upstream_vision.js"></script><script src="/static/tscircuit_editor.js"></script><script src="/static/wavedrom.unpkg.min.js"></script><script src="/static/workbench.js?v=20261023a"></script><script src="/static/app.js"></script></body>
 </html>

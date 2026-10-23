@@ -1138,3 +1138,133 @@ body{ font-size:14px; }
   #workbench-checks-summary{ font-size:11px; }
   .wb-checks-intro{ font-size:11px; }
 }
+
+/* =========================================================================
+   界面字号档位：html[data-font] 由设置面板写入，默认 standard。
+   compact = 13px 基准；standard = 14px；large = 16px。
+   只覆盖关键层级，避免每个微观标号都复制一遍。
+   ========================================================================= */
+html[data-font="compact"] body{ font-size:13px; }
+html[data-font="compact"] .bar #q{ font-size:13px; }
+html[data-font="compact"] .wb-button,html[data-font="compact"] .wb-save-slot button{ font-size:13px; }
+html[data-font="compact"] .wb-wordmark{ font-size:18px; }
+html[data-font="compact"] #workbench-title{ font-size:14px; }
+html[data-font="compact"] #workbench-save-state,html[data-font="compact"] .wb-source-slot .src-badge{ font-size:11px; }
+html[data-font="compact"] .wb-project-card h2{ font-size:15px; }
+html[data-font="compact"] .wb-project-card p{ font-size:11px; }
+html[data-font="compact"] .wb-tabs button{ font-size:13px; }
+html[data-font="compact"] .wb-section-label{ font-size:12px; }
+html[data-font="compact"] .wb-section-label span{ font-size:10px; }
+html[data-font="compact"] #examples .chip{ font-size:11px; }
+html[data-font="compact"] .wb-side-note,html[data-font="compact"] .wb-side-footer{ font-size:11px; }
+html[data-font="compact"] .wb-side-note strong{ font-size:12px; }
+html[data-font="compact"] .wb-subtle,html[data-font="compact"] .wb-library-heading{ font-size:11px; }
+html[data-font="compact"] .wb-part-name{ font-size:12px; }
+html[data-font="compact"] .wb-part-name small{ font-size:10px; }
+html[data-font="compact"] .wb-document-tab{ font-size:12px; }
+html[data-font="compact"] .wb-mode,html[data-font="compact"] .wb-theme-slot select{ font-size:11px; }
+html[data-font="compact"] .wb-canvas-info h1{ font-size:16px; }
+html[data-font="compact"] .wb-canvas-info p{ font-size:11px; }
+html[data-font="compact"] .wb-canvas-info .wb-eyebrow{ font-size:9px; }
+html[data-font="compact"] #canvasEmpty .es-title{ font-size:17px; }
+html[data-font="compact"] #canvasEmpty .es-sub{ font-size:12px; }
+html[data-font="compact"] #emptyExamples .ee-card{ font-size:12px; }
+html[data-font="compact"] #emptyExamples .ee-card strong{ font-size:11px; }
+html[data-font="compact"] .wb-checks strong{ font-size:12px; }
+html[data-font="compact"] #workbench-checks-summary{ font-size:11px; }
+html[data-font="compact"] #meta,html[data-font="compact"] #stages,html[data-font="compact"] #stages li{ font-size:12px; }
+html[data-font="compact"] #hint{ font-size:11px; }
+html[data-font="compact"] .wb-inspector-head{ font-size:10px; }
+html[data-font="compact"] .wb-inspector>.wb-tabs button{ font-size:12px; }
+html[data-font="compact"] #workbench-selection-empty p,html[data-font="compact"] .wb-selection-caption{ font-size:12px; }
+html[data-font="compact"] #props h3{ font-size:14px; }
+html[data-font="compact"] #props .row label{ font-size:11px; }
+html[data-font="compact"] #props .row input{ font-size:12px; }
+html[data-font="compact"] #props .tip,html[data-font="compact"] .wb-inspector-note{ font-size:11px; }
+html[data-font="compact"] .wb-validation-intro h2{ font-size:14px; }
+html[data-font="compact"] .wb-validation-intro p{ font-size:11px; }
+html[data-font="compact"] .wb-validation-gate strong{ font-size:12px; }
+html[data-font="compact"] .wb-validation-gate small{ font-size:11px; }
+html[data-font="compact"] .wb-gate-status{ font-size:10px; }
+html[data-font="compact"] #workbench-part-metadata h3{ font-size:12px; }
+html[data-font="compact"] .wb-metadata-row>span,html[data-font="compact"] .wb-metadata-row>div{ font-size:11px; }
+html[data-font="compact"] .wb-statusbar{ font-size:11px; }
+html[data-font="compact"] .wb-status-erc .erc-badge,html[data-font="compact"] .wb-dirty-slot{ font-size:10px; }
+html[data-font="compact"] .wb-teach-hint,html[data-font="compact"] .wb-teach-path-note,html[data-font="compact"] .wb-gate-why,html[data-font="compact"] .wb-onboard-steps span{ font-size:11px; }
+html[data-font="compact"] .wb-teach-path-title,html[data-font="compact"] .wb-teach-steps li{ font-size:10px; }
+html[data-font="compact"] .wb-onboard-steps strong{ font-size:12px; }
+html[data-font="compact"] .wb-teach-part b,html[data-font="compact"] .wb-teach-part p,html[data-font="compact"] .wb-teach-part ul,html[data-font="compact"] .wb-teach-part .wb-teach-part-meta{ font-size:11px; }
+html[data-font="compact"] .wb-timing-note,html[data-font="compact"] .wb-timing-empty{ font-size:11px; }
+html[data-font="compact"] .wb-timing-facts{ font-size:10px; }
+
+html[data-font="large"] body{ font-size:16px; }
+html[data-font="large"] .bar #q{ font-size:16px; }
+html[data-font="large"] .wb-button,html[data-font="large"] .wb-save-slot button{ font-size:16px; }
+html[data-font="large"] .wb-wordmark{ font-size:21px; }
+html[data-font="large"] #workbench-title{ font-size:17px; }
+html[data-font="large"] #workbench-save-state,html[data-font="large"] .wb-source-slot .src-badge{ font-size:13px; }
+html[data-font="large"] .wb-project-card h2{ font-size:18px; }
+html[data-font="large"] .wb-project-card p{ font-size:13px; }
+html[data-font="large"] .wb-tabs button{ font-size:16px; }
+html[data-font="large"] .wb-section-label{ font-size:15px; }
+html[data-font="large"] .wb-section-label span{ font-size:12px; }
+html[data-font="large"] #examples .chip{ font-size:14px; }
+html[data-font="large"] .wb-side-note,html[data-font="large"] .wb-side-footer{ font-size:13px; }
+html[data-font="large"] .wb-side-note strong{ font-size:15px; }
+html[data-font="large"] .wb-subtle,html[data-font="large"] .wb-library-heading{ font-size:13px; }
+html[data-font="large"] .wb-part-name{ font-size:15px; }
+html[data-font="large"] .wb-part-name small{ font-size:12px; }
+html[data-font="large"] .wb-document-tab{ font-size:15px; }
+html[data-font="large"] .wb-mode,html[data-font="large"] .wb-theme-slot select{ font-size:13px; }
+html[data-font="large"] .wb-canvas-info h1{ font-size:19px; }
+html[data-font="large"] .wb-canvas-info p{ font-size:13px; }
+html[data-font="large"] .wb-canvas-info .wb-eyebrow{ font-size:12px; }
+html[data-font="large"] #canvasEmpty .es-title{ font-size:20px; }
+html[data-font="large"] #canvasEmpty .es-sub{ font-size:14px; }
+html[data-font="large"] #emptyExamples .ee-card{ font-size:14px; }
+html[data-font="large"] #emptyExamples .ee-card strong{ font-size:13px; }
+html[data-font="large"] .wb-checks strong{ font-size:15px; }
+html[data-font="large"] #workbench-checks-summary{ font-size:13px; }
+html[data-font="large"] #meta,html[data-font="large"] #stages,html[data-font="large"] #stages li{ font-size:15px; }
+html[data-font="large"] #hint{ font-size:13px; }
+html[data-font="large"] .wb-inspector-head{ font-size:12px; }
+html[data-font="large"] .wb-inspector>.wb-tabs button{ font-size:15px; }
+html[data-font="large"] #workbench-selection-empty p,html[data-font="large"] .wb-selection-caption{ font-size:14px; }
+html[data-font="large"] #props h3{ font-size:17px; }
+html[data-font="large"] #props .row label{ font-size:13px; }
+html[data-font="large"] #props .row input{ font-size:15px; }
+html[data-font="large"] #props .tip,html[data-font="large"] .wb-inspector-note{ font-size:13px; }
+html[data-font="large"] .wb-validation-intro h2{ font-size:16px; }
+html[data-font="large"] .wb-validation-intro p{ font-size:13px; }
+html[data-font="large"] .wb-validation-gate strong{ font-size:14px; }
+html[data-font="large"] .wb-validation-gate small{ font-size:13px; }
+html[data-font="large"] .wb-gate-status{ font-size:12px; }
+html[data-font="large"] #workbench-part-metadata h3{ font-size:14px; }
+html[data-font="large"] .wb-metadata-row>span,html[data-font="large"] .wb-metadata-row>div{ font-size:13px; }
+html[data-font="large"] .wb-statusbar{ font-size:13px; }
+html[data-font="large"] .wb-status-erc .erc-badge,html[data-font="large"] .wb-dirty-slot{ font-size:12px; }
+html[data-font="large"] .wb-teach-hint,html[data-font="large"] .wb-teach-path-note,html[data-font="large"] .wb-gate-why,html[data-font="large"] .wb-onboard-steps span{ font-size:13px; }
+html[data-font="large"] .wb-teach-path-title,html[data-font="large"] .wb-teach-steps li{ font-size:12px; }
+html[data-font="large"] .wb-onboard-steps strong{ font-size:14px; }
+html[data-font="large"] .wb-teach-part b,html[data-font="large"] .wb-teach-part p,html[data-font="large"] .wb-teach-part ul,html[data-font="large"] .wb-teach-part .wb-teach-part-meta{ font-size:13px; }
+html[data-font="large"] .wb-timing-note,html[data-font="large"] .wb-timing-empty{ font-size:13px; }
+html[data-font="large"] .wb-timing-facts{ font-size:12px; }
+
+@media(max-width:760px){
+  html[data-font="large"] body{ font-size:15px; }
+  html[data-font="large"] .wb-topbar>.wb-button,html[data-font="large"] .wb-export-wrap>.wb-button,html[data-font="large"] .wb-mobile-controls .wb-button{ font-size:14px; }
+  html[data-font="large"] .wb-statusbar{ font-size:12px; }
+  html[data-font="large"] .wb-status-erc .erc-badge{ font-size:11px; }
+  html[data-font="large"] .wb-document-tab{ font-size:13px; }
+  html[data-font="large"] .wb-mode,html[data-font="large"] .wb-theme-slot select{ font-size:12px; }
+  html[data-font="large"] .wb-canvas-info h1{ font-size:16px; }
+  html[data-font="large"] .wb-canvas-info p{ font-size:12px; }
+  html[data-font="large"] .wb-canvas-info .wb-eyebrow{ font-size:10px; }
+  html[data-font="large"] #canvasEmpty .es-title{ font-size:17px; }
+  html[data-font="large"] #canvasEmpty .es-sub{ font-size:13px; }
+  html[data-font="large"] #emptyExamples .ee-card{ font-size:13px; }
+  html[data-font="large"] #emptyExamples .ee-card strong{ font-size:12px; }
+  html[data-font="large"] .wb-checks strong{ font-size:13px; }
+  html[data-font="large"] #workbench-checks-summary{ font-size:12px; }
+  html[data-font="large"] .wb-checks-intro{ font-size:12px; }
+}

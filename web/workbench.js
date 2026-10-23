@@ -374,6 +374,19 @@
     let teachStored = false;
     try { teachStored = localStorage.getItem(TEACH_KEY) === '1'; } catch (error) { teachStored = false; }
     applyTeach(teachStored);
+
+    const FONT_KEY = 'zht-font-scale';
+    const fontSelect = $('fontScale');
+    function applyFontScale(value) {
+      const next = (value === 'compact' || value === 'large') ? value : 'standard';
+      document.documentElement.setAttribute('data-font', next);
+      if (fontSelect) fontSelect.value = next;
+      try { localStorage.setItem(FONT_KEY, next); } catch (error) { /* 隐私模式禁用存储时忽略 */ }
+    }
+    if (fontSelect) fontSelect.addEventListener('change', () => applyFontScale(fontSelect.value));
+    let fontStored = 'standard';
+    try { fontStored = localStorage.getItem(FONT_KEY) || 'standard'; } catch (error) { fontStored = 'standard'; }
+    applyFontScale(fontStored);
     const partList = $('workbench-part-list'), insert = $('insert-type'), partRows = [];
     function setDrawer(side, open) {
       const panel = side === 'left' ? left : right, toggle = side === 'left' ? leftToggle : rightToggle;
